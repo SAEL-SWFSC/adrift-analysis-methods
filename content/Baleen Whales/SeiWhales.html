@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ADRIFT analysis methods - NOAA quarto simple with R</title>
+<title>ADRIFT analysis methods - Sei Whales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./content/Data Archive/DataPrep.html" rel="next">
-<link href="./images/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">NOAA quarto simple with R</h1>
+      <h1 class="quarto-secondary-nav-title">Sei Whales</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -79,11 +78,11 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./" class="sidebar-logo-link">
+      <a href="../../" class="sidebar-logo-link">
       <img src="https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
@@ -101,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Home</a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">Home</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -114,17 +113,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Data Archive/DataPrep.html" class="sidebar-item-text sidebar-link">Data Prep</a>
+  <a href="../../content/Data Archive/DataPrep.html" class="sidebar-item-text sidebar-link">Data Prep</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Data Archive/QAQC.html" class="sidebar-item-text sidebar-link">Data Quality Check</a>
+  <a href="../../content/Data Archive/QAQC.html" class="sidebar-item-text sidebar-link">Data Quality Check</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Data Archive/DataUpload.html" class="sidebar-item-text sidebar-link">Data Upload</a>
+  <a href="../../content/Data Archive/DataUpload.html" class="sidebar-item-text sidebar-link">Data Upload</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -132,17 +131,17 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Data Archive/TethysDeployments.html" class="sidebar-item-text sidebar-link">Tethys Deployments</a>
+  <a href="../../content/Data Archive/TethysDeployments.html" class="sidebar-item-text sidebar-link">Tethys Deployments</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Data Archive/TethysDetections.html" class="sidebar-item-text sidebar-link">Tethys Detections</a>
+  <a href="../../content/Data Archive/TethysDetections.html" class="sidebar-item-text sidebar-link">Tethys Detections</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Data Archive/OBIS.html" class="sidebar-item-text sidebar-link">OBIS</a>
+  <a href="../../content/Data Archive/OBIS.html" class="sidebar-item-text sidebar-link">OBIS</a>
   </div>
 </li>
       </ul>
@@ -157,17 +156,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/DataPrep.html" class="sidebar-item-text sidebar-link">Data Prep</a>
+  <a href="../../content/Baleen Whales/DataPrep.html" class="sidebar-item-text sidebar-link">Data Prep</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/FinWhales20Hz-Detection.html" class="sidebar-item-text sidebar-link">Fin Whales (20 Hz) - Detection</a>
+  <a href="../../content/Baleen Whales/FinWhales20Hz-Detection.html" class="sidebar-item-text sidebar-link">Fin Whales (20 Hz) - Detection</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/FinWhales20Hz-BANTER.html" class="sidebar-item-text sidebar-link">Fin Whales (20 Hz) - BANTER</a>
+  <a href="../../content/Baleen Whales/FinWhales20Hz-BANTER.html" class="sidebar-item-text sidebar-link">Fin Whales (20 Hz) - BANTER</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -175,37 +174,37 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/BlueWhales-GPL.html" class="sidebar-item-text sidebar-link">Blue Whales - GPL Detection</a>
+  <a href="../../content/Baleen Whales/BlueWhales-GPL.html" class="sidebar-item-text sidebar-link">Blue Whales - GPL Detection</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/BlueWhales-BANTER.html" class="sidebar-item-text sidebar-link">Blue Whales - BANTER</a>
+  <a href="../../content/Baleen Whales/BlueWhales-BANTER.html" class="sidebar-item-text sidebar-link">Blue Whales - BANTER</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/MinkeWhales-Detection.html" class="sidebar-item-text sidebar-link">Minke Whales - Detection</a>
+  <a href="../../content/Baleen Whales/MinkeWhales-Detection.html" class="sidebar-item-text sidebar-link">Minke Whales - Detection</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/MinkeWhales-Detection.html" class="sidebar-item-text sidebar-link">Minke Whales - Detection</a>
+  <a href="../../content/Baleen Whales/MinkeWhales-Detection.html" class="sidebar-item-text sidebar-link">Minke Whales - Detection</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html" class="sidebar-item-text sidebar-link">Gray &amp; Humpback Whales - Detection</a>
+  <a href="../../content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html" class="sidebar-item-text sidebar-link">Gray &amp; Humpback Whales - Detection</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/Gray_and_HumpbackWhales-BANTER.html" class="sidebar-item-text sidebar-link">Gray &amp; Humpback Whales - BANTER</a>
+  <a href="../../content/Baleen Whales/Gray_and_HumpbackWhales-BANTER.html" class="sidebar-item-text sidebar-link">Gray &amp; Humpback Whales - BANTER</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Baleen Whales/Brydes_and_FinWhales40Hz-Detection.html" class="sidebar-item-text sidebar-link">Brydes &amp; Fin Whales (40 Hz) - Detection</a>
+  <a href="../../content/Baleen Whales/Brydes_and_FinWhales40Hz-Detection.html" class="sidebar-item-text sidebar-link">Brydes &amp; Fin Whales (40 Hz) - Detection</a>
   </div>
 </li>
       </ul>
@@ -220,17 +219,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Toothed Whales/BeakedWhales-Detection.html" class="sidebar-item-text sidebar-link">Beaked Whales - Detection</a>
+  <a href="../../content/Toothed Whales/BeakedWhales-Detection.html" class="sidebar-item-text sidebar-link">Beaked Whales - Detection</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html" class="sidebar-item-text sidebar-link">Dolphins &amp; Sperm Whales - Detection</a>
+  <a href="../../content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html" class="sidebar-item-text sidebar-link">Dolphins &amp; Sperm Whales - Detection</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Toothed Whales/NBHF-Detection.html" class="sidebar-item-text sidebar-link">NBHF - Detection</a>
+  <a href="../../content/Toothed Whales/NBHF-Detection.html" class="sidebar-item-text sidebar-link">NBHF - Detection</a>
   </div>
 </li>
       </ul>
@@ -245,12 +244,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Soundscapes/Metrics.html" class="sidebar-item-text sidebar-link">Triton Metrics</a>
+  <a href="../../content/Soundscapes/Metrics.html" class="sidebar-item-text sidebar-link">Triton Metrics</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link">Summary &amp; Visualization</a>
+  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link">Summary &amp; Visualization</a>
   </div>
 </li>
       </ul>
@@ -264,17 +263,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#github-set-up" id="toc-github-set-up" class="nav-link active" data-scroll-target="#github-set-up">GitHub Set-up</a></li>
+  <li><a href="#edit-and-add-your-pages" id="toc-edit-and-add-your-pages" class="nav-link active" data-scroll-target="#edit-and-add-your-pages">Edit and add your pages</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/index.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Baleen Whales/SeiWhales.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Baleen Whales/SeiWhales.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">NOAA quarto simple with R</h1>
-<p class="subtitle lead">A simple Quarto webpage with a book layout</p>
+<h1 class="title d-none d-lg-block">Sei Whales</h1>
 </div>
 
 
@@ -288,16 +286,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is a template for a simple Quarto website that looks like a “book”. This is a common format for documentation. It includes a GitHub Action that will build the website automatically when you make changes to the files. The NOAA palette and fonts has been added to <code>theme.scss</code>. The webpage will be on the <code>gh-pages</code> branch. Serving the website files from this branch is a common way to keep all the website files from cluttering your main branch.</p>
-<p>The GitHub Action installs R so you can have R code in your qmd or Rmd files. Note, you do not need to make changes to your Rmd files unless your need Quarto features like cross-references.</p>
-<section id="github-set-up" class="level2">
-<h2 class="anchored" data-anchor-id="github-set-up">GitHub Set-up</h2>
-<ul>
-<li><p>Click the green “use template” button to make a repository with this content. Make sure to make your repo public (since GitHub Pages doesn’t work on private repos unless you have a paid account) and check box to include all the branches (so that you get the gh-pages branch). <img width="637" alt="image" src="https://user-images.githubusercontent.com/2545978/197051535-c43c62de-17e8-40bf-a536-3eea8db250c4.png"></p></li>
-<li><p>Turn on GitHub Pages under Settings &gt; Pages . You will set pages to be made from the gh-pages branch and root directory. <img width="540" alt="image" src="https://user-images.githubusercontent.com/2545978/196808262-3d2262be-b9b5-4897-bba5-fc2f056dd335.png"></p></li>
-<li><p>Turn on GitHub Actions under Settings &gt; Actions &gt; General <img width="719" alt="image" src="https://user-images.githubusercontent.com/2545978/196808404-0c075fcf-db03-4516-88dd-3143b9fca475.png"></p></li>
-<li><p>Edit the repo description and Readme to add a link to the webpage. When you edit the description, you will see the link url in the url box or you can click on the Actions tab or the Settings &gt; Pages page to find the url.</p></li>
-</ul>
+<section id="edit-and-add-your-pages" class="level2">
+<h2 class="anchored" data-anchor-id="edit-and-add-your-pages">Edit and add your pages</h2>
 
 
 </section>
@@ -514,15 +504,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./content/Data Archive/DataPrep.html" class="pagination-link">
-        <span class="nav-page-text">Data Prep</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
