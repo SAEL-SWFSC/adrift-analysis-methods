@@ -1,5 +1,5 @@
 ---
-title: Tethys Deployments
+title: Tethys - Deployments
 ---
 
 ## Edit and add your pages

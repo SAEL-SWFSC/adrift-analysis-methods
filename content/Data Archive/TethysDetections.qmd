@@ -1,5 +1,5 @@
 ---
-title: Tethys Detections
+title: Tethys - Detections
 ---
 
 ## Edit and add your pages

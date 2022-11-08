@@ -38,7 +38,7 @@ website:
           - content/Data Archive/DataPrep.qmd
           - content/Data Archive/QAQC.qmd
           - content/Data Archive/DataUpload.qmd
-          - content/Data Archive/Permits.Rmd
+          - content/Data Archive/Permits.qmd
           - content/Data Archive/TethysDeployments.qmd
           - content/Data Archive/TethysDetections.qmd
           - content/Data Archive/OBIS.qmd
