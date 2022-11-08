@@ -1,1 +1,1 @@
-Sitemap: https://sael-swfsc.github.io/adrift-field-methods/sitemap.xml
+Sitemap: https://sael-swfsc.github.io/adrift-analysis-methods/sitemap.xml
