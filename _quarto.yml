@@ -51,7 +51,7 @@ website:
           - content/Baleen Whales/BlueWhales-GPL.qmd
           - content/Baleen Whales/BlueWhales-BANTER.qmd
           - content/Baleen Whales/MinkeWhales-Detection.qmd
-          - content/Baleen Whales/MinkeWhales-Detection.qmd
+          - content/Baleen Whales/MinkeWhales-BANTER.qmd
           - content/Baleen Whales/Gray_and_HumpbackWhales-Detection.qmd
           - content/Baleen Whales/Gray_and_HumpbackWhales-BANTER.qmd
           - content/Baleen Whales/Brydes_and_FinWhales40Hz-Detection.qmd

@@ -1,5 +1,5 @@
 ---
-title: Dolphins & Sperm Whales - Detection
+title: Dolphins & Sperm Whales
 ---
 
 ## Methods Summary

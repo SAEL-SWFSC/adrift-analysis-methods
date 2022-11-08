@@ -1,5 +1,5 @@
 ---
-title: NBHF - Detection
+title: NBHF
 ---
 
 ## Methods Summary

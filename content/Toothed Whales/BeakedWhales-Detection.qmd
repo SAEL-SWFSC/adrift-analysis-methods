@@ -1,5 +1,5 @@
 ---
-title: Beaked Whales - Detection
+title: Beaked Whales
 ---
 
 ## Methods Summary
