@@ -33,21 +33,38 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - href: content/DataArchive-DataPrep.qmd
-        text: Data Archive - Data Preparation
-      - href: content/DataArchive-QAQC.qmd
-        text: Data Archive - Data Quality Check
-      - href: content/DataArchive-DataUpload.qmd
-        text: Data Archive - Data Upload
-      - href: content/DataArchive-Permits.Rmd
-        text: Data Archive - Permits
-      - href: content/DataArchive-TethysDeployments.qmd
-        text: Data Archive - Adding deployment metadata to Tethys
-      - href: content/DataArchive-TethysDetections.qmd
-        text: Data Archive - Adding detection metadata to Tethys
-      - href: content/DataArchive-OBIS.qmd
-        text: Data Archive - Adding metadata to OBIS
-        
+      - section: "Data Archive"
+        contents:
+          - content/Data Archive/DataPrep.qmd
+          - content/Data Archive/QAQC.qmd
+          - content/Data Archive/DataUpload.qmd
+          - content/Data Archive/Permits.Rmd
+          - content/Data Archive/TethysDeployments.qmd
+          - content/Data Archive/TethysDetections.qmd
+          - content/Data Archive/OBIS.qmd
+      - section: "Baleen Whales"
+        contents:
+          - content/Baleen Whales/DataPrep.qmd
+          - content/Baleen Whales/FinWhales20Hz-Detection.qmd
+          - content/Baleen Whales/FinWhales20Hz-BANTER.qmd
+          - content/Baleen Whales/BlueWhales-Manual Detection.qmd
+          - content/Baleen Whales/BlueWhales-GPL.qmd
+          - content/Baleen Whales/BlueWhales-BANTER.qmd
+          - content/Baleen Whales/MinkeWhales-Detection.qmd
+          - content/Baleen Whales/MinkeWhales-Detection.qmd
+          - content/Baleen Whales/Gray_and_HumpbackWhales-Detection.qmd
+          - content/Baleen Whales/Gray_and_HumpbackWhales-BANTER.qmd
+          - content/Baleen Whales/Brydes_and_FinWhales40Hz-Detection.qmd
+      - section: "Toothed Whales"
+        contents:
+          - content/Toothed Whales/BeakedWhales-Detection.qmd
+          - content/Toothed Whales/Dolphins_and_SpermWhales-Detection.qmd
+          - content/Toothed Whales/NBHF-Detection.qmd
+      - section: "Soundscapes"
+        contents:
+          - content/Soundscapes/Metrics.qmd
+          - content/Soundscapes/Summary_and_Visualization.qmd
+      
 format:
   html:
     theme:

@@ -1,0 +1,13 @@
+---
+title: Beaked Whales - Detection
+---
+
+## Methods Summary
+
+-   Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz
+
+-   Clicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. 
+
+-   Events and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer
+
+-   PAMpal is used to calculate features of click detections

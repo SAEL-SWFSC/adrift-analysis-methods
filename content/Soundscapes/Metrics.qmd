@@ -1,0 +1,17 @@
+---
+title: Triton Metrics
+---
+
+## Methods Summary
+
+-   Aligning methods to SanctSound protocols (<https://sanctsound.ioos.us/>) 
+
+-   Data is decimated to 48 kHz
+
+-   Triton vXXX software (<https://github.com/MarineBioAcousticsRC/Triton>) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.
+
+-   Third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.
+
+-   Vessels are acoustically detected automatically or manually
+
+## Step-by-Step Instructions

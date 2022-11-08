@@ -1,0 +1,15 @@
+---
+title: NBHF - Detection
+---
+
+## Methods Summary
+
+-   Pamguard v.2.02 is used to run click detector 
+
+-   Acoustic data is sampled with minimum sample rate 384 kHz
+
+-   Data is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) 
+
+-   Events are manually defined in Pamguard Viewer
+
+-   PAMpal is used to calculate features of click detections in each event
