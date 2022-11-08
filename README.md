@@ -1,4 +1,4 @@
-# ADRIFT in the California Current: Field Methods
+# ADRIFT in the California Current: Analysis Methods
 
 This project outlines the methods for data analysis related to passive acoustic buoys used in the ADRIFT in the California Current project. 
 
