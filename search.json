@@ -30,14 +30,14 @@
   {
     "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
     "href": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
-    "title": "Dolphins & Sperm Whales - Detection",
+    "title": "Dolphins & Sperm Whales",
     "section": "",
     "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
     "objectID": "content/Toothed Whales/BeakedWhales-Detection.html",
     "href": "content/Toothed Whales/BeakedWhales-Detection.html",
-    "title": "Beaked Whales - Detection",
+    "title": "Beaked Whales",
     "section": "",
     "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
   },
@@ -51,7 +51,7 @@
   {
     "objectID": "content/Toothed Whales/NBHF-Detection.html",
     "href": "content/Toothed Whales/NBHF-Detection.html",
-    "title": "NBHF - Detection",
+    "title": "NBHF",
     "section": "",
     "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
