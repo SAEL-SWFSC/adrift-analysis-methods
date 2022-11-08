@@ -3,9 +3,9 @@ project:
 
 website: 
   page-navigation: true
-  title: "NOAA quarto simple" 
-  site-url: "https://nmfs-opensci.github.io/NOAA-quarto-simple" 
-  repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-simple"
+  title: "ADRIFT analysis methods" 
+  site-url: "https://sael-swfsc.github.io/adrift-field-methods/" 
+  repo-url: "https://github.com/SAEL-SWFSC/adrift-analysis-methods"
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
   
@@ -33,19 +33,21 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - href: content/add-content.qmd
-        text: Add content
-      - href: content/customizing.qmd
-        text: Customizing
-      - href: content/rendering.qmd
-        text: Rendering
-      - href: content/rmarkdown.Rmd
-        text: R Markdown files
-      - href: content/code.qmd
-        text: Code in your files
-      - href: content/acknowledgements.qmd
-        text: Acknowledgements
-
+      - href: content/DataArchive-DataPrep.qmd
+        text: Data Archive - Data Preparation
+      - href: content/DataArchive-QAQC.qmd
+        text: Data Archive - Data Quality Check
+      - href: content/DataArchive-DataUpload.qmd
+        text: Data Archive - Data Upload
+      - href: content/DataArchive-Permits.Rmd
+        text: Data Archive - Permits
+      - href: content/DataArchive-TethysDeployments.qmd
+        text: Data Archive - Adding deployment metadata to Tethys
+      - href: content/DataArchive-TethysDetections.qmd
+        text: Data Archive - Adding detection metadata to Tethys
+      - href: content/DataArchive-OBIS.qmd
+        text: Data Archive - Adding metadata to OBIS
+        
 format:
   html:
     theme:
