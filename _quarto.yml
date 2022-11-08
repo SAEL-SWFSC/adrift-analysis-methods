@@ -3,8 +3,8 @@ project:
 
 website: 
   page-navigation: true
-  title: "ADRIFT analysis methods" 
-  site-url: "https://sael-swfsc.github.io/adrift-field-methods/" 
+  title: "ADRIFT Analysis Methods" 
+  site-url: "https://sael-swfsc.github.io/adrift-analysis-methods/" 
   repo-url: "https://github.com/SAEL-SWFSC/adrift-analysis-methods"
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
@@ -15,17 +15,17 @@ website:
   
   sidebar:
     background: "#D9E3E4"
-    logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/NOAA_logo.svg"
     favicon: images/favicon.ico
     pinned: true
     align: center
     tools: 
       - icon: globe
-        href: https://nmfs-opensci.github.io
-        text: "NMFS Open Science"
+        href: https://www.fisheries.noaa.gov/west-coast/science-data/southwest-acoustic-ecology-lab
+        text: "Southwest Acoustic Ecology Lab, SWFSC"
       - icon: github
-        href: https://github.com/nmfs-opensci
-        text: "NMFS OpenSci"
+        href: https://github.com/SAEL-SWFSC
+        text: "SAEL Github"
 
     style: "docked"
     search: true
