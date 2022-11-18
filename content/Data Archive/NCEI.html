@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ADRIFT Analysis Methods - Data Prep</title>
+<title>ADRIFT Analysis Methods - NCEI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../content/Data Archive/DataQualityCheck.html" rel="next">
-<link href="../../index.html" rel="prev">
+<link href="../../content/Data Archive/OBIS.html" rel="next">
+<link href="../../content/Data Archive/TethysDetections.html" rel="prev">
 <link href="../../images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Data Prep</h1>
+      <h1 class="quarto-secondary-nav-title">NCEI</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/DataPrep.html" class="sidebar-item-text sidebar-link active">Data Prep</a>
+  <a href="../../content/Data Archive/DataPrep.html" class="sidebar-item-text sidebar-link">Data Prep</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -135,12 +135,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Archive</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Archive</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../content/Data Archive/TethysDeployments.html" class="sidebar-item-text sidebar-link">Tethys - Deployments</a>
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/NCEI.html" class="sidebar-item-text sidebar-link">NCEI</a>
+  <a href="../../content/Data Archive/NCEI.html" class="sidebar-item-text sidebar-link active">NCEI</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -285,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Data Prep</h1>
+<h1 class="title d-none d-lg-block">NCEI</h1>
 </div>
 
 
@@ -301,25 +301,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <ul>
-<li><p>Complete data entries</p>
+<li><p>NCEI Passive Packer Metadata</p>
 <ul>
-<li><p>Check that all relevant columns in the Deployment Details spreadsheet are completed</p></li>
-<li><p>Reach out to deployment/retrieval team for additional deployment details if needed</p></li>
+<li>*Need to export from Tethys OR create a script to export to Passive Packer??? Taiki?</li>
 </ul></li>
-<li><p>Extract SUD files using Soundtrap Host software</p></li>
-<li><p>Generate full bandwidth LTSA</p>
+<li><p>Archive to NCEI</p>
 <ul>
-<li><p>On Triton&nbsp;</p></li>
-<li><p>5s 200Hz resolution</p></li>
-</ul></li>
-<li><p>Identify recording data start/end</p>
-<ul>
-<li>Using LTSA, truncate data (delete recordings outside of that time)</li>
-</ul></li>
-<li><p>Update deployment details&nbsp;</p>
-<ul>
-<li><p>Input recording start/end times and data quality</p></li>
-<li><p>Update Anne</p></li>
+<li>Archive data and metadata to NCEI</li>
 </ul></li>
 </ul>
 
@@ -576,13 +564,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
+      <a href="../../content/Data Archive/TethysDetections.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tethys - Detections</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../content/Data Archive/DataQualityCheck.html" class="pagination-link">
-        <span class="nav-page-text">Data Quality Check</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../content/Data Archive/OBIS.html" class="pagination-link">
+        <span class="nav-page-text">OBIS</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
