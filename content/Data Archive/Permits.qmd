@@ -2,4 +2,10 @@
 title: Permits
 ---
 
-## Edit and add your pages
+-   NOAA PRD Permit
+
+    -   \*Need to create a script to get info needed for permit and save this to Tethys
+
+-   NOAA Sanctuary Permit
+
+    -   \*Need to create a script to get info needed for permit and save this to Tethys

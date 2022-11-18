@@ -2,4 +2,24 @@
 title: Data Upload
 ---
 
-## Edit and add your pages
+-   Upload extracted SUD files to The Don
+
+-   Upload Depth Data to The Don
+
+-   Upload GPS Data to The Don
+
+    -   <https://drive.google.com/drive/folders/1AnL8LXi9deg5gQpCICp3rnn5YfTb6iSz> 
+
+-   Upload Photos to metadata media folder (on The Don)
+
+-   Upload Videos to metadata media folder (on The Don)
+
+-   Upload Sightings Forms to metadata media folder (on The Don)
+
+-   Upload any additional metadata to metadata folder (on The Don)
+
+    -   Including QAQC results
+
+-   Upload Cruise Photos to Photo Library
+
+    -   [Submit any high quality photos/videos to Photo & Video Library](https://drive.google.com/drive/folders/1s3oXdWLnbofaL1_IwhBoHBVDTBZx1qtB?usp=sharing)

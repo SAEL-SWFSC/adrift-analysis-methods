@@ -2,20 +2,26 @@
 title: Data Prep
 ---
 
-## Edit and add your pages
+-   Complete data entries
 
-Edit the qmd or md files in the `content` folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).
+    -   Check that all relevant columns in the Deployment Details spreadsheet are completed
 
-Each page should start with 
-```
----
-title: your title
----
-```
-and the first header will be the 2nd level, so `## `. Note, there are situations where you leave off
-```
----
-title: your title
----
-```
+    -   Reach out to deployment/retrieval team for additional deployment details if needed
 
+-   Extract SUD files using Soundtrap Host software
+
+-   Generate full bandwidth LTSA
+
+    -   On Triton 
+
+    -   5s 200Hz resolution
+
+-   Identify recording data start/end
+
+    -   Using LTSA, truncate data (delete recordings outside of that time)
+
+-   Update deployment details 
+
+    -   Input recording start/end times and data quality
+
+    -   Update Anne
