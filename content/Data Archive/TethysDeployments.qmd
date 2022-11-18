@@ -2,5 +2,24 @@
 title: Tethys - Deployments
 ---
 
-## Edit and add your pages
+-   Create deployment worksheet
 
+    -   Combine deployment details with GPS data in Tethys format
+
+    -   TethysSAEL repository on Anne's github (requires inputs from deployment details worksheet and GPS csv files)
+
+        -   <https://github.com/asimonis/TethysSAEL/blob/main/R/Create_Deployment_Worksheet.R>
+
+-   Deployment details to Tethys
+
+    -   Upload finalized deployment details to Tethys using appropriate sourcemap
+
+        -   Mobile and moored deployment sourcemaps in TethysSAEL repository on Anne's github: <https://github.com/asimonis/TethysSAEL/tree/main/Source%20Maps> 
+
+    -   Work with Anne for this 
+
+-   PAMpal/Tethys Metadata
+
+    -   Talk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. 
+
+    -   Additional comments on workflow spreadsheet

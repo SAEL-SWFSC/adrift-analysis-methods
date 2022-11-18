@@ -2,5 +2,12 @@
 title: Tethys - Detections
 ---
 
-## Edit and add your pages
+Create Detection worksheet for Tethys
 
+-   <https://github.com/asimonis/TethysSAEL/blob/main/R/Create_Detection_Worksheet.R>  
+
+Upload detections to Tethys
+
+-   [SWFSC.Detections.Analyst.v1 sourcemap](https://github.com/asimonis/TethysSAEL/blob/main/Source%20Maps/SWFSC.Detections.Analyst.v1.xml)
+
+-   [NOAA.NMFS.v4 species abbreviation](https://github.com/asimonis/TethysSAEL/blob/main/Species%20Abbreviations/NOAA.NMFS.v4.xml)
