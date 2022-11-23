@@ -2,24 +2,19 @@
 title: Data Upload
 ---
 
--   Upload extracted SUD files to The Don
+## Don Metadata Upload
 
--   Upload Depth Data to The Don
+All of the following files will be uploaded to the shared network drive, The Don
 
--   Upload GPS Data to The Don
-
-    -   <https://drive.google.com/drive/folders/1AnL8LXi9deg5gQpCICp3rnn5YfTb6iSz> 
-
--   Upload Photos to metadata media folder (on The Don)
-
--   Upload Videos to metadata media folder (on The Don)
-
--   Upload Sightings Forms to metadata media folder (on The Don)
-
--   Upload any additional metadata to metadata folder (on The Don)
-
+-   Upload extracted SUD files (sud, log, wav, and accelerometer)
+-   Upload Depth Data to the metadata folder
+-   Upload GPS Data from the [Driftwatch gps_csv folder](https://drive.google.com/drive/folders/1xiayEHbx30tFumMagMHJ1uhfmOishMn2) to the metadata folder
+-   Upload Photos to metadata media folder
+-   Upload Videos to metadata media folder
+-   Upload Sightings Forms to metadata media folder
+-   Upload any additional metadata to metadata folder
     -   Including QAQC results
 
--   Upload Cruise Photos to Photo Library
+## High Quality Photos and Videos
 
-    -   [Submit any high quality photos/videos to Photo & Video Library](https://drive.google.com/drive/folders/1s3oXdWLnbofaL1_IwhBoHBVDTBZx1qtB?usp=sharing)
+-   Submit any high quality photos/videos to [Photo & Video Library](https://drive.google.com/drive/folders/1s3oXdWLnbofaL1_IwhBoHBVDTBZx1qtB?usp=sharing)

@@ -2,36 +2,34 @@
 title: Data Quality Check
 ---
 
--   Data Quality Check
+## Deployment Details Quality Check
 
-    -   Quality check for errors in the Deployment Details spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)
+-   Scan for any errors or mistakes in the [Deployment Details](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing) spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)
+-   Reach out to deployment/retrieval team for corrections if needed
 
--   Check recording UTC vs local time
+## Check Recording Time: UTC vs Local Time
 
-    -   Check Soundtrap Recording time (UTC vs Local Time), fix if needed
+-   Check log files from extraced SUD files for Soundtrap Recording time (UTC vs Local Time), fix if needed
+-   Check Taiki's script
+-   Rename if on local time
 
-    -   Check Taiki\'s script
+## Assess Data Quality 
 
-    -   Rename if on local time
+-   Scan the LTSA and define overall deployment as good, compromised, or unusable
+-   Record Data Quality in [Deployment Details](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing) spreadsheet
 
--   Assess data quality (deployment details)
+## Run data check on GPS data
 
-    -   Scan LTSA and define overall deployment as good, compromised, or unusable
+-   Review [drift tracks created by Driftwatch](https://drive.google.com/file/d/1Ca2MKzXSDYh-o71WvVr2EoC9zs7w3gbo/view?usp=share_link)
+-   Look at the image that is associated with the drift number and ensure all points are from the drift (no points from when the array was on the boat or land)
 
--   Run data check on GPS data
+## Run recording QAQC 
 
-    -   Part of Driftwatch
+-   soundtrapQAQC function in PAMmisc
+-   Matlab QAQC script
+-   Make an rmd that runs this 
 
-    -   Look at the image that is associated with the drift, make sure it is actually a drifting buoy for the time
+## Scan LTSA for noisy data
 
--   Run recording QAQC 
-
-    -   soundtrapQAQC function in PAMmisc
-
-    -   Matlab QAQC script
-
-    -   Make an rmd that runs this 
-
--   Scan LTSA for noisy data
-
-    -   Split between Anne and Cory, elaborate that we only need to look at compromised data
+-   If drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data
+-   Split between Anne and Cory

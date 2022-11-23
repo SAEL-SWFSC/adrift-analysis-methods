@@ -2,26 +2,40 @@
 title: Data Prep
 ---
 
--   Complete data entries
+## Complete data entries
 
-    -   Check that all relevant columns in the Deployment Details spreadsheet are completed
+-   Check that all columns in the [Deployment Details](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing) spreadsheet are completed
+-   Reach out to deployment/retrieval team for additional deployment details if needed
 
-    -   Reach out to deployment/retrieval team for additional deployment details if needed
+## SUD File Extraction
 
--   Extract SUD files using Soundtrap Host software
+Extract SUD files using the [Soundtrap Host Software](https://www.oceaninstruments.co.nz/downloads/)
 
--   Generate full bandwidth LTSA
+-   Open the Soundtrap Host Software and navigate to Tools \> Set Default File Save Location
+-   Browse to the folder where the SUD files are saved and select it
+-   Navigate again to Tools \> File Extraction
+-   Click Select File, navigate to the SUD file folder, select all, and click open
+-   SUD file extraction will begin, take note of the number of files and ensure this is equal to the number of extracted files once the process is completed
 
-    -   On Triton 
+## Generate Full Bandwidth LTSA
 
-    -   5s 200Hz resolution
+Using [Triton on Matlab](https://www.cetus.ucsd.edu/technologies_triton.html), generate a full bandwidth LTSA with the wav files from the SUD files previously extracted
 
--   Identify recording data start/end
+-   Open Matlab and type Triton into the command window
+-   Three Triton windows will open, using the Control window, navigate to Tools \> Make LTSA from Directory of Files
+-   Select File Type pop up will open, select 1 for wav files (enter 2 or 3 if working with other sound file type)
+-   Using the file explorer pop up, navigate to folder where wav files are stored and click Select Folder
+-   The Set Long-Term Spectrogram Parameters window will open, set the Time Average Length to 5 seconds and the Frequency Bin Size to 200 Hz, press enter
+-   The Choose Channel to LTSA window will open, select 1 and press OK
+-   The Save LTSA File window will open, navigate to desired folder, name the output file using this format: ADRIFT\_###\_5s_200Hz.ltsa, and press save
+-   The LTSA will begin to process and will automatically open in the plot window once completed
 
-    -   Using LTSA, truncate data (delete recordings outside of that time)
+## Identify Recording Data Start and Data End
 
--   Update deployment details 
+-   Using the LTSA, identify when the data starts in the recordings (usually determined by when there is no ship noise from the deployment present in LTSA)
+-   Identify when the data ends in the LTSA (right before retrieval ship noise is present)
+-   Truncate the data by deleting the recordings outside of that time range
 
-    -   Input recording start/end times and data quality
+## Update deployment details 
 
-    -   Update Anne
+-   Input Data Start and Data End times into the [Deployment Details](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing) spreadsheet using the Data Start/End times determined above
