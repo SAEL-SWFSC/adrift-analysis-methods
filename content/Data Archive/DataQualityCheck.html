@@ -278,7 +278,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#deployment-details-quality-check" id="toc-deployment-details-quality-check" class="nav-link active" data-scroll-target="#deployment-details-quality-check">Deployment Details Quality Check</a></li>
+  <li><a href="#check-recording-time-utc-vs-local-time" id="toc-check-recording-time-utc-vs-local-time" class="nav-link" data-scroll-target="#check-recording-time-utc-vs-local-time">Check Recording Time: UTC vs Local Time</a></li>
+  <li><a href="#assess-data-quality" id="toc-assess-data-quality" class="nav-link" data-scroll-target="#assess-data-quality">Assess Data Quality</a></li>
+  <li><a href="#run-data-check-on-gps-data" id="toc-run-data-check-on-gps-data" class="nav-link" data-scroll-target="#run-data-check-on-gps-data">Run data check on GPS data</a></li>
+  <li><a href="#run-recording-qaqc" id="toc-run-recording-qaqc" class="nav-link" data-scroll-target="#run-recording-qaqc">Run recording QAQC&nbsp;</a></li>
+  <li><a href="#scan-ltsa-for-noisy-data" id="toc-scan-ltsa-for-noisy-data" class="nav-link" data-scroll-target="#scan-ltsa-for-noisy-data">Scan LTSA for noisy data</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Data Archive/DataQualityCheck.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Data Archive/DataQualityCheck.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -300,39 +311,52 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="deployment-details-quality-check" class="level2">
+<h2 class="anchored" data-anchor-id="deployment-details-quality-check">Deployment Details Quality Check</h2>
 <ul>
-<li><p>Data Quality Check</p>
+<li>Scan for any errors or mistakes in the <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing">Deployment Details</a> spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)</li>
+<li>Reach out to deployment/retrieval team for corrections if needed</li>
+</ul>
+</section>
+<section id="check-recording-time-utc-vs-local-time" class="level2">
+<h2 class="anchored" data-anchor-id="check-recording-time-utc-vs-local-time">Check Recording Time: UTC vs Local Time</h2>
 <ul>
-<li>Quality check for errors in the Deployment Details spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)</li>
-</ul></li>
-<li><p>Check recording UTC vs local time</p>
+<li>Check log files from extraced SUD files for Soundtrap Recording time (UTC vs Local Time), fix if needed</li>
+<li>Check Taiki’s script</li>
+<li>Rename if on local time</li>
+</ul>
+</section>
+<section id="assess-data-quality" class="level2">
+<h2 class="anchored" data-anchor-id="assess-data-quality">Assess Data Quality</h2>
 <ul>
-<li><p>Check Soundtrap Recording time (UTC vs Local Time), fix if needed</p></li>
-<li><p>Check Taiki's script</p></li>
-<li><p>Rename if on local time</p></li>
-</ul></li>
-<li><p>Assess data quality (deployment details)</p>
+<li>Scan the LTSA and define overall deployment as good, compromised, or unusable</li>
+<li>Record Data Quality in <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing">Deployment Details</a> spreadsheet</li>
+</ul>
+</section>
+<section id="run-data-check-on-gps-data" class="level2">
+<h2 class="anchored" data-anchor-id="run-data-check-on-gps-data">Run data check on GPS data</h2>
 <ul>
-<li>Scan LTSA and define overall deployment as good, compromised, or unusable</li>
-</ul></li>
-<li><p>Run data check on GPS data</p>
+<li>Review <a href="https://drive.google.com/file/d/1Ca2MKzXSDYh-o71WvVr2EoC9zs7w3gbo/view?usp=share_link">drift tracks created by Driftwatch</a></li>
+<li>Look at the image that is associated with the drift number and ensure all points are from the drift (no points from when the array was on the boat or land)</li>
+</ul>
+</section>
+<section id="run-recording-qaqc" class="level2">
+<h2 class="anchored" data-anchor-id="run-recording-qaqc">Run recording QAQC&nbsp;</h2>
 <ul>
-<li><p>Part of Driftwatch</p></li>
-<li><p>Look at the image that is associated with the drift, make sure it is actually a drifting buoy for the time</p></li>
-</ul></li>
-<li><p>Run recording QAQC&nbsp;</p>
+<li>soundtrapQAQC function in PAMmisc</li>
+<li>Matlab QAQC script</li>
+<li>Make an rmd that runs this&nbsp;</li>
+</ul>
+</section>
+<section id="scan-ltsa-for-noisy-data" class="level2">
+<h2 class="anchored" data-anchor-id="scan-ltsa-for-noisy-data">Scan LTSA for noisy data</h2>
 <ul>
-<li><p>soundtrapQAQC function in PAMmisc</p></li>
-<li><p>Matlab QAQC script</p></li>
-<li><p>Make an rmd that runs this&nbsp;</p></li>
-</ul></li>
-<li><p>Scan LTSA for noisy data</p>
-<ul>
-<li>Split between Anne and Cory, elaborate that we only need to look at compromised data</li>
-</ul></li>
+<li>If drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data</li>
+<li>Split between Anne and Cory</li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

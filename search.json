@@ -32,21 +32,91 @@
     "href": "content/Data Archive/DataQualityCheck.html",
     "title": "Data Quality Check",
     "section": "",
-    "text": "Data Quality Check\n\nQuality check for errors in the Deployment Details spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)\n\nCheck recording UTC vs local time\n\nCheck Soundtrap Recording time (UTC vs Local Time), fix if needed\nCheck Taiki's script\nRename if on local time\n\nAssess data quality (deployment details)\n\nScan LTSA and define overall deployment as good, compromised, or unusable\n\nRun data check on GPS data\n\nPart of Driftwatch\nLook at the image that is associated with the drift, make sure it is actually a drifting buoy for the time\n\nRun recording QAQC \n\nsoundtrapQAQC function in PAMmisc\nMatlab QAQC script\nMake an rmd that runs this \n\nScan LTSA for noisy data\n\nSplit between Anne and Cory, elaborate that we only need to look at compromised data"
+    "text": "Scan for any errors or mistakes in the Deployment Details spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)\nReach out to deployment/retrieval team for corrections if needed"
+  },
+  {
+    "objectID": "content/Data Archive/DataQualityCheck.html#check-recording-time-utc-vs-local-time",
+    "href": "content/Data Archive/DataQualityCheck.html#check-recording-time-utc-vs-local-time",
+    "title": "Data Quality Check",
+    "section": "Check Recording Time: UTC vs Local Time",
+    "text": "Check Recording Time: UTC vs Local Time\n\nCheck log files from extraced SUD files for Soundtrap Recording time (UTC vs Local Time), fix if needed\nCheck Taiki’s script\nRename if on local time"
+  },
+  {
+    "objectID": "content/Data Archive/DataQualityCheck.html#assess-data-quality",
+    "href": "content/Data Archive/DataQualityCheck.html#assess-data-quality",
+    "title": "Data Quality Check",
+    "section": "Assess Data Quality",
+    "text": "Assess Data Quality\n\nScan the LTSA and define overall deployment as good, compromised, or unusable\nRecord Data Quality in Deployment Details spreadsheet"
+  },
+  {
+    "objectID": "content/Data Archive/DataQualityCheck.html#run-data-check-on-gps-data",
+    "href": "content/Data Archive/DataQualityCheck.html#run-data-check-on-gps-data",
+    "title": "Data Quality Check",
+    "section": "Run data check on GPS data",
+    "text": "Run data check on GPS data\n\nReview drift tracks created by Driftwatch\nLook at the image that is associated with the drift number and ensure all points are from the drift (no points from when the array was on the boat or land)"
+  },
+  {
+    "objectID": "content/Data Archive/DataQualityCheck.html#run-recording-qaqc",
+    "href": "content/Data Archive/DataQualityCheck.html#run-recording-qaqc",
+    "title": "Data Quality Check",
+    "section": "Run recording QAQC ",
+    "text": "Run recording QAQC \n\nsoundtrapQAQC function in PAMmisc\nMatlab QAQC script\nMake an rmd that runs this"
+  },
+  {
+    "objectID": "content/Data Archive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
+    "href": "content/Data Archive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
+    "title": "Data Quality Check",
+    "section": "Scan LTSA for noisy data",
+    "text": "Scan LTSA for noisy data\n\nIf drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data\nSplit between Anne and Cory"
   },
   {
     "objectID": "content/Data Archive/DataUpload.html",
     "href": "content/Data Archive/DataUpload.html",
     "title": "Data Upload",
     "section": "",
-    "text": "Upload extracted SUD files to The Don\nUpload Depth Data to The Don\nUpload GPS Data to The Don\n\nhttps://drive.google.com/drive/folders/1AnL8LXi9deg5gQpCICp3rnn5YfTb6iSz \n\nUpload Photos to metadata media folder (on The Don)\nUpload Videos to metadata media folder (on The Don)\nUpload Sightings Forms to metadata media folder (on The Don)\nUpload any additional metadata to metadata folder (on The Don)\n\nIncluding QAQC results\n\nUpload Cruise Photos to Photo Library\n\nSubmit any high quality photos/videos to Photo & Video Library"
+    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
+  },
+  {
+    "objectID": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
+    "href": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
+    "title": "Data Upload",
+    "section": "High Quality Photos and Videos",
+    "text": "High Quality Photos and Videos\n\nSubmit any high quality photos/videos to Photo & Video Library"
   },
   {
     "objectID": "content/Data Archive/DataPrep.html",
     "href": "content/Data Archive/DataPrep.html",
     "title": "Data Prep",
     "section": "",
-    "text": "Complete data entries\n\nCheck that all relevant columns in the Deployment Details spreadsheet are completed\nReach out to deployment/retrieval team for additional deployment details if needed\n\nExtract SUD files using Soundtrap Host software\nGenerate full bandwidth LTSA\n\nOn Triton \n5s 200Hz resolution\n\nIdentify recording data start/end\n\nUsing LTSA, truncate data (delete recordings outside of that time)\n\nUpdate deployment details \n\nInput recording start/end times and data quality\nUpdate Anne"
+    "text": "Check that all columns in the Deployment Details spreadsheet are completed\nReach out to deployment/retrieval team for additional deployment details if needed"
+  },
+  {
+    "objectID": "content/Data Archive/DataPrep.html#sud-file-extraction",
+    "href": "content/Data Archive/DataPrep.html#sud-file-extraction",
+    "title": "Data Prep",
+    "section": "SUD File Extraction",
+    "text": "SUD File Extraction\nExtract SUD files using the Soundtrap Host Software\n\nOpen the Soundtrap Host Software and navigate to Tools > Set Default File Save Location\nBrowse to the folder where the SUD files are saved and select it\nNavigate again to Tools > File Extraction\nClick Select File, navigate to the SUD file folder, select all, and click open\nSUD file extraction will begin, take note of the number of files and ensure this is equal to the number of extracted files once the process is completed"
+  },
+  {
+    "objectID": "content/Data Archive/DataPrep.html#generate-full-bandwidth-ltsa",
+    "href": "content/Data Archive/DataPrep.html#generate-full-bandwidth-ltsa",
+    "title": "Data Prep",
+    "section": "Generate Full Bandwidth LTSA",
+    "text": "Generate Full Bandwidth LTSA\nUsing Triton on Matlab, generate a full bandwidth LTSA with the wav files from the SUD files previously extracted\n\nOpen Matlab and type Triton into the command window\nThree Triton windows will open, using the Control window, navigate to Tools > Make LTSA from Directory of Files\nSelect File Type pop up will open, select 1 for wav files (enter 2 or 3 if working with other sound file type)\nUsing the file explorer pop up, navigate to folder where wav files are stored and click Select Folder\nThe Set Long-Term Spectrogram Parameters window will open, set the Time Average Length to 5 seconds and the Frequency Bin Size to 200 Hz, press enter\nThe Choose Channel to LTSA window will open, select 1 and press OK\nThe Save LTSA File window will open, navigate to desired folder, name the output file using this format: ADRIFT_###_5s_200Hz.ltsa, and press save\nThe LTSA will begin to process and will automatically open in the plot window once completed"
+  },
+  {
+    "objectID": "content/Data Archive/DataPrep.html#identify-recording-data-start-and-data-end",
+    "href": "content/Data Archive/DataPrep.html#identify-recording-data-start-and-data-end",
+    "title": "Data Prep",
+    "section": "Identify Recording Data Start and Data End",
+    "text": "Identify Recording Data Start and Data End\n\nUsing the LTSA, identify when the data starts in the recordings (usually determined by when there is no ship noise from the deployment present in LTSA)\nIdentify when the data ends in the LTSA (right before retrieval ship noise is present)\nTruncate the data by deleting the recordings outside of that time range"
+  },
+  {
+    "objectID": "content/Data Archive/DataPrep.html#update-deployment-details",
+    "href": "content/Data Archive/DataPrep.html#update-deployment-details",
+    "title": "Data Prep",
+    "section": "Update deployment details ",
+    "text": "Update deployment details \n\nInput Data Start and Data End times into the Deployment Details spreadsheet using the Data Start/End times determined above"
   },
   {
     "objectID": "content/Data Archive/NCEI.html",

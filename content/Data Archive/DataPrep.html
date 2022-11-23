@@ -278,7 +278,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#complete-data-entries" id="toc-complete-data-entries" class="nav-link active" data-scroll-target="#complete-data-entries">Complete data entries</a></li>
+  <li><a href="#sud-file-extraction" id="toc-sud-file-extraction" class="nav-link" data-scroll-target="#sud-file-extraction">SUD File Extraction</a></li>
+  <li><a href="#generate-full-bandwidth-ltsa" id="toc-generate-full-bandwidth-ltsa" class="nav-link" data-scroll-target="#generate-full-bandwidth-ltsa">Generate Full Bandwidth LTSA</a></li>
+  <li><a href="#identify-recording-data-start-and-data-end" id="toc-identify-recording-data-start-and-data-end" class="nav-link" data-scroll-target="#identify-recording-data-start-and-data-end">Identify Recording Data Start and Data End</a></li>
+  <li><a href="#update-deployment-details" id="toc-update-deployment-details" class="nav-link" data-scroll-target="#update-deployment-details">Update deployment details&nbsp;</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Data Archive/DataPrep.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Data Archive/DataPrep.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -300,30 +310,54 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="complete-data-entries" class="level2">
+<h2 class="anchored" data-anchor-id="complete-data-entries">Complete data entries</h2>
 <ul>
-<li><p>Complete data entries</p>
+<li>Check that all columns in the <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing">Deployment Details</a> spreadsheet are completed</li>
+<li>Reach out to deployment/retrieval team for additional deployment details if needed</li>
+</ul>
+</section>
+<section id="sud-file-extraction" class="level2">
+<h2 class="anchored" data-anchor-id="sud-file-extraction">SUD File Extraction</h2>
+<p>Extract SUD files using the <a href="https://www.oceaninstruments.co.nz/downloads/">Soundtrap Host Software</a></p>
 <ul>
-<li><p>Check that all relevant columns in the Deployment Details spreadsheet are completed</p></li>
-<li><p>Reach out to deployment/retrieval team for additional deployment details if needed</p></li>
-</ul></li>
-<li><p>Extract SUD files using Soundtrap Host software</p></li>
-<li><p>Generate full bandwidth LTSA</p>
+<li>Open the Soundtrap Host Software and navigate to Tools &gt; Set Default File Save Location</li>
+<li>Browse to the folder where the SUD files are saved and select it</li>
+<li>Navigate again to Tools &gt; File Extraction</li>
+<li>Click Select File, navigate to the SUD file folder, select all, and click open</li>
+<li>SUD file extraction will begin, take note of the number of files and ensure this is equal to the number of extracted files once the process is completed</li>
+</ul>
+</section>
+<section id="generate-full-bandwidth-ltsa" class="level2">
+<h2 class="anchored" data-anchor-id="generate-full-bandwidth-ltsa">Generate Full Bandwidth LTSA</h2>
+<p>Using <a href="https://www.cetus.ucsd.edu/technologies_triton.html">Triton on Matlab</a>, generate a full bandwidth LTSA with the wav files from the SUD files previously extracted</p>
 <ul>
-<li><p>On Triton&nbsp;</p></li>
-<li><p>5s 200Hz resolution</p></li>
-</ul></li>
-<li><p>Identify recording data start/end</p>
+<li>Open Matlab and type Triton into the command window</li>
+<li>Three Triton windows will open, using the Control window, navigate to Tools &gt; Make LTSA from Directory of Files</li>
+<li>Select File Type pop up will open, select 1 for wav files (enter 2 or 3 if working with other sound file type)</li>
+<li>Using the file explorer pop up, navigate to folder where wav files are stored and click Select Folder</li>
+<li>The Set Long-Term Spectrogram Parameters window will open, set the Time Average Length to 5 seconds and the Frequency Bin Size to 200 Hz, press enter</li>
+<li>The Choose Channel to LTSA window will open, select 1 and press OK</li>
+<li>The Save LTSA File window will open, navigate to desired folder, name the output file using this format: ADRIFT_###_5s_200Hz.ltsa, and press save</li>
+<li>The LTSA will begin to process and will automatically open in the plot window once completed</li>
+</ul>
+</section>
+<section id="identify-recording-data-start-and-data-end" class="level2">
+<h2 class="anchored" data-anchor-id="identify-recording-data-start-and-data-end">Identify Recording Data Start and Data End</h2>
 <ul>
-<li>Using LTSA, truncate data (delete recordings outside of that time)</li>
-</ul></li>
-<li><p>Update deployment details&nbsp;</p>
+<li>Using the LTSA, identify when the data starts in the recordings (usually determined by when there is no ship noise from the deployment present in LTSA)</li>
+<li>Identify when the data ends in the LTSA (right before retrieval ship noise is present)</li>
+<li>Truncate the data by deleting the recordings outside of that time range</li>
+</ul>
+</section>
+<section id="update-deployment-details" class="level2">
+<h2 class="anchored" data-anchor-id="update-deployment-details">Update deployment details&nbsp;</h2>
 <ul>
-<li><p>Input recording start/end times and data quality</p></li>
-<li><p>Update Anne</p></li>
-</ul></li>
+<li>Input Data Start and Data End times into the <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing">Deployment Details</a> spreadsheet using the Data Start/End times determined above</li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
