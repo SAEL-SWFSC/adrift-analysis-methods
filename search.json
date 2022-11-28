@@ -1,10 +1,38 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Adrift Analysis Methods",
+    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
+    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
+    "title": "Dolphins & Sperm Whales",
     "section": "",
-    "text": "This document provides information related to data analysis for ADRIFT in the California Current, which uses drifting acoustic recorders to monitor marine mammals and ocean soundscapes. These methods include tasks related to data preparation and archiving, detection and classification of baleen and toothed whales, and the characterization of ocean soundscapes."
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+  },
+  {
+    "objectID": "content/Toothed Whales/BeakedWhales-Detection.html",
+    "href": "content/Toothed Whales/BeakedWhales-Detection.html",
+    "title": "Beaked Whales",
+    "section": "",
+    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
+  },
+  {
+    "objectID": "content/Toothed Whales/NBHF-BANTER.html",
+    "href": "content/Toothed Whales/NBHF-BANTER.html",
+    "title": "NBHF - BANTER",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+  },
+  {
+    "objectID": "content/Toothed Whales/NBHF-Detection.html",
+    "href": "content/Toothed Whales/NBHF-Detection.html",
+    "title": "NBHF",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+  },
+  {
+    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html",
+    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html",
+    "title": "Dolphins & Sperm Whales - BANTER",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
     "objectID": "content/Data Archive/TethysDeployments.html",
@@ -14,18 +42,18 @@
     "text": "Create deployment worksheet\n\nCombine deployment details with GPS data in Tethys format\nTethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)\n\nhttps://github.com/asimonis/TethysSAEL/blob/main/R/Create_Deployment_Worksheet.R\n\n\nDeployment details to Tethys\n\nUpload finalized deployment details to Tethys using appropriate sourcemap\n\nMobile and moored deployment sourcemaps in TethysSAEL repository on Anne’s github: https://github.com/asimonis/TethysSAEL/tree/main/Source%20Maps \n\nWork with Anne for this \n\nPAMpal/Tethys Metadata\n\nTalk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. \nAdditional comments on workflow spreadsheet"
   },
   {
-    "objectID": "content/Data Archive/Permits.html",
-    "href": "content/Data Archive/Permits.html",
-    "title": "Permits",
+    "objectID": "content/Data Archive/DataUpload.html",
+    "href": "content/Data Archive/DataUpload.html",
+    "title": "Data Upload",
     "section": "",
-    "text": "NOAA PRD Permit\n\n*Need to create a script to get info needed for permit and save this to Tethys\n\nNOAA Sanctuary Permit\n\n*Need to create a script to get info needed for permit and save this to Tethys"
+    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
   },
   {
-    "objectID": "content/Data Archive/OBIS.html",
-    "href": "content/Data Archive/OBIS.html",
-    "title": "OBIS",
-    "section": "",
-    "text": "OBIS Archive Metadata\n\n*Need to check w/ Taiki about this"
+    "objectID": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
+    "href": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
+    "title": "Data Upload",
+    "section": "High Quality Photos and Videos",
+    "text": "High Quality Photos and Videos\n\nSubmit any high quality photos/videos to Photo & Video Library"
   },
   {
     "objectID": "content/Data Archive/DataQualityCheck.html",
@@ -70,18 +98,32 @@
     "text": "Scan LTSA for noisy data\n\nIf drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data\nSplit between Anne and Cory"
   },
   {
-    "objectID": "content/Data Archive/DataUpload.html",
-    "href": "content/Data Archive/DataUpload.html",
-    "title": "Data Upload",
+    "objectID": "content/Data Archive/NCEI.html",
+    "href": "content/Data Archive/NCEI.html",
+    "title": "NCEI",
     "section": "",
-    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
+    "text": "NCEI Passive Packer Metadata\n\n*Need to export from Tethys OR create a script to export to Passive Packer??? Taiki?\n\nArchive to NCEI\n\nArchive data and metadata to NCEI"
   },
   {
-    "objectID": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
-    "href": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
-    "title": "Data Upload",
-    "section": "High Quality Photos and Videos",
-    "text": "High Quality Photos and Videos\n\nSubmit any high quality photos/videos to Photo & Video Library"
+    "objectID": "content/Data Archive/Permits.html",
+    "href": "content/Data Archive/Permits.html",
+    "title": "Permits",
+    "section": "",
+    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit\n*Need to create a script to get info needed for permit and save this to Tethys"
+  },
+  {
+    "objectID": "content/Data Archive/Permits.html#noaa-sanctuary-permit",
+    "href": "content/Data Archive/Permits.html#noaa-sanctuary-permit",
+    "title": "Permits",
+    "section": "NOAA Sanctuary Permit",
+    "text": "NOAA Sanctuary Permit\n\nReview the SanctuarySummary spreadsheet from Driftwatch and check for Sanctuary overlap\nRecord which sanctuaries the drift passed through in the Sanctuary Permit column in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Sanctuary Permit\n*Need to create a script to get info needed for permit and save this to Tethys"
+  },
+  {
+    "objectID": "content/Data Archive/Permits.html#permit-spreadsheet",
+    "href": "content/Data Archive/Permits.html#permit-spreadsheet",
+    "title": "Permits",
+    "section": "Permit Spreadsheet",
+    "text": "Permit Spreadsheet\nRecord all permit related information in the Permit Spreadsheet"
   },
   {
     "objectID": "content/Data Archive/DataPrep.html",
@@ -119,11 +161,11 @@
     "text": "Update deployment details \n\nInput Data Start and Data End times into the Deployment Details spreadsheet using the Data Start/End times determined above"
   },
   {
-    "objectID": "content/Data Archive/NCEI.html",
-    "href": "content/Data Archive/NCEI.html",
-    "title": "NCEI",
+    "objectID": "content/Data Archive/OBIS.html",
+    "href": "content/Data Archive/OBIS.html",
+    "title": "OBIS",
     "section": "",
-    "text": "NCEI Passive Packer Metadata\n\n*Need to export from Tethys OR create a script to export to Passive Packer??? Taiki?\n\nArchive to NCEI\n\nArchive data and metadata to NCEI"
+    "text": "OBIS Archive Metadata\n\n*Need to check w/ Taiki about this"
   },
   {
     "objectID": "content/Data Archive/TethysDetections.html",
@@ -147,38 +189,10 @@
     "text": "Step-by-Step Instructions"
   },
   {
-    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
-    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
-    "title": "Dolphins & Sperm Whales",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Adrift Analysis Methods",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/BeakedWhales-Detection.html",
-    "href": "content/Toothed Whales/BeakedWhales-Detection.html",
-    "title": "Beaked Whales",
-    "section": "",
-    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
-  },
-  {
-    "objectID": "content/Toothed Whales/NBHF-BANTER.html",
-    "href": "content/Toothed Whales/NBHF-BANTER.html",
-    "title": "NBHF - BANTER",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/NBHF-Detection.html",
-    "href": "content/Toothed Whales/NBHF-Detection.html",
-    "title": "NBHF",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html",
-    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html",
-    "title": "Dolphins & Sperm Whales - BANTER",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+    "text": "This document provides information related to data analysis for ADRIFT in the California Current, which uses drifting acoustic recorders to monitor marine mammals and ocean soundscapes. These methods include tasks related to data preparation and archiving, detection and classification of baleen and toothed whales, and the characterization of ocean soundscapes."
   }
 ]
