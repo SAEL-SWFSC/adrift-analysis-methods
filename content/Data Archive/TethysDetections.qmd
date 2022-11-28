@@ -2,11 +2,11 @@
 title: Tethys - Detections
 ---
 
-Create Detection worksheet for Tethys
+## Tethys Detection Worksheet
 
 -   <https://github.com/asimonis/TethysSAEL/blob/main/R/Create_Detection_Worksheet.R>  
 
-Upload detections to Tethys
+## Upload Detections to Tethys
 
 -   [SWFSC.Detections.Analyst.v1 sourcemap](https://github.com/asimonis/TethysSAEL/blob/main/Source%20Maps/SWFSC.Detections.Analyst.v1.xml)
 

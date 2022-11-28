@@ -2,6 +2,6 @@
 title: OBIS
 ---
 
--   OBIS Archive Metadata
+## OBIS Archive Metadata
 
-    -   \*Need to check w/ Taiki about this
+-   \*Need to check w/ Taiki about this

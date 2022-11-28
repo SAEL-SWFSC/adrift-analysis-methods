@@ -2,10 +2,10 @@
 title: NCEI 
 ---
 
--   NCEI Passive Packer Metadata
+## NCEI Passive Packer Metadata
 
-    -   \*Need to export from Tethys OR create a script to export to Passive Packer??? Taiki?
+-   \*Need to export from Tethys OR create a script to export to Passive Packer??? Taiki?
 
--   Archive to NCEI
+## Archive to NCEI
 
-    -   Archive data and metadata to NCEI
+-   Archive data and metadata to NCEI
