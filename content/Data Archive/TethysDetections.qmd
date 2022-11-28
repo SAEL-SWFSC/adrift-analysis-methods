@@ -4,7 +4,7 @@ title: Tethys - Detections
 
 ## Tethys Detection Worksheet
 
--   <https://github.com/asimonis/TethysSAEL/blob/main/R/Create_Detection_Worksheet.R>  
+-   Follow guidelines on the [TethysSAEL repository](https://github.com/asimonis/TethysSAEL/blob/main/R/Create_Detection_Worksheet.R) on Anne's github (requires user define inputs)
 
 ## Upload Detections to Tethys
 

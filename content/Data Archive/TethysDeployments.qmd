@@ -6,7 +6,7 @@ title: Tethys - Deployments
 
 -   Combine deployment details with GPS data in Tethys format
 
--   [TethysSAEL repository](https://github.com/asimonis/TethysSAEL/blob/main/R/Create_Deployment_Worksheet.R) on Anne's github (requires inputs from deployment details worksheet and GPS csv files)
+-   Follow guidelines on the [TethysSAEL repository](https://github.com/asimonis/TethysSAEL/blob/main/R/Create_Deployment_Worksheet.R) on Anne's github (requires inputs from deployment details worksheet and GPS csv files)
 
 ## Deployment details to Tethys
 

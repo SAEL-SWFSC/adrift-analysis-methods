@@ -13,23 +13,22 @@ title: Data Quality Check
 -   Check Taiki's script
 -   Rename if on local time
 
-## Assess Data Quality 
+## Assess Data Quality
 
 -   Scan the LTSA and define overall deployment as good, compromised, or unusable
 -   Record Data Quality in [Deployment Details](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing) spreadsheet
 
-## Run data check on GPS data
+## Run Data Check on GPS Data
 
 -   Review [drift tracks created by Driftwatch](https://drive.google.com/file/d/1Ca2MKzXSDYh-o71WvVr2EoC9zs7w3gbo/view?usp=share_link)
 -   Look at the image that is associated with the drift number and ensure all points are from the drift (no points from when the array was on the boat or land)
 
-## Run recording QAQC 
+## Run Recording QAQC 
 
 -   soundtrapQAQC function in PAMmisc
 -   Matlab QAQC script
--   Make an rmd that runs this 
 
-## Scan LTSA for noisy data
+## Scan LTSA for Noisy Data
 
 -   If drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data
 -   Split between Anne and Cory

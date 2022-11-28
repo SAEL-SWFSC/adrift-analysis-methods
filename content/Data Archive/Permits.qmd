@@ -5,16 +5,14 @@ title: Permits
 ## NOAA Protected Resources Permit
 
 -   Review sightings/takes forms and record takes in the [Deployment Details](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing) spreadsheet
--   Additional guidelines and information can be found in [the Protected Resources Permit](Additional guidelines and information can be found in the permit)
--   \*Need to create a script to get info needed for permit and save this to Tethys
+-   Additional guidelines and information can be found in [the Protected Resources Permit](Additional%20guidelines%20and%20information%20can%20be%20found%20in%20the%20permit)
 
 ## NOAA Sanctuary Permit
 
 -   Review the [SanctuarySummary spreadsheet from Driftwatch](https://docs.google.com/spreadsheets/d/1PgwO3ewmHX0Z1d3q2BFrRz4fVvHuy1PXk_kQ-qX4sFs/edit#gid=9880775) and check for Sanctuary overlap
 -   Record which sanctuaries the drift passed through in the Sanctuary Permit column in the [Deployment Details](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing) spreadsheet
 -   Additional guidelines and information can be found in [the Sanctuary Permit](https://drive.google.com/file/d/1zSX4WLbc_liQx5zCI8yhsr5csiAn0KA6/view?usp=sharing)
--   \*Need to create a script to get info needed for permit and save this to Tethys
 
 ## Permit Spreadsheet
 
-Record all permit related information in the [Permit Spreadsheet](https://docs.google.com/spreadsheets/d/1i2kCTgIBL9vXjiU1raGWcFhNhc6hI130RQYc41hUwBQ/edit#gid=0)
+Record all other permit related information in the [Permit Spreadsheet](https://docs.google.com/spreadsheets/d/1i2kCTgIBL9vXjiU1raGWcFhNhc6hI130RQYc41hUwBQ/edit#gid=0) including take numbers and sanctuary overlap
