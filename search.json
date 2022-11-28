@@ -39,7 +39,21 @@
     "href": "content/Data Archive/TethysDeployments.html",
     "title": "Tethys - Deployments",
     "section": "",
-    "text": "Create deployment worksheet\n\nCombine deployment details with GPS data in Tethys format\nTethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)\n\nhttps://github.com/asimonis/TethysSAEL/blob/main/R/Create_Deployment_Worksheet.R\n\n\nDeployment details to Tethys\n\nUpload finalized deployment details to Tethys using appropriate sourcemap\n\nMobile and moored deployment sourcemaps in TethysSAEL repository on Anne’s github: https://github.com/asimonis/TethysSAEL/tree/main/Source%20Maps \n\nWork with Anne for this \n\nPAMpal/Tethys Metadata\n\nTalk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. \nAdditional comments on workflow spreadsheet"
+    "text": "Combine deployment details with GPS data in Tethys format\nTethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
+  },
+  {
+    "objectID": "content/Data Archive/TethysDeployments.html#deployment-details-to-tethys",
+    "href": "content/Data Archive/TethysDeployments.html#deployment-details-to-tethys",
+    "title": "Tethys - Deployments",
+    "section": "Deployment details to Tethys",
+    "text": "Deployment details to Tethys\n\nUpload finalized deployment details to Tethys using appropriate sourcemap\n\nMobile and moored deployment sourcemaps in TethysSAEL repository on Anne’s github\n\nWork with Anne for this"
+  },
+  {
+    "objectID": "content/Data Archive/TethysDeployments.html#pampaltethys-metadata",
+    "href": "content/Data Archive/TethysDeployments.html#pampaltethys-metadata",
+    "title": "Tethys - Deployments",
+    "section": "PAMpal/Tethys Metadata",
+    "text": "PAMpal/Tethys Metadata\n\nTalk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. \nAdditional comments on workflow spreadsheet"
   },
   {
     "objectID": "content/Data Archive/DataUpload.html",
@@ -102,7 +116,14 @@
     "href": "content/Data Archive/NCEI.html",
     "title": "NCEI",
     "section": "",
-    "text": "NCEI Passive Packer Metadata\n\n*Need to export from Tethys OR create a script to export to Passive Packer??? Taiki?\n\nArchive to NCEI\n\nArchive data and metadata to NCEI"
+    "text": "*Need to export from Tethys OR create a script to export to Passive Packer??? Taiki?"
+  },
+  {
+    "objectID": "content/Data Archive/NCEI.html#archive-to-ncei",
+    "href": "content/Data Archive/NCEI.html#archive-to-ncei",
+    "title": "NCEI",
+    "section": "Archive to NCEI",
+    "text": "Archive to NCEI\n\nArchive data and metadata to NCEI"
   },
   {
     "objectID": "content/Data Archive/Permits.html",
@@ -165,14 +186,21 @@
     "href": "content/Data Archive/OBIS.html",
     "title": "OBIS",
     "section": "",
-    "text": "OBIS Archive Metadata\n\n*Need to check w/ Taiki about this"
+    "text": "*Need to check w/ Taiki about this"
   },
   {
     "objectID": "content/Data Archive/TethysDetections.html",
     "href": "content/Data Archive/TethysDetections.html",
     "title": "Tethys - Detections",
     "section": "",
-    "text": "Create Detection worksheet for Tethys\n\nhttps://github.com/asimonis/TethysSAEL/blob/main/R/Create_Detection_Worksheet.R  \n\nUpload detections to Tethys\n\nSWFSC.Detections.Analyst.v1 sourcemap\nNOAA.NMFS.v4 species abbreviation"
+    "text": "https://github.com/asimonis/TethysSAEL/blob/main/R/Create_Detection_Worksheet.R"
+  },
+  {
+    "objectID": "content/Data Archive/TethysDetections.html#upload-detections-to-tethys",
+    "href": "content/Data Archive/TethysDetections.html#upload-detections-to-tethys",
+    "title": "Tethys - Detections",
+    "section": "Upload Detections to Tethys",
+    "text": "Upload Detections to Tethys\n\nSWFSC.Detections.Analyst.v1 sourcemap\nNOAA.NMFS.v4 species abbreviation"
   },
   {
     "objectID": "content/Soundscapes/Metrics.html",
