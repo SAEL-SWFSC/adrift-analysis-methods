@@ -39,7 +39,7 @@
     "href": "content/Data Archive/TethysDeployments.html",
     "title": "Tethys - Deployments",
     "section": "",
-    "text": "Combine deployment details with GPS data in Tethys format\nTethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
+    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
   },
   {
     "objectID": "content/Data Archive/TethysDeployments.html#deployment-details-to-tethys",
@@ -94,22 +94,22 @@
     "objectID": "content/Data Archive/DataQualityCheck.html#run-data-check-on-gps-data",
     "href": "content/Data Archive/DataQualityCheck.html#run-data-check-on-gps-data",
     "title": "Data Quality Check",
-    "section": "Run data check on GPS data",
-    "text": "Run data check on GPS data\n\nReview drift tracks created by Driftwatch\nLook at the image that is associated with the drift number and ensure all points are from the drift (no points from when the array was on the boat or land)"
+    "section": "Run Data Check on GPS Data",
+    "text": "Run Data Check on GPS Data\n\nReview drift tracks created by Driftwatch\nLook at the image that is associated with the drift number and ensure all points are from the drift (no points from when the array was on the boat or land)"
   },
   {
     "objectID": "content/Data Archive/DataQualityCheck.html#run-recording-qaqc",
     "href": "content/Data Archive/DataQualityCheck.html#run-recording-qaqc",
     "title": "Data Quality Check",
-    "section": "Run recording QAQC ",
-    "text": "Run recording QAQC \n\nsoundtrapQAQC function in PAMmisc\nMatlab QAQC script\nMake an rmd that runs this"
+    "section": "Run Recording QAQC ",
+    "text": "Run Recording QAQC \n\nsoundtrapQAQC function in PAMmisc\nMatlab QAQC script"
   },
   {
     "objectID": "content/Data Archive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
     "href": "content/Data Archive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
     "title": "Data Quality Check",
-    "section": "Scan LTSA for noisy data",
-    "text": "Scan LTSA for noisy data\n\nIf drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data\nSplit between Anne and Cory"
+    "section": "Scan LTSA for Noisy Data",
+    "text": "Scan LTSA for Noisy Data\n\nIf drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data\nSplit between Anne and Cory"
   },
   {
     "objectID": "content/Data Archive/NCEI.html",
@@ -130,21 +130,21 @@
     "href": "content/Data Archive/Permits.html",
     "title": "Permits",
     "section": "",
-    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit\n*Need to create a script to get info needed for permit and save this to Tethys"
+    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit"
   },
   {
     "objectID": "content/Data Archive/Permits.html#noaa-sanctuary-permit",
     "href": "content/Data Archive/Permits.html#noaa-sanctuary-permit",
     "title": "Permits",
     "section": "NOAA Sanctuary Permit",
-    "text": "NOAA Sanctuary Permit\n\nReview the SanctuarySummary spreadsheet from Driftwatch and check for Sanctuary overlap\nRecord which sanctuaries the drift passed through in the Sanctuary Permit column in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Sanctuary Permit\n*Need to create a script to get info needed for permit and save this to Tethys"
+    "text": "NOAA Sanctuary Permit\n\nReview the SanctuarySummary spreadsheet from Driftwatch and check for Sanctuary overlap\nRecord which sanctuaries the drift passed through in the Sanctuary Permit column in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Sanctuary Permit"
   },
   {
     "objectID": "content/Data Archive/Permits.html#permit-spreadsheet",
     "href": "content/Data Archive/Permits.html#permit-spreadsheet",
     "title": "Permits",
     "section": "Permit Spreadsheet",
-    "text": "Permit Spreadsheet\nRecord all permit related information in the Permit Spreadsheet"
+    "text": "Permit Spreadsheet\nRecord all other permit related information in the Permit Spreadsheet including take numbers and sanctuary overlap"
   },
   {
     "objectID": "content/Data Archive/DataPrep.html",
@@ -193,7 +193,7 @@
     "href": "content/Data Archive/TethysDetections.html",
     "title": "Tethys - Detections",
     "section": "",
-    "text": "https://github.com/asimonis/TethysSAEL/blob/main/R/Create_Detection_Worksheet.R"
+    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)"
   },
   {
     "objectID": "content/Data Archive/TethysDetections.html#upload-detections-to-tethys",
