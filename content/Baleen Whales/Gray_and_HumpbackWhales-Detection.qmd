@@ -2,5 +2,6 @@
 title: Gray & Humpback Whales - Detection
 ---
 
-## Edit and add your pages
+## PAMGuard
 
+### GPL Settings
