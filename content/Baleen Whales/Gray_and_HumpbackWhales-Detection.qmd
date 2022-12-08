@@ -2,7 +2,9 @@
 title: Gray & Humpback Whales - Detection
 ---
 
-## PAMGuard
+## PAMGuard 
+
+\*To view the Pamguard settings files used for each drift please click [here](https://github.com/chomweaver/Pamguard_Settings_Files).
 
 ### Array
 
@@ -16,12 +18,60 @@ Depending on the drift that was process the array settings in Pamguard were upda
 
     ![Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.](Screenshots/HB_Gray_Decimation_PG.JPG)
 
-    Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.
-
-    ![Low Pass Filter for Humback and Gray whale GPL detector](Screenshots/HB_Gray_Decimation_Low_Pass_Filter_PG.JPG)
-
-    Figure X. Low pass filter settings for decimator module
+    ![Figure x. Low Pass Filter for Humback and Gray whale GPL detector](Screenshots/HB_Gray_Decimation_Low_Pass_Filter_PG.JPG)
 
 ### GPL Settings
 
-We started with basic GPL settings from Tyler Helble's PARM files and modified them to fit our data.
+-   We started with basic GPL settings from Tyler Helble's PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.
+
+![Figure X. GPL FFT Settings for humpback and gray whales](Screenshots/HB_Gray_GPL_FFT_Settings.JPG){fig-align="left"}
+
+![Figure x. GPL detections settings for humpback and gray whales](Screenshots/HB_Gray_GPL_Detection_Settings.JPG){fig-align="left"}
+
+![Figure x. GPL contour settings for humpback and gray whales](Screenshots/HB_Gray_GPL_Contour_Settings.JPG){fig-align="left"}
+
+-   We then processed an entire drift's recordings and looked at the detector's performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it's job, we processed the rest of the drifts.
+
+    -   For this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.
+
+### Detection Group Localizer Settings
+
+-   In order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.
+
+    ![Figure x. Detection Grouper Mark Display Settings](Screenshots/Detection_Grouper_Display_Settings_PG.JPG)
+
+    ![Figure X. Detection Grouper Data Selection Settings](Screenshots/Detection_Grouper_Data_Selection_Settings_PG.JPG)
+
+    ![Figure x. Detection Grouper Annotation Settings](Screenshots/Detection_Grouper_Annotation_Settings_PG.JPG)
+
+-   It is important to note that both the "Text " and "User Form" annotation boxes must be selected here.
+
+    -   To setup the user form annotation (click on the gear icon)
+
+    -   Create new user form
+
+    -   Label the form "evType" then click ok (see figure X)
+
+        ![Figure x. Adding in a user form for the Detection Grouper in Pamguard](Screenshots/Adding_user_form_to_DGL.JPG)
+
+    -   Next click "edit form"
+
+    -   Add a lookup table and fill it out exactly as follows (see figure x.)
+
+        -   Title: eventType
+
+        -   PostTitle: eventType
+
+        -   DbTitle: eventType
+
+        -   Topic: DGEventType
+
+            ![Figure x. Editing the user form for the detection grouper to work with the GPL detections](Screenshots/User_form_lookup_for_DGL.png)
+
+### PAMGuard Output
+
+-   All detections were saved to the binary files and everything else was saved to a SQLite database
+
+    ![Figure x. Storage Options Settings for PAMGuard](Screenshots/PG_output_data_storage.JPG)
+
+## PAMpal
