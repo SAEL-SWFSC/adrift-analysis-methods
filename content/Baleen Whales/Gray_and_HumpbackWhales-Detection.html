@@ -284,6 +284,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#pamguard" id="toc-pamguard" class="nav-link active" data-scroll-target="#pamguard">PAMGuard</a>
   <ul class="collapse">
+  <li><a href="#array" id="toc-array" class="nav-link" data-scroll-target="#array">Array</a></li>
   <li><a href="#decimation" id="toc-decimation" class="nav-link" data-scroll-target="#decimation">Decimation</a></li>
   <li><a href="#gpl-settings" id="toc-gpl-settings" class="nav-link" data-scroll-target="#gpl-settings">GPL Settings</a></li>
   </ul></li>
@@ -312,14 +313,24 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="pamguard" class="level2">
 <h2 class="anchored" data-anchor-id="pamguard">PAMGuard</h2>
+<section id="array" class="level3">
+<h3 class="anchored" data-anchor-id="array">Array</h3>
+<p>Depending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Array_settings_PG.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure X. Array settings in Pamguard</figcaption><p></p>
+</figure>
+</div>
+</section>
 <section id="decimation" class="level3">
 <h3 class="anchored" data-anchor-id="decimation">Decimation</h3>
 <ul>
-<li><p>For humpback and gray whales we decimated files to 10kHz and used a Butterworth Low Pass Filter of 5kHz.</p>
+<li><p>For humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/HB_Gray_Decimation_PG.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure x. Settings used in the decimator moduel in Pamguard to run the humpback and gray whale GPL detector</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.</figcaption><p></p>
 </figure>
 </div>
 <p>Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.</p>
@@ -328,7 +339,8 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="Screenshots/HB_Gray_Decimation_Low_Pass_Filter_PG.JPG" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Low Pass Filter for Humback and Gray whale GPL detector</figcaption><p></p>
 </figure>
-</div></li>
+</div>
+<p>Figure X. Low pass filter settings for decimator module</p></li>
 </ul>
 </section>
 <section id="gpl-settings" class="level3">
