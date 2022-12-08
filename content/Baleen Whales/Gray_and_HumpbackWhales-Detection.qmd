@@ -48,6 +48,26 @@ Depending on the drift that was process the array settings in Pamguard were upda
 
     -   To setup the user form annotation (click on the gear icon)
 
+    -   Create new user form
+
+    -   Label the form "evType" then click ok (see figure X)
+
+        ![Figure x. Adding in a user form for the Detection Grouper in Pamguard](Screenshots/Adding_user_form_to_DGL.JPG)
+
+    -   Next click "edit form"
+
+    -   Add a lookup table and fill it out exactly as follows (see figure x.)
+
+        -   Title: eventType
+
+        -   PostTitle: eventType
+
+        -   DbTitle: eventType
+
+        -   Topic: DGEventType
+
+            ![Figure x. Editing the user form for the detection grouper to work with the GPL detections](Screenshots/User_form_lookup_for_DGL.png)
+
 ### PAMGuard Output
 
 -   All detections were saved to the binary files and everything else was saved to a SQLite database
