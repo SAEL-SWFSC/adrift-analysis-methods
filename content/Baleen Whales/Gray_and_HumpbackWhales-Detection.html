@@ -287,7 +287,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#array" id="toc-array" class="nav-link" data-scroll-target="#array">Array</a></li>
   <li><a href="#decimation" id="toc-decimation" class="nav-link" data-scroll-target="#decimation">Decimation</a></li>
   <li><a href="#gpl-settings" id="toc-gpl-settings" class="nav-link" data-scroll-target="#gpl-settings">GPL Settings</a></li>
+  <li><a href="#detection-group-localizer-settings" id="toc-detection-group-localizer-settings" class="nav-link" data-scroll-target="#detection-group-localizer-settings">Detection Group Localizer Settings</a></li>
+  <li><a href="#pamguard-output" id="toc-pamguard-output" class="nav-link" data-scroll-target="#pamguard-output">PAMGuard Output</a></li>
   </ul></li>
+  <li><a href="#pampal" id="toc-pampal" class="nav-link" data-scroll-target="#pampal">PAMpal</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Baleen Whales/Gray_and_HumpbackWhales-Detection.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Baleen Whales/Gray_and_HumpbackWhales-Detection.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -313,6 +316,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="pamguard" class="level2">
 <h2 class="anchored" data-anchor-id="pamguard">PAMGuard</h2>
+<p>*To view the Pamguard settings files used for each drift please click <a href="https://github.com/chomweaver/Pamguard_Settings_Files">here</a>.</p>
 <section id="array" class="level3">
 <h3 class="anchored" data-anchor-id="array">Array</h3>
 <p>Depending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.</p>
@@ -333,22 +337,111 @@ ul.task-list li input[type="checkbox"] {
 <p></p><figcaption class="figure-caption">Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.</figcaption><p></p>
 </figure>
 </div>
-<p>Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/HB_Gray_Decimation_Low_Pass_Filter_PG.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Low Pass Filter for Humback and Gray whale GPL detector</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure x. Low Pass Filter for Humback and Gray whale GPL detector</figcaption><p></p>
 </figure>
-</div>
-<p>Figure X. Low pass filter settings for decimator module</p></li>
+</div></li>
 </ul>
 </section>
 <section id="gpl-settings" class="level3">
 <h3 class="anchored" data-anchor-id="gpl-settings">GPL Settings</h3>
-<p>We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data.</p>
-
-
+<ul>
+<li>We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.</li>
+</ul>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_GPL_FFT_Settings.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure X. GPL FFT Settings for humpback and gray whales</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_GPL_Detection_Settings.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure x. GPL detections settings for humpback and gray whales</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_GPL_Contour_Settings.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure x. GPL contour settings for humpback and gray whales</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li><p>We then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.</p>
+<ul>
+<li>For this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.</li>
+</ul></li>
+</ul>
 </section>
+<section id="detection-group-localizer-settings" class="level3">
+<h3 class="anchored" data-anchor-id="detection-group-localizer-settings">Detection Group Localizer Settings</h3>
+<ul>
+<li><p>In order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Detection_Grouper_Display_Settings_PG.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure x. Detection Grouper Mark Display Settings</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Detection_Grouper_Data_Selection_Settings_PG.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure X. Detection Grouper Data Selection Settings</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Detection_Grouper_Annotation_Settings_PG.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure x. Detection Grouper Annotation Settings</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>It is important to note that both the “Text” and “User Form” annotation boxes must be selected here.</p>
+<ul>
+<li><p>To setup the user form annotation (click on the gear icon)</p></li>
+<li><p>Create new user form</p></li>
+<li><p>Label the form “evType” then click ok (see figure X)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Adding_user_form_to_DGL.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure x. Adding in a user form for the Detection Grouper in Pamguard</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Next click “edit form”</p></li>
+<li><p>Add a lookup table and fill it out exactly as follows (see figure x.)</p>
+<ul>
+<li><p>Title: eventType</p></li>
+<li><p>PostTitle: eventType</p></li>
+<li><p>DbTitle: eventType</p></li>
+<li><p>Topic: DGEventType</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/User_form_lookup_for_DGL.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure x. Editing the user form for the detection grouper to work with the GPL detections</figcaption><p></p>
+</figure>
+</div></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="pamguard-output" class="level3">
+<h3 class="anchored" data-anchor-id="pamguard-output">PAMGuard Output</h3>
+<ul>
+<li><p>All detections were saved to the binary files and everything else was saved to a SQLite database</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/PG_output_data_storage.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure x. Storage Options Settings for PAMGuard</figcaption><p></p>
+</figure>
+</div></li>
+</ul>
+</section>
+</section>
+<section id="pampal" class="level2">
+<h2 class="anchored" data-anchor-id="pampal">PAMpal</h2>
+
+
 </section>
 
 </main> <!-- /main -->
