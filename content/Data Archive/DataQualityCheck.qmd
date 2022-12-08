@@ -30,5 +30,9 @@ title: Data Quality Check
 
 ## Scan LTSA for Noisy Data
 
--   If drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data
+If drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data
+
+-   Use the LTSA created with 500 Hz wav files, with 1s and 5Hz parameters
+-   View LTSA at 2 hour windows and scan through
+-   Use Logger to define start/end times of the noisy/bad data and include the type of noise in the comments (e.g. strumming, impulses, etc.)
 -   Split between Anne and Cory
