@@ -193,7 +193,7 @@
     "href": "content/Data Archive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
     "title": "Data Quality Check",
     "section": "Scan LTSA for Noisy Data",
-    "text": "Scan LTSA for Noisy Data\n\nIf drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data\nSplit between Anne and Cory"
+    "text": "Scan LTSA for Noisy Data\nIf drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data\n\nUse the LTSA created with 500 Hz wav files, with 1s and 5Hz parameters\nView LTSA at 2 hour windows and scan through\nUse Logger to define start/end times of the noisy/bad data and include the type of noise in the comments (e.g. strumming, impulses, etc.)\nSplit between Anne and Cory"
   },
   {
     "objectID": "content/Data Archive/DataPrep.html",
