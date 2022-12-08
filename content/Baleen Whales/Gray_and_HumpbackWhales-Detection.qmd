@@ -4,15 +4,23 @@ title: Gray & Humpback Whales - Detection
 
 ## PAMGuard
 
+### Array
+
+Depending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.
+
+![Figure X. Array settings in Pamguard](Screenshots/Array_settings_PG.JPG){fig-align="center"}
+
 ### Decimation
 
--   For humpback and gray whales we decimated files to 10kHz and used a Butterworth Low Pass Filter of 5kHz.
+-   For humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).
 
-    ![Figure x. Settings used in the decimator moduel in Pamguard to run the humpback and gray whale GPL detector](Screenshots/HB_Gray_Decimation_PG.JPG)
+    ![Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.](Screenshots/HB_Gray_Decimation_PG.JPG)
 
     Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.
 
     ![Low Pass Filter for Humback and Gray whale GPL detector](Screenshots/HB_Gray_Decimation_Low_Pass_Filter_PG.JPG)
+
+    Figure X. Low pass filter settings for decimator module
 
 ### GPL Settings
 
