@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.280">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -290,7 +290,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#detection-group-localizer-settings" id="toc-detection-group-localizer-settings" class="nav-link" data-scroll-target="#detection-group-localizer-settings">Detection Group Localizer Settings</a></li>
   <li><a href="#pamguard-output" id="toc-pamguard-output" class="nav-link" data-scroll-target="#pamguard-output">PAMGuard Output</a></li>
   </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   <li><a href="#pampal" id="toc-pampal" class="nav-link" data-scroll-target="#pampal">PAMpal</a></li>
+  <li><a href="#stratified-sub-sampling" id="toc-stratified-sub-sampling" class="nav-link" data-scroll-target="#stratified-sub-sampling">Stratified Sub-sampling</a></li>
+  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation">Validation</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Baleen Whales/Gray_and_HumpbackWhales-Detection.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Baleen Whales/Gray_and_HumpbackWhales-Detection.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -428,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="pamguard-output" class="level3">
 <h3 class="anchored" data-anchor-id="pamguard-output">PAMGuard Output</h3>
 <ul>
-<li><p>All detections were saved to the binary files and everything else was saved to a SQLite database</p>
+<li><p>All detections were saved to the binary files and all other data were saved to a SQLite database</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/PG_output_data_storage.JPG" class="img-fluid figure-img"></p>
@@ -438,8 +441,27 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+</section>
 <section id="pampal" class="level2">
 <h2 class="anchored" data-anchor-id="pampal">PAMpal</h2>
+<ul>
+<li>The data were then imported into PAMpal and events were created and put back into the PAMGuard database. Events were defined as 6 minute periods of continuous recordings for ADRIFT and 2 minutes for the CCES 2018 data set (limited to duty cycle 2 on 18 off) . *Add in PASCAL when we get to it.</li>
+</ul>
+</section>
+<section id="stratified-sub-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="stratified-sub-sampling">Stratified Sub-sampling</h2>
+<ul>
+<li><p>Due to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.</p></li>
+<li><p>*Add in Kaitlin’s code</p></li>
+</ul>
+</section>
+<section id="validation" class="level2">
+<h2 class="anchored" data-anchor-id="validation">Validation</h2>
+<ul>
+<li>*Kaitlin to add in methods here</li>
+</ul>
 
 
 </section>
