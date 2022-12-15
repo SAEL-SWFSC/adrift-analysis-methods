@@ -2,7 +2,7 @@
 title: Gray & Humpback Whales - Detection
 ---
 
-## PAMGuard 
+## PAMGuard
 
 \*To view the Pamguard settings files used for each drift please click [here](https://github.com/chomweaver/Pamguard_Settings_Files).
 
@@ -44,7 +44,7 @@ Depending on the drift that was process the array settings in Pamguard were upda
 
     ![Figure x. Detection Grouper Annotation Settings](Screenshots/Detection_Grouper_Annotation_Settings_PG.JPG)
 
--   It is important to note that both the "Text " and "User Form" annotation boxes must be selected here.
+-   It is important to note that both the "Text" and "User Form" annotation boxes must be selected here.
 
     -   To setup the user form annotation (click on the gear icon)
 
@@ -70,8 +70,22 @@ Depending on the drift that was process the array settings in Pamguard were upda
 
 ### PAMGuard Output
 
--   All detections were saved to the binary files and everything else was saved to a SQLite database
+-   All detections were saved to the binary files and all other data were saved to a SQLite database
 
     ![Figure x. Storage Options Settings for PAMGuard](Screenshots/PG_output_data_storage.JPG)
 
+## 
+
 ## PAMpal
+
+-   The data were then imported into PAMpal and events were created and put back into the PAMGuard database. Events were defined as 6 minute periods of continuous recordings for ADRIFT and 2 minutes for the CCES 2018 data set (limited to duty cycle 2 on 18 off) . \*Add in PASCAL when we get to it.
+
+## Stratified Sub-sampling
+
+-   Due to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.
+
+-   \*Add in Kaitlin's code
+
+## Validation
+
+-   \*Kaitlin to add in methods here
