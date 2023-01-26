@@ -8,7 +8,7 @@ title: Detection
 
 ### Array
 
-Depending on the drift that was processed the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector. To view the Array Configuration files for each drift please click here (insert link to future storage place)
+Depending on the drift that was processed the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector. To view the Array Configuration files for each drift please click here\* (insert link to storage place)
 
 ![Figure X. Array settings in Pamguard](Screenshots/Array_settings_PG.JPG){fig-align="center"}
 
