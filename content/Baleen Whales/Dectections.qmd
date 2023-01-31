@@ -88,6 +88,38 @@ Depending on the drift that was processed the array settings in Pamguard were up
 
             ![Figure x. Editing the user form for the detection grouper to work with the GPL detections](Screenshots/User_form_lookup_for_DGL.png)
 
+    -   Add selection drop down by right clicking on '= no selection =' and selecting 'Edit list'
+
+        ![](images/paste-84EC9657.png)
+
+    -   Click 'Add item' and fill in species specific options
+
+        -   In the future we can list the drop down options for each species so they are uniform across analysts
+
+        ![](images/paste-332E165A.png)
+
+    -   Click 'Ok' to close all of the tabs and return to Pamguard Viewer window
+
+-   Next, set up the Spectrogram Annotation
+
+    -   Go to File \> Add Modules \> Utilities \> Spectrogram Annotation
+
+        ![](images/paste-7099FC71.png)
+
+    -   Under 'Settings', go to Spectrogram Annotation settings and click on the gear icon next to 'User form annotation'
+
+    -   Click on the 'User form' drop down, select 'UDF_evType', and click Ok to return to the Pamguard Viewer window
+
+        ![](images/paste-C1DA1020.png)
+
+-   Right click on the spectrogram and go to Settings
+
+    -   Ensure both the 'Detection Grouper' and 'Spectrogram Annotation' boxes are checked and click Ok
+
+        ![](images/paste-C82ACEBF.png)
+
+-   Go to File \> Save Data and close Pamguard
+
 ### PAMGuard Output
 
 -   All detections were saved to the binary files and all other data were saved to a SQLite database
