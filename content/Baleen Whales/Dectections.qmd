@@ -221,4 +221,5 @@ Depending on the drift that was processed the array settings in Pamguard were up
 
 # Validation
 
--   \*Kaitlin to add in methods here
+-   Once you have followed the code above to subsample your data, reopen the database in Pamguard Viewer
+-   
