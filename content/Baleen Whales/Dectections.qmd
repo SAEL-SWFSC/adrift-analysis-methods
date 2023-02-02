@@ -94,7 +94,7 @@ Depending on the drift that was processed the array settings in Pamguard were up
 
     -   Click 'Add item' and fill in species specific options
 
-        -   In the future we can list the drop down options for each species so they are uniform across analysts
+        -   See 'Species Specific Drop Down List' below for what items to include
 
         ![](images/paste-332E165A.png)
 
@@ -120,7 +120,27 @@ Depending on the drift that was processed the array settings in Pamguard were up
 
 -   Go to File \> Save Data and close Pamguard
 
-## PAMGuard Output
+### Species Specific Drop Down List
+
+#### Fin Whales
+
+#### Blue Whales
+
+#### Minke Whales
+
+-   B - Boing
+
+-   CB - Cutoff Boing
+
+-   UB - Unknown Biological Sound
+
+-   UA - Unknown Anthropogenic Sound
+
+#### Brydes & Fin Whales (40 Hz)
+
+#### Humpback & Gray Whales
+
+#### PAMGuard Output
 
 -   All detections were saved to the binary files and all other data were saved to a SQLite database
 
@@ -169,16 +189,16 @@ Depending on the drift that was processed the array settings in Pamguard were up
     # Now tell it to process your data. Id is optional and serves no function, but can be useful to tell data apart at a later point in time. Here mode = 'recording' tells it how to organize your data. Most of the time we are working with data that have been marked manually into events, so PAMpal wants to organize things into events. mode='db' uses the events in the database, and only processes the detectoins you've marked out. In this case we just want to process everything, which is what mode='recording' does. It will group them into events by recording file. 
 
     # This might take some time to read in events after processing in order to get the time 
-    #data <- processPgDetections(pps, mode='db', id='Humpback007') 
+    #data <- processPgDetections(pps, mode='db', id='Minke_CCES_019') 
 
-    data <- processPgDetections(pps, mode='recording', id='Minke_CCES_019')
+    data <- processPgDetections(pps, mode='recording', id='Species_Project_Drift#')
 
     # And here's how you can get the detections information out of "data" as a dataframe. Time column is "UTC", other columns are stuff it measured. 
     gplDf <- getGPLData(data)
 
     # Now we can add the wav files to this data. You might get a warning about "startSample", its safe to ignore that.
     data <- addRecordings(data, 
-                          folder='E:/Minke_Analysis/Data Ran/RECORDINGS/CCES_2018/DRIFT_19_12kHz')
+                          folder='Path to wav files')
 
     # that data is stored here as a dataframe. Has "start" & "end" as POSIXct and the fulle path to the file as "file"
     wavDf <- files(data)$recordings
@@ -221,5 +241,46 @@ Depending on the drift that was processed the array settings in Pamguard were up
 
 # Validation
 
--   Once you have followed the code above to subsample your data, reopen the database in Pamguard Viewer
--   
+-   Once you have followed the code above to subsample your data, make a copy of the database in a 'Data Validated' folder and reopen the database in Pamguard Viewer
+
+-   Go to File \> Add Modules \> Displays \> User Display
+
+    ![](images/paste-2578EBE1.png)
+
+-   Name the new user display 'Subsample'
+
+-   Click on the new subsample tab and go to User Display \> New Detection Grouper data display
+
+    ![](images/paste-12CF9694.png)
+
+-   Your subsampled data should then be listed with associate marker colors
+
+    ![](images/paste-F6687E7F.png)
+
+-   Validate each subsampled wav file by scrolling in the spectrogram to the file and boxing/validating all detections using the drop down options specified above
+
+    -   Refer to species specific methods below for more validation information/guidelines
+
+    -   
+
+## Species Specific Validation Methods
+
+### Fin Whales
+
+### Blue Whales
+
+### Minke Whales
+
+-   Method for boings cutoff at the start or end of file (only applies to subsampled data to be validated)
+
+    -   If the detector consistently picks up cutoff boings AND you think they can be picked up easily using manual effort (there is enough signal to know it is a boing) \-- then box these partial detections and label them as 'Cutoff Boing' (can be helpful as they note the occurrence of these calls during this time selection)
+
+        -   The box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)
+
+-   Method for false dectections
+
+    -   Ignore them
+
+### Brydes & Fin Whales (40 Hz)
+
+### Humpback & Gray Whales
