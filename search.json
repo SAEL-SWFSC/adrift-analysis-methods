@@ -60,7 +60,7 @@
     "href": "content/Data Archive/DataQualityCheck.html#check-recording-time-utc-vs-local-time",
     "title": "Data Quality Check",
     "section": "Check Recording Time: UTC vs Local Time",
-    "text": "Check Recording Time: UTC vs Local Time\n\nCheck log files from extraced SUD files for Soundtrap Recording time (UTC vs Local Time), fix if needed\nCheck Taiki’s script\nRename if on local time"
+    "text": "Check Recording Time: UTC vs Local Time\n\nCheck log files from extraced SUD files for Soundtrap Recording time (UTC vs Local Time), fix if needed\nOpen Taiki’s soundtrapRenamer script and run it to load all necessary functions\nRun the following code in a new script to check if the files were offloaded in UTC or local time\n\n\nsource('soundtrapRenamer.R')\n\n# change this to whatever file endings you want to change\nsuffixes <- c('wav', 'sud', 'log.xml', 'accel.csv')\n\n# Change this to whatever folder these files are in\ndir <- '../Data/Renamer/orig/'\n\nprep <- prepTzFix(dir, offset=NULL, suffix=suffixes)\n\n\nIf the ‘prep’ output indicates that the files are on local time, run the following line of code to rename them\n\n\nfixStTz(dir, prep)\n\n\nIf files are renamed, the code will create a log file in the same folder of all of the name changes it made\nThere is also a reverse option that you can set to TRUE if you want to undo the renaming"
   },
   {
     "objectID": "content/Data Archive/DataQualityCheck.html#assess-data-quality",
@@ -81,7 +81,7 @@
     "href": "content/Data Archive/DataQualityCheck.html#run-recording-qaqc",
     "title": "Data Quality Check",
     "section": "Run Recording QAQC ",
-    "text": "Run Recording QAQC \n\nsoundtrapQAQC function in PAMmisc\nMatlab QAQC script"
+    "text": "Run Recording QAQC \n\nsoundtrapQAQC function in PAMmisc\nMatlab QAQC script\nIf the QAQC shows significant gaps in the files (i.e. >1 second), complete the following steps to account for those gaps\n\nIf you have a gap in the middle of the drift (with significant amount of data before AND after the gap) continue on with the following steps and add a readMe to the data folder indicating when and how long the gap is\nIf you have duty cylced recordings at the end of a continuous recording period, cut off the data"
   },
   {
     "objectID": "content/Data Archive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
