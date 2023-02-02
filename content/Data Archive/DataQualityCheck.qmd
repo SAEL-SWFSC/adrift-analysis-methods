@@ -10,8 +10,29 @@ title: Data Quality Check
 ## Check Recording Time: UTC vs Local Time
 
 -   Check log files from extraced SUD files for Soundtrap Recording time (UTC vs Local Time), fix if needed
--   Check Taiki's script
--   Rename if on local time
+-   Open Taiki's [soundtrapRenamer script](https://github.com/TaikiSan21/PAMmisc/blob/024337d62371fb419e40bd0a3764905866ae6a36/devel/soundtrapRenamer.R) and run it to load all necessary functions
+-   Run the following code in a new script to check if the files were offloaded in UTC or local time
+
+```{r eval=FALSE}
+source('soundtrapRenamer.R')
+
+# change this to whatever file endings you want to change
+suffixes <- c('wav', 'sud', 'log.xml', 'accel.csv')
+
+# Change this to whatever folder these files are in
+dir <- '../Data/Renamer/orig/'
+
+prep <- prepTzFix(dir, offset=NULL, suffix=suffixes)
+```
+
+-   If the 'prep' output indicates that the files are on local time, run the following line of code to rename them
+
+```{r eval=FALSE}
+fixStTz(dir, prep)
+```
+
+-   If files are renamed, the code will create a log file in the same folder of all of the name changes it made
+-   There is also a reverse option that you can set to TRUE if you want to undo the renaming
 
 ## Assess Data Quality
 
@@ -27,6 +48,10 @@ title: Data Quality Check
 
 -   soundtrapQAQC function in PAMmisc
 -   Matlab QAQC script
+-   If the QAQC shows significant gaps in the files (i.e. \>1 second), complete the following steps to account for those gaps
+    -   If you have a gap in the middle of the drift (with significant amount of data before AND after the gap) continue on with the following steps and add a readMe to the data folder indicating when and how long the gap is
+
+    -   If you have duty cylced recordings at the end of a continuous recording period, cut off the data
 
 ## Scan LTSA for Noisy Data
 
