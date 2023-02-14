@@ -2,126 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Data Archive/TethysDetections.html</loc>
-    <lastmod>2023-02-02T19:25:27.985Z</lastmod>
+    <lastmod>2023-02-14T22:21:52.502Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Data Archive/DataPrep.html</loc>
-    <lastmod>2023-02-02T19:25:30.057Z</lastmod>
+    <lastmod>2023-02-14T22:21:53.582Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Data Archive/DataQualityCheck.html</loc>
-    <lastmod>2023-02-02T19:25:31.397Z</lastmod>
+    <lastmod>2023-02-14T22:21:55.494Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Data Archive/TethysDeployments.html</loc>
-    <lastmod>2023-02-02T19:25:31.757Z</lastmod>
+    <lastmod>2023-02-14T22:21:55.866Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Data Archive/NCEI.html</loc>
-    <lastmod>2023-02-02T19:25:32.097Z</lastmod>
+    <lastmod>2023-02-14T22:21:56.210Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Data Archive/Permits.html</loc>
-    <lastmod>2023-02-02T19:25:32.453Z</lastmod>
+    <lastmod>2023-02-14T22:21:56.562Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Data Archive/OBIS.html</loc>
-    <lastmod>2023-02-02T19:25:32.793Z</lastmod>
+    <lastmod>2023-02-14T22:21:56.926Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Data Archive/DataUpload.html</loc>
-    <lastmod>2023-02-02T19:25:33.145Z</lastmod>
+    <lastmod>2023-02-14T22:21:57.278Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Soundscapes/Summary_and_Visualization.html</loc>
-    <lastmod>2023-02-02T19:25:33.489Z</lastmod>
+    <lastmod>2023-02-14T22:21:57.622Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Soundscapes/Metrics.html</loc>
-    <lastmod>2023-02-02T19:25:33.845Z</lastmod>
+    <lastmod>2023-02-14T22:21:57.998Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/BlueWhales-GPL.html</loc>
-    <lastmod>2023-02-02T19:25:34.189Z</lastmod>
+    <lastmod>2023-02-14T22:21:58.342Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/DataPrep.html</loc>
-    <lastmod>2023-02-02T19:25:34.565Z</lastmod>
+    <lastmod>2023-02-14T22:21:58.710Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/Gray_and_HumpbackWhales-BANTER.html</loc>
-    <lastmod>2023-02-02T19:25:34.909Z</lastmod>
+    <lastmod>2023-02-14T22:21:59.066Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html</loc>
-    <lastmod>2023-02-02T19:25:35.325Z</lastmod>
+    <lastmod>2023-02-14T22:21:59.478Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/Dectections.html</loc>
-    <lastmod>2023-02-02T19:25:36.545Z</lastmod>
+    <lastmod>2023-02-14T22:22:00.674Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/MinkeWhales-BANTER.html</loc>
-    <lastmod>2023-02-02T19:25:36.905Z</lastmod>
+    <lastmod>2023-02-14T22:22:01.014Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/FinWhales20Hz-BANTER.html</loc>
-    <lastmod>2023-02-02T19:25:37.249Z</lastmod>
+    <lastmod>2023-02-14T22:22:01.382Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/Brydes_and_FinWhales40Hz-BANTER.html</loc>
-    <lastmod>2023-02-02T19:25:37.589Z</lastmod>
+    <lastmod>2023-02-14T22:22:01.726Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/BlueWhales-BANTER.html</loc>
-    <lastmod>2023-02-02T19:25:37.929Z</lastmod>
+    <lastmod>2023-02-14T22:22:02.066Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/Brydes_and_FinWhales40Hz-Detection.html</loc>
-    <lastmod>2023-02-02T19:25:38.281Z</lastmod>
+    <lastmod>2023-02-14T22:22:02.418Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/MinkeWhales-Detection.html</loc>
-    <lastmod>2023-02-02T19:25:38.629Z</lastmod>
+    <lastmod>2023-02-14T22:22:02.766Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/BlueWhales-ManualDetection.html</loc>
-    <lastmod>2023-02-02T19:25:38.965Z</lastmod>
+    <lastmod>2023-02-14T22:22:03.106Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/SeiWhales.html</loc>
-    <lastmod>2023-02-02T19:25:39.309Z</lastmod>
+    <lastmod>2023-02-14T22:22:03.450Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Baleen Whales/FinWhales20Hz-Detection.html</loc>
-    <lastmod>2023-02-02T19:25:39.653Z</lastmod>
+    <lastmod>2023-02-14T22:22:03.794Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Toothed Whales/BeakedWhales-BANTER.html</loc>
-    <lastmod>2023-02-02T19:25:39.997Z</lastmod>
+    <lastmod>2023-02-14T22:22:04.138Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Toothed Whales/NBHF-Detection.html</loc>
-    <lastmod>2023-02-02T19:25:40.349Z</lastmod>
+    <lastmod>2023-02-14T22:22:04.478Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Toothed Whales/BeakedWhales-Detection.html</loc>
-    <lastmod>2023-02-02T19:25:40.701Z</lastmod>
+    <lastmod>2023-02-14T22:22:04.830Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Toothed Whales/BeakedWhales-IDGuide.html</loc>
+    <lastmod>2023-02-14T22:22:05.246Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html</loc>
-    <lastmod>2023-02-02T19:25:41.053Z</lastmod>
+    <lastmod>2023-02-14T22:22:05.602Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Toothed Whales/NBHF-BANTER.html</loc>
-    <lastmod>2023-02-02T19:25:41.393Z</lastmod>
+    <lastmod>2023-02-14T22:22:05.970Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html</loc>
-    <lastmod>2023-02-02T19:25:41.773Z</lastmod>
+    <lastmod>2023-02-14T22:22:06.326Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/adrift-analysis-methods/index.html</loc>
-    <lastmod>2023-02-02T19:25:42.117Z</lastmod>
+    <lastmod>2023-02-14T22:22:06.666Z</lastmod>
   </url>
 </urlset>
