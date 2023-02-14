@@ -58,6 +58,7 @@ website:
       - section: "Toothed Whales"
         contents:
           - content/Toothed Whales/BeakedWhales-Detection.qmd
+          - content/Toothed Whales/BeakedWhales-IDGuide.qmd
           - content/Toothed Whales/Dolphins_and_SpermWhales-Detection.qmd
           - content/Toothed Whales/NBHF-Detection.qmd
       - section: "Soundscapes"
