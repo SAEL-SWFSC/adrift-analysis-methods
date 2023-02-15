@@ -9,8 +9,7 @@ editor:
 
 This guide serves as a living document, with the intention to update as
 more information is learned. To recommend an update or to open a
-discussion, submit an 'Issue' with a useful title and explanation.
-\[Need to add link\]
+discussion, submit an 'Issue' with a useful title and explanation. Go to this link [https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues]  to create an Issue, and use the BW-ID label for the issue.
 
 ### ZC: *Ziphius cavirostris*, Cuvier's beaked whale
 
