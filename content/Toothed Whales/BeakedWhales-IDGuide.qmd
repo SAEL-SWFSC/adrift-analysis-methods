@@ -151,11 +151,11 @@ slightly concave upward, with no sign of "kickstand".
 
  
 
-### BW39V: Likely Hubb's beaked whale
+### BW37V: Likely Hubb's beaked whale
 
 -   Peak:34kHz, 50 kHz
 
--   Null: 39kHz
+-   Null: 37kHz
 
 -   IPI: 0.125-0.166
 
