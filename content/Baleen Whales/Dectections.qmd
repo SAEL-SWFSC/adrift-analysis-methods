@@ -8,7 +8,7 @@ title: Detection
 
 ## Array
 
-Depending on the drift that was processed the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector. To view the Array Configuration files for each drift please click here\* (insert link to storage place)
+Depending on the drift that was processed, the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector. To view the Array Configuration files for each drift please click here\* (insert link to storage place)
 
 ![Figure X. Array settings in Pamguard](Screenshots/Array_settings_PG.JPG){fig-align="center"}
 
@@ -16,7 +16,11 @@ Depending on the drift that was processed the array settings in Pamguard were up
 
 ### Fin Whales
 
+The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings were used.
+
 ### Blue Whales
+
+The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings were used.
 
 ### Minke Whales
 
@@ -38,7 +42,7 @@ Depending on the drift that was processed the array settings in Pamguard were up
 -   Once we were satisfied that the detector was doing it's job, we processed the rest of the drifts
 -   For this detector, our aim was to over-detect and then sort out the differences using a classifier
 
-### Fin Whales
+### 
 
 ### Blue Whales
 
