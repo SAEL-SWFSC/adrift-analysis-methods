@@ -35,6 +35,13 @@
     "text": "Validation\n\n*Kaitlin to add in methods here"
   },
   {
+    "objectID": "content/Baleen Whales/BlueWhales-ManualDetection.html",
+    "href": "content/Baleen Whales/BlueWhales-ManualDetection.html",
+    "title": "Blue Whales - Manual Detection",
+    "section": "",
+    "text": "Open 500Hz LTSA for the drift that is being analyzed.\n\nChange the time being displayed to reflect an hour of data.\n\nFor continuous recordings, it should say 1HR.\nFor Duty cycled data it could vary between .2 and .6HRS\n\nIncrease the brightness to 5. Leave default contrast settings\n\n\n\nTriton software was used to create and manually bin blue whale A,B and D call types into 60 minute bins."
+  },
+  {
     "objectID": "content/Baleen Whales/Dectections.html",
     "href": "content/Baleen Whales/Dectections.html",
     "title": "Detection",
