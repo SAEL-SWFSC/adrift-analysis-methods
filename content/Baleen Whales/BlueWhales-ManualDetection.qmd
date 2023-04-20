@@ -2,5 +2,18 @@
 title: Blue Whales - Manual Detection
 ---
 
-## Edit and add your pages
+## Setting up LTSA parameters
 
+-   Open 500Hz LTSA for the drift that is being analyzed.
+
+    -   Change the time being displayed to reflect an hour of data.
+
+        -   For continuous recordings, it should say 1HR.
+
+        -   For Duty cycled data it could vary between .2 and .6HRS
+
+    -   Increase the brightness to 5. Leave default contrast settings
+
+    -   
+
+Triton software was used to create and manually bin blue whale A,B and D call types into 60 minute bins.
