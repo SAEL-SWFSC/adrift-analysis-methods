@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,9 +17,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -46,43 +47,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -133,11 +104,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Detection</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/Baleen Whales/DataPrep.html">Baleen Whales</a></li><li class="breadcrumb-item"><a href="../../content/Baleen Whales/Dectections.html">Detection</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -145,83 +121,94 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/NOAA_logo.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.fisheries.noaa.gov/west-coast/science-data/southwest-acoustic-ecology-lab" title="Southwest Acoustic Ecology Lab, SWFSC" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/SAEL-SWFSC" title="SAEL Github" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+    <a href="https://www.fisheries.noaa.gov/west-coast/science-data/southwest-acoustic-ecology-lab" title="Southwest Acoustic Ecology Lab, SWFSC" class="quarto-navigation-tool px-1" aria-label="Southwest Acoustic Ecology Lab, SWFSC"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/SAEL-SWFSC" title="SAEL Github" class="quarto-navigation-tool px-1" aria-label="SAEL Github"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">Home</a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Data Archive</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Data Archive</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/DataPrep.html" class="sidebar-item-text sidebar-link">Data Prep</a>
+  <a href="../../content/Data Archive/DataPrep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Prep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/DataQualityCheck.html" class="sidebar-item-text sidebar-link">Data Quality Check</a>
+  <a href="../../content/Data Archive/DataQualityCheck.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Quality Check</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/DataUpload.html" class="sidebar-item-text sidebar-link">Data Upload</a>
+  <a href="../../content/Data Archive/DataUpload.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Upload</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/Permits.html" class="sidebar-item-text sidebar-link">Permits</a>
+  <a href="../../content/Data Archive/Permits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Permits</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Archive</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Archive</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/TethysDeployments.html" class="sidebar-item-text sidebar-link">Tethys - Deployments</a>
+  <a href="../../content/Data Archive/TethysDeployments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tethys - Deployments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/TethysDetections.html" class="sidebar-item-text sidebar-link">Tethys - Detections</a>
+  <a href="../../content/Data Archive/TethysDetections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tethys - Detections</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/NCEI.html" class="sidebar-item-text sidebar-link">NCEI</a>
+  <a href="../../content/Data Archive/NCEI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NCEI</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Data Archive/OBIS.html" class="sidebar-item-text sidebar-link">OBIS</a>
+  <a href="../../content/Data Archive/OBIS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OBIS</span></a>
   </div>
 </li>
       </ul>
@@ -230,100 +217,117 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Baleen Whales</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Baleen Whales</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Baleen Whales/DataPrep.html" class="sidebar-item-text sidebar-link">Data Prep</a>
+  <a href="../../content/Baleen Whales/DataPrep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Prep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Baleen Whales/Dectections.html" class="sidebar-item-text sidebar-link active">Detection</a>
+  <a href="../../content/Baleen Whales/Dectections.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Detection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Baleen Whales/FinWhales20Hz-BANTER.html" class="sidebar-item-text sidebar-link">Fin Whales (20 Hz) - BANTER</a>
+  <a href="../../content/Baleen Whales/FinWhales20Hz-BANTER.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fin Whales (20 Hz) - BANTER</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Baleen Whales/BlueWhales-ManualDetection.html" class="sidebar-item-text sidebar-link">Blue Whales - Manual Detection</a>
+  <a href="../../content/Baleen Whales/BlueWhales-ManualDetection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blue Whales - Manual Detection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Baleen Whales/BlueWhales-GPL.html" class="sidebar-item-text sidebar-link">Blue Whales - GPL Detection</a>
+  <a href="../../content/Baleen Whales/BlueWhales-GPL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blue Whales - GPL Detection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Baleen Whales/BlueWhales-BANTER.html" class="sidebar-item-text sidebar-link">Blue Whales - BANTER</a>
+  <a href="../../content/Baleen Whales/BlueWhales-BANTER.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blue Whales - BANTER</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Baleen Whales/MinkeWhales-BANTER.html" class="sidebar-item-text sidebar-link">Minke Whales - BANTER</a>
+  <a href="../../content/Baleen Whales/MinkeWhales-BANTER.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Minke Whales - BANTER</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Baleen Whales/Gray_and_HumpbackWhales-BANTER.html" class="sidebar-item-text sidebar-link">Gray &amp; Humpback Whales - BANTER</a>
+  <a href="../../content/Baleen Whales/Gray_and_HumpbackWhales-BANTER.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gray &amp; Humpback Whales - BANTER</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Toothed Whales</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Toothed Whales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Toothed Whales/BeakedWhales-Detection.html" class="sidebar-item-text sidebar-link">Beaked Whales</a>
+  <a href="../../content/Toothed Whales/BeakedWhales-Detection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Beaked Whales</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Toothed Whales/BeakedWhales-IDGuide.html" class="sidebar-item-text sidebar-link">Beaked Whale ID Guide</a>
+  <a href="../../content/Toothed Whales/BeakedWhales-IDGuide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Beaked Whale ID Guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html" class="sidebar-item-text sidebar-link">Dolphins &amp; Sperm Whales</a>
+  <a href="../../content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dolphins &amp; Sperm Whales</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Toothed Whales/NBHF-Detection.html" class="sidebar-item-text sidebar-link">NBHF</a>
+  <a href="../../content/Toothed Whales/NBHF-Detection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NBHF</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Soundscapes</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text">Soundscapes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Soundscapes/Metrics.html" class="sidebar-item-text sidebar-link">Triton Metrics</a>
+  <a href="../../content/Soundscapes/Metrics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Triton Metrics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link">Summary &amp; Visualization</a>
+  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary &amp; Visualization</span></a>
   </div>
 </li>
       </ul>
@@ -331,6 +335,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -356,11 +361,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#brydes-fin-whales-40-hz-1" id="toc-brydes-fin-whales-40-hz-1" class="nav-link" data-scroll-target="#brydes-fin-whales-40-hz-1">Brydes &amp; Fin Whales (40 Hz)</a></li>
   <li><a href="#humpback-gray-whales-1" id="toc-humpback-gray-whales-1" class="nav-link" data-scroll-target="#humpback-gray-whales-1">Humpback &amp; Gray Whales</a></li>
   </ul></li>
+  <li><a href="#click-detector-settings-fin-20hz-only" id="toc-click-detector-settings-fin-20hz-only" class="nav-link" data-scroll-target="#click-detector-settings-fin-20hz-only">Click Detector Settings (Fin 20Hz only)</a>
+  <ul class="collapse">
+  <li><a href="#filter-settings" id="toc-filter-settings" class="nav-link" data-scroll-target="#filter-settings">Filter Settings</a></li>
+  <li><a href="#click-classifier-settings" id="toc-click-classifier-settings" class="nav-link" data-scroll-target="#click-classifier-settings">Click Classifier Settings</a></li>
+  </ul></li>
   <li><a href="#detection-group-localizer-settings" id="toc-detection-group-localizer-settings" class="nav-link" data-scroll-target="#detection-group-localizer-settings">Detection Group Localizer Settings</a>
   <ul class="collapse">
   <li><a href="#species-specific-drop-down-list" id="toc-species-specific-drop-down-list" class="nav-link" data-scroll-target="#species-specific-drop-down-list">Species Specific Drop Down List</a></li>
   </ul></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
   </ul></li>
   <li><a href="#pampal" id="toc-pampal" class="nav-link" data-scroll-target="#pampal">PAMpal</a></li>
   <li><a href="#stratified-sub-sampling" id="toc-stratified-sub-sampling" class="nav-link" data-scroll-target="#stratified-sub-sampling">Stratified Sub-sampling</a></li>
@@ -368,7 +379,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#species-specific-validation-methods" id="toc-species-specific-validation-methods" class="nav-link" data-scroll-target="#species-specific-validation-methods">Species Specific Validation Methods</a>
   <ul class="collapse">
-  <li><a href="#fin-whales-2" id="toc-fin-whales-2" class="nav-link" data-scroll-target="#fin-whales-2">Fin Whales</a></li>
+  <li><a href="#fin-whales-1" id="toc-fin-whales-1" class="nav-link" data-scroll-target="#fin-whales-1">Fin Whales</a></li>
   <li><a href="#blue-whales-3" id="toc-blue-whales-3" class="nav-link" data-scroll-target="#blue-whales-3">Blue Whales</a></li>
   <li><a href="#minke-whales-3" id="toc-minke-whales-3" class="nav-link" data-scroll-target="#minke-whales-3">Minke Whales</a></li>
   <li><a href="#brydes-fin-whales-40-hz-3" id="toc-brydes-fin-whales-40-hz-3" class="nav-link" data-scroll-target="#brydes-fin-whales-40-hz-3">Brydes &amp; Fin Whales (40 Hz)</a></li>
@@ -383,7 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Detection</h1>
+<h1 class="title">Detection</h1>
 </div>
 
 
@@ -407,7 +418,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/Array_settings_PG.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure X. Array settings in Pamguard</figcaption><p></p>
+<figcaption class="figure-caption">Figure X. Array settings in Pamguard</figcaption>
 </figure>
 </div>
 </section>
@@ -434,13 +445,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/HB_Gray_Decimation_PG.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.</figcaption><p></p>
+<figcaption class="figure-caption">Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/HB_Gray_Decimation_Low_Pass_Filter_PG.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure x. Low Pass Filter for Humback and Gray whale GPL detector</figcaption><p></p>
+<figcaption class="figure-caption">Figure x. Low Pass Filter for Humback and Gray whale GPL detector</figcaption>
 </figure>
 </div></li>
 </ul>
@@ -471,20 +482,105 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 class="anchored" data-anchor-id="humpback-gray-whales-1">Humpback &amp; Gray Whales</h3>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="Screenshots/HB_Gray_GPL_FFT_Settings.JPG" class="img-fluid figure-img" alt="Figure X. GPL FFT Settings for humpback and gray whales"></p>
-<p></p><figcaption class="figure-caption">Figure X. GPL FFT Settings for humpback and gray whales</figcaption><p></p>
+<p><img src="Screenshots/HB_Gray_GPL_FFT_Settings.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. GPL FFT Settings for humpback and gray whales</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="Screenshots/HB_Gray_GPL_Detection_Settings.JPG" class="img-fluid figure-img" alt="Figure x. GPL detections settings for humpback and gray whales"></p>
-<p></p><figcaption class="figure-caption">Figure x. GPL detections settings for humpback and gray whales</figcaption><p></p>
+<p><img src="Screenshots/HB_Gray_GPL_Detection_Settings.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. GPL detections settings for humpback and gray whales</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="Screenshots/HB_Gray_GPL_Contour_Settings.JPG" class="img-fluid figure-img" alt="Figure x. GPL contour settings for humpback and gray whales"></p>
-<p></p><figcaption class="figure-caption">Figure x. GPL contour settings for humpback and gray whales</figcaption><p></p>
+<p><img src="Screenshots/HB_Gray_GPL_Contour_Settings.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. GPL contour settings for humpback and gray whales</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="click-detector-settings-fin-20hz-only" class="level2">
+<h2 class="anchored" data-anchor-id="click-detector-settings-fin-20hz-only">Click Detector Settings (Fin 20Hz only)</h2>
+<ul>
+<li><p>In order to detect 20Hz fin whale pulses, we ran a click detector in PAMGuard.</p>
+<h3 id="click-detector-settings" class="anchored">Click Detector Settings</h3>
+<ul>
+<li>Click detection parameters were set to the following (see figures x-xx)</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_detector_Source_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Source information for the click detector</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_detector_Trigger_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. Trigger settings for the Click Detector</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_detector_Click_Length_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. Click length settings for the click detector</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_detector_Delays_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Delays settings for the click detector</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_detector_Echo_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Echo settings for the click detector</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_detector_Noise_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Noise settings for the click detector</figcaption>
+</figure>
+</div>
+<section id="filter-settings" class="level3">
+<h3 class="anchored" data-anchor-id="filter-settings">Filter Settings</h3>
+<section id="digital-pre-filter-settings" class="level4">
+<h4 class="anchored" data-anchor-id="digital-pre-filter-settings">Digital Pre Filter Settings</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_Digital_PreFilter_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Digital Pre Filter Settings</figcaption>
+</figure>
+</div>
+</section>
+<section id="digital-trigger-filter-settings" class="level4">
+<h4 class="anchored" data-anchor-id="digital-trigger-filter-settings">Digital Trigger Filter Settings</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_Digital_Trigger_Filter_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Digital Trigger Filter Settings</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="click-classifier-settings" class="level3">
+<h3 class="anchored" data-anchor-id="click-classifier-settings">Click Classifier Settings</h3>
+<ul>
+<li>A click classifier with a frequency sweep was set up in order to classify the fin whale 20Hz pulses. The setting are below in Figure x. For the classifier itself, only the Spectrum Tab settings were changed. The rest of the tabs were left as default.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_Classifcation_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Click classification general settings</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Click_Click_Classifier_Settings.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Click classifier settings</figcaption>
 </figure>
 </div>
 </section>
@@ -496,19 +592,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/Detection_Grouper_Display_Settings_PG.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure x. Detection Grouper Mark Display Settings</figcaption><p></p>
+<figcaption class="figure-caption">Figure x. Detection Grouper Mark Display Settings</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/Detection_Grouper_Data_Selection_Settings_PG.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure X. Detection Grouper Data Selection Settings</figcaption><p></p>
+<figcaption class="figure-caption">Figure X. Detection Grouper Data Selection Settings</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/Detection_Grouper_Annotation_Settings_PG.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure x. Detection Grouper Annotation Settings</figcaption><p></p>
+<figcaption class="figure-caption">Figure x. Detection Grouper Annotation Settings</figcaption>
 </figure>
 </div></li>
 <li><p>It is important to note that both the “Text” and “User Form” annotation boxes must be selected here.</p>
@@ -519,7 +615,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/Adding_user_form_to_DGL.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure x. Adding in a user form for the Detection Grouper in Pamguard</figcaption><p></p>
+<figcaption class="figure-caption">Figure x. Adding in a user form for the Detection Grouper in Pamguard</figcaption>
 </figure>
 </div></li>
 <li><p>Next click “edit form”</p></li>
@@ -532,7 +628,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/User_form_lookup_for_DGL.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure x. Editing the user form for the detection grouper to work with the GPL detections</figcaption><p></p>
+<figcaption class="figure-caption">Figure x. Editing the user form for the detection grouper to work with the GPL detections</figcaption>
 </figure>
 </div></li>
 </ul></li>
@@ -562,8 +658,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <section id="species-specific-drop-down-list" class="level3">
 <h3 class="anchored" data-anchor-id="species-specific-drop-down-list">Species Specific Drop Down List</h3>
-<section id="fin-whales-1" class="level4">
-<h4 class="anchored" data-anchor-id="fin-whales-1">Fin Whales</h4>
+<section id="section-1" class="level4">
+<h4 class="anchored" data-anchor-id="section-1"></h4>
 </section>
 <section id="blue-whales-2" class="level4">
 <h4 class="anchored" data-anchor-id="blue-whales-2">Blue Whales</h4>
@@ -590,15 +686,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Screenshots/PG_output_data_storage.JPG" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure x. Storage Options Settings for PAMGuard</figcaption><p></p>
+<figcaption class="figure-caption">Figure x. Storage Options Settings for PAMGuard</figcaption>
 </figure>
 </div></li>
 </ul>
 </section>
 </section>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1"></h2>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"></h2>
+</section>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3"></h2>
 </section>
 </section>
 <section id="pampal" class="level1">
@@ -712,8 +811,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <section id="species-specific-validation-methods" class="level2">
 <h2 class="anchored" data-anchor-id="species-specific-validation-methods">Species Specific Validation Methods</h2>
-<section id="fin-whales-2" class="level3">
-<h3 class="anchored" data-anchor-id="fin-whales-2">Fin Whales</h3>
+<section id="fin-whales-1" class="level3">
+<h3 class="anchored" data-anchor-id="fin-whales-1">Fin Whales</h3>
 </section>
 <section id="blue-whales-3" class="level3">
 <h3 class="anchored" data-anchor-id="blue-whales-3">Blue Whales</h3>
@@ -888,9 +987,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -955,6 +1068,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1010,6 +1209,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© CC-1.0</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">This page is built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
