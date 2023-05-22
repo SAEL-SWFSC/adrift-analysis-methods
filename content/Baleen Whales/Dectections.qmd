@@ -34,7 +34,7 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 
     ![Figure x. Low Pass Filter for Humback and Gray whale GPL detector](Screenshots/HB_Gray_Decimation_Low_Pass_Filter_PG.JPG)
 
-## 
+## Fin Whale Click Detector
 
 -   In order to detect 20Hz fin whale pulses, we ran a click detector in PAMGuard.
 
