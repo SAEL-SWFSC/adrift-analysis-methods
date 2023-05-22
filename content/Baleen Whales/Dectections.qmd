@@ -78,7 +78,7 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 
 -   Run all drifts with the same settings.
 
-## Fin Validation
+## Spectrogram Annotation Setup
 
 -   Once a drift has completed its run. Save and close PAMGuard.
 
@@ -195,8 +195,6 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 -   Go to File \> Save Data and close Pamguard
 
 ### Species Specific Drop Down List
-
-#### 
 
 #### Blue Whales
 
