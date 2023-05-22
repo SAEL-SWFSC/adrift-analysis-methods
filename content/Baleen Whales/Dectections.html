@@ -353,20 +353,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#brydes-fin-whales-40-hz" id="toc-brydes-fin-whales-40-hz" class="nav-link" data-scroll-target="#brydes-fin-whales-40-hz">Brydes &amp; Fin Whales (40 Hz)</a></li>
   <li><a href="#humpback-gray-whales" id="toc-humpback-gray-whales" class="nav-link" data-scroll-target="#humpback-gray-whales">Humpback &amp; Gray Whales</a></li>
   </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a>
+  <ul class="collapse">
+  <li><a href="#filter-settings" id="toc-filter-settings" class="nav-link" data-scroll-target="#filter-settings">Filter Settings</a></li>
+  <li><a href="#click-classifier-settings" id="toc-click-classifier-settings" class="nav-link" data-scroll-target="#click-classifier-settings">Click Classifier Settings</a></li>
+  </ul></li>
+  <li><a href="#fin-validation" id="toc-fin-validation" class="nav-link" data-scroll-target="#fin-validation">Fin Validation</a></li>
   <li><a href="#gpl-settings" id="toc-gpl-settings" class="nav-link" data-scroll-target="#gpl-settings">GPL Settings</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   <li><a href="#blue-whales-1" id="toc-blue-whales-1" class="nav-link" data-scroll-target="#blue-whales-1">Blue Whales</a></li>
   <li><a href="#minke-whales-1" id="toc-minke-whales-1" class="nav-link" data-scroll-target="#minke-whales-1">Minke Whales</a></li>
   <li><a href="#brydes-fin-whales-40-hz-1" id="toc-brydes-fin-whales-40-hz-1" class="nav-link" data-scroll-target="#brydes-fin-whales-40-hz-1">Brydes &amp; Fin Whales (40 Hz)</a></li>
   <li><a href="#humpback-gray-whales-1" id="toc-humpback-gray-whales-1" class="nav-link" data-scroll-target="#humpback-gray-whales-1">Humpback &amp; Gray Whales</a></li>
   </ul></li>
-  <li><a href="#click-detector-settings-fin-20hz-only" id="toc-click-detector-settings-fin-20hz-only" class="nav-link" data-scroll-target="#click-detector-settings-fin-20hz-only">Click Detector Settings (Fin 20Hz only)</a>
-  <ul class="collapse">
-  <li><a href="#filter-settings" id="toc-filter-settings" class="nav-link" data-scroll-target="#filter-settings">Filter Settings</a></li>
-  <li><a href="#click-classifier-settings" id="toc-click-classifier-settings" class="nav-link" data-scroll-target="#click-classifier-settings">Click Classifier Settings</a></li>
-  </ul></li>
-  <li><a href="#detection-group-localizer-settings" id="toc-detection-group-localizer-settings" class="nav-link" data-scroll-target="#detection-group-localizer-settings">Detection Group Localizer Settings</a>
+  <li><a href="#detection-group-localizer-settings-gpl-only" id="toc-detection-group-localizer-settings-gpl-only" class="nav-link" data-scroll-target="#detection-group-localizer-settings-gpl-only">Detection Group Localizer Settings (GPL only)</a>
   <ul class="collapse">
   <li><a href="#species-specific-drop-down-list" id="toc-species-specific-drop-down-list" class="nav-link" data-scroll-target="#species-specific-drop-down-list">Species Specific Drop Down List</a></li>
   </ul></li>
@@ -457,51 +457,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="gpl-settings" class="level2">
-<h2 class="anchored" data-anchor-id="gpl-settings">GPL Settings</h2>
-<ul>
-<li>We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data</li>
-<li>We tested modified settings on clips that contained our species of interest until we were happy with the detectors performance</li>
-<li>We then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that calls were being picked up by the detector</li>
-<li>Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts</li>
-<li>For this detector, our aim was to over-detect and then sort out the differences using a classifier</li>
-</ul>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
-</section>
-<section id="blue-whales-1" class="level3">
-<h3 class="anchored" data-anchor-id="blue-whales-1">Blue Whales</h3>
-</section>
-<section id="minke-whales-1" class="level3">
-<h3 class="anchored" data-anchor-id="minke-whales-1">Minke Whales</h3>
-</section>
-<section id="brydes-fin-whales-40-hz-1" class="level3">
-<h3 class="anchored" data-anchor-id="brydes-fin-whales-40-hz-1">Brydes &amp; Fin Whales (40 Hz)</h3>
-</section>
-<section id="humpback-gray-whales-1" class="level3">
-<h3 class="anchored" data-anchor-id="humpback-gray-whales-1">Humpback &amp; Gray Whales</h3>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="Screenshots/HB_Gray_GPL_FFT_Settings.JPG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure X. GPL FFT Settings for humpback and gray whales</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="Screenshots/HB_Gray_GPL_Detection_Settings.JPG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure x. GPL detections settings for humpback and gray whales</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="Screenshots/HB_Gray_GPL_Contour_Settings.JPG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure x. GPL contour settings for humpback and gray whales</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="click-detector-settings-fin-20hz-only" class="level2">
-<h2 class="anchored" data-anchor-id="click-detector-settings-fin-20hz-only">Click Detector Settings (Fin 20Hz only)</h2>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 <ul>
 <li><p>In order to detect 20Hz fin whale pulses, we ran a click detector in PAMGuard.</p>
 <h3 id="click-detector-settings" class="anchored">Click Detector Settings</h3>
@@ -583,10 +540,105 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption class="figure-caption">Figure x. Click classifier settings</figcaption>
 </figure>
 </div>
+<ul>
+<li><p>Once these settings have been input into the previous modules, make sure to save the settings file using the Data Managment Google Doc as a guide. The naming scheme should have the PG version_DetectorType_Project_Deployment#.</p>
+<ul>
+<li>Ex. PG_2_02_02_FinClick_ADRIFT_049.psfx</li>
+</ul></li>
+<li><p>Run all drifts with the same settings.</p></li>
+</ul>
 </section>
 </section>
-<section id="detection-group-localizer-settings" class="level2">
-<h2 class="anchored" data-anchor-id="detection-group-localizer-settings">Detection Group Localizer Settings</h2>
+<section id="fin-validation" class="level2">
+<h2 class="anchored" data-anchor-id="fin-validation">Fin Validation</h2>
+<ul>
+<li><p>Once a drift has completed its run. Save and close PAMGuard.</p></li>
+<li><p>Make a copy of the database that was run and place it in a new folder (this is the copy that you will be adding events to).</p></li>
+<li><p>Open the database in PAMGuard Viewer Mode</p>
+<ul>
+<li>Add the spectrogrm annotation module (figure x)</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Validation_Add_Spectrogram_Annotation.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. Adding the spectrogram annotation module</figcaption>
+</figure>
+</div>
+<ul>
+<li>Add a new user form under the spectrogram annotation module by clicking on the settings gear icon.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Validation_Spec_Annotation_UserForm.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Creating a new logger form within the spectrogram annotation module</figcaption>
+</figure>
+</div>
+<ul>
+<li>Edit the form and add a LookUp table with the following titles</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Validation_Create_Lookup_Table.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. Creating a Lookup Table</figcaption>
+</figure>
+</div>
+<ul>
+<li>In the lookup editor, add in the four categories to annotate the spectrogram module with.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Fin_Validation_Editing_Lookup_table.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. Editing the lookup table so the following dropdowns are present. 20Hz_fin, possible_fin, anthropogenic, unknown_biological.</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Click ok on all the open dialog boxes. Click file-&gt;save data.</p></li>
+<li><p>Close PAMGuard Viewer Mode and re-open to see the drop down options you created.</p></li>
+</ul>
+</section>
+<section id="gpl-settings" class="level2">
+<h2 class="anchored" data-anchor-id="gpl-settings">GPL Settings</h2>
+<ul>
+<li>We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data</li>
+<li>We tested modified settings on clips that contained our species of interest until we were happy with the detectors performance</li>
+<li>We then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that calls were being picked up by the detector</li>
+<li>Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts</li>
+<li>For this detector, our aim was to over-detect and then sort out the differences using a classifier</li>
+</ul>
+<section id="blue-whales-1" class="level3">
+<h3 class="anchored" data-anchor-id="blue-whales-1">Blue Whales</h3>
+</section>
+<section id="minke-whales-1" class="level3">
+<h3 class="anchored" data-anchor-id="minke-whales-1">Minke Whales</h3>
+</section>
+<section id="brydes-fin-whales-40-hz-1" class="level3">
+<h3 class="anchored" data-anchor-id="brydes-fin-whales-40-hz-1">Brydes &amp; Fin Whales (40 Hz)</h3>
+</section>
+<section id="humpback-gray-whales-1" class="level3">
+<h3 class="anchored" data-anchor-id="humpback-gray-whales-1">Humpback &amp; Gray Whales</h3>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_GPL_FFT_Settings.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. GPL FFT Settings for humpback and gray whales</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_GPL_Detection_Settings.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. GPL detections settings for humpback and gray whales</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_GPL_Contour_Settings.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. GPL contour settings for humpback and gray whales</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="detection-group-localizer-settings-gpl-only" class="level2">
+<h2 class="anchored" data-anchor-id="detection-group-localizer-settings-gpl-only">Detection Group Localizer Settings (GPL only)</h2>
 <ul>
 <li><p>In order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.</p>
 <div class="quarto-figure quarto-figure-center">
