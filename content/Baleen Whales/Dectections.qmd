@@ -58,6 +58,44 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 
 ![Figure x. GPL contour settings for humpback and gray whales](Screenshots/HB_Gray_GPL_Contour_Settings.JPG){alt="Figure x. GPL contour settings for humpback and gray whales" fig-align="left"}
 
+## Click Detector Settings (Fin 20Hz only)
+
+-   In order to detect 20Hz fin whale pulses, we ran a click detector in PAMGuard.
+
+    ### Click Detector Settings
+
+    -   Click detection parameters were set to the following (see figures x-xx)
+
+![Figure x. Source information for the click detector](Screenshots/Fin_Click_detector_Source_Settings.jpg)
+
+![Figure X. Trigger settings for the Click Detector](Screenshots/Fin_Click_detector_Trigger_Settings.jpg)
+
+![Figure X. Click length settings for the click detector ](Screenshots/Fin_Click_detector_Click_Length_Settings.jpg)
+
+![Figure x. Delays settings for the click detector](Screenshots/Fin_Click_detector_Delays_Settings.jpg)
+
+![Figure x. Echo settings for the click detector](Screenshots/Fin_Click_detector_Echo_Settings.jpg)
+
+![Figure x. Noise settings for the click detector](Screenshots/Fin_Click_detector_Noise_Settings.jpg)
+
+### Filter Settings
+
+#### Digital Pre Filter Settings
+
+![Figure x. Digital Pre Filter Settings](Screenshots/Fin_Click_Digital_PreFilter_Settings.jpg)
+
+#### Digital Trigger Filter Settings
+
+![Figure x. Digital Trigger Filter Settings](Screenshots/Fin_Click_Digital_Trigger_Filter_Settings.jpg)
+
+### Click Classifier Settings 
+
+-   A click classifier with a frequency sweep was set up in order to classify the fin whale 20Hz pulses. The setting are below in Figure x. For the classifier itself, only the Spectrum Tab settings were changed. The rest of the tabs were left as default.
+
+![Figure x. Click classification general settings](Screenshots/Fin_Click_Classifcation_Settings.jpg)
+
+![Figure x. Click classifier settings](Screenshots/Fin_Click_Click_Classifier_Settings.jpg)
+
 ## Detection Group Localizer Settings
 
 -   In order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.
@@ -126,7 +164,7 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 
 ### Species Specific Drop Down List
 
-#### Fin Whales
+#### 
 
 #### Blue Whales
 
@@ -149,6 +187,8 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 -   All detections were saved to the binary files and all other data were saved to a SQLite database
 
     ![Figure x. Storage Options Settings for PAMGuard](Screenshots/PG_output_data_storage.JPG)
+
+## 
 
 ## 
 
