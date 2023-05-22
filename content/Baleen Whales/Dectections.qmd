@@ -34,6 +34,78 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 
     ![Figure x. Low Pass Filter for Humback and Gray whale GPL detector](Screenshots/HB_Gray_Decimation_Low_Pass_Filter_PG.JPG)
 
+## 
+
+-   In order to detect 20Hz fin whale pulses, we ran a click detector in PAMGuard.
+
+    ### Click Detector Settings
+
+    -   Click detection parameters were set to the following (see figures x-xx)
+
+![Figure x. Source information for the click detector](Screenshots/Fin_Click_detector_Source_Settings.jpg){alt="Figure x. Source information for the click detector"}
+
+![Figure X. Trigger settings for the Click Detector](Screenshots/Fin_Click_detector_Trigger_Settings.jpg){alt="Figure X. Trigger settings for the Click Detector"}
+
+![Figure X. Click length settings for the click detector](Screenshots/Fin_Click_detector_Click_Length_Settings.jpg){alt="Figure X. Click length settings for the click detector"}
+
+![Figure x. Delays settings for the click detector](Screenshots/Fin_Click_detector_Delays_Settings.jpg){alt="Figure x. Delays settings for the click detector"}
+
+![Figure x. Echo settings for the click detector](Screenshots/Fin_Click_detector_Echo_Settings.jpg){alt="Figure x. Echo settings for the click detector"}
+
+![Figure x. Noise settings for the click detector](Screenshots/Fin_Click_detector_Noise_Settings.jpg){alt="Figure x. Noise settings for the click detector"}
+
+### Filter Settings
+
+#### Digital Pre Filter Settings
+
+![Figure x. Digital Pre Filter Settings](Screenshots/Fin_Click_Digital_PreFilter_Settings.jpg){alt="Figure x. Digital Pre Filter Settings"}
+
+#### Digital Trigger Filter Settings
+
+![Figure x. Digital Trigger Filter Settings](Screenshots/Fin_Click_Digital_Trigger_Filter_Settings.jpg){alt="Figure x. Digital Trigger Filter Settings"}
+
+### Click Classifier Settings
+
+-   A click classifier with a frequency sweep was set up in order to classify the fin whale 20Hz pulses. The setting are below in Figure x. For the classifier itself, only the Spectrum Tab settings were changed. The rest of the tabs were left as default.
+
+![Figure x. Click classification general settings](Screenshots/Fin_Click_Classifcation_Settings.jpg){alt="Figure x. Click classification general settings"}
+
+![Figure x. Click classifier settings.](Screenshots/Fin_Click_Click_Classifier_Settings.jpg){alt="Figure x. Click classifier settings"}
+
+-   Once these settings have been input into the previous modules, make sure to save the settings file using the Data Managment Google Doc as a guide. The naming scheme should have the PG version_DetectorType_Project_Deployment#.
+
+    -   Ex. PG_2\_02_02_FinClick_ADRIFT_049.psfx
+
+-   Run all drifts with the same settings.
+
+## Fin Validation
+
+-   Once a drift has completed its run. Save and close PAMGuard.
+
+-   Make a copy of the database that was run and place it in a new folder (this is the copy that you will be adding events to).
+
+-   Open the database in PAMGuard Viewer Mode
+
+    -   Add the spectrogrm annotation module (figure x)
+
+![Figure X. Adding the spectrogram annotation module](Screenshots/Fin_Validation_Add_Spectrogram_Annotation.JPG)
+
+-   Add a new user form under the spectrogram annotation module by clicking on the settings gear icon.
+
+![Figure x. Creating a new logger form within the spectrogram annotation module](Screenshots/Fin_Validation_Spec_Annotation_UserForm.JPG)
+
+-   Edit the form and add a LookUp table with the following titles
+
+![Figure X. Creating a Lookup Table](Screenshots/Fin_Validation_Create_Lookup_Table.JPG)
+
+-   In the lookup editor, add in the four categories to annotate the spectrogram module with.
+
+![Figure X. Editing the lookup table so the following dropdowns are present. 20Hz_fin, possible_fin, anthropogenic, unknown_biological.](Screenshots/Fin_Validation_Editing_Lookup_table.JPG)
+
+-   Click ok on all the open dialog boxes. Click file-\>save data.
+
+-   Close PAMGuard Viewer Mode and re-open to see the drop down options you created.
+
 ## GPL Settings
 
 -   We started with basic GPL settings from Tyler Helble's PARM files and modified them to fit our data
@@ -41,8 +113,6 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 -   We then processed an entire drift's recordings and looked at the detector's performance in Pamguard Viewer Mode by spot checking that calls were being picked up by the detector
 -   Once we were satisfied that the detector was doing it's job, we processed the rest of the drifts
 -   For this detector, our aim was to over-detect and then sort out the differences using a classifier
-
-### 
 
 ### Blue Whales
 
@@ -58,45 +128,7 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 
 ![Figure x. GPL contour settings for humpback and gray whales](Screenshots/HB_Gray_GPL_Contour_Settings.JPG){alt="Figure x. GPL contour settings for humpback and gray whales" fig-align="left"}
 
-## Click Detector Settings (Fin 20Hz only)
-
--   In order to detect 20Hz fin whale pulses, we ran a click detector in PAMGuard.
-
-    ### Click Detector Settings
-
-    -   Click detection parameters were set to the following (see figures x-xx)
-
-![Figure x. Source information for the click detector](Screenshots/Fin_Click_detector_Source_Settings.jpg)
-
-![Figure X. Trigger settings for the Click Detector](Screenshots/Fin_Click_detector_Trigger_Settings.jpg)
-
-![Figure X. Click length settings for the click detector ](Screenshots/Fin_Click_detector_Click_Length_Settings.jpg)
-
-![Figure x. Delays settings for the click detector](Screenshots/Fin_Click_detector_Delays_Settings.jpg)
-
-![Figure x. Echo settings for the click detector](Screenshots/Fin_Click_detector_Echo_Settings.jpg)
-
-![Figure x. Noise settings for the click detector](Screenshots/Fin_Click_detector_Noise_Settings.jpg)
-
-### Filter Settings
-
-#### Digital Pre Filter Settings
-
-![Figure x. Digital Pre Filter Settings](Screenshots/Fin_Click_Digital_PreFilter_Settings.jpg)
-
-#### Digital Trigger Filter Settings
-
-![Figure x. Digital Trigger Filter Settings](Screenshots/Fin_Click_Digital_Trigger_Filter_Settings.jpg)
-
-### Click Classifier Settings 
-
--   A click classifier with a frequency sweep was set up in order to classify the fin whale 20Hz pulses. The setting are below in Figure x. For the classifier itself, only the Spectrum Tab settings were changed. The rest of the tabs were left as default.
-
-![Figure x. Click classification general settings](Screenshots/Fin_Click_Classifcation_Settings.jpg)
-
-![Figure x. Click classifier settings](Screenshots/Fin_Click_Click_Classifier_Settings.jpg)
-
-## Detection Group Localizer Settings
+## Detection Group Localizer Settings (GPL only)
 
 -   In order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.
 
