@@ -1,115 +1,108 @@
 [
   {
-    "objectID": "content/Data Archive/DataUpload.html",
-    "href": "content/Data Archive/DataUpload.html",
-    "title": "Data Upload",
+    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html",
+    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html",
+    "title": "Gray & Humpback Whales - Detection",
     "section": "",
-    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
+    "text": "*To view the Pamguard settings files used for each drift please click here.\n\n\nDepending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.\n\n\n\nFigure X. Array settings in Pamguard\n\n\n\n\n\n\nFor humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).\n\n\n\nFigure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.\n\n\n\n\n\nFigure x. Low Pass Filter for Humback and Gray whale GPL detector\n\n\n\n\n\n\n\nWe started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.\n\n\n\n\nFigure X. GPL FFT Settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL detections settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL contour settings for humpback and gray whales\n\n\n\nWe then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.\n\nFor this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\n\n\n\n\n\n\n\nAll detections were saved to the binary files and all other data were saved to a SQLite database\n\n\n\nFigure x. Storage Options Settings for PAMGuard"
   },
   {
-    "objectID": "content/Data Archive/DataUpload.html#don-metadata-upload",
-    "href": "content/Data Archive/DataUpload.html#don-metadata-upload",
-    "title": "Data Upload",
+    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#pamguard",
+    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#pamguard",
+    "title": "Gray & Humpback Whales - Detection",
     "section": "",
-    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
+    "text": "*To view the Pamguard settings files used for each drift please click here.\n\n\nDepending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.\n\n\n\nFigure X. Array settings in Pamguard\n\n\n\n\n\n\nFor humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).\n\n\n\nFigure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.\n\n\n\n\n\nFigure x. Low Pass Filter for Humback and Gray whale GPL detector\n\n\n\n\n\n\n\nWe started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.\n\n\n\n\nFigure X. GPL FFT Settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL detections settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL contour settings for humpback and gray whales\n\n\n\nWe then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.\n\nFor this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\n\n\n\n\n\n\n\nAll detections were saved to the binary files and all other data were saved to a SQLite database\n\n\n\nFigure x. Storage Options Settings for PAMGuard"
   },
   {
-    "objectID": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
-    "href": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
-    "title": "Data Upload",
-    "section": "High Quality Photos and Videos",
-    "text": "High Quality Photos and Videos\n\nSubmit any high quality photos/videos to Photo & Video Library"
+    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#pampal",
+    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#pampal",
+    "title": "Gray & Humpback Whales - Detection",
+    "section": "PAMpal",
+    "text": "PAMpal\n\nThe data were then imported into PAMpal and events were created and put back into the PAMGuard database. Events were defined as 6 minute periods of continuous recordings for ADRIFT and 2 minutes for the CCES 2018 data set (limited to duty cycle 2 on 18 off) . *Add in PASCAL when we get to it."
   },
   {
-    "objectID": "content/Data Archive/TethysDetections.html",
-    "href": "content/Data Archive/TethysDetections.html",
-    "title": "Tethys - Detections",
+    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#stratified-sub-sampling",
+    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#stratified-sub-sampling",
+    "title": "Gray & Humpback Whales - Detection",
+    "section": "Stratified Sub-sampling",
+    "text": "Stratified Sub-sampling\n\nDue to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.\n*Add in Kaitlin’s code"
+  },
+  {
+    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#validation",
+    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#validation",
+    "title": "Gray & Humpback Whales - Detection",
+    "section": "Validation",
+    "text": "Validation\n\n*Kaitlin to add in methods here"
+  },
+  {
+    "objectID": "content/Baleen Whales/BlueWhales-ManualDetection.html",
+    "href": "content/Baleen Whales/BlueWhales-ManualDetection.html",
+    "title": "Blue Whales - Manual Detection",
     "section": "",
-    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)"
+    "text": "Open 500Hz LTSA for the drift that is being analyzed.\n\nChange the time being displayed to reflect an hour of data.\n\nFor continuous recordings, it should say 1HR.\nFor Duty cycled data it could vary between .2 and .6HRS\n\nIncrease the brightness to 5. Leave default contrast settings\n\n\n\nTriton software was used to create and manually bin blue whale A,B and D call types into 60 minute bins."
   },
   {
-    "objectID": "content/Data Archive/TethysDetections.html#tethys-detection-worksheet",
-    "href": "content/Data Archive/TethysDetections.html#tethys-detection-worksheet",
-    "title": "Tethys - Detections",
+    "objectID": "content/Baleen Whales/BlueWhales-ManualDetection.html#setting-up-ltsa-parameters",
+    "href": "content/Baleen Whales/BlueWhales-ManualDetection.html#setting-up-ltsa-parameters",
+    "title": "Blue Whales - Manual Detection",
     "section": "",
-    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)"
+    "text": "Open 500Hz LTSA for the drift that is being analyzed.\n\nChange the time being displayed to reflect an hour of data.\n\nFor continuous recordings, it should say 1HR.\nFor Duty cycled data it could vary between .2 and .6HRS\n\nIncrease the brightness to 5. Leave default contrast settings\n\n\n\nTriton software was used to create and manually bin blue whale A,B and D call types into 60 minute bins."
   },
   {
-    "objectID": "content/Data Archive/TethysDetections.html#upload-detections-to-tethys",
-    "href": "content/Data Archive/TethysDetections.html#upload-detections-to-tethys",
-    "title": "Tethys - Detections",
-    "section": "Upload Detections to Tethys",
-    "text": "Upload Detections to Tethys\n\nSWFSC.Detections.Analyst.v1 sourcemap\nNOAA.NMFS.v4 species abbreviation"
-  },
-  {
-    "objectID": "content/Data Archive/Permits.html",
-    "href": "content/Data Archive/Permits.html",
-    "title": "Permits",
+    "objectID": "content/Toothed Whales/BeakedWhales-IDGuide.html",
+    "href": "content/Toothed Whales/BeakedWhales-IDGuide.html",
+    "title": "Beaked Whale ID Guide",
     "section": "",
-    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit"
+    "text": "This guide serves as a living document, with the intention to update as more information is learned. To recommend an update or to open a discussion, submit an ‘Issue’ with a useful title and explanation. Go to this link [https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues] to create an Issue, and use the BW-ID label for the issue.\nNote: IPI= inter-pulse interval, PPS= pulses per sec\n\n\n\nPeaks: 32-40 kHz, 22-24 kHz and ~18 kHz\nNull: Strong null at ~27 kHz\nIPI: 0.3-0.5 sec\nPPS: 2-3\n\nUpsweep usually evident. Wigner plots shows a “kickstand” (downsweep appearing after the upsweep). Sometimes this kickstand can just appear as a dot. At great range, the 18 and 22 kHz peaks may be higher than the 32-40 kHz peak and the Wigner can just show the downsweep.\nCitations:\n\n\n\n\n\n\nPeak: 15-16 kHz, 25-26 kHz, and, sometimes, 9 kHz and 35-45 kHz\nNull: NA\nIPI:0.20-0.25 sec\nPPS:4-5\n\nLow frequency click, often with multiple peaks. Upsweep is sometimes present, but pulses will look pretty flat on this scale. Can produce dolphin-like clicks as well as these longer pulses. Clicks can come from above the hydrophone.\n\n\n\n\n\n\nPeak:43 kHz\nNull: NA\nIPI:~0.22\nPPS:4-5\n\nSome higher peaks may be evident if the animal is close. The left limb declines less steeply than with BW46. Wigner is “crescent moon” shaped and lower limb, if present is strongly upswept.\n\n\nBW43 template (gray) and BW43 click from Baumann and Pickering (blue, pers. comm.)\nPeak and slope to the left of peak match well. Slope to the right of peak is much broader, perhaps reflecting proximity or hydrophone differences. Differences in Wigner plots are likely due to scaling differences. [Source: SOCAL41N_DL29_110122_175230.x_0000.wav]\n\n\n\n\n\n\nPeak: 44-48 kHz\nNull: NA\nIPI: 0.09\nPPS: 10-11\n\nPeak at about 46kHz (cyan and tan) shown on top of BW43 (gray). Notice how left slope in frequency spectrum declines more steeply than BW43, even when the peaks are similar (dark blue). The right slope is more variable for both types, but is less steep than the left slope.\n\nFrequency has very steeply declining slope to the left of peak. Right slope declines less steeply and may show higher peaks. Wigner shows “sorting cap”. The lower branch of the Wigner (if present) is nearly horizontal.\n\n\n\nSome pulses show very strong higher peak at about 75 kHz in addition to a distinct lower peak at about 50 kHz. Some signals (presumable closer or more on-axis) show a strong peak at 80 kHz, a second peak at 52 kHz, and a strong null at about 62 kHz. These may appear in the same event as 44-48kHz pulses (see above). No evidence of “sorting hat” in Wigner.\n\n\nAgain two peaks (green, same group as above). In this case, the lower peak is loudest. Inconspicuous “sorting hat” look to wigner.\n\n\n\n\n\n\nPeak:36 kHz\nNull: NA\nIPI:0.25-0.33\nPPS:3-4\n\nPeak frequency is ~36kHz (similar to Ziphius) but with a very steep decline in amplitudes at lower frequencies (left of the peak). This very clear one shows a secondary peak at 25 kHz, but that is 20dB below the peak and is not likely to be seen in a lower SNR signal. Wigner plot is slightly concave upward, with no sign of “kickstand”.\n\n \n\n\n\n\nPeak:34kHz, 50 kHz\nNull: 37kHz\nIPI: 0.125-0.166\nPPS: 6-8\n\nBW37V template (green) shows two distinct peaks at about 34 kHz and 50 kHz, with a strong null (valley) at 37kHz. Note: earlier versions may have identified these as BW39V; once the data was corrected for the frequency response of the hydrophone, the null was found to be at 37kHz.\n\n\n\n\n\n\nPeak: 70kHz\nNull: NA\nIPI: 0.12\nPPS: 8\nBW70 template (cyan) shows a peak at 70 kHz. Slope to the left of the peak is steeper than to the right. Upsweep in the Wigner plot. [Source is SIO, Baumann & Pickering pers. comm., GofCA4A4_051217_234230.x_1114.wav]\n\n\n\n\n\nPeak: 60-65 kHz\nNull: NA\nIPI: 0.127\nPPS: 8\nVery long click with very long frequency sweep and a peak frequency of about 60-65 kHz. Signals may come from above the hydrophones.\n\n\n\n\nPeak: ~26kHz\nNull: NA\nIPI: 0.27-0.40s\nPPS: 3-4\nPulses are low-frequency, with peak at ~26 kHz.\n\n \n\n\n\n\n\nWas above hydrophone. May be alternate part of the beam pattern of a BW46. Wigners were variable and odd looking. Some were almost circular. Need to look for others.\n\n\n\n\n\nMaybe M. densitrostris, but no evidence of an upsweep and signal was relatively short.\n\n\n\n\n\nLow-frequency click, typically &lt; 12 kHz peak. IPI= 0.4-1.0, PPS=1-2."
   },
   {
-    "objectID": "content/Data Archive/Permits.html#noaa-protected-resources-permit",
-    "href": "content/Data Archive/Permits.html#noaa-protected-resources-permit",
-    "title": "Permits",
+    "objectID": "content/Toothed Whales/BeakedWhales-IDGuide.html#introduction",
+    "href": "content/Toothed Whales/BeakedWhales-IDGuide.html#introduction",
+    "title": "Beaked Whale ID Guide",
     "section": "",
-    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit"
+    "text": "This guide serves as a living document, with the intention to update as more information is learned. To recommend an update or to open a discussion, submit an ‘Issue’ with a useful title and explanation. Go to this link [https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues] to create an Issue, and use the BW-ID label for the issue.\nNote: IPI= inter-pulse interval, PPS= pulses per sec\n\n\n\nPeaks: 32-40 kHz, 22-24 kHz and ~18 kHz\nNull: Strong null at ~27 kHz\nIPI: 0.3-0.5 sec\nPPS: 2-3\n\nUpsweep usually evident. Wigner plots shows a “kickstand” (downsweep appearing after the upsweep). Sometimes this kickstand can just appear as a dot. At great range, the 18 and 22 kHz peaks may be higher than the 32-40 kHz peak and the Wigner can just show the downsweep.\nCitations:\n\n\n\n\n\n\nPeak: 15-16 kHz, 25-26 kHz, and, sometimes, 9 kHz and 35-45 kHz\nNull: NA\nIPI:0.20-0.25 sec\nPPS:4-5\n\nLow frequency click, often with multiple peaks. Upsweep is sometimes present, but pulses will look pretty flat on this scale. Can produce dolphin-like clicks as well as these longer pulses. Clicks can come from above the hydrophone.\n\n\n\n\n\n\nPeak:43 kHz\nNull: NA\nIPI:~0.22\nPPS:4-5\n\nSome higher peaks may be evident if the animal is close. The left limb declines less steeply than with BW46. Wigner is “crescent moon” shaped and lower limb, if present is strongly upswept.\n\n\nBW43 template (gray) and BW43 click from Baumann and Pickering (blue, pers. comm.)\nPeak and slope to the left of peak match well. Slope to the right of peak is much broader, perhaps reflecting proximity or hydrophone differences. Differences in Wigner plots are likely due to scaling differences. [Source: SOCAL41N_DL29_110122_175230.x_0000.wav]\n\n\n\n\n\n\nPeak: 44-48 kHz\nNull: NA\nIPI: 0.09\nPPS: 10-11\n\nPeak at about 46kHz (cyan and tan) shown on top of BW43 (gray). Notice how left slope in frequency spectrum declines more steeply than BW43, even when the peaks are similar (dark blue). The right slope is more variable for both types, but is less steep than the left slope.\n\nFrequency has very steeply declining slope to the left of peak. Right slope declines less steeply and may show higher peaks. Wigner shows “sorting cap”. The lower branch of the Wigner (if present) is nearly horizontal.\n\n\n\nSome pulses show very strong higher peak at about 75 kHz in addition to a distinct lower peak at about 50 kHz. Some signals (presumable closer or more on-axis) show a strong peak at 80 kHz, a second peak at 52 kHz, and a strong null at about 62 kHz. These may appear in the same event as 44-48kHz pulses (see above). No evidence of “sorting hat” in Wigner.\n\n\nAgain two peaks (green, same group as above). In this case, the lower peak is loudest. Inconspicuous “sorting hat” look to wigner.\n\n\n\n\n\n\nPeak:36 kHz\nNull: NA\nIPI:0.25-0.33\nPPS:3-4\n\nPeak frequency is ~36kHz (similar to Ziphius) but with a very steep decline in amplitudes at lower frequencies (left of the peak). This very clear one shows a secondary peak at 25 kHz, but that is 20dB below the peak and is not likely to be seen in a lower SNR signal. Wigner plot is slightly concave upward, with no sign of “kickstand”.\n\n \n\n\n\n\nPeak:34kHz, 50 kHz\nNull: 37kHz\nIPI: 0.125-0.166\nPPS: 6-8\n\nBW37V template (green) shows two distinct peaks at about 34 kHz and 50 kHz, with a strong null (valley) at 37kHz. Note: earlier versions may have identified these as BW39V; once the data was corrected for the frequency response of the hydrophone, the null was found to be at 37kHz.\n\n\n\n\n\n\nPeak: 70kHz\nNull: NA\nIPI: 0.12\nPPS: 8\nBW70 template (cyan) shows a peak at 70 kHz. Slope to the left of the peak is steeper than to the right. Upsweep in the Wigner plot. [Source is SIO, Baumann & Pickering pers. comm., GofCA4A4_051217_234230.x_1114.wav]\n\n\n\n\n\nPeak: 60-65 kHz\nNull: NA\nIPI: 0.127\nPPS: 8\nVery long click with very long frequency sweep and a peak frequency of about 60-65 kHz. Signals may come from above the hydrophones.\n\n\n\n\nPeak: ~26kHz\nNull: NA\nIPI: 0.27-0.40s\nPPS: 3-4\nPulses are low-frequency, with peak at ~26 kHz.\n\n \n\n\n\n\n\nWas above hydrophone. May be alternate part of the beam pattern of a BW46. Wigners were variable and odd looking. Some were almost circular. Need to look for others.\n\n\n\n\n\nMaybe M. densitrostris, but no evidence of an upsweep and signal was relatively short.\n\n\n\n\n\nLow-frequency click, typically &lt; 12 kHz peak. IPI= 0.4-1.0, PPS=1-2."
   },
   {
-    "objectID": "content/Data Archive/Permits.html#noaa-sanctuary-permit",
-    "href": "content/Data Archive/Permits.html#noaa-sanctuary-permit",
-    "title": "Permits",
-    "section": "NOAA Sanctuary Permit",
-    "text": "NOAA Sanctuary Permit\n\nReview the SanctuarySummary spreadsheet from Driftwatch and check for Sanctuary overlap\nRecord which sanctuaries the drift passed through in the Sanctuary Permit column in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Sanctuary Permit"
-  },
-  {
-    "objectID": "content/Data Archive/Permits.html#permit-spreadsheet",
-    "href": "content/Data Archive/Permits.html#permit-spreadsheet",
-    "title": "Permits",
-    "section": "Permit Spreadsheet",
-    "text": "Permit Spreadsheet\nRecord all other permit related information in the Permit Spreadsheet including take numbers and sanctuary overlap"
-  },
-  {
-    "objectID": "content/Data Archive/TethysDeployments.html",
-    "href": "content/Data Archive/TethysDeployments.html",
-    "title": "Tethys - Deployments",
+    "objectID": "content/Toothed Whales/NBHF-Detection.html",
+    "href": "content/Toothed Whales/NBHF-Detection.html",
+    "title": "NBHF",
     "section": "",
-    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
-    "objectID": "content/Data Archive/TethysDeployments.html#create-deployment-worksheet",
-    "href": "content/Data Archive/TethysDeployments.html#create-deployment-worksheet",
-    "title": "Tethys - Deployments",
+    "objectID": "content/Toothed Whales/NBHF-Detection.html#methods-summary",
+    "href": "content/Toothed Whales/NBHF-Detection.html#methods-summary",
+    "title": "NBHF",
     "section": "",
-    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
-    "objectID": "content/Data Archive/TethysDeployments.html#deployment-details-to-tethys",
-    "href": "content/Data Archive/TethysDeployments.html#deployment-details-to-tethys",
-    "title": "Tethys - Deployments",
-    "section": "Deployment details to Tethys",
-    "text": "Deployment details to Tethys\n\nUpload finalized deployment details to Tethys using appropriate sourcemap\n\nMobile and moored deployment sourcemaps in TethysSAEL repository on Anne’s github\n\nWork with Anne for this"
-  },
-  {
-    "objectID": "content/Data Archive/TethysDeployments.html#pampaltethys-metadata",
-    "href": "content/Data Archive/TethysDeployments.html#pampaltethys-metadata",
-    "title": "Tethys - Deployments",
-    "section": "PAMpal/Tethys Metadata",
-    "text": "PAMpal/Tethys Metadata\n\nTalk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. \nAdditional comments on workflow spreadsheet"
-  },
-  {
-    "objectID": "content/Data Archive/OBIS.html",
-    "href": "content/Data Archive/OBIS.html",
-    "title": "OBIS",
+    "objectID": "content/Toothed Whales/NBHF-BANTER.html",
+    "href": "content/Toothed Whales/NBHF-BANTER.html",
+    "title": "NBHF - BANTER",
     "section": "",
-    "text": "*Need to check w/ Taiki about this"
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
-    "objectID": "content/Data Archive/OBIS.html#obis-archive-metadata",
-    "href": "content/Data Archive/OBIS.html#obis-archive-metadata",
-    "title": "OBIS",
+    "objectID": "content/Toothed Whales/NBHF-BANTER.html#methods-summary",
+    "href": "content/Toothed Whales/NBHF-BANTER.html#methods-summary",
+    "title": "NBHF - BANTER",
     "section": "",
-    "text": "*Need to check w/ Taiki about this"
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+  },
+  {
+    "objectID": "content/Toothed Whales/BeakedWhales-Detection.html",
+    "href": "content/Toothed Whales/BeakedWhales-Detection.html",
+    "title": "Beaked Whales",
+    "section": "",
+    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
+  },
+  {
+    "objectID": "content/Toothed Whales/BeakedWhales-Detection.html#methods-summary",
+    "href": "content/Toothed Whales/BeakedWhales-Detection.html#methods-summary",
+    "title": "Beaked Whales",
+    "section": "",
+    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
   },
   {
     "objectID": "content/Data Archive/DataPrep.html",
@@ -152,6 +145,125 @@
     "title": "Data Prep",
     "section": "Update deployment details ",
     "text": "Update deployment details \n\nInput Data Start and Data End times into the Deployment Details spreadsheet using the Data Start/End times determined above"
+  },
+  {
+    "objectID": "content/Data Archive/TethysDetections.html",
+    "href": "content/Data Archive/TethysDetections.html",
+    "title": "Tethys - Detections",
+    "section": "",
+    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)"
+  },
+  {
+    "objectID": "content/Data Archive/TethysDetections.html#tethys-detection-worksheet",
+    "href": "content/Data Archive/TethysDetections.html#tethys-detection-worksheet",
+    "title": "Tethys - Detections",
+    "section": "",
+    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)"
+  },
+  {
+    "objectID": "content/Data Archive/TethysDetections.html#upload-detections-to-tethys",
+    "href": "content/Data Archive/TethysDetections.html#upload-detections-to-tethys",
+    "title": "Tethys - Detections",
+    "section": "Upload Detections to Tethys",
+    "text": "Upload Detections to Tethys\n\nSWFSC.Detections.Analyst.v1 sourcemap\nNOAA.NMFS.v4 species abbreviation"
+  },
+  {
+    "objectID": "content/Data Archive/OBIS.html",
+    "href": "content/Data Archive/OBIS.html",
+    "title": "OBIS",
+    "section": "",
+    "text": "*Need to check w/ Taiki about this"
+  },
+  {
+    "objectID": "content/Data Archive/OBIS.html#obis-archive-metadata",
+    "href": "content/Data Archive/OBIS.html#obis-archive-metadata",
+    "title": "OBIS",
+    "section": "",
+    "text": "*Need to check w/ Taiki about this"
+  },
+  {
+    "objectID": "content/Data Archive/DataUpload.html",
+    "href": "content/Data Archive/DataUpload.html",
+    "title": "Data Upload",
+    "section": "",
+    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
+  },
+  {
+    "objectID": "content/Data Archive/DataUpload.html#don-metadata-upload",
+    "href": "content/Data Archive/DataUpload.html#don-metadata-upload",
+    "title": "Data Upload",
+    "section": "",
+    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
+  },
+  {
+    "objectID": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
+    "href": "content/Data Archive/DataUpload.html#high-quality-photos-and-videos",
+    "title": "Data Upload",
+    "section": "High Quality Photos and Videos",
+    "text": "High Quality Photos and Videos\n\nSubmit any high quality photos/videos to Photo & Video Library"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Adrift Analysis Methods",
+    "section": "",
+    "text": "This document provides information related to data analysis for ADRIFT in the California Current, which uses drifting acoustic recorders to monitor marine mammals and ocean soundscapes. These methods include tasks related to data preparation and archiving, detection and classification of baleen and toothed whales, and the characterization of ocean soundscapes."
+  },
+  {
+    "objectID": "content/Data Archive/TethysDeployments.html",
+    "href": "content/Data Archive/TethysDeployments.html",
+    "title": "Tethys - Deployments",
+    "section": "",
+    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
+  },
+  {
+    "objectID": "content/Data Archive/TethysDeployments.html#create-deployment-worksheet",
+    "href": "content/Data Archive/TethysDeployments.html#create-deployment-worksheet",
+    "title": "Tethys - Deployments",
+    "section": "",
+    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
+  },
+  {
+    "objectID": "content/Data Archive/TethysDeployments.html#deployment-details-to-tethys",
+    "href": "content/Data Archive/TethysDeployments.html#deployment-details-to-tethys",
+    "title": "Tethys - Deployments",
+    "section": "Deployment details to Tethys",
+    "text": "Deployment details to Tethys\n\nUpload finalized deployment details to Tethys using appropriate sourcemap\n\nMobile and moored deployment sourcemaps in TethysSAEL repository on Anne’s github\n\nWork with Anne for this"
+  },
+  {
+    "objectID": "content/Data Archive/TethysDeployments.html#pampaltethys-metadata",
+    "href": "content/Data Archive/TethysDeployments.html#pampaltethys-metadata",
+    "title": "Tethys - Deployments",
+    "section": "PAMpal/Tethys Metadata",
+    "text": "PAMpal/Tethys Metadata\n\nTalk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. \nAdditional comments on workflow spreadsheet"
+  },
+  {
+    "objectID": "content/Data Archive/Permits.html",
+    "href": "content/Data Archive/Permits.html",
+    "title": "Permits",
+    "section": "",
+    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit"
+  },
+  {
+    "objectID": "content/Data Archive/Permits.html#noaa-protected-resources-permit",
+    "href": "content/Data Archive/Permits.html#noaa-protected-resources-permit",
+    "title": "Permits",
+    "section": "",
+    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit"
+  },
+  {
+    "objectID": "content/Data Archive/Permits.html#noaa-sanctuary-permit",
+    "href": "content/Data Archive/Permits.html#noaa-sanctuary-permit",
+    "title": "Permits",
+    "section": "NOAA Sanctuary Permit",
+    "text": "NOAA Sanctuary Permit\n\nReview the SanctuarySummary spreadsheet from Driftwatch and check for Sanctuary overlap\nRecord which sanctuaries the drift passed through in the Sanctuary Permit column in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Sanctuary Permit"
+  },
+  {
+    "objectID": "content/Data Archive/Permits.html#permit-spreadsheet",
+    "href": "content/Data Archive/Permits.html#permit-spreadsheet",
+    "title": "Permits",
+    "section": "Permit Spreadsheet",
+    "text": "Permit Spreadsheet\nRecord all other permit related information in the Permit Spreadsheet including take numbers and sanctuary overlap"
   },
   {
     "objectID": "content/Data Archive/DataQualityCheck.html",
@@ -224,25 +336,32 @@
     "text": "Archive to NCEI\n\nArchive data and metadata to NCEI"
   },
   {
-    "objectID": "content/Soundscapes/Metrics.html",
-    "href": "content/Soundscapes/Metrics.html",
-    "title": "Triton Metrics",
+    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html",
+    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html",
+    "title": "Dolphins & Sperm Whales - BANTER",
     "section": "",
-    "text": "Aligning methods to SanctSound protocols (https://sanctsound.ioos.us/) \nData is decimated to 48 kHz\nTriton vXXX software (https://github.com/MarineBioAcousticsRC/Triton) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.\nThird-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.\nVessels are acoustically detected automatically or manually"
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
-    "objectID": "content/Soundscapes/Metrics.html#methods-summary",
-    "href": "content/Soundscapes/Metrics.html#methods-summary",
-    "title": "Triton Metrics",
+    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
+    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
+    "title": "Dolphins & Sperm Whales - BANTER",
     "section": "",
-    "text": "Aligning methods to SanctSound protocols (https://sanctsound.ioos.us/) \nData is decimated to 48 kHz\nTriton vXXX software (https://github.com/MarineBioAcousticsRC/Triton) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.\nThird-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.\nVessels are acoustically detected automatically or manually"
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
-    "objectID": "content/Soundscapes/Metrics.html#step-by-step-instructions",
-    "href": "content/Soundscapes/Metrics.html#step-by-step-instructions",
-    "title": "Triton Metrics",
-    "section": "Step-by-Step Instructions",
-    "text": "Step-by-Step Instructions"
+    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
+    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
+    "title": "Dolphins & Sperm Whales",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+  },
+  {
+    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
+    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
+    "title": "Dolphins & Sperm Whales",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
     "objectID": "content/Baleen Whales/Dectections.html",
@@ -301,20 +420,6 @@
     "text": "Species Specific Validation Methods\n\nFin Whales\n\n\nBlue Whales\n\n\nMinke Whales\n\nMethod for boings cutoff at the start or end of file (only applies to subsampled data to be validated)\n\nIf the detector consistently picks up cutoff boings AND you think they can be picked up easily using manual effort (there is enough signal to know it is a boing) -- then box these partial detections and label them as ‘Cutoff Boing’ (can be helpful as they note the occurrence of these calls during this time selection)\n\nThe box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)\n\n\nMethod for false dectections\n\nIgnore them\n\n\n\n\nBrydes & Fin Whales (40 Hz)\n\n\nHumpback & Gray Whales"
   },
   {
-    "objectID": "content/Baleen Whales/BlueWhales-ManualDetection.html",
-    "href": "content/Baleen Whales/BlueWhales-ManualDetection.html",
-    "title": "Blue Whales - Manual Detection",
-    "section": "",
-    "text": "Open 500Hz LTSA for the drift that is being analyzed.\n\nChange the time being displayed to reflect an hour of data.\n\nFor continuous recordings, it should say 1HR.\nFor Duty cycled data it could vary between .2 and .6HRS\n\nIncrease the brightness to 5. Leave default contrast settings\n\n\n\nTriton software was used to create and manually bin blue whale A,B and D call types into 60 minute bins."
-  },
-  {
-    "objectID": "content/Baleen Whales/BlueWhales-ManualDetection.html#setting-up-ltsa-parameters",
-    "href": "content/Baleen Whales/BlueWhales-ManualDetection.html#setting-up-ltsa-parameters",
-    "title": "Blue Whales - Manual Detection",
-    "section": "",
-    "text": "Open 500Hz LTSA for the drift that is being analyzed.\n\nChange the time being displayed to reflect an hour of data.\n\nFor continuous recordings, it should say 1HR.\nFor Duty cycled data it could vary between .2 and .6HRS\n\nIncrease the brightness to 5. Leave default contrast settings\n\n\n\nTriton software was used to create and manually bin blue whale A,B and D call types into 60 minute bins."
-  },
-  {
     "objectID": "content/Baleen Whales/DataPrep.html",
     "href": "content/Baleen Whales/DataPrep.html",
     "title": "Data Prep",
@@ -329,129 +434,24 @@
     "text": "In order to save space and processing time, raw wav files were decimated to both 12kHz and 500Hz using Triton Software. A few drifts were decimated to 16kHz due to an original sample rate of 256Hz, this is reflected in the folder name of that decimated drift.\n\nChannel one was selected for decimation because typically channel one on most of our arrays consists of an HTI-92 WB hydrophone. Channel two is typically an HTI-99 HF hydrophone and used for higher frequencies.\n\nFrom those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.\n\nLTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details."
   },
   {
-    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html",
-    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html",
-    "title": "Gray & Humpback Whales - Detection",
+    "objectID": "content/Soundscapes/Metrics.html",
+    "href": "content/Soundscapes/Metrics.html",
+    "title": "Triton Metrics",
     "section": "",
-    "text": "*To view the Pamguard settings files used for each drift please click here.\n\n\nDepending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.\n\n\n\nFigure X. Array settings in Pamguard\n\n\n\n\n\n\nFor humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).\n\n\n\nFigure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.\n\n\n\n\n\nFigure x. Low Pass Filter for Humback and Gray whale GPL detector\n\n\n\n\n\n\n\nWe started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.\n\n\n\n\nFigure X. GPL FFT Settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL detections settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL contour settings for humpback and gray whales\n\n\n\nWe then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.\n\nFor this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\n\n\n\n\n\n\n\nAll detections were saved to the binary files and all other data were saved to a SQLite database\n\n\n\nFigure x. Storage Options Settings for PAMGuard"
+    "text": "Aligning methods to SanctSound protocols (https://sanctsound.ioos.us/) \nData is decimated to 48 kHz\nTriton vXXX software (https://github.com/MarineBioAcousticsRC/Triton) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.\nCalibration value = Hydrophone Sensitivity (~ -155 dB for most hydrophones) + Soundtrap Sensitivity (-4 dB for 4300HF). Note, Triton calibration value is a positive value. See ‘SysSens’ function to automatically find calibration value for each deployment\nPower spectral density, third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.\nVessels are acoustically detected automatically or manually"
   },
   {
-    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#pamguard",
-    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#pamguard",
-    "title": "Gray & Humpback Whales - Detection",
+    "objectID": "content/Soundscapes/Metrics.html#methods-summary",
+    "href": "content/Soundscapes/Metrics.html#methods-summary",
+    "title": "Triton Metrics",
     "section": "",
-    "text": "*To view the Pamguard settings files used for each drift please click here.\n\n\nDepending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.\n\n\n\nFigure X. Array settings in Pamguard\n\n\n\n\n\n\nFor humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).\n\n\n\nFigure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.\n\n\n\n\n\nFigure x. Low Pass Filter for Humback and Gray whale GPL detector\n\n\n\n\n\n\n\nWe started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.\n\n\n\n\nFigure X. GPL FFT Settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL detections settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL contour settings for humpback and gray whales\n\n\n\nWe then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.\n\nFor this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\n\n\n\n\n\n\n\nAll detections were saved to the binary files and all other data were saved to a SQLite database\n\n\n\nFigure x. Storage Options Settings for PAMGuard"
+    "text": "Aligning methods to SanctSound protocols (https://sanctsound.ioos.us/) \nData is decimated to 48 kHz\nTriton vXXX software (https://github.com/MarineBioAcousticsRC/Triton) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.\nCalibration value = Hydrophone Sensitivity (~ -155 dB for most hydrophones) + Soundtrap Sensitivity (-4 dB for 4300HF). Note, Triton calibration value is a positive value. See ‘SysSens’ function to automatically find calibration value for each deployment\nPower spectral density, third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.\nVessels are acoustically detected automatically or manually"
   },
   {
-    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#pampal",
-    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#pampal",
-    "title": "Gray & Humpback Whales - Detection",
-    "section": "PAMpal",
-    "text": "PAMpal\n\nThe data were then imported into PAMpal and events were created and put back into the PAMGuard database. Events were defined as 6 minute periods of continuous recordings for ADRIFT and 2 minutes for the CCES 2018 data set (limited to duty cycle 2 on 18 off) . *Add in PASCAL when we get to it."
-  },
-  {
-    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#stratified-sub-sampling",
-    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#stratified-sub-sampling",
-    "title": "Gray & Humpback Whales - Detection",
-    "section": "Stratified Sub-sampling",
-    "text": "Stratified Sub-sampling\n\nDue to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.\n*Add in Kaitlin’s code"
-  },
-  {
-    "objectID": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#validation",
-    "href": "content/Baleen Whales/Gray_and_HumpbackWhales-Detection.html#validation",
-    "title": "Gray & Humpback Whales - Detection",
-    "section": "Validation",
-    "text": "Validation\n\n*Kaitlin to add in methods here"
-  },
-  {
-    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html",
-    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html",
-    "title": "Dolphins & Sperm Whales - BANTER",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
-    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
-    "title": "Dolphins & Sperm Whales - BANTER",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/NBHF-BANTER.html",
-    "href": "content/Toothed Whales/NBHF-BANTER.html",
-    "title": "NBHF - BANTER",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/NBHF-BANTER.html#methods-summary",
-    "href": "content/Toothed Whales/NBHF-BANTER.html#methods-summary",
-    "title": "NBHF - BANTER",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/BeakedWhales-IDGuide.html",
-    "href": "content/Toothed Whales/BeakedWhales-IDGuide.html",
-    "title": "Beaked Whale ID Guide",
-    "section": "",
-    "text": "This guide serves as a living document, with the intention to update as more information is learned. To recommend an update or to open a discussion, submit an ‘Issue’ with a useful title and explanation. Go to this link [https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues] to create an Issue, and use the BW-ID label for the issue.\nNote: IPI= inter-pulse interval, PPS= pulses per sec\n\n\n\nPeaks: 32-40 kHz, 22-24 kHz and ~18 kHz\nNull: Strong null at ~27 kHz\nIPI: 0.3-0.5 sec\nPPS: 2-3\n\nUpsweep usually evident. Wigner plots shows a “kickstand” (downsweep appearing after the upsweep). Sometimes this kickstand can just appear as a dot. At great range, the 18 and 22 kHz peaks may be higher than the 32-40 kHz peak and the Wigner can just show the downsweep.\nCitations:\n\n\n\n\n\n\nPeak: 15-16 kHz, 25-26 kHz, and, sometimes, 9 kHz and 35-45 kHz\nNull: NA\nIPI:0.20-0.25 sec\nPPS:4-5\n\nLow frequency click, often with multiple peaks. Upsweep is sometimes present, but pulses will look pretty flat on this scale. Can produce dolphin-like clicks as well as these longer pulses. Clicks can come from above the hydrophone.\n\n\n\n\n\n\nPeak:43 kHz\nNull: NA\nIPI:~0.22\nPPS:4-5\n\nSome higher peaks may be evident if the animal is close. The left limb declines less steeply than with BW46. Wigner is “crescent moon” shaped and lower limb, if present is strongly upswept.\n\n\nBW43 template (gray) and BW43 click from Baumann and Pickering (blue, pers. comm.)\nPeak and slope to the left of peak match well. Slope to the right of peak is much broader, perhaps reflecting proximity or hydrophone differences. Differences in Wigner plots are likely due to scaling differences. [Source: SOCAL41N_DL29_110122_175230.x_0000.wav]\n\n\n\n\n\n\nPeak: 44-48 kHz\nNull: NA\nIPI: 0.09\nPPS: 10-11\n\nPeak at about 46kHz (cyan and tan) shown on top of BW43 (gray). Notice how left slope in frequency spectrum declines more steeply than BW43, even when the peaks are similar (dark blue). The right slope is more variable for both types, but is less steep than the left slope.\n\nFrequency has very steeply declining slope to the left of peak. Right slope declines less steeply and may show higher peaks. Wigner shows “sorting cap”. The lower branch of the Wigner (if present) is nearly horizontal.\n\n\n\nSome pulses show very strong higher peak at about 75 kHz in addition to a distinct lower peak at about 50 kHz. Some signals (presumable closer or more on-axis) show a strong peak at 80 kHz, a second peak at 52 kHz, and a strong null at about 62 kHz. These may appear in the same event as 44-48kHz pulses (see above). No evidence of “sorting hat” in Wigner.\n\n\nAgain two peaks (green, same group as above). In this case, the lower peak is loudest. Inconspicuous “sorting hat” look to wigner.\n\n\n\n\n\n\nPeak:36 kHz\nNull: NA\nIPI:0.25-0.33\nPPS:3-4\n\nPeak frequency is ~36kHz (similar to Ziphius) but with a very steep decline in amplitudes at lower frequencies (left of the peak). This very clear one shows a secondary peak at 25 kHz, but that is 20dB below the peak and is not likely to be seen in a lower SNR signal. Wigner plot is slightly concave upward, with no sign of “kickstand”.\n\n \n\n\n\n\nPeak:34kHz, 50 kHz\nNull: 37kHz\nIPI: 0.125-0.166\nPPS: 6-8\n\nBW37V template (green) shows two distinct peaks at about 34 kHz and 50 kHz, with a strong null (valley) at 37kHz. Note: earlier versions may have identified these as BW39V; once the data was corrected for the frequency response of the hydrophone, the null was found to be at 37kHz.\n\n\n\n\n\n\nPeak: 70kHz\nNull: NA\nIPI: 0.12\nPPS: 8\nBW70 template (cyan) shows a peak at 70 kHz. Slope to the left of the peak is steeper than to the right. Upsweep in the Wigner plot. [Source is SIO, Baumann & Pickering pers. comm., GofCA4A4_051217_234230.x_1114.wav]\n\n\n\n\n\nPeak: 60-65 kHz\nNull: NA\nIPI: 0.127\nPPS: 8\nVery long click with very long frequency sweep and a peak frequency of about 60-65 kHz. Signals may come from above the hydrophones.\n\n\n\n\nPeak: ~26kHz\nNull: NA\nIPI: 0.27-0.40s\nPPS: 3-4\nPulses are low-frequency, with peak at ~26 kHz.\n\n \n\n\n\n\n\nWas above hydrophone. May be alternate part of the beam pattern of a BW46. Wigners were variable and odd looking. Some were almost circular. Need to look for others.\n\n\n\n\n\nMaybe M. densitrostris, but no evidence of an upsweep and signal was relatively short.\n\n\n\n\n\nLow-frequency click, typically &lt; 12 kHz peak. IPI= 0.4-1.0, PPS=1-2."
-  },
-  {
-    "objectID": "content/Toothed Whales/BeakedWhales-IDGuide.html#introduction",
-    "href": "content/Toothed Whales/BeakedWhales-IDGuide.html#introduction",
-    "title": "Beaked Whale ID Guide",
-    "section": "",
-    "text": "This guide serves as a living document, with the intention to update as more information is learned. To recommend an update or to open a discussion, submit an ‘Issue’ with a useful title and explanation. Go to this link [https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues] to create an Issue, and use the BW-ID label for the issue.\nNote: IPI= inter-pulse interval, PPS= pulses per sec\n\n\n\nPeaks: 32-40 kHz, 22-24 kHz and ~18 kHz\nNull: Strong null at ~27 kHz\nIPI: 0.3-0.5 sec\nPPS: 2-3\n\nUpsweep usually evident. Wigner plots shows a “kickstand” (downsweep appearing after the upsweep). Sometimes this kickstand can just appear as a dot. At great range, the 18 and 22 kHz peaks may be higher than the 32-40 kHz peak and the Wigner can just show the downsweep.\nCitations:\n\n\n\n\n\n\nPeak: 15-16 kHz, 25-26 kHz, and, sometimes, 9 kHz and 35-45 kHz\nNull: NA\nIPI:0.20-0.25 sec\nPPS:4-5\n\nLow frequency click, often with multiple peaks. Upsweep is sometimes present, but pulses will look pretty flat on this scale. Can produce dolphin-like clicks as well as these longer pulses. Clicks can come from above the hydrophone.\n\n\n\n\n\n\nPeak:43 kHz\nNull: NA\nIPI:~0.22\nPPS:4-5\n\nSome higher peaks may be evident if the animal is close. The left limb declines less steeply than with BW46. Wigner is “crescent moon” shaped and lower limb, if present is strongly upswept.\n\n\nBW43 template (gray) and BW43 click from Baumann and Pickering (blue, pers. comm.)\nPeak and slope to the left of peak match well. Slope to the right of peak is much broader, perhaps reflecting proximity or hydrophone differences. Differences in Wigner plots are likely due to scaling differences. [Source: SOCAL41N_DL29_110122_175230.x_0000.wav]\n\n\n\n\n\n\nPeak: 44-48 kHz\nNull: NA\nIPI: 0.09\nPPS: 10-11\n\nPeak at about 46kHz (cyan and tan) shown on top of BW43 (gray). Notice how left slope in frequency spectrum declines more steeply than BW43, even when the peaks are similar (dark blue). The right slope is more variable for both types, but is less steep than the left slope.\n\nFrequency has very steeply declining slope to the left of peak. Right slope declines less steeply and may show higher peaks. Wigner shows “sorting cap”. The lower branch of the Wigner (if present) is nearly horizontal.\n\n\n\nSome pulses show very strong higher peak at about 75 kHz in addition to a distinct lower peak at about 50 kHz. Some signals (presumable closer or more on-axis) show a strong peak at 80 kHz, a second peak at 52 kHz, and a strong null at about 62 kHz. These may appear in the same event as 44-48kHz pulses (see above). No evidence of “sorting hat” in Wigner.\n\n\nAgain two peaks (green, same group as above). In this case, the lower peak is loudest. Inconspicuous “sorting hat” look to wigner.\n\n\n\n\n\n\nPeak:36 kHz\nNull: NA\nIPI:0.25-0.33\nPPS:3-4\n\nPeak frequency is ~36kHz (similar to Ziphius) but with a very steep decline in amplitudes at lower frequencies (left of the peak). This very clear one shows a secondary peak at 25 kHz, but that is 20dB below the peak and is not likely to be seen in a lower SNR signal. Wigner plot is slightly concave upward, with no sign of “kickstand”.\n\n \n\n\n\n\nPeak:34kHz, 50 kHz\nNull: 37kHz\nIPI: 0.125-0.166\nPPS: 6-8\n\nBW37V template (green) shows two distinct peaks at about 34 kHz and 50 kHz, with a strong null (valley) at 37kHz. Note: earlier versions may have identified these as BW39V; once the data was corrected for the frequency response of the hydrophone, the null was found to be at 37kHz.\n\n\n\n\n\n\nPeak: 70kHz\nNull: NA\nIPI: 0.12\nPPS: 8\nBW70 template (cyan) shows a peak at 70 kHz. Slope to the left of the peak is steeper than to the right. Upsweep in the Wigner plot. [Source is SIO, Baumann & Pickering pers. comm., GofCA4A4_051217_234230.x_1114.wav]\n\n\n\n\n\nPeak: 60-65 kHz\nNull: NA\nIPI: 0.127\nPPS: 8\nVery long click with very long frequency sweep and a peak frequency of about 60-65 kHz. Signals may come from above the hydrophones.\n\n\n\n\nPeak: ~26kHz\nNull: NA\nIPI: 0.27-0.40s\nPPS: 3-4\nPulses are low-frequency, with peak at ~26 kHz.\n\n \n\n\n\n\n\nWas above hydrophone. May be alternate part of the beam pattern of a BW46. Wigners were variable and odd looking. Some were almost circular. Need to look for others.\n\n\n\n\n\nMaybe M. densitrostris, but no evidence of an upsweep and signal was relatively short.\n\n\n\n\n\nLow-frequency click, typically &lt; 12 kHz peak. IPI= 0.4-1.0, PPS=1-2."
-  },
-  {
-    "objectID": "content/Toothed Whales/NBHF-Detection.html",
-    "href": "content/Toothed Whales/NBHF-Detection.html",
-    "title": "NBHF",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/NBHF-Detection.html#methods-summary",
-    "href": "content/Toothed Whales/NBHF-Detection.html#methods-summary",
-    "title": "NBHF",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/BeakedWhales-Detection.html",
-    "href": "content/Toothed Whales/BeakedWhales-Detection.html",
-    "title": "Beaked Whales",
-    "section": "",
-    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
-  },
-  {
-    "objectID": "content/Toothed Whales/BeakedWhales-Detection.html#methods-summary",
-    "href": "content/Toothed Whales/BeakedWhales-Detection.html#methods-summary",
-    "title": "Beaked Whales",
-    "section": "",
-    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
-  },
-  {
-    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
-    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html",
-    "title": "Dolphins & Sperm Whales",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
-    "href": "content/Toothed Whales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
-    "title": "Dolphins & Sperm Whales",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Adrift Analysis Methods",
-    "section": "",
-    "text": "This document provides information related to data analysis for ADRIFT in the California Current, which uses drifting acoustic recorders to monitor marine mammals and ocean soundscapes. These methods include tasks related to data preparation and archiving, detection and classification of baleen and toothed whales, and the characterization of ocean soundscapes."
+    "objectID": "content/Soundscapes/Metrics.html#step-by-step-instructions",
+    "href": "content/Soundscapes/Metrics.html#step-by-step-instructions",
+    "title": "Triton Metrics",
+    "section": "Step-by-Step Instructions",
+    "text": "Step-by-Step Instructions"
   }
 ]
