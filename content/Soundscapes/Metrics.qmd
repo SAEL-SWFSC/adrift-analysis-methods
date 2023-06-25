@@ -10,7 +10,9 @@ title: Triton Metrics
 
 -   Triton vXXX software (<https://github.com/MarineBioAcousticsRC/Triton>) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.
 
--   Third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.
+-   Calibration value = Hydrophone Sensitivity (~ -155 dB for most hydrophones) + Soundtrap Sensitivity (-4 dB for 4300HF). Note, Triton calibration value is a positive value. See 'SysSens' function to automatically find calibration value for each deployment
+
+-   Power spectral density, third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.
 
 -   Vessels are acoustically detected automatically or manually
 
