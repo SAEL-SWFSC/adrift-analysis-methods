@@ -1,0 +1,230 @@
+---
+title: Minke Whales
+---
+
+## Pamguard Set Up
+
+All drifts used a default Pamguard settings file. To view the Pamguard settings files used for each drift please click here (insert link to GitHub repository). Open default Pamguard settings file and save each drift under a new .psfx as ADRIFT\_###\_PGversion_Minke (ADRIFT_001_PG_2\_02_02_Minke.psfx)
+
+### Database
+
+Set database path to a new blank database titled ADRIFT\_###\_PG_2\_02_02_Minke.sqlite3
+
+### Binary Storage
+
+Create a new binary folder for your detections titled ADRIFT\_###\_PG_2\_02_02_Minke
+
+### Hydrophone Array
+
+Depending on the drift that was processed, the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector. To view the Array Configuration files for each drift please click here\* (insert link to storage place)
+
+### Sound Acquisition
+
+Set the sound acquisition path to the folder your sound files are in
+
+### Decimation
+
+he Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz .
+
+### GPL Settings
+
+![](images/Screenshot%202023-08-15%20203934.png)
+
+![](images/Screenshot%202023-08-15%20204002.png)
+
+![](images/Screenshot%202023-08-15%20204019.png)
+
+### Spectrogram Annotation and Detection Grouper Settings
+
+-   In order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.
+
+![Figure x. Detection Grouper Mark Display Settings](Screenshots/Detection_Grouper_Display_Settings_PG.JPG){alt="Figure x. Detection Grouper Mark Display Settings"}
+
+![Figure X. Detection Grouper Data Selection Settings](Screenshots/Detection_Grouper_Data_Selection_Settings_PG.JPG){alt="Figure X. Detection Grouper Data Selection Settings"}
+
+![Figure x. Detection Grouper Annotation Settings](Screenshots/Detection_Grouper_Annotation_Settings_PG.JPG){alt="Figure x. Detection Grouper Annotation Settings"}
+
+-   It is important to note that both the "Text" and "User Form" annotation boxes must be selected here.
+
+    -   To setup the user form annotation (click on the gear icon)
+
+    -   Create new user form
+
+    -   Label the form "evType" then click ok (see figure X)
+
+        ![Figure x. Adding in a user form for the Detection Grouper in Pamguard](Screenshots/Adding_user_form_to_DGL.JPG){alt="Figure x. Adding in a user form for the Detection Grouper in Pamguard"}
+
+    -   Next click "edit form"
+
+    -   Add a lookup table and fill it out exactly as follows (see figure x.)
+
+        -   Title: eventType
+
+        -   PostTitle: eventType
+
+        -   DbTitle: eventType
+
+        -   Topic: DGEventType
+
+            ![Figure x. Editing the user form for the detection grouper to work with the GPL detections](Screenshots/User_form_lookup_for_DGL.png){alt="Figure x. Editing the user form for the detection grouper to work with the GPL detections"}
+
+        -   Add selection drop down by right clicking on '= no selection =' and selecting 'Edit list'
+
+![](images/paste-84EC9657.png)
+
+-   Click 'Add item' and fill in species specific options
+
+    -   B - Boing
+
+    -   CB - Cutoff Boing
+
+    -   UB - Unknown Biological Sound
+
+    -   UA - Unknown Anthropogenic Sound
+
+![](images/paste-332E165A.png)
+
+-   Click 'Ok' to close all of the tabs and return to Pamguard Viewer window
+
+-   Next, set up the Spectrogram Annotation
+
+    -   Go to File \> Add Modules \> Utilities \> Spectrogram Annotation
+
+        ![](images/paste-7099FC71.png)
+
+-   Under 'Settings', go to Spectrogram Annotation settings and click on the gear icon next to 'User form annotation'
+
+-   Click on the 'User form' drop down, select 'UDF_evType', and click Ok to return to the Pamguard Viewer window
+
+    ![](images/paste-C1DA1020.png)
+
+-   Right click on the spectrogram and go to Settings
+
+    -   Ensure both the 'Detection Grouper' and 'Spectrogram Annotation' boxes are checked and click Ok
+
+        ![](images/paste-C82ACEBF.png)
+
+-   Go to File \> Save Data and close Pamguard
+
+## Detection Validation
+
+Manually validate all detections to look for Minke boings
+
+## All Data Validation
+
+-   Due to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.
+
+### \*Add in Kaitlin's code
+
+```{r}
+#| eval: FALSE
+# PAMpal simple example 
+# Its on CRAN. Yay!
+# install.packages('PAMpal')
+# Sometimes I fix things and theyre only available on the GitHub version
+# Right now there are some things that run a lot faster on teh GitHub version so I recommend installing that.
+# updated 22-12-6 to include loop for PG event adding w/PAMmisc
+rm(list=ls())
+devtools::install_github('TaikiSan21/PAMpal')
+devtools::install_github('TaikiSan21/PAMmisc')
+library(PAMpal)
+library(PAMmisc)
+
+# Start by creating a "PAMpalSettings" object. This keeps track of what data you want to process and what processing you want to apply to it.
+
+# Change paths below to your DB and binary folder. Can just be the highest level binary folder for that drift - it will add all files within that folder recursively through subfolders.
+
+# This will also ask you to type in some parameters for calculations in your console. You can just hit ENTER to accept defaults for all of these, they aren't relevant to the GPL calculations only for clicks.
+
+pps <- PAMpalSettings(db = 'Path to database',
+                      binaries = 'Path to binaries',
+                      # these parameters are only for the click detector - can ignroe
+                      sr_hz='auto',
+                      filterfrom_khz=0,
+                      filterto_khz=NULL,
+                      winLen_sec=.0025)
+
+# Now tell it to process your data. Id is optional and serves no function, but can be useful to tell data apart at a later point in time. Here mode = 'recording' tells it how to organize your data. Most of the time we are working with data that have been marked manually into events, so PAMpal wants to organize things into events. mode='db' uses the events in the database, and only processes the detectoins you've marked out. In this case we just want to process everything, which is what mode='recording' does. It will group them into events by recording file. 
+
+# This might take some time to read in events after processing in order to get the time 
+#data <- processPgDetections(pps, mode='db', id='Minke_CCES_019') 
+
+data <- processPgDetections(pps, mode='recording', id='Species_Project_Drift#')
+
+# And here's how you can get the detections information out of "data" as a dataframe. Time column is "UTC", other columns are stuff it measured. 
+gplDf <- getGPLData(data)
+
+# Now we can add the wav files to this data. You might get a warning about "startSample", its safe to ignore that.
+data <- addRecordings(data, 
+                      folder='Path to wav files')
+
+# that data is stored here as a dataframe. Has "start" & "end" as POSIXct and the fulle path to the file as "file"
+wavDf <- files(data)$recordings
+
+# add number of detections to this
+nDets <- sapply(events(data), nDetections)
+nDets <- data.frame(join=names(nDets), nDets=nDets)
+wavDf$join <- basename(wavDf$file)
+wavDf <- left_join(wavDf, nDets)
+wavDf$join <- NULL
+wavDf$nDets[is.na(wavDf$nDets)] <- 0
+
+nfiles =round(nrow(wavDf)*.2)
+randStart =sample(1:5,1)
+
+wavDf=wavDf[round(seq(randStart, nrow(wavDf), length.out = nfiles)),]
+
+# If we care about assigning some kind of initial label to these detections. Otherwise ignore. 
+data <- setSpecies(data, method='manual', value='InitialGPL')
+
+# Add events from wavDf loop
+for(e in 1:nrow(wavDf)) {
+  thisEv <- data[[basename(wavDf$file[e])]]
+  # this will get all detector types, if just one type is wanted can be simplified to ex. uids <- unique(getGPLData(thisEv)$UID)
+  uids <- unique(unlist(lapply(getDetectorData(thisEv), function(x) {
+    if(is.null(x)) return(NULL)
+    x$UID
+  })))
+  
+  addPgEvent(db = files(thisEv)$db,
+             binary = files(thisEv)$binaries,
+             eventType = species(thisEv)$id,
+             UIDs = uids,
+             type = 'dg',
+             start = wavDf$start[e],
+             end = wavDf$end[e],
+             comment = paste0('Added by PAMpal, event ID: ', id(thisEv)))
+}
+```
+
+### Validation
+
+-   Once you have followed the code above to subsample your data, make a copy of the database in a 'Data Validated' folder and reopen the database in Pamguard Viewer
+
+-   Go to File \> Add Modules \> Displays \> User Display
+
+    ![](images/paste-2578EBE1.png)
+
+-   Name the new user display 'Subsample'
+
+-   Click on the new subsample tab and go to User Display \> New Detection Grouper data display
+
+    ![](images/paste-12CF9694.png)
+
+-   Your subsampled data should then be listed with associate marker colors
+
+    ![](images/paste-F6687E7F.png)
+
+-   Validate each subsampled wav file by scrolling in the spectrogram to the file and boxing/validating all detections using the drop down options specified above
+
+### Notes
+
+-   Method for boings cutoff at the start or end of file (only applies to subsampled data to be validated)
+
+    -   If the detector consistently picks up cutoff boings AND you think they can be picked up easily using manual effort (there is enough signal to know it is a boing) \-- then box these partial detections and label them as 'Cutoff Boing' (can be helpful as they note the occurrence of these calls during this time selection)
+
+        -   The box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)
+
+-   Method for false dectections
+
+    -   Ignore them

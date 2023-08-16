@@ -24,6 +24,8 @@ The Decimator in PAMGuard was set to decimate to 200Hz. Default filter settings 
 
 ### Minke Whales
 
+The Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz .
+
 ### Brydes & Fin Whales (40 Hz)
 
 ### Humpback & Gray Whales

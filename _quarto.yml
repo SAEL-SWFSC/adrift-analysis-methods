@@ -53,7 +53,7 @@ website:
           - content/Baleen Whales/BlueWhales-ManualDetection.qmd
           - content/Baleen Whales/BlueWhales-GPL.qmd
           - content/Baleen Whales/BlueWhales-BANTER.qmd
-          - content/Baleen Whales/MinkeWhales-BANTER.qmd
+          - content/Baleen Whales/MinkeWhales.qmd
           - content/Baleen Whales/Gray_and_HumpbackWhales-BANTER.qmd
       - section: "Toothed Whales"
         contents:
