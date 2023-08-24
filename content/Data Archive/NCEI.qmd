@@ -294,6 +294,6 @@ Add other sensors as needed
 
 See [Passive Packer manual](https://www.ngdc.noaa.gov/mgg/pad/packager_manual.pdf) for Additional Information and Warning Message Guidelines
 
-#### Archive to NCEI
+## Archive to NCEI
 
 -   Archive data and metadata to NCEI
