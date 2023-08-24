@@ -4,7 +4,7 @@ title: NCEI
 
 ## NCEI Passive Packer Metadata
 
-### Disclaimer 
+### Disclaimer
 
 Most of the following information can be found in the Passive Packer Manual. This information is summarized from the manual with ADRIFT specific directions for various Passive Packer guidelines and fields. The following steps were put together using Passive Packer v.4.0.2.
 
@@ -54,19 +54,19 @@ The goal is to automate the Passive Packer process as much as possible. Currentl
 
 -   Try exporting Tethys queries and import data into Passive Packer
 
--   Modify Anne\'s Tethys deployment spreadsheet script to pull necessary data from deployment details and import it to Passive Packer database. This will auto-fill most fields when Passive Packer is opened, allowing for less manual entry. 
+-   Modify Anne's Tethys deployment spreadsheet script to pull necessary data from deployment details and import it to Passive Packer database. This will auto-fill most fields when Passive Packer is opened, allowing for less manual entry. 
 
 ### Getting Started
 
--   Download software from [Passive Packer Website](https://www.ncei.noaa.gov/products/passivepacker) and follow the \'Getting Started\' directions
+-   Download software from [Passive Packer Website](https://www.ncei.noaa.gov/products/passivepacker) and follow the 'Getting Started' directions
 
 -   See [Passive Packer Manual](https://www.ngdc.noaa.gov/mgg/pad/packager_manual.pdf) for introduction to software and guidelines on packaging other passive acoustics data, including detections and moored deployments
 
 -   Note: The majority of the information required by Passive Packer can be found in the [Deployment Details spreadsheet](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=395545420)
 
-### Package Tab
+### Passive Packer Options
 
-![](images/paste-179B2ED1.png)
+![](images/PassivePacker_options.png)
 
 -   **?:** Opens Passive Packer Manual
 
@@ -82,7 +82,7 @@ The goal is to automate the Passive Packer process as much as possible. Currentl
 
 ### Package Tab
 
-![](images/paste-4D82BE71.png)
+![](images/PassivePacker_PackageTab.png)
 
 1.  **Projects:** input or select from drop down ADRIFT, CCES, PASCAL, or other applicable project name
 
@@ -98,19 +98,19 @@ The goal is to automate the Passive Packer process as much as possible. Currentl
 
 7.  **Public Release Date:** For SWFSC ADRIFT project, always list at least 1 year after data were collected
 
-8.  **Dataset Packager:** Your name, use \'Create/Edit People\' if you are not on the drop down menu
+8.  **Dataset Packager:** Your name, use 'Create/Edit People' if you are not on the drop down menu
 
 9.  **Export JSON File & Export Records:** Once all data fields have been filled in, export the file and save it to you metadata folder
 
-10. **Select existing dataset and \'Generate Dataset Name\':** use drop down to select data you saved for later or fill in all above information and click \'Generate Dataset Name\' to create a new dataset entry
+10. **Select existing dataset and 'Generate Dataset Name':** use drop down to select data you saved for later or fill in all above information and click 'Generate Dataset Name' to create a new dataset entry
 
 ### Dataset Description Tab
 
-![](images/paste-88071F8A.png)
+![](images/PassivePacker_datasetDescription.png)
 
 1.  **Deployment Title:** Full name of project/ dataset
 
-    1.  Example: For CCES write \'California Current Ecosystems Survey - Passive Acoustics Survey
+    1.  Example: For CCES write 'California Current Ecosystems Survey - Passive Acoustics Survey
 
 2.  **Deployment Purpose:** Description of the purpose of the deployment/ dataset. Stays the same for each project, use information from reports for past projects
 
@@ -122,7 +122,7 @@ The goal is to automate the Passive Packer process as much as possible. Currentl
 
 ### Dataset Details
 
-![](images/paste-EAA7450D.png)
+![](images/PassivePacker_datasetDetails.png)
 
 1.  **Platform:** Drifter
 
@@ -146,9 +146,9 @@ The goal is to automate the Passive Packer process as much as possible. Currentl
 
 ### Sampling Details Tab
 
-![](images/paste-0988E10B.png)
+![](images/PassivePacker_SamplingDetails.png)
 
--   **Channel Time & all other time field:** Should auto-fill based on \'Audio Start Time\' and \'Audio End Time\' in Dataset Details tab. Edit as necessary
+-   **Channel Time & all other time field:** Should auto-fill based on 'Audio Start Time' and 'Audio End Time' in Dataset Details tab. Edit as necessary
 
 -   **Sensor Number:** Should match number used in Sensor Details window, change sensor number if duplicating channels
 
@@ -166,31 +166,31 @@ The goal is to automate the Passive Packer process as much as possible. Currentl
 
 ### Data Quality Window
 
-![](images/paste-F15BE4B5.png)
+![](images/PassivePacker_DataQuality.png)
 
 **For ADRIFT an overall deployment data quality entry will be added and a detailed noise log will be attached**
 
 -   **Quality Analyst:** select who determined the data quality, create/edit people as needed
 
--   **Select Quality Level: select overall deployment data quality from drop down**
+-   **Select Quality Level:** select overall deployment data quality from drop down
 
--   **Frequency Range: input minimum and maximum frequency for that data quality level**
+-   **Frequency Range:** input minimum and maximum frequency for that data quality level
 
 -   **Time** will auto-fill from Dataset Details tab
 
--   **Comments: include any comments about data quality here**
+-   **Comments:** include any comments about data quality here
 
--   **Channels: for ADRIFT we only analyze channel 1, change as needed**
+-   **Channels:** for ADRIFT we only analyze channel 1, change as needed
 
 -   Add quality entries and update times as needed
 
--   **Additional Quality Information: Fill in objectives, method, and description of quality assessment for future users and analysts**
+-   **Additional Quality Information:** Fill in objectives, method, and description of quality assessment for future users and analysts
 
 ### Sensors Window
 
-![](images/paste-8E171857.png)
+![](images/PassivePacker_Sensorswindow.png)
 
-#### **Audio Sensor:** 
+#### **Audio Sensor:**
 
 Add new sensor for each channel, 2 CH for ADRIFT
 
@@ -204,44 +204,45 @@ Add new sensor for each channel, 2 CH for ADRIFT
 
 -   **Hydrophone ID:**
 
--   **Preamp ID: leave blank for ADRIFT**
+-   **Preamp ID:** leave blank for ADRIFT
 
--   **Sensor Description: Any additional information about hydrophone**
+-   **Sensor Description:** Any additional information about hydrophone
 
 #### **Depth Sensor:**
 
--   **Sensor Number: 3 (if 2 audio sensors were added above)**
+-   **Sensor Number:** 3 (if 2 audio sensors were added above)
 
--   **Sensor ID: depth sensor serial number (i.e. U-15771)**
+-   **Sensor ID:** depth sensor serial number (i.e. U-15771)
 
--   **Sensor Name: Sensus Ultra**
+-   **Sensor Name:** Sensus Ultra
 
--   **Sensor Position: Deployment depth (-100)**
+-   **Sensor Position:** Deployment depth (-100)
 
--   **Sensor Description: Any additional information about depth sensor**
+-   **Sensor Description:** Any additional information about depth sensor
 
-#### **GPS Sensor:** 
+#### **GPS Sensor:**
 
 Add new sensor if 2 GPS units were used (i.e. SPOT)
 
--   **Sensor Number: 4 (if 2 audio sensors and depth sensor were added)**
+-   **Sensor Number:** 4 (if 2 audio sensors and depth sensor were added)
 
--   **Sensor ID: GPS ID (7 digit number, 3391082 or 0-4554502)**
+-   **Sensor ID:** GPS ID (7 digit number, 3391082 or 0-4554502)
 
--   **Sensor Name: GPS name (SO-001 or Spot Letter)**
+-   **Sensor Name:** GPS name (SO-001 or Spot Letter)
 
--   **Sensor Position: +1 (above sea level)**
+-   **Sensor Position:** +1 (above sea level)
 
--   **Sensor Type: GPS**
+-   **Sensor Type:** GPS
 
--   **Properties: Leave blank**
+-   **Properties:** Leave blank
 
--   **Sensor Description: Any additional information about GPS**
+-   **Sensor Description:** Any additional information about GPS
 
 Add other sensors as needed
 
 ### Location Tab
-![](images/paste-026A79EF.png)
+
+![](images/PassivePacker_LocationTab.png)
 
 -   **Vessel:** Name of deployment vessel
 
@@ -253,7 +254,7 @@ Add other sensors as needed
 
 ### Calibration Info Tab
 
-![](images/paste-F82408B2.png)
+![](images/PassivePacker_CalibrationInfo.png)
 
 -   **Calibration State:**
 
@@ -269,23 +270,23 @@ Add other sensors as needed
 
 ### People/Organizations Tab
 
-![](images/paste-6FBF776F.png)
+![](images/PassivePacker_PeopleAndOrgs.png)
 
--   **Scientists: List PI and Chief Scientist for each project/deployment (PASCAL - Shannon Rankin & Jennifer McCullough, CCES - Shannon Rankin and Anne Simonis, ADRIFT - Shannon Rankin & Deployment Details Personnel Column)**
+-   **Scientists:** List PI and Chief Scientist for each project/deployment (PASCAL - Shannon Rankin & Jennifer McCullough, CCES - Shannon Rankin and Anne Simonis, ADRIFT - Shannon Rankin & Deployment Details Personnel Column)
 
--   **Source Organizations: SWFSC**
+-   **Source Organizations:** SWFSC
 
--   **Funding Organization: Always list SWFSC, check acknowledgements in past reports, ADRIFT - BOEM**
+-   **Funding Organization:** Always list SWFSC, check acknowledgements in past reports, ADRIFT - BOEM
 
 -   Create/Edit people and organizations as needed
 
 ### Ancillary Data
 
-![](images/paste-C82FF7A4.png)
+![](images/PassivePacker_AncillaryInfo.png)
 
--   **Path to temperature data files: directory with temp files from soundtrap or temperature sensor**
+-   **Path to temperature data files:** directory with temp files from soundtrap or temperature sensor
 
--   **Path to observational data files: only include for opportunistic recordings with observation notes (species, behavior, time, etc.)**
+-   **Path to observational data files:** only include for opportunistic recordings with observation notes (species, behavior, time, etc.)
 
 -   **Path to other files you wish to submit:** accelerometer and depth data
 
