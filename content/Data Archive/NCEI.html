@@ -316,8 +316,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#hard-drive-requirements" id="toc-hard-drive-requirements" class="nav-link" data-scroll-target="#hard-drive-requirements">Hard Drive Requirements</a></li>
   <li><a href="#passive-packer-and-tethys" id="toc-passive-packer-and-tethys" class="nav-link" data-scroll-target="#passive-packer-and-tethys">Passive Packer and Tethys</a></li>
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#passive-packer-options" id="toc-passive-packer-options" class="nav-link" data-scroll-target="#passive-packer-options">Passive Packer Options</a></li>
   <li><a href="#package-tab" id="toc-package-tab" class="nav-link" data-scroll-target="#package-tab">Package Tab</a></li>
-  <li><a href="#package-tab-1" id="toc-package-tab-1" class="nav-link" data-scroll-target="#package-tab-1">Package Tab</a></li>
   <li><a href="#dataset-description-tab" id="toc-dataset-description-tab" class="nav-link" data-scroll-target="#dataset-description-tab">Dataset Description Tab</a></li>
   <li><a href="#dataset-details" id="toc-dataset-details" class="nav-link" data-scroll-target="#dataset-details">Dataset Details</a></li>
   <li><a href="#sampling-details-tab" id="toc-sampling-details-tab" class="nav-link" data-scroll-target="#sampling-details-tab">Sampling Details Tab</a></li>
@@ -401,21 +401,21 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="future-plan">Future Plan</h4>
 <ul>
 <li><p>Try exporting Tethys queries and import data into Passive Packer</p></li>
-<li><p>Modify Anne's Tethys deployment spreadsheet script to pull necessary data from deployment details and import it to Passive Packer database. This will auto-fill most fields when Passive Packer is opened, allowing for less manual entry.&nbsp;</p></li>
+<li><p>Modify Anne’s Tethys deployment spreadsheet script to pull necessary data from deployment details and import it to Passive Packer database. This will auto-fill most fields when Passive Packer is opened, allowing for less manual entry.&nbsp;</p></li>
 </ul>
 </section>
 </section>
 <section id="getting-started" class="level3">
 <h3 class="anchored" data-anchor-id="getting-started">Getting Started</h3>
 <ul>
-<li><p>Download software from <a href="https://www.ncei.noaa.gov/products/passivepacker">Passive Packer Website</a> and follow the 'Getting Started' directions</p></li>
+<li><p>Download software from <a href="https://www.ncei.noaa.gov/products/passivepacker">Passive Packer Website</a> and follow the ‘Getting Started’ directions</p></li>
 <li><p>See <a href="https://www.ngdc.noaa.gov/mgg/pad/packager_manual.pdf">Passive Packer Manual</a> for introduction to software and guidelines on packaging other passive acoustics data, including detections and moored deployments</p></li>
 <li><p>Note: The majority of the information required by Passive Packer can be found in the <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=395545420">Deployment Details spreadsheet</a></p></li>
 </ul>
 </section>
-<section id="package-tab" class="level3">
-<h3 class="anchored" data-anchor-id="package-tab">Package Tab</h3>
-<p><img src="images/paste-179B2ED1.png" class="img-fluid"></p>
+<section id="passive-packer-options" class="level3">
+<h3 class="anchored" data-anchor-id="passive-packer-options">Passive Packer Options</h3>
+<p><img src="images/PassivePacker_options.png" class="img-fluid"></p>
 <ul>
 <li><p><strong>?:</strong> Opens Passive Packer Manual</p></li>
 <li><p><strong>Hide Records:</strong> Opens the package record show/hide dialog box. Previous packages records with show selected will be displayed in the Select Existing Record drop down menu</p></li>
@@ -425,9 +425,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Package Data:</strong> Starts the packaging process</p></li>
 </ul>
 </section>
-<section id="package-tab-1" class="level3">
-<h3 class="anchored" data-anchor-id="package-tab-1">Package Tab</h3>
-<p><img src="images/paste-4D82BE71.png" class="img-fluid"></p>
+<section id="package-tab" class="level3">
+<h3 class="anchored" data-anchor-id="package-tab">Package Tab</h3>
+<p><img src="images/PassivePacker_PackageTab.png" class="img-fluid"></p>
 <ol type="1">
 <li><p><strong>Projects:</strong> input or select from drop down ADRIFT, CCES, PASCAL, or other applicable project name</p></li>
 <li><p><strong>Site or Cruise:</strong> input cruise name (drifting deployments do not have set sites)</p></li>
@@ -436,18 +436,18 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Dataset Type:</strong> Audio (unless packaging other types of acoustic data, see manual for directions)</p></li>
 <li><p><strong>Deployment Type:</strong> Mobile Marine</p></li>
 <li><p><strong>Public Release Date:</strong> For SWFSC ADRIFT project, always list at least 1 year after data were collected</p></li>
-<li><p><strong>Dataset Packager:</strong> Your name, use 'Create/Edit People' if you are not on the drop down menu</p></li>
+<li><p><strong>Dataset Packager:</strong> Your name, use ‘Create/Edit People’ if you are not on the drop down menu</p></li>
 <li><p><strong>Export JSON File &amp; Export Records:</strong> Once all data fields have been filled in, export the file and save it to you metadata folder</p></li>
-<li><p><strong>Select existing dataset and 'Generate Dataset Name':</strong> use drop down to select data you saved for later or fill in all above information and click 'Generate Dataset Name' to create a new dataset entry</p></li>
+<li><p><strong>Select existing dataset and ‘Generate Dataset Name’:</strong> use drop down to select data you saved for later or fill in all above information and click ‘Generate Dataset Name’ to create a new dataset entry</p></li>
 </ol>
 </section>
 <section id="dataset-description-tab" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-description-tab">Dataset Description Tab</h3>
-<p><img src="images/paste-88071F8A.png" class="img-fluid"></p>
+<p><img src="images/PassivePacker_datasetDescription.png" class="img-fluid"></p>
 <ol type="1">
 <li><p><strong>Deployment Title:</strong> Full name of project/ dataset</p>
 <ol type="1">
-<li>Example: For CCES write 'California Current Ecosystems Survey - Passive Acoustics Survey</li>
+<li>Example: For CCES write ’California Current Ecosystems Survey - Passive Acoustics Survey</li>
 </ol></li>
 <li><p><strong>Deployment Purpose:</strong> Description of the purpose of the deployment/ dataset. Stays the same for each project, use information from reports for past projects</p></li>
 <li><p><strong>Deployment Description:</strong> Information on why data were collected, details for future data users, and anything special that might affect data usefulness for other analyses. Stays the same for each project, use information from reports for past projects</p></li>
@@ -457,7 +457,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="dataset-details" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-details">Dataset Details</h3>
-<p><img src="images/paste-EAA7450D.png" class="img-fluid"></p>
+<p><img src="images/PassivePacker_datasetDetails.png" class="img-fluid"></p>
 <ol type="1">
 <li><p><strong>Platform:</strong> Drifter</p></li>
 <li><p><strong>Instrument type:</strong> ST4300, ST640, or other instrument</p></li>
@@ -473,9 +473,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sampling-details-tab" class="level3">
 <h3 class="anchored" data-anchor-id="sampling-details-tab">Sampling Details Tab</h3>
-<p><img src="images/paste-0988E10B.png" class="img-fluid"></p>
+<p><img src="images/PassivePacker_SamplingDetails.png" class="img-fluid"></p>
 <ul>
-<li><p><strong>Channel Time &amp; all other time field:</strong> Should auto-fill based on 'Audio Start Time' and 'Audio End Time' in Dataset Details tab. Edit as necessary</p></li>
+<li><p><strong>Channel Time &amp; all other time field:</strong> Should auto-fill based on ‘Audio Start Time’ and ‘Audio End Time’ in Dataset Details tab. Edit as necessary</p></li>
 <li><p><strong>Sensor Number:</strong> Should match number used in Sensor Details window, change sensor number if duplicating channels</p></li>
 <li><p><strong>Sample Rate (kHz):</strong> sampling rate set in soundtrap deployment window, should be 384 for ADRIFT</p></li>
 <li><p><strong>Sample Bits:</strong> 16 for ADRIFT</p></li>
@@ -487,22 +487,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="data-quality-window" class="level3">
 <h3 class="anchored" data-anchor-id="data-quality-window">Data Quality Window</h3>
-<p><img src="images/paste-F15BE4B5.png" class="img-fluid"></p>
+<p><img src="images/PassivePacker_DataQuality.png" class="img-fluid"></p>
 <p><strong>For ADRIFT an overall deployment data quality entry will be added and a detailed noise log will be attached</strong></p>
 <ul>
 <li><p><strong>Quality Analyst:</strong> select who determined the data quality, create/edit people as needed</p></li>
-<li><p><strong>Select Quality Level: select overall deployment data quality from drop down</strong></p></li>
-<li><p><strong>Frequency Range: input minimum and maximum frequency for that data quality level</strong></p></li>
+<li><p><strong>Select Quality Level:</strong> select overall deployment data quality from drop down</p></li>
+<li><p><strong>Frequency Range:</strong> input minimum and maximum frequency for that data quality level</p></li>
 <li><p><strong>Time</strong> will auto-fill from Dataset Details tab</p></li>
-<li><p><strong>Comments: include any comments about data quality here</strong></p></li>
-<li><p><strong>Channels: for ADRIFT we only analyze channel 1, change as needed</strong></p></li>
+<li><p><strong>Comments:</strong> include any comments about data quality here</p></li>
+<li><p><strong>Channels:</strong> for ADRIFT we only analyze channel 1, change as needed</p></li>
 <li><p>Add quality entries and update times as needed</p></li>
-<li><p><strong>Additional Quality Information: Fill in objectives, method, and description of quality assessment for future users and analysts</strong></p></li>
+<li><p><strong>Additional Quality Information:</strong> Fill in objectives, method, and description of quality assessment for future users and analysts</p></li>
 </ul>
 </section>
 <section id="sensors-window" class="level3">
 <h3 class="anchored" data-anchor-id="sensors-window">Sensors Window</h3>
-<p><img src="images/paste-8E171857.png" class="img-fluid"></p>
+<p><img src="images/PassivePacker_Sensorswindow.png" class="img-fluid"></p>
 <section id="audio-sensor" class="level4">
 <h4 class="anchored" data-anchor-id="audio-sensor"><strong>Audio Sensor:</strong></h4>
 <p>Add new sensor for each channel, 2 CH for ADRIFT</p>
@@ -512,38 +512,38 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Sensor Name:</strong> type of hydrophone (HTI-99-HF, HTI-92-WB, or HTI-96-MIN)</p></li>
 <li><p><strong>Sensor Position:</strong> leave X and Y blank, Z for sensor 1 is deployment depth, Z for other sensors is the deployment depth plus the distance between sensor 1 and sensor x (1 is -100, 2 is -105)</p></li>
 <li><p><strong>Hydrophone ID:</strong></p></li>
-<li><p><strong>Preamp ID: leave blank for ADRIFT</strong></p></li>
-<li><p><strong>Sensor Description: Any additional information about hydrophone</strong></p></li>
+<li><p><strong>Preamp ID:</strong> leave blank for ADRIFT</p></li>
+<li><p><strong>Sensor Description:</strong> Any additional information about hydrophone</p></li>
 </ul>
 </section>
 <section id="depth-sensor" class="level4">
 <h4 class="anchored" data-anchor-id="depth-sensor"><strong>Depth Sensor:</strong></h4>
 <ul>
-<li><p><strong>Sensor Number: 3 (if 2 audio sensors were added above)</strong></p></li>
-<li><p><strong>Sensor ID: depth sensor serial number (i.e.&nbsp;U-15771)</strong></p></li>
-<li><p><strong>Sensor Name: Sensus Ultra</strong></p></li>
-<li><p><strong>Sensor Position: Deployment depth (-100)</strong></p></li>
-<li><p><strong>Sensor Description: Any additional information about depth sensor</strong></p></li>
+<li><p><strong>Sensor Number:</strong> 3 (if 2 audio sensors were added above)</p></li>
+<li><p><strong>Sensor ID:</strong> depth sensor serial number (i.e.&nbsp;U-15771)</p></li>
+<li><p><strong>Sensor Name:</strong> Sensus Ultra</p></li>
+<li><p><strong>Sensor Position:</strong> Deployment depth (-100)</p></li>
+<li><p><strong>Sensor Description:</strong> Any additional information about depth sensor</p></li>
 </ul>
 </section>
 <section id="gps-sensor" class="level4">
 <h4 class="anchored" data-anchor-id="gps-sensor"><strong>GPS Sensor:</strong></h4>
 <p>Add new sensor if 2 GPS units were used (i.e.&nbsp;SPOT)</p>
 <ul>
-<li><p><strong>Sensor Number: 4 (if 2 audio sensors and depth sensor were added)</strong></p></li>
-<li><p><strong>Sensor ID: GPS ID (7 digit number, 3391082 or 0-4554502)</strong></p></li>
-<li><p><strong>Sensor Name: GPS name (SO-001 or Spot Letter)</strong></p></li>
-<li><p><strong>Sensor Position: +1 (above sea level)</strong></p></li>
-<li><p><strong>Sensor Type: GPS</strong></p></li>
-<li><p><strong>Properties: Leave blank</strong></p></li>
-<li><p><strong>Sensor Description: Any additional information about GPS</strong></p></li>
+<li><p><strong>Sensor Number:</strong> 4 (if 2 audio sensors and depth sensor were added)</p></li>
+<li><p><strong>Sensor ID:</strong> GPS ID (7 digit number, 3391082 or 0-4554502)</p></li>
+<li><p><strong>Sensor Name:</strong> GPS name (SO-001 or Spot Letter)</p></li>
+<li><p><strong>Sensor Position:</strong> +1 (above sea level)</p></li>
+<li><p><strong>Sensor Type:</strong> GPS</p></li>
+<li><p><strong>Properties:</strong> Leave blank</p></li>
+<li><p><strong>Sensor Description:</strong> Any additional information about GPS</p></li>
 </ul>
 <p>Add other sensors as needed</p>
 </section>
 </section>
 <section id="location-tab" class="level3">
 <h3 class="anchored" data-anchor-id="location-tab">Location Tab</h3>
-<p><img src="images/paste-026A79EF.png" class="img-fluid"></p>
+<p><img src="images/PassivePacker_LocationTab.png" class="img-fluid"></p>
 <ul>
 <li><p><strong>Vessel:</strong> Name of deployment vessel</p></li>
 <li><p><strong>IHO Sea Area:</strong> North Pacific Ocean</p></li>
@@ -553,7 +553,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="calibration-info-tab" class="level3">
 <h3 class="anchored" data-anchor-id="calibration-info-tab">Calibration Info Tab</h3>
-<p><img src="images/paste-F82408B2.png" class="img-fluid"></p>
+<p><img src="images/PassivePacker_CalibrationInfo.png" class="img-fluid"></p>
 <ul>
 <li><p><strong>Calibration State:</strong></p></li>
 <li><p><strong>Hydrophone Sensitivity (dB):</strong></p></li>
@@ -565,20 +565,20 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="peopleorganizations-tab" class="level3">
 <h3 class="anchored" data-anchor-id="peopleorganizations-tab">People/Organizations Tab</h3>
-<p><img src="images/paste-6FBF776F.png" class="img-fluid"></p>
+<p><img src="images/PassivePacker_PeopleAndOrgs.png" class="img-fluid"></p>
 <ul>
-<li><p><strong>Scientists: List PI and Chief Scientist for each project/deployment (PASCAL - Shannon Rankin &amp; Jennifer McCullough, CCES - Shannon Rankin and Anne Simonis, ADRIFT - Shannon Rankin &amp; Deployment Details Personnel Column)</strong></p></li>
-<li><p><strong>Source Organizations: SWFSC</strong></p></li>
-<li><p><strong>Funding Organization: Always list SWFSC, check acknowledgements in past reports, ADRIFT - BOEM</strong></p></li>
+<li><p><strong>Scientists:</strong> List PI and Chief Scientist for each project/deployment (PASCAL - Shannon Rankin &amp; Jennifer McCullough, CCES - Shannon Rankin and Anne Simonis, ADRIFT - Shannon Rankin &amp; Deployment Details Personnel Column)</p></li>
+<li><p><strong>Source Organizations:</strong> SWFSC</p></li>
+<li><p><strong>Funding Organization:</strong> Always list SWFSC, check acknowledgements in past reports, ADRIFT - BOEM</p></li>
 <li><p>Create/Edit people and organizations as needed</p></li>
 </ul>
 </section>
 <section id="ancillary-data" class="level3">
 <h3 class="anchored" data-anchor-id="ancillary-data">Ancillary Data</h3>
-<p><img src="images/paste-C82FF7A4.png" class="img-fluid"></p>
+<p><img src="images/PassivePacker_AncillaryInfo.png" class="img-fluid"></p>
 <ul>
-<li><p><strong>Path to temperature data files: directory with temp files from soundtrap or temperature sensor</strong></p></li>
-<li><p><strong>Path to observational data files: only include for opportunistic recordings with observation notes (species, behavior, time, etc.)</strong></p></li>
+<li><p><strong>Path to temperature data files:</strong> directory with temp files from soundtrap or temperature sensor</p></li>
+<li><p><strong>Path to observational data files:</strong> only include for opportunistic recordings with observation notes (species, behavior, time, etc.)</p></li>
 <li><p><strong>Path to other files you wish to submit:</strong> accelerometer and depth data</p></li>
 </ul>
 <section id="now-you-are-ready-to-package" class="level4">
