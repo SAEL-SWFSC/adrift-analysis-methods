@@ -13,3 +13,6 @@ title: Dolphins & Sperm Whales
 -   Events and species ID are manually defined in Pamguard Viewer
 
 -   PAMpal is used to calculate features of click detections in each event
+
+
+##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)
