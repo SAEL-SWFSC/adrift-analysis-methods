@@ -385,7 +385,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="pamguard-set-up" class="level2">
 <h2 class="anchored" data-anchor-id="pamguard-set-up">Pamguard Set Up</h2>
-<p>All drifts used a default Pamguard settings file. To view the Pamguard settings files used for each drift please click here (insert link to GitHub repository). Open default Pamguard settings file and save each drift under a new .psfx as ADRIFT_###_PGversion_Minke (ADRIFT_001_PG_2_02_02_Minke.psfx)</p>
+<p>All drifts used a default Pamguard settings file. To view an example Pamguard settings file please click here (insert link to GitHub repository). Open Pamguard settings file and save each drift under a new .psfx as ADRIFT_###_PGversion_Minke (ADRIFT_001_PG_2_02_02_Minke.psfx)</p>
+<p>A Generalized Power Law detector was used to detect Minke boings (figure X). We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. Exact parameters are detailed below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/MinkeGPLDetections.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. Spectrogram of Minke whale boings being detected by GPL detector</figcaption>
+</figure>
+</div>
 <section id="database" class="level3">
 <h3 class="anchored" data-anchor-id="database">Database</h3>
 <p>Set database path to a new blank database titled ADRIFT_###_PG_2_02_02_Minke.sqlite3</p>
