@@ -4,7 +4,11 @@ title: Minke Whales
 
 ## Pamguard Set Up
 
-All drifts used a default Pamguard settings file. To view the Pamguard settings files used for each drift please click here (insert link to GitHub repository). Open default Pamguard settings file and save each drift under a new .psfx as ADRIFT\_###\_PGversion_Minke (ADRIFT_001_PG_2\_02_02_Minke.psfx)
+All drifts used a default Pamguard settings file. To view an example Pamguard settings file please click here (insert link to GitHub repository). Open Pamguard settings file and save each drift under a new .psfx as ADRIFT\_###\_PGversion_Minke (ADRIFT_001_PG_2\_02_02_Minke.psfx)
+
+A Generalized Power Law detector was used to detect Minke boings (figure X). We started with basic GPL settings from Tyler Helble's PARM files and modified them to fit our data. Exact parameters are detailed below.
+
+![Figure X. Spectrogram of Minke whale boings being detected by GPL detector](images/MinkeGPLDetections.png)
 
 ### Database
 
