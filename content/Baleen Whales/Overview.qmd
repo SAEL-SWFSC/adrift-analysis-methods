@@ -12,13 +12,21 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 ## Blue Whales
 
-### Annotation in Triton
+### *GPL in PAMGuard (we can omit this or leave it in)* 
 
--   Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA's to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click here for more detail of these methods
+-   PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.
+
+### *Annotation in Triton*
+
+-   Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA's to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click [here](https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Baleen%20Whales/Powerpoint/Methods%20for%20Logging%20Baleen%20Whales%20SWFSC%20V1.pptx) for more detail of these methods.
 
 ## Brydes
 
 ## Fin
+
+### *Click detector in PAMGuard*
+
+-   A click detector in PAMGuard version 2.02.02 was used to detect 20Hz fin whale pluses throughout the recordings. Twenty percent of those data were validated as a training set for a BANTER model.
 
 ## Gray
 
