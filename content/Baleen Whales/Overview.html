@@ -320,10 +320,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-prep" id="toc-data-prep" class="nav-link" data-scroll-target="#data-prep">Data Prep</a></li>
   <li><a href="#blue-whales" id="toc-blue-whales" class="nav-link" data-scroll-target="#blue-whales">Blue Whales</a>
   <ul class="collapse">
-  <li><a href="#annotation-in-triton" id="toc-annotation-in-triton" class="nav-link" data-scroll-target="#annotation-in-triton">Annotation in Triton</a></li>
+  <li><a href="#gpl-in-pamguard-we-can-omit-this-or-leave-it-in" id="toc-gpl-in-pamguard-we-can-omit-this-or-leave-it-in" class="nav-link" data-scroll-target="#gpl-in-pamguard-we-can-omit-this-or-leave-it-in"><em>GPL in PAMGuard (we can omit this or leave it in)</em></a></li>
+  <li><a href="#annotation-in-triton" id="toc-annotation-in-triton" class="nav-link" data-scroll-target="#annotation-in-triton"><em>Annotation in Triton</em></a></li>
   </ul></li>
   <li><a href="#brydes" id="toc-brydes" class="nav-link" data-scroll-target="#brydes">Brydes</a></li>
-  <li><a href="#fin" id="toc-fin" class="nav-link" data-scroll-target="#fin">Fin</a></li>
+  <li><a href="#fin" id="toc-fin" class="nav-link" data-scroll-target="#fin">Fin</a>
+  <ul class="collapse">
+  <li><a href="#click-detector-in-pamguard" id="toc-click-detector-in-pamguard" class="nav-link" data-scroll-target="#click-detector-in-pamguard"><em>Click detector in PAMGuard</em></a></li>
+  </ul></li>
   <li><a href="#gray" id="toc-gray" class="nav-link" data-scroll-target="#gray">Gray</a></li>
   <li><a href="#humpack" id="toc-humpack" class="nav-link" data-scroll-target="#humpack">Humpack</a></li>
   <li><a href="#minke" id="toc-minke" class="nav-link" data-scroll-target="#minke">Minke</a></li>
@@ -362,10 +366,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="blue-whales" class="level2">
 <h2 class="anchored" data-anchor-id="blue-whales">Blue Whales</h2>
-<section id="annotation-in-triton" class="level3">
-<h3 class="anchored" data-anchor-id="annotation-in-triton">Annotation in Triton</h3>
+<section id="gpl-in-pamguard-we-can-omit-this-or-leave-it-in" class="level3">
+<h3 class="anchored" data-anchor-id="gpl-in-pamguard-we-can-omit-this-or-leave-it-in"><em>GPL in PAMGuard (we can omit this or leave it in)</em></h3>
 <ul>
-<li>Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA’s to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click here for more detail of these methods</li>
+<li>PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.</li>
+</ul>
+</section>
+<section id="annotation-in-triton" class="level3">
+<h3 class="anchored" data-anchor-id="annotation-in-triton"><em>Annotation in Triton</em></h3>
+<ul>
+<li>Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA’s to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Baleen%20Whales/Powerpoint/Methods%20for%20Logging%20Baleen%20Whales%20SWFSC%20V1.pptx">here</a> for more detail of these methods.</li>
 </ul>
 </section>
 </section>
@@ -374,6 +384,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="fin" class="level2">
 <h2 class="anchored" data-anchor-id="fin">Fin</h2>
+<section id="click-detector-in-pamguard" class="level3">
+<h3 class="anchored" data-anchor-id="click-detector-in-pamguard"><em>Click detector in PAMGuard</em></h3>
+<ul>
+<li>A click detector in PAMGuard version 2.02.02 was used to detect 20Hz fin whale pluses throughout the recordings. Twenty percent of those data were validated as a training set for a BANTER model.</li>
+</ul>
+</section>
 </section>
 <section id="gray" class="level2">
 <h2 class="anchored" data-anchor-id="gray">Gray</h2>
