@@ -1,0 +1,27 @@
+---
+title: Overview
+---
+
+# Summary
+
+Baleen whale vocalizations are noted by their long duration, low frequency calls. While we wanted to come up with one approach to detect and classify all baleen whale species in the California Current, existing open source software did not provide the best platform to do so. Here we summarize multiple methods on how we tackled the problem of detecting and classifying baleen whales in the the ADRIFT recordings.
+
+## Data Prep
+
+-   Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively. See more information about data prep [here](http://localhost:3580/content/Baleen%20Whales/DataPrep.html).
+
+## Blue Whales
+
+### Annotation in Triton
+
+-   Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA's to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click here for more detail of these methods
+
+## Brydes
+
+## Fin
+
+## Gray
+
+## Humpack
+
+## Minke
