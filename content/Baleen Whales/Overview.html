@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../content/Baleen Whales/DataPrep.html" rel="next">
+<link href="../../content/Baleen Whales/Dectections.html" rel="next">
 <link href="../../content/Data Archive/OBIS.html" rel="prev">
 <link href="../../images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -199,12 +199,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Baleen Whales/DataPrep.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Prep</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../content/Baleen Whales/Dectections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Detection</span></a>
   </div>
@@ -361,7 +355,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="data-prep" class="level2">
 <h2 class="anchored" data-anchor-id="data-prep">Data Prep</h2>
 <ul>
-<li>Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively. See more information about data prep <a href="http://localhost:3580/content/Baleen%20Whales/DataPrep.html">here</a>.</li>
+<li><p>Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively using channel one of the raw recordings.</p></li>
+<li><p>From those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.</p>
+<ul>
+<li>LTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details.</li>
+</ul></li>
 </ul>
 </section>
 <section id="blue-whales" class="level2">
@@ -760,8 +758,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../content/Baleen Whales/DataPrep.html" class="pagination-link">
-        <span class="nav-page-text">Data Prep</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../content/Baleen Whales/Dectections.html" class="pagination-link">
+        <span class="nav-page-text">Detection</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
