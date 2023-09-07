@@ -48,7 +48,6 @@ website:
       - section: "Baleen Whales"
         contents:
           - content/Baleen Whales/Overview.qmd
-          - content/Baleen Whales/DataPrep.qmd
           - content/Baleen Whales/Dectections.qmd
           - content/Baleen Whales/FinWhales20Hz-BANTER.qmd
           - content/Baleen Whales/BlueWhales-ManualDetection.qmd

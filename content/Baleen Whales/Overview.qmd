@@ -8,7 +8,11 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 ## Data Prep
 
--   Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively. See more information about data prep [here](http://localhost:3580/content/Baleen%20Whales/DataPrep.html).
+-   Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively using channel one of the raw recordings.
+
+-   From those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.
+
+    -   LTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details.
 
 ## Blue Whales
 
