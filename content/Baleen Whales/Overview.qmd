@@ -16,7 +16,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 ## Blue Whales
 
-### *GPL in PAMGuard (we can omit this or leave it in)* 
+### *GPL in PAMGuard (we can omit this or leave it in)*
 
 -   PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.
 
@@ -37,3 +37,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 ## Humpack
 
 ## Minke
+
+### *GPL in PAMGuard*
+
+-   PAMGuard version 2.02.02 was used to run a GPL detector to look for Minke whale boings. All detections were manually scanned to annotate boings, then 20% of all of the data was subsampled to verify boings were not being missed.
