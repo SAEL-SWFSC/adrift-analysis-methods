@@ -6,4 +6,4 @@ page-layout: full
 
 This document provides information related to data analysis for ADRIFT in the California Current, which uses drifting acoustic recorders to monitor marine mammals and ocean soundscapes. These methods include tasks related to data preparation and archiving, detection and classification of baleen and toothed whales, and the characterization of ocean soundscapes.
 
-[Method Slides Template](content/Slides/methodsSlidesTemplate.qmd)
+[Methods Slides Template](content/Slides/methodsSlidesTemplate.qmd)

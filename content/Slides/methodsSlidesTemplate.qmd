@@ -4,7 +4,7 @@ author: "Kourtney Burger"
 format: 
   revealjs:
     slide-number: true
-    footer: "[Return to methods](https://sael-swfsc.github.io/adrift-analysis-methods)" #This should link to your methods page
+    footer: "[Source Code](https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Slides/methodsSlidesTemplate.qmd)" #This should link to your methods page
     theme: black
 editor: visual
 ---
@@ -13,7 +13,7 @@ editor: visual
 
 This template can be used to create slides for your analysis methods
 
-Edit the author and link in the footer above to redirect to your main methods page
+Edit the text and link in the footer above to redirect to your main methods page
 
 See Quarto's [Revealjs documentation](https://quarto.org/docs/presentations/revealjs/#overview) and [options pages](https://quarto.org/docs/reference/formats/presentations/revealjs.html) for more information on formatting and editing your slides
 
@@ -197,10 +197,10 @@ ggplot(mtcars, aes(hp, mpg, color = am)) +
 #| echo: true
 #| fig-width: 10
 #| fig-height: 4.5
-library(ggplot2)
-ggplot(mtcars, aes(hp, mpg, color = am)) +
-  geom_point() +
-  geom_smooth(formula = y ~ x, method = "loess")
+#library(ggplot2)
+#ggplot(mtcars, aes(hp, mpg, color = am)) +
+#  geom_point() +
+#  geom_smooth(formula = y ~ x, method = "loess")
 ```
 
 ## Slide with Highlighted Code Lines
