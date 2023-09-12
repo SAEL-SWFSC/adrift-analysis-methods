@@ -53,7 +53,7 @@ Left column
 ::: {.column width="50%"}
 Right column
 
-![](images/download.jpg){fig-align="left" width="194"}
+![](images/dog1.jpg){fig-align="left"}
 :::
 :::
 
