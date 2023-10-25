@@ -9,31 +9,30 @@ format:
 editor: visual
 ---
 
-## Overview
+## Overview {.smaller}
 
 Within PAMGuard, a Generalized Power Law detector was used to detect Minke boings. We started with basic GPL settings from Tyler Helble's PARM files and modified them to fit our data.
 
-Example Pamguard settings file (INSERT LINK)
+-   Example Pamguard settings file (INSERT LINK)
 
 ![Spectrogram of Minke whale boings being detected by GPL detector](/content/BaleenWhales/images/MinkeGPLDetections.png)
 
 # PAMGuard Set Up
 
-## Database & Binary Storage
+## Database & Binary Storage {.smaller}
 
-Set database path to a new blank database titled ADRIFT\_###\_PG_2\_02_02_Minke.sqlite3
+-   Set database path to a new blank database titled *ADRIFT\_###\_PG_2\_02_02_Minke.sqlite3*
 
-Create a new binary folder for your detections titled ADRIFT\_###\_PG_2\_02_02_Minke
+-   Create a new binary folder for your detections titled *ADRIFT\_###\_PG_2\_02_02_Minke*
 
-## Hydrophone Array
+## Hydrophone Array {.smaller}
 
 Depending on the drift that was processed, the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector (CH 1 in physical hydrophone array).
 
-## Sound Acquisition & Decimation
+## Sound Acquisition & Decimation {.smaller}
 
-Set the sound acquisition path to the folder your sound files are in
-
-The Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz.
+-   Set the sound acquisition path to the folder your sound files are in
+-   The Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz.
 
 ## GPL Settings {.smaller}
 
@@ -57,7 +56,7 @@ The Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Lo
 :::
 :::
 
-## Spectrogram Annotation & Detection Grouper Settings
+## Spectrogram Annotation Setup {.smaller}
 
 In order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.
 
@@ -119,7 +118,7 @@ In order for PAMpal to interact with the GPL detections we added in the Detectio
 :::
 :::
 
-## Edit Lookup List
+## Edit Lookup List {.smaller}
 
 ::: columns
 ::: {.column width="70%"}
@@ -145,23 +144,35 @@ Click 'Ok' to close all of the tabs and return to Pamguard Viewer window
 
 ## Add Spectrogram Annotation Module
 
+::: columns
+::: {.column width="30%"}
 -   Go to File \> Add Modules \> Utilities \> Spectrogram Annotation
 
 -   Under 'Settings', go to Spectrogram Annotation settings and click on the gear icon next to 'User form annotation'
 
 -   Click on the 'User form' drop down, select 'UDF_evType', and click Ok to return to the Pamguard Viewer window
+:::
 
+::: {.column width="70%"}
 ![](/content/BaleenWhales/images/paste-C1DA1020.png)
+:::
+:::
 
 ## Fix Spectrogram Parameters
 
+::: columns
+::: {.column width="30%"}
 -   Right click on the spectrogram and go to Settings
 
     -   Ensure both the 'Detection Grouper' and 'Spectrogram Annotation' boxes are checked and click Ok
 
-![](/content/BaleenWhales/images/paste-C82ACEBF.png)
-
 -   Go to File \> Save Data and close Pamguard
+:::
+
+::: {.column width="70%"}
+![](/content/BaleenWhales/images/paste-C82ACEBF.png)
+:::
+:::
 
 # Detection Validation
 
@@ -173,11 +184,13 @@ ADD METHODS FOR BOXING BOINGS
 
 # Additional 20% Data Validation
 
-## 20% Validation Code
+## 20% Validation Code {.scrollable}
 
 -   Due to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for additional validation.
 
-```{r, eval=FALSE}
+```{r}
+#| eval: FALSE
+#| echo: true
 # PAMpal simple example 
 # Its on CRAN. Yay!
 # install.packages('PAMpal')
@@ -257,7 +270,7 @@ for(e in 1:nrow(wavDf)) {
 }
 ```
 
-## 20% Validation Steps
+## 20% Validation Steps {.scrollable}
 
 -   Once you have followed the code above to subsample your data, make a copy of the database in a 'Data Validated' folder and reopen the database in Pamguard Viewer
 
@@ -277,7 +290,7 @@ for(e in 1:nrow(wavDf)) {
 
 -   Validate each subsampled wav file by scrolling in the spectrogram to the file and boxing/validating all detections using the drop down options specified above
 
-# Additional Notes
+# Additional Notes {.smaller}
 
 -   Method for boings cutoff at the start or end of file (only applies to subsampled data to be validated)
 
