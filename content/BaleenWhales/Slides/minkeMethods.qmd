@@ -137,31 +137,25 @@ Click 'Add item' and fill in species specific options
 -   UB - Unknown Biological Sound
 
 -   UA - Unknown Anthropogenic Sound
-:::
-:::
 
 Click 'Ok' to close all of the tabs and return to Pamguard Viewer window
+:::
+:::
 
-## Add Spectrogram Annotation Module
+## Add Spectrogram Annotation Module {.scrollable}
 
-::: columns
-::: {.column width="30%"}
 -   Go to File \> Add Modules \> Utilities \> Spectrogram Annotation
 
 -   Under 'Settings', go to Spectrogram Annotation settings and click on the gear icon next to 'User form annotation'
 
 -   Click on the 'User form' drop down, select 'UDF_evType', and click Ok to return to the Pamguard Viewer window
-:::
 
-::: {.column width="70%"}
 ![](/content/BaleenWhales/images/paste-C1DA1020.png)
-:::
-:::
 
-## Fix Spectrogram Parameters
+## Fix Spectrogram Parameters {.smaller}
 
 ::: columns
-::: {.column width="30%"}
+::: {.column width="48%"}
 -   Right click on the spectrogram and go to Settings
 
     -   Ensure both the 'Detection Grouper' and 'Spectrogram Annotation' boxes are checked and click Ok
@@ -169,7 +163,10 @@ Click 'Ok' to close all of the tabs and return to Pamguard Viewer window
 -   Go to File \> Save Data and close Pamguard
 :::
 
-::: {.column width="70%"}
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
 ![](/content/BaleenWhales/images/paste-C82ACEBF.png)
 :::
 :::
@@ -184,9 +181,9 @@ ADD METHODS FOR BOXING BOINGS
 
 # Additional 20% Data Validation
 
-## 20% Validation Code {.scrollable}
+## 20% Validation Code {.smaller}
 
--   Due to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for additional validation.
+Due to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for additional validation.
 
 ```{r}
 #| eval: FALSE
