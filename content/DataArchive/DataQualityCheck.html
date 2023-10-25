@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ADRIFT Analysis Methods - Summary &amp; Visualization</title>
+<title>ADRIFT Analysis Methods - Data Quality Check</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,7 +63,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../content/Soundscapes/Metrics.html" rel="prev">
+<link href="../../content/DataArchive/DataUpload.html" rel="next">
+<link href="../../content/DataArchive/DataPrep.html" rel="prev">
 <link href="../../images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/Soundscapes/Metrics.html">Soundscapes</a></li><li class="breadcrumb-item"><a href="../../content/Soundscapes/Summary_and_Visualization.html">Summary &amp; Visualization</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/DataArchive/DataPrep.html">Data Archive</a></li><li class="breadcrumb-item"><a href="../../content/DataArchive/DataQualityCheck.html">Data Quality Check</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -113,13 +148,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Data Archive</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../content/DataArchive/DataPrep.html" class="sidebar-item-text sidebar-link">
@@ -128,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/DataArchive/DataQualityCheck.html" class="sidebar-item-text sidebar-link">
+  <a href="../../content/DataArchive/DataQualityCheck.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data Quality Check</span></a>
   </div>
 </li>
@@ -277,13 +312,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Soundscapes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../content/Soundscapes/Metrics.html" class="sidebar-item-text sidebar-link">
@@ -292,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary &amp; Visualization</span></a>
   </div>
 </li>
@@ -308,16 +343,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#methods-summary" id="toc-methods-summary" class="nav-link active" data-scroll-target="#methods-summary">Methods Summary</a></li>
+  <li><a href="#deployment-details-quality-check" id="toc-deployment-details-quality-check" class="nav-link active" data-scroll-target="#deployment-details-quality-check">Deployment Details Quality Check</a></li>
+  <li><a href="#check-recording-time-utc-vs-local-time" id="toc-check-recording-time-utc-vs-local-time" class="nav-link" data-scroll-target="#check-recording-time-utc-vs-local-time">Check Recording Time: UTC vs Local Time</a></li>
+  <li><a href="#assess-data-quality" id="toc-assess-data-quality" class="nav-link" data-scroll-target="#assess-data-quality">Assess Data Quality</a></li>
+  <li><a href="#run-data-check-on-gps-data" id="toc-run-data-check-on-gps-data" class="nav-link" data-scroll-target="#run-data-check-on-gps-data">Run Data Check on GPS Data</a></li>
+  <li><a href="#run-recording-qaqc" id="toc-run-recording-qaqc" class="nav-link" data-scroll-target="#run-recording-qaqc">Run Recording QAQC&nbsp;</a></li>
+  <li><a href="#scan-ltsa-for-noisy-data" id="toc-scan-ltsa-for-noisy-data" class="nav-link" data-scroll-target="#scan-ltsa-for-noisy-data">Scan LTSA for Noisy Data</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Soundscapes/Summary_and_Visualization.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Soundscapes/Summary_and_Visualization.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/DataArchive/DataQualityCheck.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/DataArchive/DataQualityCheck.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Summary &amp; Visualization</h1>
+<h1 class="title">Data Quality Check</h1>
 </div>
 
 
@@ -332,8 +372,77 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="methods-summary" class="level2">
-<h2 class="anchored" data-anchor-id="methods-summary">Methods Summary</h2>
+<section id="deployment-details-quality-check" class="level2">
+<h2 class="anchored" data-anchor-id="deployment-details-quality-check">Deployment Details Quality Check</h2>
+<ul>
+<li>Scan for any errors or mistakes in the <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing">Deployment Details</a> spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)</li>
+<li>Reach out to deployment/retrieval team for corrections if needed</li>
+</ul>
+</section>
+<section id="check-recording-time-utc-vs-local-time" class="level2">
+<h2 class="anchored" data-anchor-id="check-recording-time-utc-vs-local-time">Check Recording Time: UTC vs Local Time</h2>
+<ul>
+<li>Check log files from extraced SUD files for Soundtrap Recording time (UTC vs Local Time), fix if needed</li>
+<li>Open Taiki’s <a href="https://github.com/TaikiSan21/PAMmisc/blob/024337d62371fb419e40bd0a3764905866ae6a36/devel/soundtrapRenamer.R">soundtrapRenamer script</a> and run it to load all necessary functions</li>
+<li>Run the following code in a new script to check if the files were offloaded in UTC or local time</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">'soundtrapRenamer.R'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># change this to whatever file endings you want to change</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>suffixes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'wav'</span>, <span class="st">'sud'</span>, <span class="st">'log.xml'</span>, <span class="st">'accel.csv'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Change this to whatever folder these files are in</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>dir <span class="ot">&lt;-</span> <span class="st">'../Data/Renamer/orig/'</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>prep <span class="ot">&lt;-</span> <span class="fu">prepTzFix</span>(dir, <span class="at">offset=</span><span class="cn">NULL</span>, <span class="at">suffix=</span>suffixes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>If the ‘prep’ output indicates that the files are on local time, run the following line of code to rename them</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fixStTz</span>(dir, prep)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>If files are renamed, the code will create a log file in the same folder of all of the name changes it made</li>
+<li>There is also a reverse option that you can set to TRUE if you want to undo the renaming</li>
+</ul>
+</section>
+<section id="assess-data-quality" class="level2">
+<h2 class="anchored" data-anchor-id="assess-data-quality">Assess Data Quality</h2>
+<ul>
+<li>Scan the LTSA and define overall deployment as good, compromised, or unusable</li>
+<li>Record Data Quality in <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing">Deployment Details</a> spreadsheet</li>
+</ul>
+</section>
+<section id="run-data-check-on-gps-data" class="level2">
+<h2 class="anchored" data-anchor-id="run-data-check-on-gps-data">Run Data Check on GPS Data</h2>
+<ul>
+<li>Review <a href="https://drive.google.com/file/d/1Ca2MKzXSDYh-o71WvVr2EoC9zs7w3gbo/view?usp=share_link">drift tracks created by Driftwatch</a></li>
+<li>Look at the image that is associated with the drift number and ensure all points are from the drift (no points from when the array was on the boat or land)</li>
+</ul>
+</section>
+<section id="run-recording-qaqc" class="level2">
+<h2 class="anchored" data-anchor-id="run-recording-qaqc">Run Recording QAQC&nbsp;</h2>
+<ul>
+<li>soundtrapQAQC function in PAMmisc</li>
+<li>Matlab QAQC script</li>
+<li>If the QAQC shows significant gaps in the files (i.e.&nbsp;&gt;1 second), complete the following steps to account for those gaps
+<ul>
+<li><p>If you have a gap in the middle of the drift (with significant amount of data before AND after the gap) continue on with the following steps and add a readMe to the data folder indicating when and how long the gap is</p></li>
+<li><p>If you have duty cylced recordings at the end of a continuous recording period, cut off the data</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="scan-ltsa-for-noisy-data" class="level2">
+<h2 class="anchored" data-anchor-id="scan-ltsa-for-noisy-data">Scan LTSA for Noisy Data</h2>
+<p>If drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data</p>
+<ul>
+<li>Use the LTSA created with 500 Hz wav files, with 1s and 5Hz parameters</li>
+<li>View LTSA at 2 hour windows and scan through</li>
+<li>Use Logger to define start/end times of the noisy/bad data and include the type of noise in the comments (e.g.&nbsp;strumming, impulses, etc.)</li>
+<li>Split between Anne and Cory</li>
+</ul>
 
 
 </section>
@@ -689,11 +798,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../content/Soundscapes/Metrics.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Triton Metrics</span>
+      <a href="../../content/DataArchive/DataPrep.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data Prep</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../content/DataArchive/DataUpload.html" class="pagination-link">
+        <span class="nav-page-text">Data Upload</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

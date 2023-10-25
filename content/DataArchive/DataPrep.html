@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ADRIFT Analysis Methods - Summary &amp; Visualization</title>
+<title>ADRIFT Analysis Methods - Data Prep</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../content/Soundscapes/Metrics.html" rel="prev">
+<link href="../../content/DataArchive/DataQualityCheck.html" rel="next">
+<link href="../../index.html" rel="prev">
 <link href="../../images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/Soundscapes/Metrics.html">Soundscapes</a></li><li class="breadcrumb-item"><a href="../../content/Soundscapes/Summary_and_Visualization.html">Summary &amp; Visualization</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/DataArchive/DataPrep.html">Data Archive</a></li><li class="breadcrumb-item"><a href="../../content/DataArchive/DataPrep.html">Data Prep</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -113,16 +114,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Data Archive</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/DataArchive/DataPrep.html" class="sidebar-item-text sidebar-link">
+  <a href="../../content/DataArchive/DataPrep.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data Prep</span></a>
   </div>
 </li>
@@ -277,13 +278,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Soundscapes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../content/Soundscapes/Metrics.html" class="sidebar-item-text sidebar-link">
@@ -292,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary &amp; Visualization</span></a>
   </div>
 </li>
@@ -308,16 +309,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#methods-summary" id="toc-methods-summary" class="nav-link active" data-scroll-target="#methods-summary">Methods Summary</a></li>
+  <li><a href="#complete-data-entries" id="toc-complete-data-entries" class="nav-link active" data-scroll-target="#complete-data-entries">Complete data entries</a></li>
+  <li><a href="#sud-file-extraction" id="toc-sud-file-extraction" class="nav-link" data-scroll-target="#sud-file-extraction">SUD File Extraction</a></li>
+  <li><a href="#generate-full-bandwidth-ltsa" id="toc-generate-full-bandwidth-ltsa" class="nav-link" data-scroll-target="#generate-full-bandwidth-ltsa">Generate Full Bandwidth LTSA</a></li>
+  <li><a href="#identify-recording-data-start-and-data-end" id="toc-identify-recording-data-start-and-data-end" class="nav-link" data-scroll-target="#identify-recording-data-start-and-data-end">Identify Recording Data Start and Data End</a></li>
+  <li><a href="#update-deployment-details" id="toc-update-deployment-details" class="nav-link" data-scroll-target="#update-deployment-details">Update deployment details&nbsp;</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Soundscapes/Summary_and_Visualization.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Soundscapes/Summary_and_Visualization.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/DataArchive/DataPrep.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/DataArchive/DataPrep.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Summary &amp; Visualization</h1>
+<h1 class="title">Data Prep</h1>
 </div>
 
 
@@ -332,8 +337,51 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="methods-summary" class="level2">
-<h2 class="anchored" data-anchor-id="methods-summary">Methods Summary</h2>
+<section id="complete-data-entries" class="level2">
+<h2 class="anchored" data-anchor-id="complete-data-entries">Complete data entries</h2>
+<ul>
+<li>Check that all columns in the <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing">Deployment Details</a> spreadsheet are completed</li>
+<li>Reach out to deployment/retrieval team for additional deployment details if needed</li>
+</ul>
+</section>
+<section id="sud-file-extraction" class="level2">
+<h2 class="anchored" data-anchor-id="sud-file-extraction">SUD File Extraction</h2>
+<p>Extract SUD files using the <a href="https://www.oceaninstruments.co.nz/downloads/">Soundtrap Host Software</a></p>
+<ul>
+<li>Open the Soundtrap Host Software and navigate to Tools &gt; Set Default File Save Location</li>
+<li>Browse to the folder where the SUD files are saved and select it</li>
+<li>Navigate again to Tools &gt; File Extraction</li>
+<li>Click Select File, navigate to the SUD file folder, select all, and click open</li>
+<li>SUD file extraction will begin, take note of the number of files and ensure this is equal to the number of extracted files once the process is completed</li>
+</ul>
+</section>
+<section id="generate-full-bandwidth-ltsa" class="level2">
+<h2 class="anchored" data-anchor-id="generate-full-bandwidth-ltsa">Generate Full Bandwidth LTSA</h2>
+<p>Using <a href="https://www.cetus.ucsd.edu/technologies_triton.html">Triton on Matlab</a>, generate a full bandwidth LTSA with the wav files from the SUD files previously extracted</p>
+<ul>
+<li>Open Matlab and type Triton into the command window</li>
+<li>Three Triton windows will open, using the Control window, navigate to Tools &gt; Make LTSA from Directory of Files</li>
+<li>Select File Type pop up will open, select 1 for wav files (enter 2 or 3 if working with other sound file type)</li>
+<li>Using the file explorer pop up, navigate to folder where wav files are stored and click Select Folder</li>
+<li>The Set Long-Term Spectrogram Parameters window will open, set the Time Average Length to 5 seconds and the Frequency Bin Size to 200 Hz, press enter</li>
+<li>The Choose Channel to LTSA window will open, select 1 and press OK</li>
+<li>The Save LTSA File window will open, navigate to desired folder, name the output file using this format: ADRIFT_###_5s_200Hz.ltsa, and press save</li>
+<li>The LTSA will begin to process and will automatically open in the plot window once completed</li>
+</ul>
+</section>
+<section id="identify-recording-data-start-and-data-end" class="level2">
+<h2 class="anchored" data-anchor-id="identify-recording-data-start-and-data-end">Identify Recording Data Start and Data End</h2>
+<ul>
+<li>Using the LTSA, identify when the data starts in the recordings (usually determined by when there is no ship noise from the deployment present in LTSA)</li>
+<li>Identify when the data ends in the LTSA (right before retrieval ship noise is present)</li>
+<li>Truncate the data by deleting the recordings outside of that time range</li>
+</ul>
+</section>
+<section id="update-deployment-details" class="level2">
+<h2 class="anchored" data-anchor-id="update-deployment-details">Update deployment details&nbsp;</h2>
+<ul>
+<li>Input Data Start and Data End times into the <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?usp=sharing">Deployment Details</a> spreadsheet using the Data Start/End times determined above</li>
+</ul>
 
 
 </section>
@@ -689,11 +737,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../content/Soundscapes/Metrics.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Triton Metrics</span>
+      <a href="../../index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../content/DataArchive/DataQualityCheck.html" class="pagination-link">
+        <span class="nav-page-text">Data Quality Check</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

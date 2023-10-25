@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ADRIFT Analysis Methods - Summary &amp; Visualization</title>
+<title>ADRIFT Analysis Methods - Gray &amp; Humpback Whales - Detection</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../content/Soundscapes/Metrics.html" rel="prev">
 <link href="../../images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/Soundscapes/Metrics.html">Soundscapes</a></li><li class="breadcrumb-item"><a href="../../content/Soundscapes/Summary_and_Visualization.html">Summary &amp; Visualization</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Gray &amp; Humpback Whales - Detection</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -277,13 +276,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Soundscapes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../content/Soundscapes/Metrics.html" class="sidebar-item-text sidebar-link">
@@ -292,7 +291,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary &amp; Visualization</span></a>
   </div>
 </li>
@@ -308,16 +307,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#methods-summary" id="toc-methods-summary" class="nav-link active" data-scroll-target="#methods-summary">Methods Summary</a></li>
+  <li><a href="#pamguard" id="toc-pamguard" class="nav-link active" data-scroll-target="#pamguard">PAMGuard</a>
+  <ul class="collapse">
+  <li><a href="#array" id="toc-array" class="nav-link" data-scroll-target="#array">Array</a></li>
+  <li><a href="#decimation" id="toc-decimation" class="nav-link" data-scroll-target="#decimation">Decimation</a></li>
+  <li><a href="#gpl-settings" id="toc-gpl-settings" class="nav-link" data-scroll-target="#gpl-settings">GPL Settings</a></li>
+  <li><a href="#detection-group-localizer-settings" id="toc-detection-group-localizer-settings" class="nav-link" data-scroll-target="#detection-group-localizer-settings">Detection Group Localizer Settings</a></li>
+  <li><a href="#pamguard-output" id="toc-pamguard-output" class="nav-link" data-scroll-target="#pamguard-output">PAMGuard Output</a></li>
+  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#pampal" id="toc-pampal" class="nav-link" data-scroll-target="#pampal">PAMpal</a></li>
+  <li><a href="#stratified-sub-sampling" id="toc-stratified-sub-sampling" class="nav-link" data-scroll-target="#stratified-sub-sampling">Stratified Sub-sampling</a></li>
+  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation">Validation</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Soundscapes/Summary_and_Visualization.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Soundscapes/Summary_and_Visualization.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/BaleenWhales/Gray_and_HumpbackWhales-Detection.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/BaleenWhales/Gray_and_HumpbackWhales-Detection.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Summary &amp; Visualization</h1>
+<h1 class="title">Gray &amp; Humpback Whales - Detection</h1>
 </div>
 
 
@@ -332,8 +342,151 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="methods-summary" class="level2">
-<h2 class="anchored" data-anchor-id="methods-summary">Methods Summary</h2>
+<section id="pamguard" class="level2">
+<h2 class="anchored" data-anchor-id="pamguard">PAMGuard</h2>
+<p>*To view the Pamguard settings files used for each drift please click <a href="https://github.com/chomweaver/Pamguard_Settings_Files">here</a>.</p>
+<section id="array" class="level3">
+<h3 class="anchored" data-anchor-id="array">Array</h3>
+<p>Depending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Array_settings_PG.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. Array settings in Pamguard</figcaption>
+</figure>
+</div>
+</section>
+<section id="decimation" class="level3">
+<h3 class="anchored" data-anchor-id="decimation">Decimation</h3>
+<ul>
+<li><p>For humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_Decimation_PG.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_Decimation_Low_Pass_Filter_PG.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Low Pass Filter for Humback and Gray whale GPL detector</figcaption>
+</figure>
+</div></li>
+</ul>
+</section>
+<section id="gpl-settings" class="level3">
+<h3 class="anchored" data-anchor-id="gpl-settings">GPL Settings</h3>
+<ul>
+<li>We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.</li>
+</ul>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_GPL_FFT_Settings.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. GPL FFT Settings for humpback and gray whales</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_GPL_Detection_Settings.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. GPL detections settings for humpback and gray whales</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Screenshots/HB_Gray_GPL_Contour_Settings.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. GPL contour settings for humpback and gray whales</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>We then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.</p>
+<ul>
+<li>For this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.</li>
+</ul></li>
+</ul>
+</section>
+<section id="detection-group-localizer-settings" class="level3">
+<h3 class="anchored" data-anchor-id="detection-group-localizer-settings">Detection Group Localizer Settings</h3>
+<ul>
+<li><p>In order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Detection_Grouper_Display_Settings_PG.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Detection Grouper Mark Display Settings</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Detection_Grouper_Data_Selection_Settings_PG.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. Detection Grouper Data Selection Settings</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Detection_Grouper_Annotation_Settings_PG.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Detection Grouper Annotation Settings</figcaption>
+</figure>
+</div></li>
+<li><p>It is important to note that both the “Text” and “User Form” annotation boxes must be selected here.</p>
+<ul>
+<li><p>To setup the user form annotation (click on the gear icon)</p></li>
+<li><p>Create new user form</p></li>
+<li><p>Label the form “evType” then click ok (see figure X)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/Adding_user_form_to_DGL.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Adding in a user form for the Detection Grouper in Pamguard</figcaption>
+</figure>
+</div></li>
+<li><p>Next click “edit form”</p></li>
+<li><p>Add a lookup table and fill it out exactly as follows (see figure x.)</p>
+<ul>
+<li><p>Title: eventType</p></li>
+<li><p>PostTitle: eventType</p></li>
+<li><p>DbTitle: eventType</p></li>
+<li><p>Topic: DGEventType</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/User_form_lookup_for_DGL.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Editing the user form for the detection grouper to work with the GPL detections</figcaption>
+</figure>
+</div></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="pamguard-output" class="level3">
+<h3 class="anchored" data-anchor-id="pamguard-output">PAMGuard Output</h3>
+<ul>
+<li><p>All detections were saved to the binary files and all other data were saved to a SQLite database</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshots/PG_output_data_storage.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure x. Storage Options Settings for PAMGuard</figcaption>
+</figure>
+</div></li>
+</ul>
+</section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+</section>
+<section id="pampal" class="level2">
+<h2 class="anchored" data-anchor-id="pampal">PAMpal</h2>
+<ul>
+<li>The data were then imported into PAMpal and events were created and put back into the PAMGuard database. Events were defined as 6 minute periods of continuous recordings for ADRIFT and 2 minutes for the CCES 2018 data set (limited to duty cycle 2 on 18 off) . *Add in PASCAL when we get to it.</li>
+</ul>
+</section>
+<section id="stratified-sub-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="stratified-sub-sampling">Stratified Sub-sampling</h2>
+<ul>
+<li><p>Due to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.</p></li>
+<li><p>*Add in Kaitlin’s code</p></li>
+</ul>
+</section>
+<section id="validation" class="level2">
+<h2 class="anchored" data-anchor-id="validation">Validation</h2>
+<ul>
+<li>*Kaitlin to add in methods here</li>
+</ul>
 
 
 </section>
@@ -687,15 +840,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../content/Soundscapes/Metrics.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Triton Metrics</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

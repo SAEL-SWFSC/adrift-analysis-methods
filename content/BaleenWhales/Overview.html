@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ADRIFT Analysis Methods - Summary &amp; Visualization</title>
+<title>ADRIFT Analysis Methods - Overview</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../content/Soundscapes/Metrics.html" rel="prev">
+<link href="../../content/BaleenWhales/Dectections.html" rel="next">
+<link href="../../content/DataArchive/OBIS.html" rel="prev">
 <link href="../../images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/Soundscapes/Metrics.html">Soundscapes</a></li><li class="breadcrumb-item"><a href="../../content/Soundscapes/Summary_and_Visualization.html">Summary &amp; Visualization</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/BaleenWhales/Overview.html">Baleen Whales</a></li><li class="breadcrumb-item"><a href="../../content/BaleenWhales/Overview.html">Overview</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -183,16 +184,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Baleen Whales</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/BaleenWhales/Overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../../content/BaleenWhales/Overview.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -277,13 +278,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Soundscapes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../content/Soundscapes/Metrics.html" class="sidebar-item-text sidebar-link">
@@ -292,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../content/Soundscapes/Summary_and_Visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary &amp; Visualization</span></a>
   </div>
 </li>
@@ -308,16 +309,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#methods-summary" id="toc-methods-summary" class="nav-link active" data-scroll-target="#methods-summary">Methods Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a>
+  <ul class="collapse">
+  <li><a href="#data-prep" id="toc-data-prep" class="nav-link" data-scroll-target="#data-prep">Data Prep</a></li>
+  <li><a href="#blue-whales" id="toc-blue-whales" class="nav-link" data-scroll-target="#blue-whales">Blue Whales</a>
+  <ul class="collapse">
+  <li><a href="#gpl-in-pamguard-we-can-omit-this-or-leave-it-in" id="toc-gpl-in-pamguard-we-can-omit-this-or-leave-it-in" class="nav-link" data-scroll-target="#gpl-in-pamguard-we-can-omit-this-or-leave-it-in"><em>GPL in PAMGuard (we can omit this or leave it in)</em></a></li>
+  <li><a href="#annotation-in-triton" id="toc-annotation-in-triton" class="nav-link" data-scroll-target="#annotation-in-triton"><em>Annotation in Triton</em></a></li>
+  </ul></li>
+  <li><a href="#brydes" id="toc-brydes" class="nav-link" data-scroll-target="#brydes">Brydes</a></li>
+  <li><a href="#fin" id="toc-fin" class="nav-link" data-scroll-target="#fin">Fin</a>
+  <ul class="collapse">
+  <li><a href="#click-detector-in-pamguard" id="toc-click-detector-in-pamguard" class="nav-link" data-scroll-target="#click-detector-in-pamguard"><em>Click detector in PAMGuard</em></a></li>
+  </ul></li>
+  <li><a href="#gray" id="toc-gray" class="nav-link" data-scroll-target="#gray">Gray</a></li>
+  <li><a href="#humpack" id="toc-humpack" class="nav-link" data-scroll-target="#humpack">Humpack</a></li>
+  <li><a href="#minke" id="toc-minke" class="nav-link" data-scroll-target="#minke">Minke</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Soundscapes/Summary_and_Visualization.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Soundscapes/Summary_and_Visualization.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/BaleenWhales/Overview.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/BaleenWhales/Overview.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Summary &amp; Visualization</h1>
+<h1 class="title">Overview</h1>
 </div>
 
 
@@ -332,10 +349,65 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="methods-summary" class="level2">
-<h2 class="anchored" data-anchor-id="methods-summary">Methods Summary</h2>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>Baleen whale vocalizations are noted by their long duration, low frequency calls. While we wanted to come up with one approach to detect and classify all baleen whale species in the California Current, existing open source software did not provide the best platform to do so. Here we summarize multiple methods on how we tackled the problem of detecting and classifying baleen whales in the the ADRIFT recordings.</p>
+<section id="data-prep" class="level2">
+<h2 class="anchored" data-anchor-id="data-prep">Data Prep</h2>
+<ul>
+<li><p>Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively using channel one of the raw recordings.</p></li>
+<li><p>From those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.</p>
+<ul>
+<li>LTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details.</li>
+</ul></li>
+</ul>
+</section>
+<section id="blue-whales" class="level2">
+<h2 class="anchored" data-anchor-id="blue-whales">Blue Whales</h2>
+<section id="gpl-in-pamguard-we-can-omit-this-or-leave-it-in" class="level3">
+<h3 class="anchored" data-anchor-id="gpl-in-pamguard-we-can-omit-this-or-leave-it-in"><em>GPL in PAMGuard (we can omit this or leave it in)</em></h3>
+<ul>
+<li>PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.</li>
+</ul>
+</section>
+<section id="annotation-in-triton" class="level3">
+<h3 class="anchored" data-anchor-id="annotation-in-triton"><em>Annotation in Triton</em></h3>
+<ul>
+<li>Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA’s to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Baleen%20Whales/Powerpoint/Methods%20for%20Logging%20Baleen%20Whales%20SWFSC%20V1.pptx">here</a> for more detail of these methods.</li>
+</ul>
+</section>
+</section>
+<section id="brydes" class="level2">
+<h2 class="anchored" data-anchor-id="brydes">Brydes</h2>
+</section>
+<section id="fin" class="level2">
+<h2 class="anchored" data-anchor-id="fin">Fin</h2>
+<section id="click-detector-in-pamguard" class="level3">
+<h3 class="anchored" data-anchor-id="click-detector-in-pamguard"><em>Click detector in PAMGuard</em></h3>
+<ul>
+<li>A click detector in PAMGuard version 2.02.02 was used to detect 20Hz fin whale pluses throughout the recordings. Twenty percent of those data were validated as a training set for a BANTER model.</li>
+</ul>
+</section>
+</section>
+<section id="gray" class="level2">
+<h2 class="anchored" data-anchor-id="gray">Gray</h2>
+</section>
+<section id="humpack" class="level2">
+<h2 class="anchored" data-anchor-id="humpack">Humpack</h2>
+</section>
+<section id="minke" class="level2">
+<h2 class="anchored" data-anchor-id="minke">Minke</h2>
+<p>PAMGuard version 2.02.02 was used to run a GPL detector to identify Minke whale boings (see image below). All detections were manually scanned and all boings were annotated in PAMGuard. Following manual scanning, an additional 20% of the total data was subsampled to verify boings were not being missed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/MinkeGPLDetections.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure X. Spectrogram of Minke whale boings being detected by GPL detector</figcaption>
+</figure>
+</div>
+<p><a href="../../content/BaleenWhales/Slides/minkeMethods.html">Detailed methods</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -689,11 +761,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../content/Soundscapes/Metrics.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Triton Metrics</span>
+      <a href="../../content/DataArchive/OBIS.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">OBIS</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../content/BaleenWhales/Dectections.html" class="pagination-link">
+        <span class="nav-page-text">Detection</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
