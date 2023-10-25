@@ -105,18 +105,109 @@
     "text": "Slide with Highlighted Code Lines\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n\nMore line highlighting options here\n\n\n\nSource Code"
   },
   {
-    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html",
-    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html",
-    "title": "Dolphins & Sperm Whales",
+    "objectID": "content/BaleenWhales/Overview.html",
+    "href": "content/BaleenWhales/Overview.html",
+    "title": "Overview",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event\n\n##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)"
+    "text": "Baleen whale vocalizations are noted by their long duration, low frequency calls. While we wanted to come up with one approach to detect and classify all baleen whale species in the California Current, existing open source software did not provide the best platform to do so. Here we summarize multiple methods on how we tackled the problem of detecting and classifying baleen whales in the the ADRIFT recordings.\n\n\n\nRecordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively using channel one of the raw recordings.\nFrom those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.\n\nLTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details.\n\n\n\n\n\n\n\n\nPAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.\n\n\n\n\n\nTriton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA’s to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click here for more detail of these methods.\n\n\n\n\n\n\n\n\n\n\n\nA click detector in PAMGuard version 2.02.02 was used to detect 20Hz fin whale pluses throughout the recordings. Twenty percent of those data were validated as a training set for a BANTER model.\n\n\n\n\n\n\n\n\n\n\n\nPAMGuard version 2.02.02 was used to run a GPL detector to identify Minke whale boings (see image below). All detections were manually scanned and all boings were annotated in PAMGuard. Following manual scanning, an additional 20% of the total data was subsampled to verify boings were not being missed.\n\n\n\nFigure X. Spectrogram of Minke whale boings being detected by GPL detector\n\n\nDetailed methods"
   },
   {
-    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
-    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
-    "title": "Dolphins & Sperm Whales",
+    "objectID": "content/BaleenWhales/Overview.html#data-prep",
+    "href": "content/BaleenWhales/Overview.html#data-prep",
+    "title": "Overview",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event\n\n##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)"
+    "text": "Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively using channel one of the raw recordings.\nFrom those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.\n\nLTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details."
+  },
+  {
+    "objectID": "content/BaleenWhales/Overview.html#blue-whales",
+    "href": "content/BaleenWhales/Overview.html#blue-whales",
+    "title": "Overview",
+    "section": "",
+    "text": "PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.\n\n\n\n\n\nTriton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA’s to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click here for more detail of these methods."
+  },
+  {
+    "objectID": "content/BaleenWhales/Overview.html#fin",
+    "href": "content/BaleenWhales/Overview.html#fin",
+    "title": "Overview",
+    "section": "",
+    "text": "A click detector in PAMGuard version 2.02.02 was used to detect 20Hz fin whale pluses throughout the recordings. Twenty percent of those data were validated as a training set for a BANTER model."
+  },
+  {
+    "objectID": "content/BaleenWhales/Overview.html#minke",
+    "href": "content/BaleenWhales/Overview.html#minke",
+    "title": "Overview",
+    "section": "",
+    "text": "PAMGuard version 2.02.02 was used to run a GPL detector to identify Minke whale boings (see image below). All detections were manually scanned and all boings were annotated in PAMGuard. Following manual scanning, an additional 20% of the total data was subsampled to verify boings were not being missed.\n\n\n\nFigure X. Spectrogram of Minke whale boings being detected by GPL detector\n\n\nDetailed methods"
+  },
+  {
+    "objectID": "content/BaleenWhales/MinkeWhales.html",
+    "href": "content/BaleenWhales/MinkeWhales.html",
+    "title": "Minke Whales",
+    "section": "",
+    "text": "All drifts used a default Pamguard settings file. To view an example Pamguard settings file please click here (insert link to GitHub repository). Open Pamguard settings file and save each drift under a new .psfx as ADRIFT_###_PGversion_Minke (ADRIFT_001_PG_2_02_02_Minke.psfx)\nA Generalized Power Law detector was used to detect Minke boings (figure X). We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. Exact parameters are detailed below.\n\n\n\nFigure X. Spectrogram of Minke whale boings being detected by GPL detector\n\n\n\n\nSet database path to a new blank database titled ADRIFT_###_PG_2_02_02_Minke.sqlite3\n\n\n\nCreate a new binary folder for your detections titled ADRIFT_###_PG_2_02_02_Minke\n\n\n\nDepending on the drift that was processed, the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector. To view the Array Configuration files for each drift please click here* (insert link to storage place)\n\n\n\nSet the sound acquisition path to the folder your sound files are in\n\n\n\nhe Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz .\n\n\n\n\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\nAdd selection drop down by right clicking on ‘= no selection =’ and selecting ‘Edit list’\n\n\n\n\n\nClick ‘Add item’ and fill in species specific options\n\nB - Boing\nCB - Cutoff Boing\nUB - Unknown Biological Sound\nUA - Unknown Anthropogenic Sound\n\n\n\n\nClick ‘Ok’ to close all of the tabs and return to Pamguard Viewer window\nNext, set up the Spectrogram Annotation\n\nGo to File &gt; Add Modules &gt; Utilities &gt; Spectrogram Annotation\n\n\nUnder ‘Settings’, go to Spectrogram Annotation settings and click on the gear icon next to ‘User form annotation’\nClick on the ‘User form’ drop down, select ‘UDF_evType’, and click Ok to return to the Pamguard Viewer window\n\nRight click on the spectrogram and go to Settings\n\nEnsure both the ‘Detection Grouper’ and ‘Spectrogram Annotation’ boxes are checked and click Ok\n\n\nGo to File &gt; Save Data and close Pamguard"
+  },
+  {
+    "objectID": "content/BaleenWhales/MinkeWhales.html#pamguard-set-up",
+    "href": "content/BaleenWhales/MinkeWhales.html#pamguard-set-up",
+    "title": "Minke Whales",
+    "section": "",
+    "text": "All drifts used a default Pamguard settings file. To view an example Pamguard settings file please click here (insert link to GitHub repository). Open Pamguard settings file and save each drift under a new .psfx as ADRIFT_###_PGversion_Minke (ADRIFT_001_PG_2_02_02_Minke.psfx)\nA Generalized Power Law detector was used to detect Minke boings (figure X). We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. Exact parameters are detailed below.\n\n\n\nFigure X. Spectrogram of Minke whale boings being detected by GPL detector\n\n\n\n\nSet database path to a new blank database titled ADRIFT_###_PG_2_02_02_Minke.sqlite3\n\n\n\nCreate a new binary folder for your detections titled ADRIFT_###_PG_2_02_02_Minke\n\n\n\nDepending on the drift that was processed, the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector. To view the Array Configuration files for each drift please click here* (insert link to storage place)\n\n\n\nSet the sound acquisition path to the folder your sound files are in\n\n\n\nhe Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz .\n\n\n\n\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\nAdd selection drop down by right clicking on ‘= no selection =’ and selecting ‘Edit list’\n\n\n\n\n\nClick ‘Add item’ and fill in species specific options\n\nB - Boing\nCB - Cutoff Boing\nUB - Unknown Biological Sound\nUA - Unknown Anthropogenic Sound\n\n\n\n\nClick ‘Ok’ to close all of the tabs and return to Pamguard Viewer window\nNext, set up the Spectrogram Annotation\n\nGo to File &gt; Add Modules &gt; Utilities &gt; Spectrogram Annotation\n\n\nUnder ‘Settings’, go to Spectrogram Annotation settings and click on the gear icon next to ‘User form annotation’\nClick on the ‘User form’ drop down, select ‘UDF_evType’, and click Ok to return to the Pamguard Viewer window\n\nRight click on the spectrogram and go to Settings\n\nEnsure both the ‘Detection Grouper’ and ‘Spectrogram Annotation’ boxes are checked and click Ok\n\n\nGo to File &gt; Save Data and close Pamguard"
+  },
+  {
+    "objectID": "content/BaleenWhales/MinkeWhales.html#detection-validation",
+    "href": "content/BaleenWhales/MinkeWhales.html#detection-validation",
+    "title": "Minke Whales",
+    "section": "Detection Validation",
+    "text": "Detection Validation\nManually validate all detections to look for Minke boings"
+  },
+  {
+    "objectID": "content/BaleenWhales/MinkeWhales.html#all-data-validation",
+    "href": "content/BaleenWhales/MinkeWhales.html#all-data-validation",
+    "title": "Minke Whales",
+    "section": "All Data Validation",
+    "text": "All Data Validation\n\nDue to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.\n\n\n*Add in Kaitlin’s code\n\n# PAMpal simple example \n# Its on CRAN. Yay!\n# install.packages('PAMpal')\n# Sometimes I fix things and theyre only available on the GitHub version\n# Right now there are some things that run a lot faster on teh GitHub version so I recommend installing that.\n# updated 22-12-6 to include loop for PG event adding w/PAMmisc\nrm(list=ls())\ndevtools::install_github('TaikiSan21/PAMpal')\ndevtools::install_github('TaikiSan21/PAMmisc')\nlibrary(PAMpal)\nlibrary(PAMmisc)\n\n# Start by creating a \"PAMpalSettings\" object. This keeps track of what data you want to process and what processing you want to apply to it.\n\n# Change paths below to your DB and binary folder. Can just be the highest level binary folder for that drift - it will add all files within that folder recursively through subfolders.\n\n# This will also ask you to type in some parameters for calculations in your console. You can just hit ENTER to accept defaults for all of these, they aren't relevant to the GPL calculations only for clicks.\n\npps &lt;- PAMpalSettings(db = 'Path to database',\n                      binaries = 'Path to binaries',\n                      # these parameters are only for the click detector - can ignroe\n                      sr_hz='auto',\n                      filterfrom_khz=0,\n                      filterto_khz=NULL,\n                      winLen_sec=.0025)\n\n# Now tell it to process your data. Id is optional and serves no function, but can be useful to tell data apart at a later point in time. Here mode = 'recording' tells it how to organize your data. Most of the time we are working with data that have been marked manually into events, so PAMpal wants to organize things into events. mode='db' uses the events in the database, and only processes the detectoins you've marked out. In this case we just want to process everything, which is what mode='recording' does. It will group them into events by recording file. \n\n# This might take some time to read in events after processing in order to get the time \n#data &lt;- processPgDetections(pps, mode='db', id='Minke_CCES_019') \n\ndata &lt;- processPgDetections(pps, mode='recording', id='Species_Project_Drift#')\n\n# And here's how you can get the detections information out of \"data\" as a dataframe. Time column is \"UTC\", other columns are stuff it measured. \ngplDf &lt;- getGPLData(data)\n\n# Now we can add the wav files to this data. You might get a warning about \"startSample\", its safe to ignore that.\ndata &lt;- addRecordings(data, \n                      folder='Path to wav files')\n\n# that data is stored here as a dataframe. Has \"start\" & \"end\" as POSIXct and the fulle path to the file as \"file\"\nwavDf &lt;- files(data)$recordings\n\n# add number of detections to this\nnDets &lt;- sapply(events(data), nDetections)\nnDets &lt;- data.frame(join=names(nDets), nDets=nDets)\nwavDf$join &lt;- basename(wavDf$file)\nwavDf &lt;- left_join(wavDf, nDets)\nwavDf$join &lt;- NULL\nwavDf$nDets[is.na(wavDf$nDets)] &lt;- 0\n\nnfiles =round(nrow(wavDf)*.2)\nrandStart =sample(1:5,1)\n\nwavDf=wavDf[round(seq(randStart, nrow(wavDf), length.out = nfiles)),]\n\n# If we care about assigning some kind of initial label to these detections. Otherwise ignore. \ndata &lt;- setSpecies(data, method='manual', value='InitialGPL')\n\n# Add events from wavDf loop\nfor(e in 1:nrow(wavDf)) {\n  thisEv &lt;- data[[basename(wavDf$file[e])]]\n  # this will get all detector types, if just one type is wanted can be simplified to ex. uids &lt;- unique(getGPLData(thisEv)$UID)\n  uids &lt;- unique(unlist(lapply(getDetectorData(thisEv), function(x) {\n    if(is.null(x)) return(NULL)\n    x$UID\n  })))\n  \n  addPgEvent(db = files(thisEv)$db,\n             binary = files(thisEv)$binaries,\n             eventType = species(thisEv)$id,\n             UIDs = uids,\n             type = 'dg',\n             start = wavDf$start[e],\n             end = wavDf$end[e],\n             comment = paste0('Added by PAMpal, event ID: ', id(thisEv)))\n}\n\n\n\nValidation\n\nOnce you have followed the code above to subsample your data, make a copy of the database in a ‘Data Validated’ folder and reopen the database in Pamguard Viewer\nGo to File &gt; Add Modules &gt; Displays &gt; User Display\n\nName the new user display ‘Subsample’\nClick on the new subsample tab and go to User Display &gt; New Detection Grouper data display\n\nYour subsampled data should then be listed with associate marker colors\n\nValidate each subsampled wav file by scrolling in the spectrogram to the file and boxing/validating all detections using the drop down options specified above\n\n\n\nNotes\n\nMethod for boings cutoff at the start or end of file (only applies to subsampled data to be validated)\n\nIf the detector consistently picks up cutoff boings AND you think they can be picked up easily using manual effort (there is enough signal to know it is a boing) -- then box these partial detections and label them as ‘Cutoff Boing’ (can be helpful as they note the occurrence of these calls during this time selection)\n\nThe box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)\n\n\nMethod for false dectections\n\nIgnore them"
+  },
+  {
+    "objectID": "content/ToothedWhales/BeakedWhales-Detection.html",
+    "href": "content/ToothedWhales/BeakedWhales-Detection.html",
+    "title": "Beaked Whales",
+    "section": "",
+    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
+  },
+  {
+    "objectID": "content/ToothedWhales/BeakedWhales-Detection.html#methods-summary",
+    "href": "content/ToothedWhales/BeakedWhales-Detection.html#methods-summary",
+    "title": "Beaked Whales",
+    "section": "",
+    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
+  },
+  {
+    "objectID": "content/ToothedWhales/BeakedWhales-IDGuide.html",
+    "href": "content/ToothedWhales/BeakedWhales-IDGuide.html",
+    "title": "Beaked Whale ID Guide",
+    "section": "",
+    "text": "This guide serves as a living document, with the intention to update as more information is learned. To recommend an update or to open a discussion, submit an ‘Issue’ with a useful title and explanation. Go to this link [https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues] to create an Issue, and use the BW-ID label for the issue.\nNote: IPI= inter-pulse interval, PPS= pulses per sec\n\n\n\nPeaks: 32-40 kHz, 22-24 kHz and ~18 kHz\nNull: Strong null at ~27 kHz\nIPI: 0.3-0.5 sec\nPPS: 2-3\n\nUpsweep usually evident. Wigner plots shows a “kickstand” (downsweep appearing after the upsweep). Sometimes this kickstand can just appear as a dot. At great range, the 18 and 22 kHz peaks may be higher than the 32-40 kHz peak and the Wigner can just show the downsweep.\nCitations:\n\n\n\n\n\n\nPeak: 15-16 kHz, 25-26 kHz, and, sometimes, 9 kHz and 35-45 kHz\nNull: NA\nIPI:0.20-0.25 sec\nPPS:4-5\n\nLow frequency click, often with multiple peaks. Upsweep is sometimes present, but pulses will look pretty flat on this scale. Can produce dolphin-like clicks as well as these longer pulses. Clicks can come from above the hydrophone.\n\n\n\n\n\n\nPeak:43 kHz\nNull: NA\nIPI:~0.22\nPPS:4-5\n\nSome higher peaks may be evident if the animal is close. The left limb declines less steeply than with BW46. Wigner is “crescent moon” shaped and lower limb, if present is strongly upswept.\n\n\nBW43 template (gray) and BW43 click from Baumann and Pickering (blue, pers. comm.)\nPeak and slope to the left of peak match well. Slope to the right of peak is much broader, perhaps reflecting proximity or hydrophone differences. Differences in Wigner plots are likely due to scaling differences. [Source: SOCAL41N_DL29_110122_175230.x_0000.wav]\n\n\n\n\n\n\nPeak: 44-48 kHz\nNull: NA\nIPI: 0.09\nPPS: 10-11\n\nPeak at about 46kHz (cyan and tan) shown on top of BW43 (gray). Notice how left slope in frequency spectrum declines more steeply than BW43, even when the peaks are similar (dark blue). The right slope is more variable for both types, but is less steep than the left slope.\n\nFrequency has very steeply declining slope to the left of peak. Right slope declines less steeply and may show higher peaks. Wigner shows “sorting cap”. The lower branch of the Wigner (if present) is nearly horizontal.\n\n\n\nSome pulses show very strong higher peak at about 75 kHz in addition to a distinct lower peak at about 50 kHz. Some signals (presumable closer or more on-axis) show a strong peak at 80 kHz, a second peak at 52 kHz, and a strong null at about 62 kHz. These may appear in the same event as 44-48kHz pulses (see above). No evidence of “sorting hat” in Wigner.\n\n\nAgain two peaks (green, same group as above). In this case, the lower peak is loudest. Inconspicuous “sorting hat” look to wigner.\n\n\n\n\n\n\nPeak:36 kHz\nNull: NA\nIPI:0.25-0.33\nPPS:3-4\n\nPeak frequency is ~36kHz (similar to Ziphius) but with a very steep decline in amplitudes at lower frequencies (left of the peak). This very clear one shows a secondary peak at 25 kHz, but that is 20dB below the peak and is not likely to be seen in a lower SNR signal. Wigner plot is slightly concave upward, with no sign of “kickstand”.\n\n \n\n\n\n\nPeak:34kHz, 50 kHz\nNull: 37kHz\nIPI: 0.125-0.166\nPPS: 6-8\n\nBW37V template (green) shows two distinct peaks at about 34 kHz and 50 kHz, with a strong null (valley) at 37kHz. Note: earlier versions may have identified these as BW39V; once the data was corrected for the frequency response of the hydrophone, the null was found to be at 37kHz.\n\n\n\n\n\n\nPeak: 70kHz\nNull: NA\nIPI: 0.12\nPPS: 8\nBW70 template (cyan) shows a peak at 70 kHz. Slope to the left of the peak is steeper than to the right. Upsweep in the Wigner plot. [Source is SIO, Baumann & Pickering pers. comm., GofCA4A4_051217_234230.x_1114.wav]\n\n\n\n\n\nPeak: 60-65 kHz\nNull: NA\nIPI: 0.127\nPPS: 8\nVery long click with very long frequency sweep and a peak frequency of about 60-65 kHz. Signals may come from above the hydrophones.\n\n\n\n\nPeak: ~26kHz\nNull: NA\nIPI: 0.27-0.40s\nPPS: 3-4\nPulses are low-frequency, with peak at ~26 kHz.\n\n \n\n\n\n\n\nWas above hydrophone. May be alternate part of the beam pattern of a BW46. Wigners were variable and odd looking. Some were almost circular. Need to look for others.\n\n\n\n\n\nMaybe M. densitrostris, but no evidence of an upsweep and signal was relatively short.\n\n\n\n\n\nLow-frequency click, typically &lt; 12 kHz peak. IPI= 0.4-1.0, PPS=1-2."
+  },
+  {
+    "objectID": "content/ToothedWhales/BeakedWhales-IDGuide.html#introduction",
+    "href": "content/ToothedWhales/BeakedWhales-IDGuide.html#introduction",
+    "title": "Beaked Whale ID Guide",
+    "section": "",
+    "text": "This guide serves as a living document, with the intention to update as more information is learned. To recommend an update or to open a discussion, submit an ‘Issue’ with a useful title and explanation. Go to this link [https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues] to create an Issue, and use the BW-ID label for the issue.\nNote: IPI= inter-pulse interval, PPS= pulses per sec\n\n\n\nPeaks: 32-40 kHz, 22-24 kHz and ~18 kHz\nNull: Strong null at ~27 kHz\nIPI: 0.3-0.5 sec\nPPS: 2-3\n\nUpsweep usually evident. Wigner plots shows a “kickstand” (downsweep appearing after the upsweep). Sometimes this kickstand can just appear as a dot. At great range, the 18 and 22 kHz peaks may be higher than the 32-40 kHz peak and the Wigner can just show the downsweep.\nCitations:\n\n\n\n\n\n\nPeak: 15-16 kHz, 25-26 kHz, and, sometimes, 9 kHz and 35-45 kHz\nNull: NA\nIPI:0.20-0.25 sec\nPPS:4-5\n\nLow frequency click, often with multiple peaks. Upsweep is sometimes present, but pulses will look pretty flat on this scale. Can produce dolphin-like clicks as well as these longer pulses. Clicks can come from above the hydrophone.\n\n\n\n\n\n\nPeak:43 kHz\nNull: NA\nIPI:~0.22\nPPS:4-5\n\nSome higher peaks may be evident if the animal is close. The left limb declines less steeply than with BW46. Wigner is “crescent moon” shaped and lower limb, if present is strongly upswept.\n\n\nBW43 template (gray) and BW43 click from Baumann and Pickering (blue, pers. comm.)\nPeak and slope to the left of peak match well. Slope to the right of peak is much broader, perhaps reflecting proximity or hydrophone differences. Differences in Wigner plots are likely due to scaling differences. [Source: SOCAL41N_DL29_110122_175230.x_0000.wav]\n\n\n\n\n\n\nPeak: 44-48 kHz\nNull: NA\nIPI: 0.09\nPPS: 10-11\n\nPeak at about 46kHz (cyan and tan) shown on top of BW43 (gray). Notice how left slope in frequency spectrum declines more steeply than BW43, even when the peaks are similar (dark blue). The right slope is more variable for both types, but is less steep than the left slope.\n\nFrequency has very steeply declining slope to the left of peak. Right slope declines less steeply and may show higher peaks. Wigner shows “sorting cap”. The lower branch of the Wigner (if present) is nearly horizontal.\n\n\n\nSome pulses show very strong higher peak at about 75 kHz in addition to a distinct lower peak at about 50 kHz. Some signals (presumable closer or more on-axis) show a strong peak at 80 kHz, a second peak at 52 kHz, and a strong null at about 62 kHz. These may appear in the same event as 44-48kHz pulses (see above). No evidence of “sorting hat” in Wigner.\n\n\nAgain two peaks (green, same group as above). In this case, the lower peak is loudest. Inconspicuous “sorting hat” look to wigner.\n\n\n\n\n\n\nPeak:36 kHz\nNull: NA\nIPI:0.25-0.33\nPPS:3-4\n\nPeak frequency is ~36kHz (similar to Ziphius) but with a very steep decline in amplitudes at lower frequencies (left of the peak). This very clear one shows a secondary peak at 25 kHz, but that is 20dB below the peak and is not likely to be seen in a lower SNR signal. Wigner plot is slightly concave upward, with no sign of “kickstand”.\n\n \n\n\n\n\nPeak:34kHz, 50 kHz\nNull: 37kHz\nIPI: 0.125-0.166\nPPS: 6-8\n\nBW37V template (green) shows two distinct peaks at about 34 kHz and 50 kHz, with a strong null (valley) at 37kHz. Note: earlier versions may have identified these as BW39V; once the data was corrected for the frequency response of the hydrophone, the null was found to be at 37kHz.\n\n\n\n\n\n\nPeak: 70kHz\nNull: NA\nIPI: 0.12\nPPS: 8\nBW70 template (cyan) shows a peak at 70 kHz. Slope to the left of the peak is steeper than to the right. Upsweep in the Wigner plot. [Source is SIO, Baumann & Pickering pers. comm., GofCA4A4_051217_234230.x_1114.wav]\n\n\n\n\n\nPeak: 60-65 kHz\nNull: NA\nIPI: 0.127\nPPS: 8\nVery long click with very long frequency sweep and a peak frequency of about 60-65 kHz. Signals may come from above the hydrophones.\n\n\n\n\nPeak: ~26kHz\nNull: NA\nIPI: 0.27-0.40s\nPPS: 3-4\nPulses are low-frequency, with peak at ~26 kHz.\n\n \n\n\n\n\n\nWas above hydrophone. May be alternate part of the beam pattern of a BW46. Wigners were variable and odd looking. Some were almost circular. Need to look for others.\n\n\n\n\n\nMaybe M. densitrostris, but no evidence of an upsweep and signal was relatively short.\n\n\n\n\n\nLow-frequency click, typically &lt; 12 kHz peak. IPI= 0.4-1.0, PPS=1-2."
+  },
+  {
+    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html",
+    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html",
+    "title": "Dolphins & Sperm Whales - BANTER",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+  },
+  {
+    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
+    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
+    "title": "Dolphins & Sperm Whales - BANTER",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
     "objectID": "content/ToothedWhales/NBHF-Detection.html",
@@ -133,81 +224,151 @@
     "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
-    "objectID": "content/ToothedWhales/NBHF-BANTER.html",
-    "href": "content/ToothedWhales/NBHF-BANTER.html",
-    "title": "NBHF - BANTER",
+    "objectID": "content/DataArchive/Permits.html",
+    "href": "content/DataArchive/Permits.html",
+    "title": "Permits",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit"
   },
   {
-    "objectID": "content/ToothedWhales/NBHF-BANTER.html#methods-summary",
-    "href": "content/ToothedWhales/NBHF-BANTER.html#methods-summary",
-    "title": "NBHF - BANTER",
+    "objectID": "content/DataArchive/Permits.html#noaa-protected-resources-permit",
+    "href": "content/DataArchive/Permits.html#noaa-protected-resources-permit",
+    "title": "Permits",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit"
   },
   {
-    "objectID": "content/Soundscapes/Metrics.html",
-    "href": "content/Soundscapes/Metrics.html",
-    "title": "Triton Metrics",
+    "objectID": "content/DataArchive/Permits.html#noaa-sanctuary-permit",
+    "href": "content/DataArchive/Permits.html#noaa-sanctuary-permit",
+    "title": "Permits",
+    "section": "NOAA Sanctuary Permit",
+    "text": "NOAA Sanctuary Permit\n\nReview the SanctuarySummary spreadsheet from Driftwatch and check for Sanctuary overlap\nRecord which sanctuaries the drift passed through in the Sanctuary Permit column in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Sanctuary Permit"
+  },
+  {
+    "objectID": "content/DataArchive/Permits.html#permit-spreadsheet",
+    "href": "content/DataArchive/Permits.html#permit-spreadsheet",
+    "title": "Permits",
+    "section": "Permit Spreadsheet",
+    "text": "Permit Spreadsheet\nRecord all other permit related information in the Permit Spreadsheet including take numbers and sanctuary overlap"
+  },
+  {
+    "objectID": "content/DataArchive/DataUpload.html",
+    "href": "content/DataArchive/DataUpload.html",
+    "title": "Data Upload",
     "section": "",
-    "text": "Aligning methods to SanctSound protocols (https://sanctsound.ioos.us/) \nData is decimated to 48 kHz\nTriton vXXX software (https://github.com/MarineBioAcousticsRC/Triton) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.\nCalibration value = Hydrophone Sensitivity (~ -155 dB for most hydrophones) + Soundtrap Sensitivity (-4 dB for 4300HF). Note, Triton calibration value is a positive value. See ‘SysSens’ function to automatically find calibration value for each deployment\nPower spectral density, third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.\nVessels are acoustically detected automatically or manually"
+    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
   },
   {
-    "objectID": "content/Soundscapes/Metrics.html#methods-summary",
-    "href": "content/Soundscapes/Metrics.html#methods-summary",
-    "title": "Triton Metrics",
+    "objectID": "content/DataArchive/DataUpload.html#don-metadata-upload",
+    "href": "content/DataArchive/DataUpload.html#don-metadata-upload",
+    "title": "Data Upload",
     "section": "",
-    "text": "Aligning methods to SanctSound protocols (https://sanctsound.ioos.us/) \nData is decimated to 48 kHz\nTriton vXXX software (https://github.com/MarineBioAcousticsRC/Triton) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.\nCalibration value = Hydrophone Sensitivity (~ -155 dB for most hydrophones) + Soundtrap Sensitivity (-4 dB for 4300HF). Note, Triton calibration value is a positive value. See ‘SysSens’ function to automatically find calibration value for each deployment\nPower spectral density, third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.\nVessels are acoustically detected automatically or manually"
+    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
   },
   {
-    "objectID": "content/Soundscapes/Metrics.html#step-by-step-instructions",
-    "href": "content/Soundscapes/Metrics.html#step-by-step-instructions",
-    "title": "Triton Metrics",
-    "section": "Step-by-Step Instructions",
-    "text": "Step-by-Step Instructions"
+    "objectID": "content/DataArchive/DataUpload.html#high-quality-photos-and-videos",
+    "href": "content/DataArchive/DataUpload.html#high-quality-photos-and-videos",
+    "title": "Data Upload",
+    "section": "High Quality Photos and Videos",
+    "text": "High Quality Photos and Videos\n\nSubmit any high quality photos/videos to Photo & Video Library"
   },
   {
-    "objectID": "content/DataArchive/OBIS.html",
-    "href": "content/DataArchive/OBIS.html",
-    "title": "OBIS",
+    "objectID": "content/DataArchive/DataQualityCheck.html",
+    "href": "content/DataArchive/DataQualityCheck.html",
+    "title": "Data Quality Check",
     "section": "",
-    "text": "*Need to check w/ Taiki about this"
+    "text": "Scan for any errors or mistakes in the Deployment Details spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)\nReach out to deployment/retrieval team for corrections if needed"
   },
   {
-    "objectID": "content/DataArchive/OBIS.html#obis-archive-metadata",
-    "href": "content/DataArchive/OBIS.html#obis-archive-metadata",
-    "title": "OBIS",
+    "objectID": "content/DataArchive/DataQualityCheck.html#deployment-details-quality-check",
+    "href": "content/DataArchive/DataQualityCheck.html#deployment-details-quality-check",
+    "title": "Data Quality Check",
     "section": "",
-    "text": "*Need to check w/ Taiki about this"
+    "text": "Scan for any errors or mistakes in the Deployment Details spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)\nReach out to deployment/retrieval team for corrections if needed"
   },
   {
-    "objectID": "content/DataArchive/TethysDeployments.html",
-    "href": "content/DataArchive/TethysDeployments.html",
-    "title": "Tethys - Deployments",
+    "objectID": "content/DataArchive/DataQualityCheck.html#check-recording-time-utc-vs-local-time",
+    "href": "content/DataArchive/DataQualityCheck.html#check-recording-time-utc-vs-local-time",
+    "title": "Data Quality Check",
+    "section": "Check Recording Time: UTC vs Local Time",
+    "text": "Check Recording Time: UTC vs Local Time\n\nCheck log files from extraced SUD files for Soundtrap Recording time (UTC vs Local Time), fix if needed\nOpen Taiki’s soundtrapRenamer script and run it to load all necessary functions\nRun the following code in a new script to check if the files were offloaded in UTC or local time\n\n\nsource('soundtrapRenamer.R')\n\n# change this to whatever file endings you want to change\nsuffixes &lt;- c('wav', 'sud', 'log.xml', 'accel.csv')\n\n# Change this to whatever folder these files are in\ndir &lt;- '../Data/Renamer/orig/'\n\nprep &lt;- prepTzFix(dir, offset=NULL, suffix=suffixes)\n\n\nIf the ‘prep’ output indicates that the files are on local time, run the following line of code to rename them\n\n\nfixStTz(dir, prep)\n\n\nIf files are renamed, the code will create a log file in the same folder of all of the name changes it made\nThere is also a reverse option that you can set to TRUE if you want to undo the renaming"
+  },
+  {
+    "objectID": "content/DataArchive/DataQualityCheck.html#assess-data-quality",
+    "href": "content/DataArchive/DataQualityCheck.html#assess-data-quality",
+    "title": "Data Quality Check",
+    "section": "Assess Data Quality",
+    "text": "Assess Data Quality\n\nScan the LTSA and define overall deployment as good, compromised, or unusable\nRecord Data Quality in Deployment Details spreadsheet"
+  },
+  {
+    "objectID": "content/DataArchive/DataQualityCheck.html#run-data-check-on-gps-data",
+    "href": "content/DataArchive/DataQualityCheck.html#run-data-check-on-gps-data",
+    "title": "Data Quality Check",
+    "section": "Run Data Check on GPS Data",
+    "text": "Run Data Check on GPS Data\n\nReview drift tracks created by Driftwatch\nLook at the image that is associated with the drift number and ensure all points are from the drift (no points from when the array was on the boat or land)"
+  },
+  {
+    "objectID": "content/DataArchive/DataQualityCheck.html#run-recording-qaqc",
+    "href": "content/DataArchive/DataQualityCheck.html#run-recording-qaqc",
+    "title": "Data Quality Check",
+    "section": "Run Recording QAQC ",
+    "text": "Run Recording QAQC \n\nsoundtrapQAQC function in PAMmisc\nMatlab QAQC script\nIf the QAQC shows significant gaps in the files (i.e. &gt;1 second), complete the following steps to account for those gaps\n\nIf you have a gap in the middle of the drift (with significant amount of data before AND after the gap) continue on with the following steps and add a readMe to the data folder indicating when and how long the gap is\nIf you have duty cylced recordings at the end of a continuous recording period, cut off the data"
+  },
+  {
+    "objectID": "content/DataArchive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
+    "href": "content/DataArchive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
+    "title": "Data Quality Check",
+    "section": "Scan LTSA for Noisy Data",
+    "text": "Scan LTSA for Noisy Data\nIf drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data\n\nUse the LTSA created with 500 Hz wav files, with 1s and 5Hz parameters\nView LTSA at 2 hour windows and scan through\nUse Logger to define start/end times of the noisy/bad data and include the type of noise in the comments (e.g. strumming, impulses, etc.)\nSplit between Anne and Cory"
+  },
+  {
+    "objectID": "content/DataArchive/NCEI.html",
+    "href": "content/DataArchive/NCEI.html",
+    "title": "NCEI",
     "section": "",
-    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
+    "text": "Most of the following information can be found in the Passive Packer Manual. This information is summarized from the manual with ADRIFT specific directions for various Passive Packer guidelines and fields. The following steps were put together using Passive Packer v.4.0.2.\n\n\n\nNCEI Passive Acoustic Data Viewer\nPassive Packer Manual\nAdditional Archive Guidelines\n\n\n\n\n\n\nOnly use Western Digital or Seagate Drives\n\nWe bought 4 20TB WD Elements Desktop Hard Drives for PASCAL, CCES, and ADRIFT\n\nData can be packaged directly from its home directory to the destination external hard drive\nAll data and the metadata files created by Passive Packer must fit on the destination drive, ensure there is ample space on drive to reduce the risk of the program crashing\n\n\n\n\nInclude the organization and project name without spaces in the hard drive name\n\nExample: SWFSC_ADRIFT_DRIVE\n\n\n\n\nLabel drive with the following information easily visible\n\nPackagers full name\nYour organization\nProject Name\nExample: Kourtney Burger, SWFSC, ADRIFT\n\n\n\n\n\nThe goal is to automate the Passive Packer process as much as possible. Currently, these guidelines will help with manual data entry.\n\n\n\nTry exporting Tethys queries and import data into Passive Packer\nModify Anne’s Tethys deployment spreadsheet script to pull necessary data from deployment details and import it to Passive Packer database. This will auto-fill most fields when Passive Packer is opened, allowing for less manual entry. \n\n\n\n\n\n\nDownload software from Passive Packer Website and follow the ‘Getting Started’ directions\nSee Passive Packer Manual for introduction to software and guidelines on packaging other passive acoustics data, including detections and moored deployments\nNote: The majority of the information required by Passive Packer can be found in the Deployment Details spreadsheet\n\n\n\n\n\n\n?: Opens Passive Packer Manual\nHide Records: Opens the package record show/hide dialog box. Previous packages records with show selected will be displayed in the Select Existing Record drop down menu\nClear Form: Clears all form fields on all tabs\nStop Packaging: Stops the packaging process at its current point\nSave For Later: Saves entered data for later use. Allows the user to continue working on packaging their data at a later date. This button should be routinely clicked to minimize data loss in case Passive Packer crashes\nPackage Data: Starts the packaging process\n\n\n\n\n\n\nProjects: input or select from drop down ADRIFT, CCES, PASCAL, or other applicable project name\nSite or Cruise: input cruise name (drifting deployments do not have set sites)\nDeployment ID: Input 3 digit deployment number\nPackage destination: path to external hard drive\nDataset Type: Audio (unless packaging other types of acoustic data, see manual for directions)\nDeployment Type: Mobile Marine\nPublic Release Date: For SWFSC ADRIFT project, always list at least 1 year after data were collected\nDataset Packager: Your name, use ‘Create/Edit People’ if you are not on the drop down menu\nExport JSON File & Export Records: Once all data fields have been filled in, export the file and save it to you metadata folder\nSelect existing dataset and ‘Generate Dataset Name’: use drop down to select data you saved for later or fill in all above information and click ‘Generate Dataset Name’ to create a new dataset entry\n\n\n\n\n\n\nDeployment Title: Full name of project/ dataset\n\nExample: For CCES write ’California Current Ecosystems Survey - Passive Acoustics Survey\n\nDeployment Purpose: Description of the purpose of the deployment/ dataset. Stays the same for each project, use information from reports for past projects\nDeployment Description: Information on why data were collected, details for future data users, and anything special that might affect data usefulness for other analyses. Stays the same for each project, use information from reports for past projects\nPath to documentation files: Path to directory with reports or other documentation files. Files can be added after packaging is complete using Update Bag function \nAlternate site name and Alternate deployment name: Leave blank for ADRIFT\n\n\n\n\n\n\nPlatform: Drifter\nInstrument type: ST4300, ST640, or other instrument\nInstrument ID: 4 digit soundtrap ID number\nDeployment Time: time of deployment (UTC)\nRecovery Time: time of recovery (UTC)\nAudio Start Time: start time of first audio file (UTC)\nAudio End Time: end time of last audio file(UTC)\nPath to audio files: path to wav file directory\nDeployment comments: From deployment details, any comments that may be useful to future users and analysis. No quality comments should be included here\nSampling Details, Data Quality, Sensors: See next slides\n\n\n\n\n\n\nChannel Time & all other time field: Should auto-fill based on ‘Audio Start Time’ and ‘Audio End Time’ in Dataset Details tab. Edit as necessary\nSensor Number: Should match number used in Sensor Details window, change sensor number if duplicating channels\nSample Rate (kHz): sampling rate set in soundtrap deployment window, should be 384 for ADRIFT\nSample Bits: 16 for ADRIFT\nGain (dB) or Gain (rel):\nDuration and Interval: Fill in duty cycle information or check continuous box. Note: if set to a continuous cycle (i.e. 6/6) do not check continuous, fill in duration and interval both as 6\nAdd Sample Rate, Gain, and Duty Cycle as needed. Should only be different if recorder malfunctioned or was set to record with different settings throughout deployment\nUse New Channel or Duplicate Channel to add channels as needed. Should have at least 2 for ADRIFT, include bad channels \n\n\n\n\n\nFor ADRIFT an overall deployment data quality entry will be added and a detailed noise log will be attached\n\nQuality Analyst: select who determined the data quality, create/edit people as needed\nSelect Quality Level: select overall deployment data quality from drop down\nFrequency Range: input minimum and maximum frequency for that data quality level\nTime will auto-fill from Dataset Details tab\nComments: include any comments about data quality here\nChannels: for ADRIFT we only analyze channel 1, change as needed\nAdd quality entries and update times as needed\nAdditional Quality Information: Fill in objectives, method, and description of quality assessment for future users and analysts\n\n\n\n\n\n\n\nAdd new sensor for each channel, 2 CH for ADRIFT\n\nSensor Number: match sensor number from Sampling Details Window\nSensor ID: Hydrophone Serial Number\nSensor Name: type of hydrophone (HTI-99-HF, HTI-92-WB, or HTI-96-MIN)\nSensor Position: leave X and Y blank, Z for sensor 1 is deployment depth, Z for other sensors is the deployment depth plus the distance between sensor 1 and sensor x (1 is -100, 2 is -105)\nHydrophone ID:\nPreamp ID: leave blank for ADRIFT\nSensor Description: Any additional information about hydrophone\n\n\n\n\n\nSensor Number: 3 (if 2 audio sensors were added above)\nSensor ID: depth sensor serial number (i.e. U-15771)\nSensor Name: Sensus Ultra\nSensor Position: Deployment depth (-100)\nSensor Description: Any additional information about depth sensor\n\n\n\n\nAdd new sensor if 2 GPS units were used (i.e. SPOT)\n\nSensor Number: 4 (if 2 audio sensors and depth sensor were added)\nSensor ID: GPS ID (7 digit number, 3391082 or 0-4554502)\nSensor Name: GPS name (SO-001 or Spot Letter)\nSensor Position: +1 (above sea level)\nSensor Type: GPS\nProperties: Leave blank\nSensor Description: Any additional information about GPS\n\nAdd other sensors as needed\n\n\n\n\n\n\nVessel: Name of deployment vessel\nIHO Sea Area: North Pacific Ocean\nPath to navigation / position files: select GPS csv\nDescription of location derivation:\n\n\n\n\n\n\nCalibration State:\nHydrophone Sensitivity (dB):\nFrequency Range (Hz): (i.e. 20-5000)\nGain (dB):\nPath to Calibration Documents:\nCalibration Description: Enter calibration methods and any other relevant calibration information\n\n\n\n\n\n\nScientists: List PI and Chief Scientist for each project/deployment (PASCAL - Shannon Rankin & Jennifer McCullough, CCES - Shannon Rankin and Anne Simonis, ADRIFT - Shannon Rankin & Deployment Details Personnel Column)\nSource Organizations: SWFSC\nFunding Organization: Always list SWFSC, check acknowledgements in past reports, ADRIFT - BOEM\nCreate/Edit people and organizations as needed\n\n\n\n\n\n\nPath to temperature data files: directory with temp files from soundtrap or temperature sensor\nPath to observational data files: only include for opportunistic recordings with observation notes (species, behavior, time, etc.)\nPath to other files you wish to submit: accelerometer and depth data\n\n\n\nSee Passive Packer manual for Additional Information and Warning Message Guidelines"
   },
   {
-    "objectID": "content/DataArchive/TethysDeployments.html#create-deployment-worksheet",
-    "href": "content/DataArchive/TethysDeployments.html#create-deployment-worksheet",
-    "title": "Tethys - Deployments",
+    "objectID": "content/DataArchive/NCEI.html#ncei-passive-packer-metadata",
+    "href": "content/DataArchive/NCEI.html#ncei-passive-packer-metadata",
+    "title": "NCEI",
     "section": "",
-    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
+    "text": "Most of the following information can be found in the Passive Packer Manual. This information is summarized from the manual with ADRIFT specific directions for various Passive Packer guidelines and fields. The following steps were put together using Passive Packer v.4.0.2.\n\n\n\nNCEI Passive Acoustic Data Viewer\nPassive Packer Manual\nAdditional Archive Guidelines\n\n\n\n\n\n\nOnly use Western Digital or Seagate Drives\n\nWe bought 4 20TB WD Elements Desktop Hard Drives for PASCAL, CCES, and ADRIFT\n\nData can be packaged directly from its home directory to the destination external hard drive\nAll data and the metadata files created by Passive Packer must fit on the destination drive, ensure there is ample space on drive to reduce the risk of the program crashing\n\n\n\n\nInclude the organization and project name without spaces in the hard drive name\n\nExample: SWFSC_ADRIFT_DRIVE\n\n\n\n\nLabel drive with the following information easily visible\n\nPackagers full name\nYour organization\nProject Name\nExample: Kourtney Burger, SWFSC, ADRIFT\n\n\n\n\n\nThe goal is to automate the Passive Packer process as much as possible. Currently, these guidelines will help with manual data entry.\n\n\n\nTry exporting Tethys queries and import data into Passive Packer\nModify Anne’s Tethys deployment spreadsheet script to pull necessary data from deployment details and import it to Passive Packer database. This will auto-fill most fields when Passive Packer is opened, allowing for less manual entry. \n\n\n\n\n\n\nDownload software from Passive Packer Website and follow the ‘Getting Started’ directions\nSee Passive Packer Manual for introduction to software and guidelines on packaging other passive acoustics data, including detections and moored deployments\nNote: The majority of the information required by Passive Packer can be found in the Deployment Details spreadsheet\n\n\n\n\n\n\n?: Opens Passive Packer Manual\nHide Records: Opens the package record show/hide dialog box. Previous packages records with show selected will be displayed in the Select Existing Record drop down menu\nClear Form: Clears all form fields on all tabs\nStop Packaging: Stops the packaging process at its current point\nSave For Later: Saves entered data for later use. Allows the user to continue working on packaging their data at a later date. This button should be routinely clicked to minimize data loss in case Passive Packer crashes\nPackage Data: Starts the packaging process\n\n\n\n\n\n\nProjects: input or select from drop down ADRIFT, CCES, PASCAL, or other applicable project name\nSite or Cruise: input cruise name (drifting deployments do not have set sites)\nDeployment ID: Input 3 digit deployment number\nPackage destination: path to external hard drive\nDataset Type: Audio (unless packaging other types of acoustic data, see manual for directions)\nDeployment Type: Mobile Marine\nPublic Release Date: For SWFSC ADRIFT project, always list at least 1 year after data were collected\nDataset Packager: Your name, use ‘Create/Edit People’ if you are not on the drop down menu\nExport JSON File & Export Records: Once all data fields have been filled in, export the file and save it to you metadata folder\nSelect existing dataset and ‘Generate Dataset Name’: use drop down to select data you saved for later or fill in all above information and click ‘Generate Dataset Name’ to create a new dataset entry\n\n\n\n\n\n\nDeployment Title: Full name of project/ dataset\n\nExample: For CCES write ’California Current Ecosystems Survey - Passive Acoustics Survey\n\nDeployment Purpose: Description of the purpose of the deployment/ dataset. Stays the same for each project, use information from reports for past projects\nDeployment Description: Information on why data were collected, details for future data users, and anything special that might affect data usefulness for other analyses. Stays the same for each project, use information from reports for past projects\nPath to documentation files: Path to directory with reports or other documentation files. Files can be added after packaging is complete using Update Bag function \nAlternate site name and Alternate deployment name: Leave blank for ADRIFT\n\n\n\n\n\n\nPlatform: Drifter\nInstrument type: ST4300, ST640, or other instrument\nInstrument ID: 4 digit soundtrap ID number\nDeployment Time: time of deployment (UTC)\nRecovery Time: time of recovery (UTC)\nAudio Start Time: start time of first audio file (UTC)\nAudio End Time: end time of last audio file(UTC)\nPath to audio files: path to wav file directory\nDeployment comments: From deployment details, any comments that may be useful to future users and analysis. No quality comments should be included here\nSampling Details, Data Quality, Sensors: See next slides\n\n\n\n\n\n\nChannel Time & all other time field: Should auto-fill based on ‘Audio Start Time’ and ‘Audio End Time’ in Dataset Details tab. Edit as necessary\nSensor Number: Should match number used in Sensor Details window, change sensor number if duplicating channels\nSample Rate (kHz): sampling rate set in soundtrap deployment window, should be 384 for ADRIFT\nSample Bits: 16 for ADRIFT\nGain (dB) or Gain (rel):\nDuration and Interval: Fill in duty cycle information or check continuous box. Note: if set to a continuous cycle (i.e. 6/6) do not check continuous, fill in duration and interval both as 6\nAdd Sample Rate, Gain, and Duty Cycle as needed. Should only be different if recorder malfunctioned or was set to record with different settings throughout deployment\nUse New Channel or Duplicate Channel to add channels as needed. Should have at least 2 for ADRIFT, include bad channels \n\n\n\n\n\nFor ADRIFT an overall deployment data quality entry will be added and a detailed noise log will be attached\n\nQuality Analyst: select who determined the data quality, create/edit people as needed\nSelect Quality Level: select overall deployment data quality from drop down\nFrequency Range: input minimum and maximum frequency for that data quality level\nTime will auto-fill from Dataset Details tab\nComments: include any comments about data quality here\nChannels: for ADRIFT we only analyze channel 1, change as needed\nAdd quality entries and update times as needed\nAdditional Quality Information: Fill in objectives, method, and description of quality assessment for future users and analysts\n\n\n\n\n\n\n\nAdd new sensor for each channel, 2 CH for ADRIFT\n\nSensor Number: match sensor number from Sampling Details Window\nSensor ID: Hydrophone Serial Number\nSensor Name: type of hydrophone (HTI-99-HF, HTI-92-WB, or HTI-96-MIN)\nSensor Position: leave X and Y blank, Z for sensor 1 is deployment depth, Z for other sensors is the deployment depth plus the distance between sensor 1 and sensor x (1 is -100, 2 is -105)\nHydrophone ID:\nPreamp ID: leave blank for ADRIFT\nSensor Description: Any additional information about hydrophone\n\n\n\n\n\nSensor Number: 3 (if 2 audio sensors were added above)\nSensor ID: depth sensor serial number (i.e. U-15771)\nSensor Name: Sensus Ultra\nSensor Position: Deployment depth (-100)\nSensor Description: Any additional information about depth sensor\n\n\n\n\nAdd new sensor if 2 GPS units were used (i.e. SPOT)\n\nSensor Number: 4 (if 2 audio sensors and depth sensor were added)\nSensor ID: GPS ID (7 digit number, 3391082 or 0-4554502)\nSensor Name: GPS name (SO-001 or Spot Letter)\nSensor Position: +1 (above sea level)\nSensor Type: GPS\nProperties: Leave blank\nSensor Description: Any additional information about GPS\n\nAdd other sensors as needed\n\n\n\n\n\n\nVessel: Name of deployment vessel\nIHO Sea Area: North Pacific Ocean\nPath to navigation / position files: select GPS csv\nDescription of location derivation:\n\n\n\n\n\n\nCalibration State:\nHydrophone Sensitivity (dB):\nFrequency Range (Hz): (i.e. 20-5000)\nGain (dB):\nPath to Calibration Documents:\nCalibration Description: Enter calibration methods and any other relevant calibration information\n\n\n\n\n\n\nScientists: List PI and Chief Scientist for each project/deployment (PASCAL - Shannon Rankin & Jennifer McCullough, CCES - Shannon Rankin and Anne Simonis, ADRIFT - Shannon Rankin & Deployment Details Personnel Column)\nSource Organizations: SWFSC\nFunding Organization: Always list SWFSC, check acknowledgements in past reports, ADRIFT - BOEM\nCreate/Edit people and organizations as needed\n\n\n\n\n\n\nPath to temperature data files: directory with temp files from soundtrap or temperature sensor\nPath to observational data files: only include for opportunistic recordings with observation notes (species, behavior, time, etc.)\nPath to other files you wish to submit: accelerometer and depth data\n\n\n\nSee Passive Packer manual for Additional Information and Warning Message Guidelines"
   },
   {
-    "objectID": "content/DataArchive/TethysDeployments.html#deployment-details-to-tethys",
-    "href": "content/DataArchive/TethysDeployments.html#deployment-details-to-tethys",
-    "title": "Tethys - Deployments",
-    "section": "Deployment details to Tethys",
-    "text": "Deployment details to Tethys\n\nUpload finalized deployment details to Tethys using appropriate sourcemap\n\nMobile and moored deployment sourcemaps in TethysSAEL repository on Anne’s github\n\nWork with Anne for this"
+    "objectID": "content/DataArchive/NCEI.html#archive-to-ncei",
+    "href": "content/DataArchive/NCEI.html#archive-to-ncei",
+    "title": "NCEI",
+    "section": "Archive to NCEI",
+    "text": "Archive to NCEI\n\nArchive data and metadata to NCEI"
   },
   {
-    "objectID": "content/DataArchive/TethysDeployments.html#pampaltethys-metadata",
-    "href": "content/DataArchive/TethysDeployments.html#pampaltethys-metadata",
-    "title": "Tethys - Deployments",
-    "section": "PAMpal/Tethys Metadata",
-    "text": "PAMpal/Tethys Metadata\n\nTalk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. \nAdditional comments on workflow spreadsheet"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Adrift Analysis Methods",
+    "section": "",
+    "text": "This document provides information related to data analysis for ADRIFT in the California Current, which uses drifting acoustic recorders to monitor marine mammals and ocean soundscapes. These methods include tasks related to data preparation and archiving, detection and classification of baleen and toothed whales, and the characterization of ocean soundscapes."
+  },
+  {
+    "objectID": "content/DataArchive/TethysDetections.html",
+    "href": "content/DataArchive/TethysDetections.html",
+    "title": "Tethys - Detections",
+    "section": "",
+    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)"
+  },
+  {
+    "objectID": "content/DataArchive/TethysDetections.html#tethys-detection-worksheet",
+    "href": "content/DataArchive/TethysDetections.html#tethys-detection-worksheet",
+    "title": "Tethys - Detections",
+    "section": "",
+    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)"
+  },
+  {
+    "objectID": "content/DataArchive/TethysDetections.html#upload-detections-to-tethys",
+    "href": "content/DataArchive/TethysDetections.html#upload-detections-to-tethys",
+    "title": "Tethys - Detections",
+    "section": "Upload Detections to Tethys",
+    "text": "Upload Detections to Tethys\n\nSWFSC.Detections.Analyst.v1 sourcemap\nNOAA.NMFS.v4 species abbreviation"
   },
   {
     "objectID": "content/DataArchive/DataPrep.html",
@@ -252,130 +413,179 @@
     "text": "Update deployment details \n\nInput Data Start and Data End times into the Deployment Details spreadsheet using the Data Start/End times determined above"
   },
   {
-    "objectID": "content/DataArchive/TethysDetections.html",
-    "href": "content/DataArchive/TethysDetections.html",
-    "title": "Tethys - Detections",
+    "objectID": "content/DataArchive/OBIS.html",
+    "href": "content/DataArchive/OBIS.html",
+    "title": "OBIS",
     "section": "",
-    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)"
+    "text": "*Need to check w/ Taiki about this"
   },
   {
-    "objectID": "content/DataArchive/TethysDetections.html#tethys-detection-worksheet",
-    "href": "content/DataArchive/TethysDetections.html#tethys-detection-worksheet",
-    "title": "Tethys - Detections",
+    "objectID": "content/DataArchive/OBIS.html#obis-archive-metadata",
+    "href": "content/DataArchive/OBIS.html#obis-archive-metadata",
+    "title": "OBIS",
     "section": "",
-    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)"
+    "text": "*Need to check w/ Taiki about this"
   },
   {
-    "objectID": "content/DataArchive/TethysDetections.html#upload-detections-to-tethys",
-    "href": "content/DataArchive/TethysDetections.html#upload-detections-to-tethys",
-    "title": "Tethys - Detections",
-    "section": "Upload Detections to Tethys",
-    "text": "Upload Detections to Tethys\n\nSWFSC.Detections.Analyst.v1 sourcemap\nNOAA.NMFS.v4 species abbreviation"
+    "objectID": "content/DataArchive/TethysDeployments.html",
+    "href": "content/DataArchive/TethysDeployments.html",
+    "title": "Tethys - Deployments",
+    "section": "",
+    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#title-page",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#title-page",
-    "title": "Methods Template",
-    "section": "Title Page",
-    "text": "Title Page\nThis template can be used to create slides for your analysis methods\nEdit the text and link in the footer above to redirect to your main methods page\nSee Quarto’s Revealjs documentation and options pages for more information on formatting and editing your slides\nFor advanced formatting options see Quarto’s Advanced Reveal documentation"
+    "objectID": "content/DataArchive/TethysDeployments.html#create-deployment-worksheet",
+    "href": "content/DataArchive/TethysDeployments.html#create-deployment-worksheet",
+    "title": "Tethys - Deployments",
+    "section": "",
+    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#new-slide",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#new-slide",
-    "title": "Methods Template",
-    "section": "New Slide",
-    "text": "New Slide\nNew slides can be created using the header options\n\n‘## Slide Title’ creates a new slide\n‘# Slide Title’ creates a new section with a title slide\nSee following slides for example"
+    "objectID": "content/DataArchive/TethysDeployments.html#deployment-details-to-tethys",
+    "href": "content/DataArchive/TethysDeployments.html#deployment-details-to-tethys",
+    "title": "Tethys - Deployments",
+    "section": "Deployment details to Tethys",
+    "text": "Deployment details to Tethys\n\nUpload finalized deployment details to Tethys using appropriate sourcemap\n\nMobile and moored deployment sourcemaps in TethysSAEL repository on Anne’s github\n\nWork with Anne for this"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#new-slide-in-section",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#new-slide-in-section",
-    "title": "Methods Template",
-    "section": "New Slide in Section",
-    "text": "New Slide in Section\nThe outline can be viewed by clicking the three lines in the bottom left corner in the rendered slides"
+    "objectID": "content/DataArchive/TethysDeployments.html#pampaltethys-metadata",
+    "href": "content/DataArchive/TethysDeployments.html#pampaltethys-metadata",
+    "title": "Tethys - Deployments",
+    "section": "PAMpal/Tethys Metadata",
+    "text": "PAMpal/Tethys Metadata\n\nTalk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. \nAdditional comments on workflow spreadsheet"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#multiple-columns",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#multiple-columns",
-    "title": "Methods Template",
-    "section": "Multiple Columns",
-    "text": "Multiple Columns\nYou can add text and images side by side using columns\nEdit the number of columns and column width as needed\n\n\nLeft column\n\nText\n\n\nRight column"
+    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html",
+    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html",
+    "title": "Dolphins & Sperm Whales",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event\n\n##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#absolute-positions",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#absolute-positions",
-    "title": "Methods Template",
-    "section": "Absolute Positions",
-    "text": "Absolute Positions\nPosition images or other elements at precise locations using class .absolute"
+    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
+    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
+    "title": "Dolphins & Sperm Whales",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event\n\n##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#content-overflow",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#content-overflow",
-    "title": "Methods Template",
-    "section": "Content Overflow",
-    "text": "Content Overflow\nHere are some ways to deal with too much information on one slide\n\nUse the .smaller class to use a smaller typeface\nUse the .scrollable class to make off-slide content available by scrolling"
+    "objectID": "content/ToothedWhales/NBHF-BANTER.html",
+    "href": "content/ToothedWhales/NBHF-BANTER.html",
+    "title": "NBHF - BANTER",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#content-overflow-.smaller",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#content-overflow-.smaller",
-    "title": "Methods Template",
-    "section": "Content Overflow: .smaller",
-    "text": "Content Overflow: .smaller\nHere’s the smaller font"
+    "objectID": "content/ToothedWhales/NBHF-BANTER.html#methods-summary",
+    "href": "content/ToothedWhales/NBHF-BANTER.html#methods-summary",
+    "title": "NBHF - BANTER",
+    "section": "",
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#content-overflow-.scrollable",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#content-overflow-.scrollable",
-    "title": "Methods Template",
-    "section": "Content Overflow: .scrollable",
-    "text": "Content Overflow: .scrollable\nHere you can scroll down the slide\n\nList a\nList b\nList c\nList d\nList e\nList f\nList g\nList h\nList i\nList j"
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#overview",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#overview",
+    "title": "Minke Methods",
+    "section": "Overview",
+    "text": "Overview\nWithin PAMGuard, a Generalized Power Law detector was used to detect Minke boings. We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data.\nExample Pamguard settings file (INSERT LINK)\n\nSpectrogram of Minke whale boings being detected by GPL detector"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#adding-code-to-slides",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#adding-code-to-slides",
-    "title": "Methods Template",
-    "section": "Adding Code To Slides",
-    "text": "Adding Code To Slides\nYou can add code blocks and executable code to your slides. There are a wide variety of options to customize and display code, see the following resources for guidance\n\nHTML Code Blocks\nRevealjs Code Options"
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#database-binary-storage",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#database-binary-storage",
+    "title": "Minke Methods",
+    "section": "Database & Binary Storage",
+    "text": "Database & Binary Storage\nSet database path to a new blank database titled ADRIFT_###_PG_2_02_02_Minke.sqlite3\nCreate a new binary folder for your detections titled ADRIFT_###_PG_2_02_02_Minke"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#text-and-image-side-by-side",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#text-and-image-side-by-side",
-    "title": "Methods Template",
-    "section": "Text and Image Side by Side",
-    "text": "Text and Image Side by Side\n\n\n\nCurrently we are using Matlab 2021b\nOn the home tab -&gt; Environment -&gt; Set Path\nClick “Add folder with Subfolders…”\nBrowse to the folder containing Triton-R2020 (or the newest version of Triton on GitHub)\nClick ‘Save’ and then ’Close"
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#hydrophone-array",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#hydrophone-array",
+    "title": "Minke Methods",
+    "section": "Hydrophone Array",
+    "text": "Hydrophone Array\nDepending on the drift that was processed, the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector (CH 1 in physical hydrophone array)."
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-multiple-columns",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-multiple-columns",
-    "title": "Methods Template",
-    "section": "Slide with Multiple Columns",
-    "text": "Slide with Multiple Columns\n\n\n\nStart Matlab and at the command prompt type ‘triton’ and press enter to run the application\nThree windows will be displayed:\n\nPlot\nControl\nMessage\n\n\n\n\n\nControl Window - Controls settings for Plot Window\nMessage Window - Keeps a record of the users actions and displays Plot Window cursor location\n\n\n\n\nPlot Window - Displays Long Term Spectral Average (LTSA), spectrogram, spectra, and time series plots"
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#sound-acquisition-decimation",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#sound-acquisition-decimation",
+    "title": "Minke Methods",
+    "section": "Sound Acquisition & Decimation",
+    "text": "Sound Acquisition & Decimation\nSet the sound acquisition path to the folder your sound files are in\nThe Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz."
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-scrollable-figure-panel",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-scrollable-figure-panel",
-    "title": "Methods Template",
-    "section": "Slide with Scrollable Figure Panel",
-    "text": "Slide with Scrollable Figure Panel\n\n\n\n\n\n\nSNR 1 Call\n\n\n\n\n\n\n\nSNR 2 Call\n\n\n\n\n\n\n\n\n\nSNR 3 Call\n\n\n\n\n\n\n\nBad Recordings"
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#gpl-settings",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#gpl-settings",
+    "title": "Minke Methods",
+    "section": "GPL Settings",
+    "text": "GPL Settings\n\n\n\n\n\nFFT Settings\n\n\n\n\n\n\n\n\nDetection Settings\n\n\n\n\n\n\n\n\nContours settings"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-code",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-code",
-    "title": "Methods Template",
-    "section": "Slide with Code",
-    "text": "Slide with Code\n\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")"
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#spectrogram-annotation-detection-grouper-settings",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#spectrogram-annotation-detection-grouper-settings",
+    "title": "Minke Methods",
+    "section": "Spectrogram Annotation & Detection Grouper Settings",
+    "text": "Spectrogram Annotation & Detection Grouper Settings\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard."
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-executable-code",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-executable-code",
-    "title": "Methods Template",
-    "section": "Slide with Executable Code",
-    "text": "Slide with Executable Code\n\n#library(ggplot2)\n#ggplot(mtcars, aes(hp, mpg, color = am)) +\n#  geom_point() +\n#  geom_smooth(formula = y ~ x, method = \"loess\")"
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#detection-grouper-settings",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#detection-grouper-settings",
+    "title": "Minke Methods",
+    "section": "Detection Grouper Settings",
+    "text": "Detection Grouper Settings\n\n\n\n\n\nMarkers settings\n\n\n\n\n\n\n\n\nData selection settings\n\n\n\n\n\n\n\n\nAnnotations settings"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-highlighted-code-lines",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#slide-with-highlighted-code-lines",
-    "title": "Methods Template",
-    "section": "Slide with Highlighted Code Lines",
-    "text": "Slide with Highlighted Code Lines\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n\nMore line highlighting options here\n\n\n\nSource Code"
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#create-new-user-form",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#create-new-user-form",
+    "title": "Minke Methods",
+    "section": "Create New User Form",
+    "text": "Create New User Form\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#edit-user-form-add-lookup-table",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#edit-user-form-add-lookup-table",
+    "title": "Minke Methods",
+    "section": "Edit User Form & Add Lookup Table",
+    "text": "Edit User Form & Add Lookup Table\n\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#edit-lookup-list",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#edit-lookup-list",
+    "title": "Minke Methods",
+    "section": "Edit Lookup List",
+    "text": "Edit Lookup List\n\n\nAdd selection drop down by right clicking on ‘= no selection =’ and selecting ‘Edit list’\n\n\nClick ‘Add item’ and fill in species specific options\n\nB - Boing\nCB - Cutoff Boing\nUB - Unknown Biological Sound\nUA - Unknown Anthropogenic Sound\n\n\n\nClick ‘Ok’ to close all of the tabs and return to Pamguard Viewer window"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#add-spectrogram-annotation-module",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#add-spectrogram-annotation-module",
+    "title": "Minke Methods",
+    "section": "Add Spectrogram Annotation Module",
+    "text": "Add Spectrogram Annotation Module\n\nGo to File &gt; Add Modules &gt; Utilities &gt; Spectrogram Annotation\nUnder ‘Settings’, go to Spectrogram Annotation settings and click on the gear icon next to ‘User form annotation’\nClick on the ‘User form’ drop down, select ‘UDF_evType’, and click Ok to return to the Pamguard Viewer window"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#fix-spectrogram-parameters",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#fix-spectrogram-parameters",
+    "title": "Minke Methods",
+    "section": "Fix Spectrogram Parameters",
+    "text": "Fix Spectrogram Parameters\n\nRight click on the spectrogram and go to Settings\n\nEnsure both the ‘Detection Grouper’ and ‘Spectrogram Annotation’ boxes are checked and click Ok\n\n\n\n\nGo to File &gt; Save Data and close Pamguard"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#detection-validation-1",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#detection-validation-1",
+    "title": "Minke Methods",
+    "section": "Detection Validation",
+    "text": "Detection Validation\nManually validate all detections to look for Minke boings\nADD METHODS FOR BOXING BOINGS"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#validation-code",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#validation-code",
+    "title": "Minke Methods",
+    "section": "20% Validation Code",
+    "text": "20% Validation Code\n\nDue to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for additional validation."
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#validation-steps",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#validation-steps",
+    "title": "Minke Methods",
+    "section": "20% Validation Steps",
+    "text": "20% Validation Steps\n\nOnce you have followed the code above to subsample your data, make a copy of the database in a ‘Data Validated’ folder and reopen the database in Pamguard Viewer\nGo to File &gt; Add Modules &gt; Displays &gt; User Display\n\n\n\nName the new user display ‘Subsample’\nClick on the new subsample tab and go to User Display &gt; New Detection Grouper data display\n\n\n\nYour subsampled data should then be listed with associate marker colors\n\n\n\nValidate each subsampled wav file by scrolling in the spectrogram to the file and boxing/validating all detections using the drop down options specified above"
   },
   {
     "objectID": "content/BaleenWhales/BlueWhales-ManualDetection.html",
@@ -390,76 +600,6 @@
     "title": "Blue Whales - Manual Detection",
     "section": "",
     "text": "Open 500Hz LTSA for the drift that is being analyzed.\n\nChange the time being displayed to reflect an hour of data.\n\nFor continuous recordings, it should say 1HR.\nFor Duty cycled data it could vary between .2 and .6HRS\n\nIncrease the brightness to 5. Leave default contrast settings\n\n\n\nTriton software was used to create and manually bin blue whale A,B and D call types into 60 minute bins."
-  },
-  {
-    "objectID": "content/BaleenWhales/MinkeWhales.html",
-    "href": "content/BaleenWhales/MinkeWhales.html",
-    "title": "Minke Whales",
-    "section": "",
-    "text": "All drifts used a default Pamguard settings file. To view an example Pamguard settings file please click here (insert link to GitHub repository). Open Pamguard settings file and save each drift under a new .psfx as ADRIFT_###_PGversion_Minke (ADRIFT_001_PG_2_02_02_Minke.psfx)\nA Generalized Power Law detector was used to detect Minke boings (figure X). We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. Exact parameters are detailed below.\n\n\n\nFigure X. Spectrogram of Minke whale boings being detected by GPL detector\n\n\n\n\nSet database path to a new blank database titled ADRIFT_###_PG_2_02_02_Minke.sqlite3\n\n\n\nCreate a new binary folder for your detections titled ADRIFT_###_PG_2_02_02_Minke\n\n\n\nDepending on the drift that was processed, the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector. To view the Array Configuration files for each drift please click here* (insert link to storage place)\n\n\n\nSet the sound acquisition path to the folder your sound files are in\n\n\n\nhe Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz .\n\n\n\n\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\nAdd selection drop down by right clicking on ‘= no selection =’ and selecting ‘Edit list’\n\n\n\n\n\nClick ‘Add item’ and fill in species specific options\n\nB - Boing\nCB - Cutoff Boing\nUB - Unknown Biological Sound\nUA - Unknown Anthropogenic Sound\n\n\n\n\nClick ‘Ok’ to close all of the tabs and return to Pamguard Viewer window\nNext, set up the Spectrogram Annotation\n\nGo to File &gt; Add Modules &gt; Utilities &gt; Spectrogram Annotation\n\n\nUnder ‘Settings’, go to Spectrogram Annotation settings and click on the gear icon next to ‘User form annotation’\nClick on the ‘User form’ drop down, select ‘UDF_evType’, and click Ok to return to the Pamguard Viewer window\n\nRight click on the spectrogram and go to Settings\n\nEnsure both the ‘Detection Grouper’ and ‘Spectrogram Annotation’ boxes are checked and click Ok\n\n\nGo to File &gt; Save Data and close Pamguard"
-  },
-  {
-    "objectID": "content/BaleenWhales/MinkeWhales.html#pamguard-set-up",
-    "href": "content/BaleenWhales/MinkeWhales.html#pamguard-set-up",
-    "title": "Minke Whales",
-    "section": "",
-    "text": "All drifts used a default Pamguard settings file. To view an example Pamguard settings file please click here (insert link to GitHub repository). Open Pamguard settings file and save each drift under a new .psfx as ADRIFT_###_PGversion_Minke (ADRIFT_001_PG_2_02_02_Minke.psfx)\nA Generalized Power Law detector was used to detect Minke boings (figure X). We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. Exact parameters are detailed below.\n\n\n\nFigure X. Spectrogram of Minke whale boings being detected by GPL detector\n\n\n\n\nSet database path to a new blank database titled ADRIFT_###_PG_2_02_02_Minke.sqlite3\n\n\n\nCreate a new binary folder for your detections titled ADRIFT_###_PG_2_02_02_Minke\n\n\n\nDepending on the drift that was processed, the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector. To view the Array Configuration files for each drift please click here* (insert link to storage place)\n\n\n\nSet the sound acquisition path to the folder your sound files are in\n\n\n\nhe Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz .\n\n\n\n\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\nAdd selection drop down by right clicking on ‘= no selection =’ and selecting ‘Edit list’\n\n\n\n\n\nClick ‘Add item’ and fill in species specific options\n\nB - Boing\nCB - Cutoff Boing\nUB - Unknown Biological Sound\nUA - Unknown Anthropogenic Sound\n\n\n\n\nClick ‘Ok’ to close all of the tabs and return to Pamguard Viewer window\nNext, set up the Spectrogram Annotation\n\nGo to File &gt; Add Modules &gt; Utilities &gt; Spectrogram Annotation\n\n\nUnder ‘Settings’, go to Spectrogram Annotation settings and click on the gear icon next to ‘User form annotation’\nClick on the ‘User form’ drop down, select ‘UDF_evType’, and click Ok to return to the Pamguard Viewer window\n\nRight click on the spectrogram and go to Settings\n\nEnsure both the ‘Detection Grouper’ and ‘Spectrogram Annotation’ boxes are checked and click Ok\n\n\nGo to File &gt; Save Data and close Pamguard"
-  },
-  {
-    "objectID": "content/BaleenWhales/MinkeWhales.html#detection-validation",
-    "href": "content/BaleenWhales/MinkeWhales.html#detection-validation",
-    "title": "Minke Whales",
-    "section": "Detection Validation",
-    "text": "Detection Validation\nManually validate all detections to look for Minke boings"
-  },
-  {
-    "objectID": "content/BaleenWhales/MinkeWhales.html#all-data-validation",
-    "href": "content/BaleenWhales/MinkeWhales.html#all-data-validation",
-    "title": "Minke Whales",
-    "section": "All Data Validation",
-    "text": "All Data Validation\n\nDue to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.\n\n\n*Add in Kaitlin’s code\n\n# PAMpal simple example \n# Its on CRAN. Yay!\n# install.packages('PAMpal')\n# Sometimes I fix things and theyre only available on the GitHub version\n# Right now there are some things that run a lot faster on teh GitHub version so I recommend installing that.\n# updated 22-12-6 to include loop for PG event adding w/PAMmisc\nrm(list=ls())\ndevtools::install_github('TaikiSan21/PAMpal')\ndevtools::install_github('TaikiSan21/PAMmisc')\nlibrary(PAMpal)\nlibrary(PAMmisc)\n\n# Start by creating a \"PAMpalSettings\" object. This keeps track of what data you want to process and what processing you want to apply to it.\n\n# Change paths below to your DB and binary folder. Can just be the highest level binary folder for that drift - it will add all files within that folder recursively through subfolders.\n\n# This will also ask you to type in some parameters for calculations in your console. You can just hit ENTER to accept defaults for all of these, they aren't relevant to the GPL calculations only for clicks.\n\npps &lt;- PAMpalSettings(db = 'Path to database',\n                      binaries = 'Path to binaries',\n                      # these parameters are only for the click detector - can ignroe\n                      sr_hz='auto',\n                      filterfrom_khz=0,\n                      filterto_khz=NULL,\n                      winLen_sec=.0025)\n\n# Now tell it to process your data. Id is optional and serves no function, but can be useful to tell data apart at a later point in time. Here mode = 'recording' tells it how to organize your data. Most of the time we are working with data that have been marked manually into events, so PAMpal wants to organize things into events. mode='db' uses the events in the database, and only processes the detectoins you've marked out. In this case we just want to process everything, which is what mode='recording' does. It will group them into events by recording file. \n\n# This might take some time to read in events after processing in order to get the time \n#data &lt;- processPgDetections(pps, mode='db', id='Minke_CCES_019') \n\ndata &lt;- processPgDetections(pps, mode='recording', id='Species_Project_Drift#')\n\n# And here's how you can get the detections information out of \"data\" as a dataframe. Time column is \"UTC\", other columns are stuff it measured. \ngplDf &lt;- getGPLData(data)\n\n# Now we can add the wav files to this data. You might get a warning about \"startSample\", its safe to ignore that.\ndata &lt;- addRecordings(data, \n                      folder='Path to wav files')\n\n# that data is stored here as a dataframe. Has \"start\" & \"end\" as POSIXct and the fulle path to the file as \"file\"\nwavDf &lt;- files(data)$recordings\n\n# add number of detections to this\nnDets &lt;- sapply(events(data), nDetections)\nnDets &lt;- data.frame(join=names(nDets), nDets=nDets)\nwavDf$join &lt;- basename(wavDf$file)\nwavDf &lt;- left_join(wavDf, nDets)\nwavDf$join &lt;- NULL\nwavDf$nDets[is.na(wavDf$nDets)] &lt;- 0\n\nnfiles =round(nrow(wavDf)*.2)\nrandStart =sample(1:5,1)\n\nwavDf=wavDf[round(seq(randStart, nrow(wavDf), length.out = nfiles)),]\n\n# If we care about assigning some kind of initial label to these detections. Otherwise ignore. \ndata &lt;- setSpecies(data, method='manual', value='InitialGPL')\n\n# Add events from wavDf loop\nfor(e in 1:nrow(wavDf)) {\n  thisEv &lt;- data[[basename(wavDf$file[e])]]\n  # this will get all detector types, if just one type is wanted can be simplified to ex. uids &lt;- unique(getGPLData(thisEv)$UID)\n  uids &lt;- unique(unlist(lapply(getDetectorData(thisEv), function(x) {\n    if(is.null(x)) return(NULL)\n    x$UID\n  })))\n  \n  addPgEvent(db = files(thisEv)$db,\n             binary = files(thisEv)$binaries,\n             eventType = species(thisEv)$id,\n             UIDs = uids,\n             type = 'dg',\n             start = wavDf$start[e],\n             end = wavDf$end[e],\n             comment = paste0('Added by PAMpal, event ID: ', id(thisEv)))\n}\n\n\n\nValidation\n\nOnce you have followed the code above to subsample your data, make a copy of the database in a ‘Data Validated’ folder and reopen the database in Pamguard Viewer\nGo to File &gt; Add Modules &gt; Displays &gt; User Display\n\nName the new user display ‘Subsample’\nClick on the new subsample tab and go to User Display &gt; New Detection Grouper data display\n\nYour subsampled data should then be listed with associate marker colors\n\nValidate each subsampled wav file by scrolling in the spectrogram to the file and boxing/validating all detections using the drop down options specified above\n\n\n\nNotes\n\nMethod for boings cutoff at the start or end of file (only applies to subsampled data to be validated)\n\nIf the detector consistently picks up cutoff boings AND you think they can be picked up easily using manual effort (there is enough signal to know it is a boing) -- then box these partial detections and label them as ‘Cutoff Boing’ (can be helpful as they note the occurrence of these calls during this time selection)\n\nThe box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)\n\n\nMethod for false dectections\n\nIgnore them"
-  },
-  {
-    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html",
-    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html",
-    "title": "Gray & Humpback Whales - Detection",
-    "section": "",
-    "text": "*To view the Pamguard settings files used for each drift please click here.\n\n\nDepending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.\n\n\n\nFigure X. Array settings in Pamguard\n\n\n\n\n\n\nFor humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).\n\n\n\nFigure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.\n\n\n\n\n\nFigure x. Low Pass Filter for Humback and Gray whale GPL detector\n\n\n\n\n\n\n\nWe started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.\n\n\n\n\nFigure X. GPL FFT Settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL detections settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL contour settings for humpback and gray whales\n\n\n\nWe then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.\n\nFor this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\n\n\n\n\n\n\n\nAll detections were saved to the binary files and all other data were saved to a SQLite database\n\n\n\nFigure x. Storage Options Settings for PAMGuard"
-  },
-  {
-    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#pamguard",
-    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#pamguard",
-    "title": "Gray & Humpback Whales - Detection",
-    "section": "",
-    "text": "*To view the Pamguard settings files used for each drift please click here.\n\n\nDepending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.\n\n\n\nFigure X. Array settings in Pamguard\n\n\n\n\n\n\nFor humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).\n\n\n\nFigure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.\n\n\n\n\n\nFigure x. Low Pass Filter for Humback and Gray whale GPL detector\n\n\n\n\n\n\n\nWe started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.\n\n\n\n\nFigure X. GPL FFT Settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL detections settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL contour settings for humpback and gray whales\n\n\n\nWe then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.\n\nFor this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\n\n\n\n\n\n\n\nAll detections were saved to the binary files and all other data were saved to a SQLite database\n\n\n\nFigure x. Storage Options Settings for PAMGuard"
-  },
-  {
-    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#pampal",
-    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#pampal",
-    "title": "Gray & Humpback Whales - Detection",
-    "section": "PAMpal",
-    "text": "PAMpal\n\nThe data were then imported into PAMpal and events were created and put back into the PAMGuard database. Events were defined as 6 minute periods of continuous recordings for ADRIFT and 2 minutes for the CCES 2018 data set (limited to duty cycle 2 on 18 off) . *Add in PASCAL when we get to it."
-  },
-  {
-    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#stratified-sub-sampling",
-    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#stratified-sub-sampling",
-    "title": "Gray & Humpback Whales - Detection",
-    "section": "Stratified Sub-sampling",
-    "text": "Stratified Sub-sampling\n\nDue to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.\n*Add in Kaitlin’s code"
-  },
-  {
-    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#validation",
-    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#validation",
-    "title": "Gray & Humpback Whales - Detection",
-    "section": "Validation",
-    "text": "Validation\n\n*Kaitlin to add in methods here"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Adrift Analysis Methods",
-    "section": "",
-    "text": "This document provides information related to data analysis for ADRIFT in the California Current, which uses drifting acoustic recorders to monitor marine mammals and ocean soundscapes. These methods include tasks related to data preparation and archiving, detection and classification of baleen and toothed whales, and the characterization of ocean soundscapes."
   },
   {
     "objectID": "content/BaleenWhales/Dectections.html",
@@ -518,199 +658,59 @@
     "text": "Species Specific Validation Methods\n\nFin Whales\n\n\nBlue Whales\n\n\nMinke Whales\n\nMethod for boings cutoff at the start or end of file (only applies to subsampled data to be validated)\n\nIf the detector consistently picks up cutoff boings AND you think they can be picked up easily using manual effort (there is enough signal to know it is a boing) -- then box these partial detections and label them as ‘Cutoff Boing’ (can be helpful as they note the occurrence of these calls during this time selection)\n\nThe box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)\n\n\nMethod for false dectections\n\nIgnore them\n\n\n\n\nBrydes & Fin Whales (40 Hz)\n\n\nHumpback & Gray Whales"
   },
   {
-    "objectID": "content/BaleenWhales/Overview.html",
-    "href": "content/BaleenWhales/Overview.html",
-    "title": "Overview",
+    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html",
+    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html",
+    "title": "Gray & Humpback Whales - Detection",
     "section": "",
-    "text": "Baleen whale vocalizations are noted by their long duration, low frequency calls. While we wanted to come up with one approach to detect and classify all baleen whale species in the California Current, existing open source software did not provide the best platform to do so. Here we summarize multiple methods on how we tackled the problem of detecting and classifying baleen whales in the the ADRIFT recordings.\n\n\n\nRecordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively using channel one of the raw recordings.\nFrom those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.\n\nLTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details.\n\n\n\n\n\n\n\n\nPAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.\n\n\n\n\n\nTriton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA’s to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click here for more detail of these methods.\n\n\n\n\n\n\n\n\n\n\n\nA click detector in PAMGuard version 2.02.02 was used to detect 20Hz fin whale pluses throughout the recordings. Twenty percent of those data were validated as a training set for a BANTER model.\n\n\n\n\n\n\n\n\n\n\n\nPAMGuard version 2.02.02 was used to run a GPL detector to identify Minke whale boings (see image below). All detections were manually scanned and all boings were annotated in PAMGuard. Following manual scanning, an additional 20% of the total data was subsampled to verify boings were not being missed.\n\n\n\nFigure X. Spectrogram of Minke whale boings being detected by GPL detector\n\n\nDetailed methods"
+    "text": "*To view the Pamguard settings files used for each drift please click here.\n\n\nDepending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.\n\n\n\nFigure X. Array settings in Pamguard\n\n\n\n\n\n\nFor humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).\n\n\n\nFigure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.\n\n\n\n\n\nFigure x. Low Pass Filter for Humback and Gray whale GPL detector\n\n\n\n\n\n\n\nWe started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.\n\n\n\n\nFigure X. GPL FFT Settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL detections settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL contour settings for humpback and gray whales\n\n\n\nWe then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.\n\nFor this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\n\n\n\n\n\n\n\nAll detections were saved to the binary files and all other data were saved to a SQLite database\n\n\n\nFigure x. Storage Options Settings for PAMGuard"
   },
   {
-    "objectID": "content/BaleenWhales/Overview.html#data-prep",
-    "href": "content/BaleenWhales/Overview.html#data-prep",
-    "title": "Overview",
+    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#pamguard",
+    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#pamguard",
+    "title": "Gray & Humpback Whales - Detection",
     "section": "",
-    "text": "Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively using channel one of the raw recordings.\nFrom those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.\n\nLTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details."
+    "text": "*To view the Pamguard settings files used for each drift please click here.\n\n\nDepending on the drift that was process the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector.\n\n\n\nFigure X. Array settings in Pamguard\n\n\n\n\n\n\nFor humpback and gray whales we decimated files to 10kHz (Figure X.) and used a Butterworth Low Pass Filter of 5kHz (Figure x).\n\n\n\nFigure x. Settings used in the decimator module in Pamguard to run the humpback and gray whale GPL detector.\n\n\n\n\n\nFigure x. Low Pass Filter for Humback and Gray whale GPL detector\n\n\n\n\n\n\n\nWe started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data. For the humpback and gray whales we tested modified settings on clips that contained either humpback or gray whales until we were happy with the detectors performance.\n\n\n\n\nFigure X. GPL FFT Settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL detections settings for humpback and gray whales\n\n\n\n\n\nFigure x. GPL contour settings for humpback and gray whales\n\n\n\nWe then processed an entire drift’s recordings and looked at the detector’s performance in Pamguard Viewer Mode by spot checking that humpback and gray whale calls were being picked up by the detector. Once we were satisfied that the detector was doing it’s job, we processed the rest of the drifts.\n\nFor this detector our aim was to over-detect and then sort out the differences between the humpback and gray detections using a classifier.\n\n\n\n\n\n\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.\n\n\n\nFigure x. Detection Grouper Mark Display Settings\n\n\n\n\n\nFigure X. Detection Grouper Data Selection Settings\n\n\n\n\n\nFigure x. Detection Grouper Annotation Settings\n\n\nIt is important to note that both the “Text” and “User Form” annotation boxes must be selected here.\n\nTo setup the user form annotation (click on the gear icon)\nCreate new user form\nLabel the form “evType” then click ok (see figure X)\n\n\n\nFigure x. Adding in a user form for the Detection Grouper in Pamguard\n\n\nNext click “edit form”\nAdd a lookup table and fill it out exactly as follows (see figure x.)\n\nTitle: eventType\nPostTitle: eventType\nDbTitle: eventType\nTopic: DGEventType\n\n\n\nFigure x. Editing the user form for the detection grouper to work with the GPL detections\n\n\n\n\n\n\n\n\n\nAll detections were saved to the binary files and all other data were saved to a SQLite database\n\n\n\nFigure x. Storage Options Settings for PAMGuard"
   },
   {
-    "objectID": "content/BaleenWhales/Overview.html#blue-whales",
-    "href": "content/BaleenWhales/Overview.html#blue-whales",
-    "title": "Overview",
+    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#pampal",
+    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#pampal",
+    "title": "Gray & Humpback Whales - Detection",
+    "section": "PAMpal",
+    "text": "PAMpal\n\nThe data were then imported into PAMpal and events were created and put back into the PAMGuard database. Events were defined as 6 minute periods of continuous recordings for ADRIFT and 2 minutes for the CCES 2018 data set (limited to duty cycle 2 on 18 off) . *Add in PASCAL when we get to it."
+  },
+  {
+    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#stratified-sub-sampling",
+    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#stratified-sub-sampling",
+    "title": "Gray & Humpback Whales - Detection",
+    "section": "Stratified Sub-sampling",
+    "text": "Stratified Sub-sampling\n\nDue to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for validation.\n*Add in Kaitlin’s code"
+  },
+  {
+    "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#validation",
+    "href": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html#validation",
+    "title": "Gray & Humpback Whales - Detection",
+    "section": "Validation",
+    "text": "Validation\n\n*Kaitlin to add in methods here"
+  },
+  {
+    "objectID": "content/Soundscapes/Metrics.html",
+    "href": "content/Soundscapes/Metrics.html",
+    "title": "Triton Metrics",
     "section": "",
-    "text": "PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.\n\n\n\n\n\nTriton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA’s to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click here for more detail of these methods."
+    "text": "Aligning methods to SanctSound protocols (https://sanctsound.ioos.us/) \nData is decimated to 48 kHz\nTriton vXXX software (https://github.com/MarineBioAcousticsRC/Triton) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.\nCalibration value = Hydrophone Sensitivity (~ -155 dB for most hydrophones) + Soundtrap Sensitivity (-4 dB for 4300HF). Note, Triton calibration value is a positive value. See ‘SysSens’ function to automatically find calibration value for each deployment\nPower spectral density, third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.\nVessels are acoustically detected automatically or manually"
   },
   {
-    "objectID": "content/BaleenWhales/Overview.html#fin",
-    "href": "content/BaleenWhales/Overview.html#fin",
-    "title": "Overview",
+    "objectID": "content/Soundscapes/Metrics.html#methods-summary",
+    "href": "content/Soundscapes/Metrics.html#methods-summary",
+    "title": "Triton Metrics",
     "section": "",
-    "text": "A click detector in PAMGuard version 2.02.02 was used to detect 20Hz fin whale pluses throughout the recordings. Twenty percent of those data were validated as a training set for a BANTER model."
+    "text": "Aligning methods to SanctSound protocols (https://sanctsound.ioos.us/) \nData is decimated to 48 kHz\nTriton vXXX software (https://github.com/MarineBioAcousticsRC/Triton) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.\nCalibration value = Hydrophone Sensitivity (~ -155 dB for most hydrophones) + Soundtrap Sensitivity (-4 dB for 4300HF). Note, Triton calibration value is a positive value. See ‘SysSens’ function to automatically find calibration value for each deployment\nPower spectral density, third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.\nVessels are acoustically detected automatically or manually"
   },
   {
-    "objectID": "content/BaleenWhales/Overview.html#minke",
-    "href": "content/BaleenWhales/Overview.html#minke",
-    "title": "Overview",
-    "section": "",
-    "text": "PAMGuard version 2.02.02 was used to run a GPL detector to identify Minke whale boings (see image below). All detections were manually scanned and all boings were annotated in PAMGuard. Following manual scanning, an additional 20% of the total data was subsampled to verify boings were not being missed.\n\n\n\nFigure X. Spectrogram of Minke whale boings being detected by GPL detector\n\n\nDetailed methods"
-  },
-  {
-    "objectID": "content/DataArchive/Permits.html",
-    "href": "content/DataArchive/Permits.html",
-    "title": "Permits",
-    "section": "",
-    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit"
-  },
-  {
-    "objectID": "content/DataArchive/Permits.html#noaa-protected-resources-permit",
-    "href": "content/DataArchive/Permits.html#noaa-protected-resources-permit",
-    "title": "Permits",
-    "section": "",
-    "text": "Review sightings/takes forms and record takes in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Protected Resources Permit"
-  },
-  {
-    "objectID": "content/DataArchive/Permits.html#noaa-sanctuary-permit",
-    "href": "content/DataArchive/Permits.html#noaa-sanctuary-permit",
-    "title": "Permits",
-    "section": "NOAA Sanctuary Permit",
-    "text": "NOAA Sanctuary Permit\n\nReview the SanctuarySummary spreadsheet from Driftwatch and check for Sanctuary overlap\nRecord which sanctuaries the drift passed through in the Sanctuary Permit column in the Deployment Details spreadsheet\nAdditional guidelines and information can be found in the Sanctuary Permit"
-  },
-  {
-    "objectID": "content/DataArchive/Permits.html#permit-spreadsheet",
-    "href": "content/DataArchive/Permits.html#permit-spreadsheet",
-    "title": "Permits",
-    "section": "Permit Spreadsheet",
-    "text": "Permit Spreadsheet\nRecord all other permit related information in the Permit Spreadsheet including take numbers and sanctuary overlap"
-  },
-  {
-    "objectID": "content/DataArchive/DataQualityCheck.html",
-    "href": "content/DataArchive/DataQualityCheck.html",
-    "title": "Data Quality Check",
-    "section": "",
-    "text": "Scan for any errors or mistakes in the Deployment Details spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)\nReach out to deployment/retrieval team for corrections if needed"
-  },
-  {
-    "objectID": "content/DataArchive/DataQualityCheck.html#deployment-details-quality-check",
-    "href": "content/DataArchive/DataQualityCheck.html#deployment-details-quality-check",
-    "title": "Data Quality Check",
-    "section": "",
-    "text": "Scan for any errors or mistakes in the Deployment Details spreadsheet (hydrophone, array, recorder, GPS, dates, etc.)\nReach out to deployment/retrieval team for corrections if needed"
-  },
-  {
-    "objectID": "content/DataArchive/DataQualityCheck.html#check-recording-time-utc-vs-local-time",
-    "href": "content/DataArchive/DataQualityCheck.html#check-recording-time-utc-vs-local-time",
-    "title": "Data Quality Check",
-    "section": "Check Recording Time: UTC vs Local Time",
-    "text": "Check Recording Time: UTC vs Local Time\n\nCheck log files from extraced SUD files for Soundtrap Recording time (UTC vs Local Time), fix if needed\nOpen Taiki’s soundtrapRenamer script and run it to load all necessary functions\nRun the following code in a new script to check if the files were offloaded in UTC or local time\n\n\nsource('soundtrapRenamer.R')\n\n# change this to whatever file endings you want to change\nsuffixes &lt;- c('wav', 'sud', 'log.xml', 'accel.csv')\n\n# Change this to whatever folder these files are in\ndir &lt;- '../Data/Renamer/orig/'\n\nprep &lt;- prepTzFix(dir, offset=NULL, suffix=suffixes)\n\n\nIf the ‘prep’ output indicates that the files are on local time, run the following line of code to rename them\n\n\nfixStTz(dir, prep)\n\n\nIf files are renamed, the code will create a log file in the same folder of all of the name changes it made\nThere is also a reverse option that you can set to TRUE if you want to undo the renaming"
-  },
-  {
-    "objectID": "content/DataArchive/DataQualityCheck.html#assess-data-quality",
-    "href": "content/DataArchive/DataQualityCheck.html#assess-data-quality",
-    "title": "Data Quality Check",
-    "section": "Assess Data Quality",
-    "text": "Assess Data Quality\n\nScan the LTSA and define overall deployment as good, compromised, or unusable\nRecord Data Quality in Deployment Details spreadsheet"
-  },
-  {
-    "objectID": "content/DataArchive/DataQualityCheck.html#run-data-check-on-gps-data",
-    "href": "content/DataArchive/DataQualityCheck.html#run-data-check-on-gps-data",
-    "title": "Data Quality Check",
-    "section": "Run Data Check on GPS Data",
-    "text": "Run Data Check on GPS Data\n\nReview drift tracks created by Driftwatch\nLook at the image that is associated with the drift number and ensure all points are from the drift (no points from when the array was on the boat or land)"
-  },
-  {
-    "objectID": "content/DataArchive/DataQualityCheck.html#run-recording-qaqc",
-    "href": "content/DataArchive/DataQualityCheck.html#run-recording-qaqc",
-    "title": "Data Quality Check",
-    "section": "Run Recording QAQC ",
-    "text": "Run Recording QAQC \n\nsoundtrapQAQC function in PAMmisc\nMatlab QAQC script\nIf the QAQC shows significant gaps in the files (i.e. &gt;1 second), complete the following steps to account for those gaps\n\nIf you have a gap in the middle of the drift (with significant amount of data before AND after the gap) continue on with the following steps and add a readMe to the data folder indicating when and how long the gap is\nIf you have duty cylced recordings at the end of a continuous recording period, cut off the data"
-  },
-  {
-    "objectID": "content/DataArchive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
-    "href": "content/DataArchive/DataQualityCheck.html#scan-ltsa-for-noisy-data",
-    "title": "Data Quality Check",
-    "section": "Scan LTSA for Noisy Data",
-    "text": "Scan LTSA for Noisy Data\nIf drift has been determined to be compromised in the data quality check above, scan the LTSA to log time periods with noisy/compromised data\n\nUse the LTSA created with 500 Hz wav files, with 1s and 5Hz parameters\nView LTSA at 2 hour windows and scan through\nUse Logger to define start/end times of the noisy/bad data and include the type of noise in the comments (e.g. strumming, impulses, etc.)\nSplit between Anne and Cory"
-  },
-  {
-    "objectID": "content/DataArchive/DataUpload.html",
-    "href": "content/DataArchive/DataUpload.html",
-    "title": "Data Upload",
-    "section": "",
-    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
-  },
-  {
-    "objectID": "content/DataArchive/DataUpload.html#don-metadata-upload",
-    "href": "content/DataArchive/DataUpload.html#don-metadata-upload",
-    "title": "Data Upload",
-    "section": "",
-    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results"
-  },
-  {
-    "objectID": "content/DataArchive/DataUpload.html#high-quality-photos-and-videos",
-    "href": "content/DataArchive/DataUpload.html#high-quality-photos-and-videos",
-    "title": "Data Upload",
-    "section": "High Quality Photos and Videos",
-    "text": "High Quality Photos and Videos\n\nSubmit any high quality photos/videos to Photo & Video Library"
-  },
-  {
-    "objectID": "content/DataArchive/NCEI.html",
-    "href": "content/DataArchive/NCEI.html",
-    "title": "NCEI",
-    "section": "",
-    "text": "Most of the following information can be found in the Passive Packer Manual. This information is summarized from the manual with ADRIFT specific directions for various Passive Packer guidelines and fields. The following steps were put together using Passive Packer v.4.0.2.\n\n\n\nNCEI Passive Acoustic Data Viewer\nPassive Packer Manual\nAdditional Archive Guidelines\n\n\n\n\n\n\nOnly use Western Digital or Seagate Drives\n\nWe bought 4 20TB WD Elements Desktop Hard Drives for PASCAL, CCES, and ADRIFT\n\nData can be packaged directly from its home directory to the destination external hard drive\nAll data and the metadata files created by Passive Packer must fit on the destination drive, ensure there is ample space on drive to reduce the risk of the program crashing\n\n\n\n\nInclude the organization and project name without spaces in the hard drive name\n\nExample: SWFSC_ADRIFT_DRIVE\n\n\n\n\nLabel drive with the following information easily visible\n\nPackagers full name\nYour organization\nProject Name\nExample: Kourtney Burger, SWFSC, ADRIFT\n\n\n\n\n\nThe goal is to automate the Passive Packer process as much as possible. Currently, these guidelines will help with manual data entry.\n\n\n\nTry exporting Tethys queries and import data into Passive Packer\nModify Anne’s Tethys deployment spreadsheet script to pull necessary data from deployment details and import it to Passive Packer database. This will auto-fill most fields when Passive Packer is opened, allowing for less manual entry. \n\n\n\n\n\n\nDownload software from Passive Packer Website and follow the ‘Getting Started’ directions\nSee Passive Packer Manual for introduction to software and guidelines on packaging other passive acoustics data, including detections and moored deployments\nNote: The majority of the information required by Passive Packer can be found in the Deployment Details spreadsheet\n\n\n\n\n\n\n?: Opens Passive Packer Manual\nHide Records: Opens the package record show/hide dialog box. Previous packages records with show selected will be displayed in the Select Existing Record drop down menu\nClear Form: Clears all form fields on all tabs\nStop Packaging: Stops the packaging process at its current point\nSave For Later: Saves entered data for later use. Allows the user to continue working on packaging their data at a later date. This button should be routinely clicked to minimize data loss in case Passive Packer crashes\nPackage Data: Starts the packaging process\n\n\n\n\n\n\nProjects: input or select from drop down ADRIFT, CCES, PASCAL, or other applicable project name\nSite or Cruise: input cruise name (drifting deployments do not have set sites)\nDeployment ID: Input 3 digit deployment number\nPackage destination: path to external hard drive\nDataset Type: Audio (unless packaging other types of acoustic data, see manual for directions)\nDeployment Type: Mobile Marine\nPublic Release Date: For SWFSC ADRIFT project, always list at least 1 year after data were collected\nDataset Packager: Your name, use ‘Create/Edit People’ if you are not on the drop down menu\nExport JSON File & Export Records: Once all data fields have been filled in, export the file and save it to you metadata folder\nSelect existing dataset and ‘Generate Dataset Name’: use drop down to select data you saved for later or fill in all above information and click ‘Generate Dataset Name’ to create a new dataset entry\n\n\n\n\n\n\nDeployment Title: Full name of project/ dataset\n\nExample: For CCES write ’California Current Ecosystems Survey - Passive Acoustics Survey\n\nDeployment Purpose: Description of the purpose of the deployment/ dataset. Stays the same for each project, use information from reports for past projects\nDeployment Description: Information on why data were collected, details for future data users, and anything special that might affect data usefulness for other analyses. Stays the same for each project, use information from reports for past projects\nPath to documentation files: Path to directory with reports or other documentation files. Files can be added after packaging is complete using Update Bag function \nAlternate site name and Alternate deployment name: Leave blank for ADRIFT\n\n\n\n\n\n\nPlatform: Drifter\nInstrument type: ST4300, ST640, or other instrument\nInstrument ID: 4 digit soundtrap ID number\nDeployment Time: time of deployment (UTC)\nRecovery Time: time of recovery (UTC)\nAudio Start Time: start time of first audio file (UTC)\nAudio End Time: end time of last audio file(UTC)\nPath to audio files: path to wav file directory\nDeployment comments: From deployment details, any comments that may be useful to future users and analysis. No quality comments should be included here\nSampling Details, Data Quality, Sensors: See next slides\n\n\n\n\n\n\nChannel Time & all other time field: Should auto-fill based on ‘Audio Start Time’ and ‘Audio End Time’ in Dataset Details tab. Edit as necessary\nSensor Number: Should match number used in Sensor Details window, change sensor number if duplicating channels\nSample Rate (kHz): sampling rate set in soundtrap deployment window, should be 384 for ADRIFT\nSample Bits: 16 for ADRIFT\nGain (dB) or Gain (rel):\nDuration and Interval: Fill in duty cycle information or check continuous box. Note: if set to a continuous cycle (i.e. 6/6) do not check continuous, fill in duration and interval both as 6\nAdd Sample Rate, Gain, and Duty Cycle as needed. Should only be different if recorder malfunctioned or was set to record with different settings throughout deployment\nUse New Channel or Duplicate Channel to add channels as needed. Should have at least 2 for ADRIFT, include bad channels \n\n\n\n\n\nFor ADRIFT an overall deployment data quality entry will be added and a detailed noise log will be attached\n\nQuality Analyst: select who determined the data quality, create/edit people as needed\nSelect Quality Level: select overall deployment data quality from drop down\nFrequency Range: input minimum and maximum frequency for that data quality level\nTime will auto-fill from Dataset Details tab\nComments: include any comments about data quality here\nChannels: for ADRIFT we only analyze channel 1, change as needed\nAdd quality entries and update times as needed\nAdditional Quality Information: Fill in objectives, method, and description of quality assessment for future users and analysts\n\n\n\n\n\n\n\nAdd new sensor for each channel, 2 CH for ADRIFT\n\nSensor Number: match sensor number from Sampling Details Window\nSensor ID: Hydrophone Serial Number\nSensor Name: type of hydrophone (HTI-99-HF, HTI-92-WB, or HTI-96-MIN)\nSensor Position: leave X and Y blank, Z for sensor 1 is deployment depth, Z for other sensors is the deployment depth plus the distance between sensor 1 and sensor x (1 is -100, 2 is -105)\nHydrophone ID:\nPreamp ID: leave blank for ADRIFT\nSensor Description: Any additional information about hydrophone\n\n\n\n\n\nSensor Number: 3 (if 2 audio sensors were added above)\nSensor ID: depth sensor serial number (i.e. U-15771)\nSensor Name: Sensus Ultra\nSensor Position: Deployment depth (-100)\nSensor Description: Any additional information about depth sensor\n\n\n\n\nAdd new sensor if 2 GPS units were used (i.e. SPOT)\n\nSensor Number: 4 (if 2 audio sensors and depth sensor were added)\nSensor ID: GPS ID (7 digit number, 3391082 or 0-4554502)\nSensor Name: GPS name (SO-001 or Spot Letter)\nSensor Position: +1 (above sea level)\nSensor Type: GPS\nProperties: Leave blank\nSensor Description: Any additional information about GPS\n\nAdd other sensors as needed\n\n\n\n\n\n\nVessel: Name of deployment vessel\nIHO Sea Area: North Pacific Ocean\nPath to navigation / position files: select GPS csv\nDescription of location derivation:\n\n\n\n\n\n\nCalibration State:\nHydrophone Sensitivity (dB):\nFrequency Range (Hz): (i.e. 20-5000)\nGain (dB):\nPath to Calibration Documents:\nCalibration Description: Enter calibration methods and any other relevant calibration information\n\n\n\n\n\n\nScientists: List PI and Chief Scientist for each project/deployment (PASCAL - Shannon Rankin & Jennifer McCullough, CCES - Shannon Rankin and Anne Simonis, ADRIFT - Shannon Rankin & Deployment Details Personnel Column)\nSource Organizations: SWFSC\nFunding Organization: Always list SWFSC, check acknowledgements in past reports, ADRIFT - BOEM\nCreate/Edit people and organizations as needed\n\n\n\n\n\n\nPath to temperature data files: directory with temp files from soundtrap or temperature sensor\nPath to observational data files: only include for opportunistic recordings with observation notes (species, behavior, time, etc.)\nPath to other files you wish to submit: accelerometer and depth data\n\n\n\nSee Passive Packer manual for Additional Information and Warning Message Guidelines"
-  },
-  {
-    "objectID": "content/DataArchive/NCEI.html#ncei-passive-packer-metadata",
-    "href": "content/DataArchive/NCEI.html#ncei-passive-packer-metadata",
-    "title": "NCEI",
-    "section": "",
-    "text": "Most of the following information can be found in the Passive Packer Manual. This information is summarized from the manual with ADRIFT specific directions for various Passive Packer guidelines and fields. The following steps were put together using Passive Packer v.4.0.2.\n\n\n\nNCEI Passive Acoustic Data Viewer\nPassive Packer Manual\nAdditional Archive Guidelines\n\n\n\n\n\n\nOnly use Western Digital or Seagate Drives\n\nWe bought 4 20TB WD Elements Desktop Hard Drives for PASCAL, CCES, and ADRIFT\n\nData can be packaged directly from its home directory to the destination external hard drive\nAll data and the metadata files created by Passive Packer must fit on the destination drive, ensure there is ample space on drive to reduce the risk of the program crashing\n\n\n\n\nInclude the organization and project name without spaces in the hard drive name\n\nExample: SWFSC_ADRIFT_DRIVE\n\n\n\n\nLabel drive with the following information easily visible\n\nPackagers full name\nYour organization\nProject Name\nExample: Kourtney Burger, SWFSC, ADRIFT\n\n\n\n\n\nThe goal is to automate the Passive Packer process as much as possible. Currently, these guidelines will help with manual data entry.\n\n\n\nTry exporting Tethys queries and import data into Passive Packer\nModify Anne’s Tethys deployment spreadsheet script to pull necessary data from deployment details and import it to Passive Packer database. This will auto-fill most fields when Passive Packer is opened, allowing for less manual entry. \n\n\n\n\n\n\nDownload software from Passive Packer Website and follow the ‘Getting Started’ directions\nSee Passive Packer Manual for introduction to software and guidelines on packaging other passive acoustics data, including detections and moored deployments\nNote: The majority of the information required by Passive Packer can be found in the Deployment Details spreadsheet\n\n\n\n\n\n\n?: Opens Passive Packer Manual\nHide Records: Opens the package record show/hide dialog box. Previous packages records with show selected will be displayed in the Select Existing Record drop down menu\nClear Form: Clears all form fields on all tabs\nStop Packaging: Stops the packaging process at its current point\nSave For Later: Saves entered data for later use. Allows the user to continue working on packaging their data at a later date. This button should be routinely clicked to minimize data loss in case Passive Packer crashes\nPackage Data: Starts the packaging process\n\n\n\n\n\n\nProjects: input or select from drop down ADRIFT, CCES, PASCAL, or other applicable project name\nSite or Cruise: input cruise name (drifting deployments do not have set sites)\nDeployment ID: Input 3 digit deployment number\nPackage destination: path to external hard drive\nDataset Type: Audio (unless packaging other types of acoustic data, see manual for directions)\nDeployment Type: Mobile Marine\nPublic Release Date: For SWFSC ADRIFT project, always list at least 1 year after data were collected\nDataset Packager: Your name, use ‘Create/Edit People’ if you are not on the drop down menu\nExport JSON File & Export Records: Once all data fields have been filled in, export the file and save it to you metadata folder\nSelect existing dataset and ‘Generate Dataset Name’: use drop down to select data you saved for later or fill in all above information and click ‘Generate Dataset Name’ to create a new dataset entry\n\n\n\n\n\n\nDeployment Title: Full name of project/ dataset\n\nExample: For CCES write ’California Current Ecosystems Survey - Passive Acoustics Survey\n\nDeployment Purpose: Description of the purpose of the deployment/ dataset. Stays the same for each project, use information from reports for past projects\nDeployment Description: Information on why data were collected, details for future data users, and anything special that might affect data usefulness for other analyses. Stays the same for each project, use information from reports for past projects\nPath to documentation files: Path to directory with reports or other documentation files. Files can be added after packaging is complete using Update Bag function \nAlternate site name and Alternate deployment name: Leave blank for ADRIFT\n\n\n\n\n\n\nPlatform: Drifter\nInstrument type: ST4300, ST640, or other instrument\nInstrument ID: 4 digit soundtrap ID number\nDeployment Time: time of deployment (UTC)\nRecovery Time: time of recovery (UTC)\nAudio Start Time: start time of first audio file (UTC)\nAudio End Time: end time of last audio file(UTC)\nPath to audio files: path to wav file directory\nDeployment comments: From deployment details, any comments that may be useful to future users and analysis. No quality comments should be included here\nSampling Details, Data Quality, Sensors: See next slides\n\n\n\n\n\n\nChannel Time & all other time field: Should auto-fill based on ‘Audio Start Time’ and ‘Audio End Time’ in Dataset Details tab. Edit as necessary\nSensor Number: Should match number used in Sensor Details window, change sensor number if duplicating channels\nSample Rate (kHz): sampling rate set in soundtrap deployment window, should be 384 for ADRIFT\nSample Bits: 16 for ADRIFT\nGain (dB) or Gain (rel):\nDuration and Interval: Fill in duty cycle information or check continuous box. Note: if set to a continuous cycle (i.e. 6/6) do not check continuous, fill in duration and interval both as 6\nAdd Sample Rate, Gain, and Duty Cycle as needed. Should only be different if recorder malfunctioned or was set to record with different settings throughout deployment\nUse New Channel or Duplicate Channel to add channels as needed. Should have at least 2 for ADRIFT, include bad channels \n\n\n\n\n\nFor ADRIFT an overall deployment data quality entry will be added and a detailed noise log will be attached\n\nQuality Analyst: select who determined the data quality, create/edit people as needed\nSelect Quality Level: select overall deployment data quality from drop down\nFrequency Range: input minimum and maximum frequency for that data quality level\nTime will auto-fill from Dataset Details tab\nComments: include any comments about data quality here\nChannels: for ADRIFT we only analyze channel 1, change as needed\nAdd quality entries and update times as needed\nAdditional Quality Information: Fill in objectives, method, and description of quality assessment for future users and analysts\n\n\n\n\n\n\n\nAdd new sensor for each channel, 2 CH for ADRIFT\n\nSensor Number: match sensor number from Sampling Details Window\nSensor ID: Hydrophone Serial Number\nSensor Name: type of hydrophone (HTI-99-HF, HTI-92-WB, or HTI-96-MIN)\nSensor Position: leave X and Y blank, Z for sensor 1 is deployment depth, Z for other sensors is the deployment depth plus the distance between sensor 1 and sensor x (1 is -100, 2 is -105)\nHydrophone ID:\nPreamp ID: leave blank for ADRIFT\nSensor Description: Any additional information about hydrophone\n\n\n\n\n\nSensor Number: 3 (if 2 audio sensors were added above)\nSensor ID: depth sensor serial number (i.e. U-15771)\nSensor Name: Sensus Ultra\nSensor Position: Deployment depth (-100)\nSensor Description: Any additional information about depth sensor\n\n\n\n\nAdd new sensor if 2 GPS units were used (i.e. SPOT)\n\nSensor Number: 4 (if 2 audio sensors and depth sensor were added)\nSensor ID: GPS ID (7 digit number, 3391082 or 0-4554502)\nSensor Name: GPS name (SO-001 or Spot Letter)\nSensor Position: +1 (above sea level)\nSensor Type: GPS\nProperties: Leave blank\nSensor Description: Any additional information about GPS\n\nAdd other sensors as needed\n\n\n\n\n\n\nVessel: Name of deployment vessel\nIHO Sea Area: North Pacific Ocean\nPath to navigation / position files: select GPS csv\nDescription of location derivation:\n\n\n\n\n\n\nCalibration State:\nHydrophone Sensitivity (dB):\nFrequency Range (Hz): (i.e. 20-5000)\nGain (dB):\nPath to Calibration Documents:\nCalibration Description: Enter calibration methods and any other relevant calibration information\n\n\n\n\n\n\nScientists: List PI and Chief Scientist for each project/deployment (PASCAL - Shannon Rankin & Jennifer McCullough, CCES - Shannon Rankin and Anne Simonis, ADRIFT - Shannon Rankin & Deployment Details Personnel Column)\nSource Organizations: SWFSC\nFunding Organization: Always list SWFSC, check acknowledgements in past reports, ADRIFT - BOEM\nCreate/Edit people and organizations as needed\n\n\n\n\n\n\nPath to temperature data files: directory with temp files from soundtrap or temperature sensor\nPath to observational data files: only include for opportunistic recordings with observation notes (species, behavior, time, etc.)\nPath to other files you wish to submit: accelerometer and depth data\n\n\n\nSee Passive Packer manual for Additional Information and Warning Message Guidelines"
-  },
-  {
-    "objectID": "content/DataArchive/NCEI.html#archive-to-ncei",
-    "href": "content/DataArchive/NCEI.html#archive-to-ncei",
-    "title": "NCEI",
-    "section": "Archive to NCEI",
-    "text": "Archive to NCEI\n\nArchive data and metadata to NCEI"
-  },
-  {
-    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html",
-    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html",
-    "title": "Dolphins & Sperm Whales - BANTER",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
-    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
-    "title": "Dolphins & Sperm Whales - BANTER",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/ToothedWhales/BeakedWhales-IDGuide.html",
-    "href": "content/ToothedWhales/BeakedWhales-IDGuide.html",
-    "title": "Beaked Whale ID Guide",
-    "section": "",
-    "text": "This guide serves as a living document, with the intention to update as more information is learned. To recommend an update or to open a discussion, submit an ‘Issue’ with a useful title and explanation. Go to this link [https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues] to create an Issue, and use the BW-ID label for the issue.\nNote: IPI= inter-pulse interval, PPS= pulses per sec\n\n\n\nPeaks: 32-40 kHz, 22-24 kHz and ~18 kHz\nNull: Strong null at ~27 kHz\nIPI: 0.3-0.5 sec\nPPS: 2-3\n\nUpsweep usually evident. Wigner plots shows a “kickstand” (downsweep appearing after the upsweep). Sometimes this kickstand can just appear as a dot. At great range, the 18 and 22 kHz peaks may be higher than the 32-40 kHz peak and the Wigner can just show the downsweep.\nCitations:\n\n\n\n\n\n\nPeak: 15-16 kHz, 25-26 kHz, and, sometimes, 9 kHz and 35-45 kHz\nNull: NA\nIPI:0.20-0.25 sec\nPPS:4-5\n\nLow frequency click, often with multiple peaks. Upsweep is sometimes present, but pulses will look pretty flat on this scale. Can produce dolphin-like clicks as well as these longer pulses. Clicks can come from above the hydrophone.\n\n\n\n\n\n\nPeak:43 kHz\nNull: NA\nIPI:~0.22\nPPS:4-5\n\nSome higher peaks may be evident if the animal is close. The left limb declines less steeply than with BW46. Wigner is “crescent moon” shaped and lower limb, if present is strongly upswept.\n\n\nBW43 template (gray) and BW43 click from Baumann and Pickering (blue, pers. comm.)\nPeak and slope to the left of peak match well. Slope to the right of peak is much broader, perhaps reflecting proximity or hydrophone differences. Differences in Wigner plots are likely due to scaling differences. [Source: SOCAL41N_DL29_110122_175230.x_0000.wav]\n\n\n\n\n\n\nPeak: 44-48 kHz\nNull: NA\nIPI: 0.09\nPPS: 10-11\n\nPeak at about 46kHz (cyan and tan) shown on top of BW43 (gray). Notice how left slope in frequency spectrum declines more steeply than BW43, even when the peaks are similar (dark blue). The right slope is more variable for both types, but is less steep than the left slope.\n\nFrequency has very steeply declining slope to the left of peak. Right slope declines less steeply and may show higher peaks. Wigner shows “sorting cap”. The lower branch of the Wigner (if present) is nearly horizontal.\n\n\n\nSome pulses show very strong higher peak at about 75 kHz in addition to a distinct lower peak at about 50 kHz. Some signals (presumable closer or more on-axis) show a strong peak at 80 kHz, a second peak at 52 kHz, and a strong null at about 62 kHz. These may appear in the same event as 44-48kHz pulses (see above). No evidence of “sorting hat” in Wigner.\n\n\nAgain two peaks (green, same group as above). In this case, the lower peak is loudest. Inconspicuous “sorting hat” look to wigner.\n\n\n\n\n\n\nPeak:36 kHz\nNull: NA\nIPI:0.25-0.33\nPPS:3-4\n\nPeak frequency is ~36kHz (similar to Ziphius) but with a very steep decline in amplitudes at lower frequencies (left of the peak). This very clear one shows a secondary peak at 25 kHz, but that is 20dB below the peak and is not likely to be seen in a lower SNR signal. Wigner plot is slightly concave upward, with no sign of “kickstand”.\n\n \n\n\n\n\nPeak:34kHz, 50 kHz\nNull: 37kHz\nIPI: 0.125-0.166\nPPS: 6-8\n\nBW37V template (green) shows two distinct peaks at about 34 kHz and 50 kHz, with a strong null (valley) at 37kHz. Note: earlier versions may have identified these as BW39V; once the data was corrected for the frequency response of the hydrophone, the null was found to be at 37kHz.\n\n\n\n\n\n\nPeak: 70kHz\nNull: NA\nIPI: 0.12\nPPS: 8\nBW70 template (cyan) shows a peak at 70 kHz. Slope to the left of the peak is steeper than to the right. Upsweep in the Wigner plot. [Source is SIO, Baumann & Pickering pers. comm., GofCA4A4_051217_234230.x_1114.wav]\n\n\n\n\n\nPeak: 60-65 kHz\nNull: NA\nIPI: 0.127\nPPS: 8\nVery long click with very long frequency sweep and a peak frequency of about 60-65 kHz. Signals may come from above the hydrophones.\n\n\n\n\nPeak: ~26kHz\nNull: NA\nIPI: 0.27-0.40s\nPPS: 3-4\nPulses are low-frequency, with peak at ~26 kHz.\n\n \n\n\n\n\n\nWas above hydrophone. May be alternate part of the beam pattern of a BW46. Wigners were variable and odd looking. Some were almost circular. Need to look for others.\n\n\n\n\n\nMaybe M. densitrostris, but no evidence of an upsweep and signal was relatively short.\n\n\n\n\n\nLow-frequency click, typically &lt; 12 kHz peak. IPI= 0.4-1.0, PPS=1-2."
-  },
-  {
-    "objectID": "content/ToothedWhales/BeakedWhales-IDGuide.html#introduction",
-    "href": "content/ToothedWhales/BeakedWhales-IDGuide.html#introduction",
-    "title": "Beaked Whale ID Guide",
-    "section": "",
-    "text": "This guide serves as a living document, with the intention to update as more information is learned. To recommend an update or to open a discussion, submit an ‘Issue’ with a useful title and explanation. Go to this link [https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues] to create an Issue, and use the BW-ID label for the issue.\nNote: IPI= inter-pulse interval, PPS= pulses per sec\n\n\n\nPeaks: 32-40 kHz, 22-24 kHz and ~18 kHz\nNull: Strong null at ~27 kHz\nIPI: 0.3-0.5 sec\nPPS: 2-3\n\nUpsweep usually evident. Wigner plots shows a “kickstand” (downsweep appearing after the upsweep). Sometimes this kickstand can just appear as a dot. At great range, the 18 and 22 kHz peaks may be higher than the 32-40 kHz peak and the Wigner can just show the downsweep.\nCitations:\n\n\n\n\n\n\nPeak: 15-16 kHz, 25-26 kHz, and, sometimes, 9 kHz and 35-45 kHz\nNull: NA\nIPI:0.20-0.25 sec\nPPS:4-5\n\nLow frequency click, often with multiple peaks. Upsweep is sometimes present, but pulses will look pretty flat on this scale. Can produce dolphin-like clicks as well as these longer pulses. Clicks can come from above the hydrophone.\n\n\n\n\n\n\nPeak:43 kHz\nNull: NA\nIPI:~0.22\nPPS:4-5\n\nSome higher peaks may be evident if the animal is close. The left limb declines less steeply than with BW46. Wigner is “crescent moon” shaped and lower limb, if present is strongly upswept.\n\n\nBW43 template (gray) and BW43 click from Baumann and Pickering (blue, pers. comm.)\nPeak and slope to the left of peak match well. Slope to the right of peak is much broader, perhaps reflecting proximity or hydrophone differences. Differences in Wigner plots are likely due to scaling differences. [Source: SOCAL41N_DL29_110122_175230.x_0000.wav]\n\n\n\n\n\n\nPeak: 44-48 kHz\nNull: NA\nIPI: 0.09\nPPS: 10-11\n\nPeak at about 46kHz (cyan and tan) shown on top of BW43 (gray). Notice how left slope in frequency spectrum declines more steeply than BW43, even when the peaks are similar (dark blue). The right slope is more variable for both types, but is less steep than the left slope.\n\nFrequency has very steeply declining slope to the left of peak. Right slope declines less steeply and may show higher peaks. Wigner shows “sorting cap”. The lower branch of the Wigner (if present) is nearly horizontal.\n\n\n\nSome pulses show very strong higher peak at about 75 kHz in addition to a distinct lower peak at about 50 kHz. Some signals (presumable closer or more on-axis) show a strong peak at 80 kHz, a second peak at 52 kHz, and a strong null at about 62 kHz. These may appear in the same event as 44-48kHz pulses (see above). No evidence of “sorting hat” in Wigner.\n\n\nAgain two peaks (green, same group as above). In this case, the lower peak is loudest. Inconspicuous “sorting hat” look to wigner.\n\n\n\n\n\n\nPeak:36 kHz\nNull: NA\nIPI:0.25-0.33\nPPS:3-4\n\nPeak frequency is ~36kHz (similar to Ziphius) but with a very steep decline in amplitudes at lower frequencies (left of the peak). This very clear one shows a secondary peak at 25 kHz, but that is 20dB below the peak and is not likely to be seen in a lower SNR signal. Wigner plot is slightly concave upward, with no sign of “kickstand”.\n\n \n\n\n\n\nPeak:34kHz, 50 kHz\nNull: 37kHz\nIPI: 0.125-0.166\nPPS: 6-8\n\nBW37V template (green) shows two distinct peaks at about 34 kHz and 50 kHz, with a strong null (valley) at 37kHz. Note: earlier versions may have identified these as BW39V; once the data was corrected for the frequency response of the hydrophone, the null was found to be at 37kHz.\n\n\n\n\n\n\nPeak: 70kHz\nNull: NA\nIPI: 0.12\nPPS: 8\nBW70 template (cyan) shows a peak at 70 kHz. Slope to the left of the peak is steeper than to the right. Upsweep in the Wigner plot. [Source is SIO, Baumann & Pickering pers. comm., GofCA4A4_051217_234230.x_1114.wav]\n\n\n\n\n\nPeak: 60-65 kHz\nNull: NA\nIPI: 0.127\nPPS: 8\nVery long click with very long frequency sweep and a peak frequency of about 60-65 kHz. Signals may come from above the hydrophones.\n\n\n\n\nPeak: ~26kHz\nNull: NA\nIPI: 0.27-0.40s\nPPS: 3-4\nPulses are low-frequency, with peak at ~26 kHz.\n\n \n\n\n\n\n\nWas above hydrophone. May be alternate part of the beam pattern of a BW46. Wigners were variable and odd looking. Some were almost circular. Need to look for others.\n\n\n\n\n\nMaybe M. densitrostris, but no evidence of an upsweep and signal was relatively short.\n\n\n\n\n\nLow-frequency click, typically &lt; 12 kHz peak. IPI= 0.4-1.0, PPS=1-2."
-  },
-  {
-    "objectID": "content/ToothedWhales/BeakedWhales-Detection.html",
-    "href": "content/ToothedWhales/BeakedWhales-Detection.html",
-    "title": "Beaked Whales",
-    "section": "",
-    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
-  },
-  {
-    "objectID": "content/ToothedWhales/BeakedWhales-Detection.html#methods-summary",
-    "href": "content/ToothedWhales/BeakedWhales-Detection.html#methods-summary",
-    "title": "Beaked Whales",
-    "section": "",
-    "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
+    "objectID": "content/Soundscapes/Metrics.html#step-by-step-instructions",
+    "href": "content/Soundscapes/Metrics.html#step-by-step-instructions",
+    "title": "Triton Metrics",
+    "section": "Step-by-Step Instructions",
+    "text": "Step-by-Step Instructions"
   }
 ]
