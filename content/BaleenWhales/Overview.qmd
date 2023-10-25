@@ -42,4 +42,4 @@ PAMGuard version 2.02.02 was used to run a GPL detector to identify Minke whale 
 
 ![Figure X. Spectrogram of Minke whale boings being detected by GPL detector](images/MinkeGPLDetections.png)
 
-[Detailed methods](~/GitHub/adrift-analysis-methods/content/Baleen Whales/Slides/minkeMethods.qmd)
+[Detailed methods](Slides/minkeMethods.qmd)
