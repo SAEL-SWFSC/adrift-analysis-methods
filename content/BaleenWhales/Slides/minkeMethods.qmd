@@ -142,7 +142,7 @@ Click 'Ok' to close all of the tabs and return to Pamguard Viewer window
 :::
 :::
 
-## Add Spectrogram Annotation Module {.scrollable}
+## Add Spectrogram Annotation Module {.smaller}
 
 -   Go to File \> Add Modules \> Utilities \> Spectrogram Annotation
 
