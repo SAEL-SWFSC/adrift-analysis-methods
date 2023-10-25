@@ -487,14 +487,14 @@
     "href": "content/BaleenWhales/Slides/minkeMethods.html#overview",
     "title": "Minke Methods",
     "section": "Overview",
-    "text": "Overview\nWithin PAMGuard, a Generalized Power Law detector was used to detect Minke boings. We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data.\nExample Pamguard settings file (INSERT LINK)\n\nSpectrogram of Minke whale boings being detected by GPL detector"
+    "text": "Overview\nWithin PAMGuard, a Generalized Power Law detector was used to detect Minke boings. We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data.\n\nExample Pamguard settings file (INSERT LINK)\n\n\nSpectrogram of Minke whale boings being detected by GPL detector"
   },
   {
     "objectID": "content/BaleenWhales/Slides/minkeMethods.html#database-binary-storage",
     "href": "content/BaleenWhales/Slides/minkeMethods.html#database-binary-storage",
     "title": "Minke Methods",
     "section": "Database & Binary Storage",
-    "text": "Database & Binary Storage\nSet database path to a new blank database titled ADRIFT_###_PG_2_02_02_Minke.sqlite3\nCreate a new binary folder for your detections titled ADRIFT_###_PG_2_02_02_Minke"
+    "text": "Database & Binary Storage\n\nSet database path to a new blank database titled ADRIFT_###_PG_2_02_02_Minke.sqlite3\nCreate a new binary folder for your detections titled ADRIFT_###_PG_2_02_02_Minke"
   },
   {
     "objectID": "content/BaleenWhales/Slides/minkeMethods.html#hydrophone-array",
@@ -508,7 +508,7 @@
     "href": "content/BaleenWhales/Slides/minkeMethods.html#sound-acquisition-decimation",
     "title": "Minke Methods",
     "section": "Sound Acquisition & Decimation",
-    "text": "Sound Acquisition & Decimation\nSet the sound acquisition path to the folder your sound files are in\nThe Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz."
+    "text": "Sound Acquisition & Decimation\n\nSet the sound acquisition path to the folder your sound files are in\nThe Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz."
   },
   {
     "objectID": "content/BaleenWhales/Slides/minkeMethods.html#gpl-settings",
@@ -518,11 +518,11 @@
     "text": "GPL Settings\n\n\n\n\n\nFFT Settings\n\n\n\n\n\n\n\n\nDetection Settings\n\n\n\n\n\n\n\n\nContours settings"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#spectrogram-annotation-detection-grouper-settings",
-    "href": "content/BaleenWhales/Slides/minkeMethods.html#spectrogram-annotation-detection-grouper-settings",
+    "objectID": "content/BaleenWhales/Slides/minkeMethods.html#spectrogram-annotation-setup",
+    "href": "content/BaleenWhales/Slides/minkeMethods.html#spectrogram-annotation-setup",
     "title": "Minke Methods",
-    "section": "Spectrogram Annotation & Detection Grouper Settings",
-    "text": "Spectrogram Annotation & Detection Grouper Settings\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard."
+    "section": "Spectrogram Annotation Setup",
+    "text": "Spectrogram Annotation Setup\nIn order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard."
   },
   {
     "objectID": "content/BaleenWhales/Slides/minkeMethods.html#detection-grouper-settings",
@@ -557,14 +557,14 @@
     "href": "content/BaleenWhales/Slides/minkeMethods.html#add-spectrogram-annotation-module",
     "title": "Minke Methods",
     "section": "Add Spectrogram Annotation Module",
-    "text": "Add Spectrogram Annotation Module\n\nGo to File &gt; Add Modules &gt; Utilities &gt; Spectrogram Annotation\nUnder ‘Settings’, go to Spectrogram Annotation settings and click on the gear icon next to ‘User form annotation’\nClick on the ‘User form’ drop down, select ‘UDF_evType’, and click Ok to return to the Pamguard Viewer window"
+    "text": "Add Spectrogram Annotation Module\n\n\n\nGo to File &gt; Add Modules &gt; Utilities &gt; Spectrogram Annotation\nUnder ‘Settings’, go to Spectrogram Annotation settings and click on the gear icon next to ‘User form annotation’\nClick on the ‘User form’ drop down, select ‘UDF_evType’, and click Ok to return to the Pamguard Viewer window"
   },
   {
     "objectID": "content/BaleenWhales/Slides/minkeMethods.html#fix-spectrogram-parameters",
     "href": "content/BaleenWhales/Slides/minkeMethods.html#fix-spectrogram-parameters",
     "title": "Minke Methods",
     "section": "Fix Spectrogram Parameters",
-    "text": "Fix Spectrogram Parameters\n\nRight click on the spectrogram and go to Settings\n\nEnsure both the ‘Detection Grouper’ and ‘Spectrogram Annotation’ boxes are checked and click Ok\n\n\n\n\nGo to File &gt; Save Data and close Pamguard"
+    "text": "Fix Spectrogram Parameters\n\n\n\nRight click on the spectrogram and go to Settings\n\nEnsure both the ‘Detection Grouper’ and ‘Spectrogram Annotation’ boxes are checked and click Ok\n\nGo to File &gt; Save Data and close Pamguard"
   },
   {
     "objectID": "content/BaleenWhales/Slides/minkeMethods.html#detection-validation-1",
@@ -578,7 +578,7 @@
     "href": "content/BaleenWhales/Slides/minkeMethods.html#validation-code",
     "title": "Minke Methods",
     "section": "20% Validation Code",
-    "text": "20% Validation Code\n\nDue to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for additional validation."
+    "text": "20% Validation Code\n\nDue to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for additional validation.\n\n\n# PAMpal simple example \n# Its on CRAN. Yay!\n# install.packages('PAMpal')\n# Sometimes I fix things and theyre only available on the GitHub version\n# Right now there are some things that run a lot faster on teh GitHub version so I recommend installing that.\n# updated 22-12-6 to include loop for PG event adding w/PAMmisc\nrm(list=ls())\ndevtools::install_github('TaikiSan21/PAMpal')\ndevtools::install_github('TaikiSan21/PAMmisc')\nlibrary(PAMpal)\nlibrary(PAMmisc)\n\n# Start by creating a \"PAMpalSettings\" object. This keeps track of what data you want to process and what processing you want to apply to it.\n\n# Change paths below to your DB and binary folder. Can just be the highest level binary folder for that drift - it will add all files within that folder recursively through subfolders.\n\n# This will also ask you to type in some parameters for calculations in your console. You can just hit ENTER to accept defaults for all of these, they aren't relevant to the GPL calculations only for clicks.\n\npps &lt;- PAMpalSettings(db = 'Path to database',\n                      binaries = 'Path to binaries',\n                      # these parameters are only for the click detector - can ignroe\n                      sr_hz='auto',\n                      filterfrom_khz=0,\n                      filterto_khz=NULL,\n                      winLen_sec=.0025)\n\n# Now tell it to process your data. Id is optional and serves no function, but can be useful to tell data apart at a later point in time. Here mode = 'recording' tells it how to organize your data. Most of the time we are working with data that have been marked manually into events, so PAMpal wants to organize things into events. mode='db' uses the events in the database, and only processes the detectoins you've marked out. In this case we just want to process everything, which is what mode='recording' does. It will group them into events by recording file. \n\n# This might take some time to read in events after processing in order to get the time \n#data &lt;- processPgDetections(pps, mode='db', id='Minke_CCES_019') \n\ndata &lt;- processPgDetections(pps, mode='recording', id='Species_Project_Drift#')\n\n# And here's how you can get the detections information out of \"data\" as a dataframe. Time column is \"UTC\", other columns are stuff it measured. \ngplDf &lt;- getGPLData(data)\n\n# Now we can add the wav files to this data. You might get a warning about \"startSample\", its safe to ignore that.\ndata &lt;- addRecordings(data, \n                      folder='Path to wav files')\n\n# that data is stored here as a dataframe. Has \"start\" & \"end\" as POSIXct and the fulle path to the file as \"file\"\nwavDf &lt;- files(data)$recordings\n\n# add number of detections to this\nnDets &lt;- sapply(events(data), nDetections)\nnDets &lt;- data.frame(join=names(nDets), nDets=nDets)\nwavDf$join &lt;- basename(wavDf$file)\nwavDf &lt;- left_join(wavDf, nDets)\nwavDf$join &lt;- NULL\nwavDf$nDets[is.na(wavDf$nDets)] &lt;- 0\n\nnfiles =round(nrow(wavDf)*.2)\nrandStart =sample(1:5,1)\n\nwavDf=wavDf[round(seq(randStart, nrow(wavDf), length.out = nfiles)),]\n\n# If we care about assigning some kind of initial label to these detections. Otherwise ignore. \ndata &lt;- setSpecies(data, method='manual', value='InitialGPL')\n\n# Add events from wavDf loop\nfor(e in 1:nrow(wavDf)) {\n  thisEv &lt;- data[[basename(wavDf$file[e])]]\n  # this will get all detector types, if just one type is wanted can be simplified to ex. uids &lt;- unique(getGPLData(thisEv)$UID)\n  uids &lt;- unique(unlist(lapply(getDetectorData(thisEv), function(x) {\n    if(is.null(x)) return(NULL)\n    x$UID\n  })))\n  \n  addPgEvent(db = files(thisEv)$db,\n             binary = files(thisEv)$binaries,\n             eventType = species(thisEv)$id,\n             UIDs = uids,\n             type = 'dg',\n             start = wavDf$start[e],\n             end = wavDf$end[e],\n             comment = paste0('Added by PAMpal, event ID: ', id(thisEv)))\n}"
   },
   {
     "objectID": "content/BaleenWhales/Slides/minkeMethods.html#validation-steps",
