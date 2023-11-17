@@ -28,7 +28,7 @@ Most ADRIFT acoustic data is recorded at sampling rates of 384 kHz, however soun
 
 1.  Using the Tools menu in the Triton "Control" window, choose to decimate an entire folder of WAV files
 
-    ![](images/Triton_Menu_Decimate.png){width="289"}
+    ![](images/Triton_Menu_Decimate.png){width="400"}
 
 2.  You will be prompted to choose a folder of WAV files, and then define the appropriate decimation factor. For example, to decimate from 384 kHz to 48 kHz, use a decimation factor of 8.
 
@@ -42,7 +42,7 @@ Most ADRIFT acoustic data is recorded at sampling rates of 384 kHz, however soun
 
 2.  Using the Remoras menu in the Triton "Control" window, choose to Make Soundscape LTSAs
 
-    ![](images/Triton_Menu_SoundscapeLTSA.png){width="289"}
+    ![](images/Triton_Menu_SoundscapeLTSA.png){width="400"}
 
 3.  Define the appropriate settings to generate the soundscape LTSA, including:
 
@@ -56,7 +56,7 @@ Most ADRIFT acoustic data is recorded at sampling rates of 384 kHz, however soun
 
     -   Press Run Soundscape LTSA
 
-        ![](images/Triton_SoundscapeLTSA_Settings.png){width="289"}
+        ![](images/Triton_SoundscapeLTSA_Settings.png){width="400"}
 
 4.  The LTSA generation process will start automatically and show a progress bar. When the LTSA is complete, it will load automatically. Do not be concerned if the LTSA looks strange. Soundscape LTSAs must be loaded with the Soundscape Remora to be properly viewed. This process may take a few hours.
 
@@ -70,7 +70,7 @@ See 'SysSens' function to automatically find calibration value for each deployme
 
 1.  Using the Remoras menu in the Triton "Control" window, choose to Compute Soundscape Metrics
 
-    ![](images/Triton_Menu_SoundscapeMetric.png){width="289"}
+    ![](images/Triton_Menu_SoundscapeMetric.png){width="400"}
 
 2.  Define the appropriate settings to generate the soundscape metrics, including:
 
@@ -88,7 +88,7 @@ See 'SysSens' function to automatically find calibration value for each deployme
 
     -   Check box for Calibration, and insert appropriate calibration value
 
-![](images/Triton_SoundscapeMetric_Settings.png){width="289"}
+![](images/Triton_SoundscapeMetric_Settings.png){width="400"}
 
 ADRIFT recordings were collected on a continuous or 50% duty cycle (6 min on out of
 every 12 minutes). Carious duty cycles were used to collect acoustic data from the 2016
