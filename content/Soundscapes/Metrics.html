@@ -364,7 +364,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Most ADRIFT acoustic data is recorded at sampling rates of 384 kHz, however soundscape metrics are only calculated up to 24 kHz. To reduce processing time and data storage requirements, full bandwidth data is decimated to a sample rate of 48 kHz using a decimation factor of 8 (384,000/48,000=8).</p>
 <ol type="1">
 <li><p>Using the Tools menu in the Triton “Control” window, choose to decimate an entire folder of WAV files</p>
-<p><img src="images/Triton_Menu_Decimate.png" class="img-fluid" width="289"></p></li>
+<p><img src="images/Triton_Menu_Decimate.png" class="img-fluid" width="400"></p></li>
 <li><p>You will be prompted to choose a folder of WAV files, and then define the appropriate decimation factor. For example, to decimate from 384 kHz to 48 kHz, use a decimation factor of 8.</p></li>
 <li><p>Then define a folder to save the new, decimated WAV files.</p></li>
 <li><p>The decimation process will start automatically and show a progress bar. When the decimation is complete, the progress bar will disappear. Depending on the total number of files and the required decimation factor, this process may take a few hours.</p></li>
@@ -375,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p>Add the soundscape remora to Triton (see Remoras menu in “Control” window), if it hasn’t already been added. Triton will need to be restarted after adding the remora for the first time.</p></li>
 <li><p>Using the Remoras menu in the Triton “Control” window, choose to Make Soundscape LTSAs</p>
-<p><img src="images/Triton_Menu_SoundscapeLTSA.png" class="img-fluid" width="289"></p></li>
+<p><img src="images/Triton_Menu_SoundscapeLTSA.png" class="img-fluid" width="400"></p></li>
 <li><p>Define the appropriate settings to generate the soundscape LTSA, including:</p>
 <ul>
 <li><p>Input directory containing 48kHz WAV files</p></li>
@@ -383,7 +383,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Output filename</p></li>
 <li><p>Averaging Time [s]=1, Frequency bin size [Hz]=1, Length of LTSA [days]=3, Start with LTSA#=1, File type=1, Data Type=5, Data Channel Number=1</p></li>
 <li><p>Press Run Soundscape LTSA</p>
-<p><img src="images/Triton_SoundscapeLTSA_Settings.png" class="img-fluid" width="289"></p></li>
+<p><img src="images/Triton_SoundscapeLTSA_Settings.png" class="img-fluid" width="400"></p></li>
 </ul></li>
 <li><p>The LTSA generation process will start automatically and show a progress bar. When the LTSA is complete, it will load automatically. Do not be concerned if the LTSA looks strange. Soundscape LTSAs must be loaded with the Soundscape Remora to be properly viewed. This process may take a few hours.</p></li>
 </ol>
@@ -397,7 +397,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="calculate-soundscape-metrics">Calculate soundscape metrics</h3>
 <ol type="1">
 <li><p>Using the Remoras menu in the Triton “Control” window, choose to Compute Soundscape Metrics</p>
-<p><img src="images/Triton_Menu_SoundscapeMetric.png" class="img-fluid" width="289"></p></li>
+<p><img src="images/Triton_Menu_SoundscapeMetric.png" class="img-fluid" width="400"></p></li>
 <li><p>Define the appropriate settings to generate the soundscape metrics, including:</p>
 <ul>
 <li><p>Directory with LTSA(s)</p></li>
@@ -409,7 +409,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Check box for Calibration, and insert appropriate calibration value</p></li>
 </ul></li>
 </ol>
-<p><img src="images/Triton_SoundscapeMetric_Settings.png" class="img-fluid" width="289"></p>
+<p><img src="images/Triton_SoundscapeMetric_Settings.png" class="img-fluid" width="400"></p>
 <p>ADRIFT recordings were collected on a continuous or 50% duty cycle (6 min on out of every 12 minutes). Carious duty cycles were used to collect acoustic data from the 2016 PASCAL and 2018 CCES survey, with a minimum 2-minute recording time. Therefore, a 2 minute window is used to calculate soundscape metrics which can be compared across surveys.</p>
 <p>Consistent cable strumming was observed below 100 Hz on many drifting buoy deployments, therefore the lower frequency limit for all calculated soundscape metrics was set to 100 Hz.</p>
 </section>
