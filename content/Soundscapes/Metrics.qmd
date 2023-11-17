@@ -68,16 +68,38 @@ See 'SysSens' function to automatically find calibration value for each deployme
 
 ### Calculate soundscape metrics
 
+1.  Using the Remoras menu in the Triton "Control" window, choose to Compute Soundscape Metrics
+
+    ![](images/Triton_Menu_SoundscapeMetric.png){width="289"}
+
+2.  Define the appropriate settings to generate the soundscape metrics, including:
+
+    -   Directory with LTSA(s)
+
+    -   Output Directory for metrics
+
+    -   Input Start file
+
+    -   Low Frequency Limit \[Hz\]=100, High Frequency Limit \[Hz\]=24000, Bin Size Time \[sec\]=120, PSD Bin Size Frequency \[Hz\]=1, Min. Seconds/Average\[%\]=50
+
+    -   Check boxes for Broadband Level, Third Octave Level, and Power Spectral Density
+
+    -   Check boxes for Mean, Median, and Percentiles
+
+    -   Check box for Calibration, and insert appropriate calibration value
+
+![](images/Triton_SoundscapeMetric_Settings.png){width="289"}
+
+ADRIFT recordings were collected on a continuous or 50% duty cycle (6 min on out of
+every 12 minutes). Carious duty cycles were used to collect acoustic data from the 2016
+PASCAL and 2018 CCES survey, with a minimum 2-minute recording time. Therefore, a 2 minute window is used to calculate soundscape metrics which can be compared across surveys.
+
+Consistent cable strumming was observed below 100 Hz on many drifting buoy deployments, therefore the lower frequency limit for all calculated soundscape metrics was set to 100 Hz.
+
 ### Detect vessels
+
+Manual identification in LTSA
 
 ### Identify bad data 
 
-Current ADRIFT recordings are collected on a 50% duty cycle (6 min on out of
-every 12 minutes), which is acceptable for hourly calculations. In the 2016
-PASCAL and 2018 CCES survey, various duty cycles were used to collect
-recordings, none of which resulted in 50% hourly coverage. Therefore, 2-minute
-averages are reported for the 2018 CCES data, and any comparisons to hourly
-metrics should be viewed with caution as less variation is expected across
-shorter time scales. I developed figures to visualize soundscape data at
-multiple spatial and temporal scales. I am working with the project leader and funders to
-refine the preferred data visualizations relevant to the project.
+Manual identification in LTSA
