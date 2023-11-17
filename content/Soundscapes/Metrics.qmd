@@ -4,16 +4,80 @@ title: Triton Metrics
 
 ## Methods Summary
 
--   Aligning methods to SanctSound protocols (<https://sanctsound.ioos.us/>) 
+-   Soundscape methods are aligned with SanctSound protocols as much as possible (<https://sanctsound.ioos.us/>)
 
--   Data is decimated to 48 kHz
+-   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) is used for the following:
 
--   Triton vXXX software (<https://github.com/MarineBioAcousticsRC/Triton>) with Soundscape Remora used to calculate long-term spectral averages with 1 Hz, 1 second resolution.
+    -   Acoustic data is decimated to 48 kHz sample rate
 
--   Calibration value = Hydrophone Sensitivity (~ -155 dB for most hydrophones) + Soundtrap Sensitivity (-4 dB for 4300HF). Note, Triton calibration value is a positive value. See 'SysSens' function to automatically find calibration value for each deployment
+    -   Soundscape long-term spectral averages (LTSAs) are calculated with a 1 Hz, 1 second resolution
 
--   Power spectral density, third-octave, octave, and broadband sound pressure levels are calculated in 2 minute windows from 100-24000 Hz.
+    -   The full system calibration value is calculated from the combined hydrophone and Sound Trap sensitivity
 
--   Vessels are acoustically detected automatically or manually
+    -   Soundscape LTSAs are used to calculate sound levels in 2 minute windows from 100-24,000 Hz, including broadband sound pressure levels, third-octave levels, and power spectral densities. Median (50^th^ percentile), mean, and various statistical sound levels (1^st^, 5^th^, 10^th^,25^th^, 75^th^, 90^th^, 95^th^ percentiles) are calculated for each metric.
+
+    -   Vessels are detected by manually scanning LTSAs with X Hz, X s resolution in 1 hour windows
+
+    -   Identify periods of noisy or bad data to eliminate from downstream analyses
 
 ## Step-by-Step Instructions
+
+### Decimation of acoustic data
+
+Most ADRIFT acoustic data is recorded at sampling rates of 384 kHz, however soundscape metrics are only calculated up to 24 kHz. To reduce processing time and data storage requirements, full bandwidth data is decimated to a sample rate of 48 kHz using a decimation factor of 8 (384,000/48,000=8).
+
+1.  Using the Tools menu in the Triton "Control" window, choose to decimate an entire folder of WAV files
+
+    ![](images/Triton_Menu_Decimate.png){width="289"}
+
+2.  You will be prompted to choose a folder of WAV files, and then define the appropriate decimation factor. For example, to decimate from 384 kHz to 48 kHz, use a decimation factor of 8.
+
+3.  Then define a folder to save the new, decimated WAV files.
+
+4.  The decimation process will start automatically and show a progress bar. When the decimation is complete, the progress bar will disappear. Depending on the total number of files and the required decimation factor, this process may take a few hours.
+
+### Generate soundscape LTSA
+
+1.  Add the soundscape remora to Triton (see Remoras menu in "Control" window), if it hasn't already been added. Triton will need to be restarted after adding the remora for the first time.
+
+2.  Using the Remoras menu in the Triton "Control" window, choose to Make Soundscape LTSAs
+
+    ![](images/Triton_Menu_SoundscapeLTSA.png){width="289"}
+
+3.  Define the appropriate settings to generate the soundscape LTSA, including:
+
+    -   Input directory containing 48kHz WAV files
+
+    -   Output directory to save LTSA files
+
+    -   Output filename
+
+    -   Averaging Time \[s\]=1, Frequency bin size \[Hz\]=1, Length of LTSA \[days\]=3, Start with LTSA#=1, File type=1, Data Type=5, Data Channel Number=1
+
+    -   Press Run Soundscape LTSA
+
+        ![](images/Triton_SoundscapeLTSA_Settings.png){width="289"}
+
+4.  The LTSA generation process will start automatically and show a progress bar. When the LTSA is complete, it will load automatically. Do not be concerned if the LTSA looks strange. Soundscape LTSAs must be loaded with the Soundscape Remora to be properly viewed. This process may take a few hours.
+
+### Calculate full system calibration
+
+The full system calibration value is calculated by the hydrophone and recorder sensitivity, both of which should be provided by the manufacturer. SoundTrap recorder sensitivities are available on the [OceanInstruments website](https://oceaninstruments.azurewebsites.net/App/#/%23), and should be reported in units of "dB". Hydrophone sensitivities should be reported in units of "dB re: 1V/uPa". For example, for a HTI-96min hydrophone with sensitivity of -155 dB re: 1V/uPa, and a ST640 SoundTrap with sensitivity of -4 dB, the full system calibration value would be -159 dB e: 1V/uPa.
+
+See 'SysSens' function to automatically find calibration value for each deployment based on the deployment details and inventory worksheets. While hydrophone and recorder sensitivities are generally reported as negative values, the calibration value provided to Triton should be the absolute value of the combined sensitivities (a positive value).
+
+### Calculate soundscape metrics
+
+### Detect vessels
+
+### Identify bad data 
+
+Current ADRIFT recordings are collected on a 50% duty cycle (6 min on out of
+every 12 minutes), which is acceptable for hourly calculations. In the 2016
+PASCAL and 2018 CCES survey, various duty cycles were used to collect
+recordings, none of which resulted in 50% hourly coverage. Therefore, 2-minute
+averages are reported for the 2018 CCES data, and any comparisons to hourly
+metrics should be viewed with caution as less variation is expected across
+shorter time scales. I developed figures to visualize soundscape data at
+multiple spatial and temporal scales. I am working with the project leader and funders to
+refine the preferred data visualizations relevant to the project.
