@@ -35,32 +35,32 @@ website:
         text: Home
       - section: "Data Archive"
         contents:
-          - content/Data Archive/DataPrep.qmd
-          - content/Data Archive/DataQualityCheck.qmd
-          - content/Data Archive/DataUpload.qmd
-          - content/Data Archive/Permits.qmd
+          - content/DataArchive/DataPrep.qmd
+          - content/DataArchive/DataQualityCheck.qmd
+          - content/DataArchive/DataUpload.qmd
+          - content/DataArchive/Permits.qmd
           - section: "Archive"
             contents: 
-                - content/Data Archive/TethysDeployments.qmd
-                - content/Data Archive/TethysDetections.qmd
-                - content/Data Archive/NCEI.qmd
-                - content/Data Archive/OBIS.qmd
+                - content/DataArchive/TethysDeployments.qmd
+                - content/DataArchive/TethysDetections.qmd
+                - content/DataArchive/NCEI.qmd
+                - content/DataArchive/OBIS.qmd
       - section: "Baleen Whales"
         contents:
-          - content/Baleen Whales/Overview.qmd
-          - content/Baleen Whales/Dectections.qmd
-          - content/Baleen Whales/FinWhales20Hz-BANTER.qmd
-          - content/Baleen Whales/BlueWhales-ManualDetection.qmd
-          - content/Baleen Whales/BlueWhales-GPL.qmd
-          - content/Baleen Whales/BlueWhales-BANTER.qmd
-          - content/Baleen Whales/MinkeWhales.qmd
-          - content/Baleen Whales/Gray_and_HumpbackWhales-BANTER.qmd
+          - content/BaleenWhales/Overview.qmd
+          - content/BaleenWhales/Dectections.qmd
+          - content/BaleenWhales/FinWhales20Hz-BANTER.qmd
+          - content/BaleenWhales/BlueWhales-ManualDetection.qmd
+          - content/BaleenWhales/BlueWhales-GPL.qmd
+          - content/BaleenWhales/BlueWhales-BANTER.qmd
+          - content/BaleenWhales/MinkeWhales.qmd
+          - content/BaleenWhales/Gray_and_HumpbackWhales-BANTER.qmd
       - section: "Toothed Whales"
         contents:
-          - content/Toothed Whales/BeakedWhales-Detection.qmd
-          - content/Toothed Whales/BeakedWhales-IDGuide.qmd
-          - content/Toothed Whales/Dolphins_and_SpermWhales-Detection.qmd
-          - content/Toothed Whales/NBHF-Detection.qmd
+          - content/ToothedWhales/BeakedWhales-Detection.qmd
+          - content/ToothedWhales/BeakedWhales-IDGuide.qmd
+          - content/ToothedWhales/Dolphins_and_SpermWhales-Detection.qmd
+          - content/ToothedWhales/NBHF-Detection.qmd
       - section: "Soundscapes"
         contents:
           - content/Soundscapes/Metrics.qmd
