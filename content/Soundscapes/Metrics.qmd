@@ -102,4 +102,4 @@ Manual identification in LTSA
 
 ### Identify bad data 
 
-Manual identification in LTSA
+Scan LTSA (1s, Hz resolution) with 2-hour windows, viewing frequencies between 0-500 Hz to identify time periods with noisy or compromised data quality. This review was performed as part of the initial data quality check (see more details on [these methods here](https://sael-swfsc.github.io/adrift-analysis-methods/content/DataArchive/DataQualityCheck.html#assess-data-quality)), and is an important step to identify time periods where noisy data prevents accurate calculations of sound levels in the environment.
