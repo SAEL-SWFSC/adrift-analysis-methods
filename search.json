@@ -1,17 +1,24 @@
 [
   {
-    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html",
-    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html",
-    "title": "Dolphins & Sperm Whales - BANTER",
+    "objectID": "content/ToothedWhales/Dolphins-Detection.html",
+    "href": "content/ToothedWhales/Dolphins-Detection.html",
+    "title": "Sperm Whales",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+    "text": "Triton software is used for the following:\n\nAcoustic data is decimated to 48 kHz sample rate\nLong-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution\nThe start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows\nIdentify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation"
   },
   {
-    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
-    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-BANTER.html#methods-summary",
-    "title": "Dolphins & Sperm Whales - BANTER",
+    "objectID": "content/ToothedWhales/Dolphins-Detection.html#methods-summary",
+    "href": "content/ToothedWhales/Dolphins-Detection.html#methods-summary",
+    "title": "Sperm Whales",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+    "text": "Triton software is used for the following:\n\nAcoustic data is decimated to 48 kHz sample rate\nLong-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution\nThe start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows\nIdentify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation"
+  },
+  {
+    "objectID": "content/ToothedWhales/Dolphins-Detection.html#step-by-step-instructions",
+    "href": "content/ToothedWhales/Dolphins-Detection.html#step-by-step-instructions",
+    "title": "Sperm Whales",
+    "section": "Step-by-Step Instructions",
+    "text": "Step-by-Step Instructions\n\nDecimation of acoustic data\n\n\nGenerate Long Term Spectral Average (LTSA)\n\n\nManually log sperm whale acoustic events\n\n\nIdentify potential masking for sperm whale echolocation\n##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)"
   },
   {
     "objectID": "content/ToothedWhales/BeakedWhales-Detection.html",
@@ -26,20 +33,6 @@
     "title": "Beaked Whales",
     "section": "",
     "text": "Data is whitened by applying 1st order, high-pass filter at 80 kHz, then decimated to 288 kHz\nClicks are detected (pre-filter at 10 kHz, detector threshold 12 dB) with multiple click classifiers, and then the click template classification module is used to assign correlation scores to click templates from the following click types: ZC, BB, MD, MS, MC (formerly BW37V), BWC, BW43. \nEvents and species ID are manually defined and bearing angles are manually corrected in Pamguard Viewer\nPAMpal is used to calculate features of click detections"
-  },
-  {
-    "objectID": "content/ToothedWhales/NBHF-Detection.html",
-    "href": "content/ToothedWhales/NBHF-Detection.html",
-    "title": "NBHF",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
-  },
-  {
-    "objectID": "content/ToothedWhales/NBHF-Detection.html#methods-summary",
-    "href": "content/ToothedWhales/NBHF-Detection.html#methods-summary",
-    "title": "NBHF",
-    "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
     "objectID": "content/ToothedWhales/BeakedWhales-IDGuide.html",
@@ -686,18 +679,39 @@
     "text": "Update deployment details \n\nInput Data Start and Data End times into the Deployment Details spreadsheet using the Data Start/End times determined above"
   },
   {
-    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html",
-    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html",
-    "title": "Dolphins & Sperm Whales",
+    "objectID": "content/ToothedWhales/NBHF-Detection.html",
+    "href": "content/ToothedWhales/NBHF-Detection.html",
+    "title": "NBHF",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event\n\n##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)"
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
   },
   {
-    "objectID": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
-    "href": "content/ToothedWhales/Dolphins_and_SpermWhales-Detection.html#methods-summary",
-    "title": "Dolphins & Sperm Whales",
+    "objectID": "content/ToothedWhales/NBHF-Detection.html#methods-summary",
+    "href": "content/ToothedWhales/NBHF-Detection.html#methods-summary",
+    "title": "NBHF",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run standard detector settings agreed upon by NMFS acoustics partners at Southwest, Northeast Fisheries Science Centers, and includes click, whistle and burst pulse detectors. \nAcoustic data is decimated to 192 kHz\nMultiple click classifiers are applied within the click detector module (digital pre-filter 1 kHz, threshold = 15 dB), 2 distinct whistle detectors are applied on data decimated at 48 kHz and 192 kHz, and burse pulses are detected from data decimated to 192 kHz using the cepstrum and whistle and moan modules\nEvents and species ID are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event\n\n##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)"
+    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+  },
+  {
+    "objectID": "content/ToothedWhales/SpermWhales-Detection.html",
+    "href": "content/ToothedWhales/SpermWhales-Detection.html",
+    "title": "Sperm Whales",
+    "section": "",
+    "text": "Triton software is used for the following:\n\nAcoustic data is decimated to 48 kHz sample rate\nLong-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution\nThe start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows\nIdentify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation"
+  },
+  {
+    "objectID": "content/ToothedWhales/SpermWhales-Detection.html#methods-summary",
+    "href": "content/ToothedWhales/SpermWhales-Detection.html#methods-summary",
+    "title": "Sperm Whales",
+    "section": "",
+    "text": "Triton software is used for the following:\n\nAcoustic data is decimated to 48 kHz sample rate\nLong-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution\nThe start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows\nIdentify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation"
+  },
+  {
+    "objectID": "content/ToothedWhales/SpermWhales-Detection.html#step-by-step-instructions",
+    "href": "content/ToothedWhales/SpermWhales-Detection.html#step-by-step-instructions",
+    "title": "Sperm Whales",
+    "section": "Step-by-Step Instructions",
+    "text": "Step-by-Step Instructions\n\nDecimation of acoustic data\nMost ADRIFT acoustic data is recorded at sampling rates of 384 kHz, however sperm whale echolocation clicks contain energy between 400 Hz to 30 kHz. To reduce processing time and data storage requirements, full bandwidth data is decimated to a sample rate of 48 kHz using a decimation factor of 8 (384,000/48,000=8).\n\nUsing the Tools menu in the Triton “Control” window, choose to decimate an entire folder of WAV files\n\nYou will be prompted to choose a folder of WAV files, and then define the appropriate decimation factor. For example, to decimate from 384 kHz to 48 kHz, use a decimation factor of 8.\nThen define a folder to save the new, decimated WAV files.\nThe decimation process will start automatically and show a progress bar. When the decimation is complete, the progress bar will disappear. Depending on the total number of files and the required decimation factor, this process may take a few hours.\n\n\n\nGenerate Long Term Spectral Average (LTSA)\n\n\nManually log sperm whale acoustic events\n\n\nIdentify potential masking for sperm whale echolocation\n##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)"
   },
   {
     "objectID": "content/ToothedWhales/NBHF-BANTER.html",
