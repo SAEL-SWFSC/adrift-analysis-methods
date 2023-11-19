@@ -1,0 +1,27 @@
+---
+title: Sperm Whales
+---
+
+## Methods Summary
+
+-   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) is used for the following:
+
+    -   Acoustic data is decimated to 48 kHz sample rate
+
+    -   Long-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution
+
+    -   The start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows
+
+    -   Identify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation
+
+## Step-by-Step Instructions
+
+### Decimation of acoustic data
+
+### Generate Long Term Spectral Average (LTSA) 
+
+### Manually log sperm whale acoustic events
+
+### Identify potential masking for sperm whale echolocation 
+
+##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)
