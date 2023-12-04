@@ -270,14 +270,21 @@
     "href": "content/ToothedWhales/NBHF-Detection.html",
     "title": "NBHF",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+    "text": "Pamguard v.2.02.09 (https://www.pamguard.org/) is used to run click detector on full bandwidth data (384 kHz sample rate)\nData is high-pass filtered at 100 kHz with a click detector (12 dB threshold) \nClick detections are classified within Pamguard based on peak frequency\nThe Matched Template Classifier module evaluates the similarity of each click detection to known templates\nPotential acoustic events are automatically defined in R\nPAMpal is used to calculate features of click detections in each event"
   },
   {
     "objectID": "content/ToothedWhales/NBHF-Detection.html#methods-summary",
     "href": "content/ToothedWhales/NBHF-Detection.html#methods-summary",
     "title": "NBHF",
     "section": "",
-    "text": "Pamguard v.2.02 is used to run click detector \nAcoustic data is sampled with minimum sample rate 384 kHz\nData is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) \nEvents are manually defined in Pamguard Viewer\nPAMpal is used to calculate features of click detections in each event"
+    "text": "Pamguard v.2.02.09 (https://www.pamguard.org/) is used to run click detector on full bandwidth data (384 kHz sample rate)\nData is high-pass filtered at 100 kHz with a click detector (12 dB threshold) \nClick detections are classified within Pamguard based on peak frequency\nThe Matched Template Classifier module evaluates the similarity of each click detection to known templates\nPotential acoustic events are automatically defined in R\nPAMpal is used to calculate features of click detections in each event"
+  },
+  {
+    "objectID": "content/ToothedWhales/NBHF-Detection.html#step-by-step-instructions",
+    "href": "content/ToothedWhales/NBHF-Detection.html#step-by-step-instructions",
+    "title": "NBHF",
+    "section": "Step-by-Step Instructions",
+    "text": "Step-by-Step Instructions\n\nRun echolocation click detector\n\nDefine location to save database and binary files\nDefine array configuration (hydrophone sensitivity and separation)\nAdd click classifiers to Click Classification module \nAdd click templates to Matched Template Classification module\nSave configuration file with a descriptive filename\nPress Run\n\n\n\nAutomatically define potential acoustic events in R\n\n\nCalculate click parameters for all events in R\n\n\nPredict species classification using BANTER model\n\n\nReview labels of low-scoring events"
   },
   {
     "objectID": "content/ToothedWhales/SpermWhales-Detection.html",
