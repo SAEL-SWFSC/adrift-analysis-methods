@@ -4,12 +4,33 @@ title: NBHF
 
 ## Methods Summary
 
--   Pamguard v.2.02 is used to run click detector 
+-   Pamguard v.2.02.09 (<https://www.pamguard.org/>) is used to run click detector on full bandwidth data (384 kHz sample rate)
 
--   Acoustic data is sampled with minimum sample rate 384 kHz
+-   Data is high-pass filtered at 100 kHz with a click detector (12 dB threshold) 
 
--   Data is high-pass filtered at 100 kHz  with a single click detector (12 dB threshold) 
+-   Click detections are classified within Pamguard based on peak frequency
 
--   Events are manually defined in Pamguard Viewer
+-   The Matched Template Classifier module evaluates the similarity of each click detection to known templates
+
+-   Potential acoustic events are automatically defined in R
 
 -   PAMpal is used to calculate features of click detections in each event
+
+## Step-by-Step Instructions
+
+### Run echolocation click detector
+
+1.  Define location to save database and binary files
+2.  Define array configuration (hydrophone sensitivity and separation)
+3.  Add click classifiers to Click Classification module <!--#   Click classifiers are saved within the default NBHF Pamguard configuration file. They are also saved within the "Click Classifiers" folder within the ToothedWhale section, and .pgccs files can be imported into other Pamguard configuration files through the Click Classification settings. -->
+4.  Add click templates to Matched Template Classification module
+5.  Save configuration file with a descriptive filename
+6.  Press Run
+
+### Automatically define potential acoustic events in R
+
+### Calculate click parameters for all events in R
+
+### Predict species classification using BANTER model
+
+### Review labels of low-scoring events
