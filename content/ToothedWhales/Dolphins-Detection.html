@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ADRIFT Analysis Methods - Sperm Whales</title>
+<title>ADRIFT Analysis Methods - Dolphins</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -76,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/ToothedWhales/BeakedWhales-Detection.html">Toothed Whales</a></li><li class="breadcrumb-item"><a href="../../content/ToothedWhales/Dolphins-Detection.html">Sperm Whales</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/ToothedWhales/BeakedWhales-Detection.html">Toothed Whales</a></li><li class="breadcrumb-item"><a href="../../content/ToothedWhales/Dolphins-Detection.html">Dolphins</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -271,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../content/ToothedWhales/Dolphins-Detection.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Sperm Whales</span></a>
+ <span class="menu-text">Dolphins</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,10 +337,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#methods-summary" id="toc-methods-summary" class="nav-link active" data-scroll-target="#methods-summary">Methods Summary</a></li>
   <li><a href="#step-by-step-instructions" id="toc-step-by-step-instructions" class="nav-link" data-scroll-target="#step-by-step-instructions">Step-by-Step Instructions</a>
   <ul class="collapse">
-  <li><a href="#decimation-of-acoustic-data" id="toc-decimation-of-acoustic-data" class="nav-link" data-scroll-target="#decimation-of-acoustic-data">Decimation of acoustic data</a></li>
   <li><a href="#generate-long-term-spectral-average-ltsa" id="toc-generate-long-term-spectral-average-ltsa" class="nav-link" data-scroll-target="#generate-long-term-spectral-average-ltsa">Generate Long Term Spectral Average (LTSA)</a></li>
-  <li><a href="#manually-log-sperm-whale-acoustic-events" id="toc-manually-log-sperm-whale-acoustic-events" class="nav-link" data-scroll-target="#manually-log-sperm-whale-acoustic-events">Manually log sperm whale acoustic events</a></li>
-  <li><a href="#identify-potential-masking-for-sperm-whale-echolocation" id="toc-identify-potential-masking-for-sperm-whale-echolocation" class="nav-link" data-scroll-target="#identify-potential-masking-for-sperm-whale-echolocation">Identify potential masking for sperm whale echolocation</a></li>
+  <li><a href="#start-triton-logger-remora" id="toc-start-triton-logger-remora" class="nav-link" data-scroll-target="#start-triton-logger-remora">Start Triton Logger Remora</a></li>
+  <li><a href="#annotate-the-presence-dolphin-acoustic-events" id="toc-annotate-the-presence-dolphin-acoustic-events" class="nav-link" data-scroll-target="#annotate-the-presence-dolphin-acoustic-events">Annotate the presence dolphin acoustic events</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/ToothedWhales/Dolphins-Detection.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/ToothedWhales/Dolphins-Detection.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -331,7 +350,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sperm Whales</h1>
+<h1 class="title">Dolphins</h1>
 </div>
 
 
@@ -349,35 +368,55 @@ ul.task-list li input[type="checkbox"] {
 <section id="methods-summary" class="level2">
 <h2 class="anchored" data-anchor-id="methods-summary">Methods Summary</h2>
 <ul>
+<li><p>Identified dolphin acoustic events include echolocation clicks from Risso’s and Pacific white-sided dolphins, and whistles from unidentified dolphin species</p></li>
 <li><p><a href="https://github.com/MarineBioAcousticsRC/Triton">Triton software</a> is used for the following:</p>
 <ul>
-<li><p>Acoustic data is decimated to 48 kHz sample rate</p></li>
-<li><p>Long-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution</p></li>
-<li><p>The start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows</p></li>
-<li><p>Identify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation</p></li>
+<li><p>Long-term spectral averages (LTSAs) are calculated with a 200 Hz, 5 second resolution</p></li>
+<li><p>For continuous recordings (ADRIFT dataset), the start and end times of dolphin acoustic events are identified by manually scanning LTSAs in 1 hour windows</p></li>
+<li><p>For duty-cycled recordings (CCES and PASCAL datasets), the presence of dolphin acoustic events is identified within 2-minute bins</p></li>
 </ul></li>
 </ul>
 </section>
 <section id="step-by-step-instructions" class="level2">
 <h2 class="anchored" data-anchor-id="step-by-step-instructions">Step-by-Step Instructions</h2>
-<section id="decimation-of-acoustic-data" class="level3">
-<h3 class="anchored" data-anchor-id="decimation-of-acoustic-data">Decimation of acoustic data</h3>
-</section>
 <section id="generate-long-term-spectral-average-ltsa" class="level3">
 <h3 class="anchored" data-anchor-id="generate-long-term-spectral-average-ltsa">Generate Long Term Spectral Average (LTSA)</h3>
+<p>See methods in <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/DataArchive/DataPrep.html#generate-full-bandwidth-ltsa">“Data Prep” section</a>. Use 5 s 200 Hz resolution.</p>
 </section>
-<section id="manually-log-sperm-whale-acoustic-events" class="level3">
-<h3 class="anchored" data-anchor-id="manually-log-sperm-whale-acoustic-events">Manually log sperm whale acoustic events</h3>
+<section id="start-triton-logger-remora" class="level3">
+<h3 class="anchored" data-anchor-id="start-triton-logger-remora">Start Triton Logger Remora</h3>
+<ol type="1">
+<li>Launch Triton within Matlab. Open the LTSA for the data you want to analyze.</li>
+<li>In the Triton “Control” window, select the Remoras menu, choose Logger and then start a new log. You will need to re-start Triton if this is the first instance of using the Logger remora. See more info on Triton Remoras on the Marine Bioacoustic Research Collective <a href="https://github.com/MarineBioAcousticsRC/Triton/wiki">wiki</a>.</li>
+</ol>
 </section>
-<section id="identify-potential-masking-for-sperm-whale-echolocation" class="level3">
-<h3 class="anchored" data-anchor-id="identify-potential-masking-for-sperm-whale-echolocation">Identify potential masking for sperm whale echolocation</h3>
-<p>##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)</p>
+<section id="annotate-the-presence-dolphin-acoustic-events" class="level3">
+<h3 class="anchored" data-anchor-id="annotate-the-presence-dolphin-acoustic-events">Annotate the presence dolphin acoustic events</h3>
+<p>Risso's dolphins (<em>Grampus griseus</em>) and Pacific white-sided dolphins (<em>Lagenorhynchus obliquidens</em>) produce echolocation clicks which can be identified to species by distinct spectral features observable in the LTSA and spectrogram <span class="citation" data-cites="Soldevilla2008">(<a href="#ref-Soldevilla2008" role="doc-biblioref">Soldevilla et al. 2008</a>)</span>. There is some varation in the spectral features of echolocation clicks for Risso’s dolphins <span class="citation" data-cites="soldevilla2017">(<a href="#ref-soldevilla2017" role="doc-biblioref">Soldevilla et al. 2017</a>)</span> and Pacific white-sided dolphins <span class="citation" data-cites="Soldevilla2008">(<a href="#ref-Soldevilla2008" role="doc-biblioref">Soldevilla et al. 2008</a>)</span>. The analysts noted the presence of different click types within each encounter, when possible. Some dolphin species produce echolocation clicks which cannot currently be classified from the LTSA; those species are not included in this analysis, but their presence may be captured by the dolphin whistle events.</p>
+<p>[INSERT SCREENSHOT SHOWING START AND END TIME OF RISSO’S DOLPHIN ECHOLOCATION EVENT]</p>
+<p>[INSERT SCREENSHOT SHOWING START AND END TIME OF PACIFIC WHITE-SIDED DOLPHIN ECHOLOCATION EVENT]</p>
+<p>&lt;!--# Potential unidentified dolphin species within the California Current include common dolphins (<em>Delphinus spp.</em>), bottlenose dolphins (<em>Tursiops truncatus),</em> Northern right whale dolphin (<em>Lissodelphus borealis</em>), and striped dolphins (<em>Stenella coeruleoalba</em>).</p>
+<p>--&gt;</p>
+<p>Dolphin whistles appear in the LTSA as scattered, yet distinct pockets of energy between 2-20 kHz. There are no established methods to identify dolphin species by their whistles in the LTSA alone; therefore dolphin whistle events are all attributed to “Unidentified Odontocetes”.</p>
+<p>[INSERT SCREENSHOT SHOWING START AND END TIME OF DOLPHIN WHISTLE EVENT]</p>
+<p>Dolphin acoustic events are defined with an encounter granularity (including start and end time) for continuous acoustic data, and with a 2-minute binned granularity (presence-only within a 2-minute bin) for duty-cycled acoustic data.</p>
+</section>
+<section id="section" class="level3">
+
+
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-soldevilla2017" class="csl-entry" role="listitem">
+Soldevilla, Melissa S., Simone Baumann-Pickering, Danielle Cholewiak, Lynne E. W. Hodge, Erin M. Oleson, and Shannon Rankin. 2017. <span>“Geographic Variation in Risso’s Dolphin Echolocation Click Spectra.”</span> <em>The Journal of the Acoustical Society of America</em> 142 (2): 599–617. <a href="https://doi.org/10.1121/1.4996002">https://doi.org/10.1121/1.4996002</a>.
+</div>
+<div id="ref-Soldevilla2008" class="csl-entry" role="listitem">
+Soldevilla, Melissa S., E Elizabeth Henderson, Gregory S. Campbell, Sean M. Wiggins, John A Hildebrand, and Marie A Roch. 2008. <span>“Classification of Risso’s and Pacific White-Sided Dolphins Using Spectral Properties of Echolocation Clicks.”</span> <em>The Journal of the Acoustical Society of America</em> 124 (1): 609–24. <a href="https://doi.org/10.1121/1.2932059">https://doi.org/10.1121/1.2932059</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
