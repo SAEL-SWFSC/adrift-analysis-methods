@@ -1,27 +1,47 @@
 ---
-title: Sperm Whales
+title: Dolphins
+bibliography: references.bib
 ---
 
 ## Methods Summary
 
+-   Identified dolphin acoustic events include echolocation clicks from Risso's and Pacific white-sided dolphins, and whistles from unidentified dolphin species
+
 -   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) is used for the following:
 
-    -   Acoustic data is decimated to 48 kHz sample rate
+    -   Long-term spectral averages (LTSAs) are calculated with a 200 Hz, 5 second resolution
 
-    -   Long-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution
+    -   For continuous recordings (ADRIFT dataset), the start and end times of dolphin acoustic events are identified by manually scanning LTSAs in 1 hour windows
 
-    -   The start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows
-
-    -   Identify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation
+    -   For duty-cycled recordings (CCES and PASCAL datasets), the presence of dolphin acoustic events is identified within 2-minute bins
 
 ## Step-by-Step Instructions
 
-### Decimation of acoustic data
+### Generate Long Term Spectral Average (LTSA)
 
-### Generate Long Term Spectral Average (LTSA) 
+See methods in ["Data Prep" section](https://sael-swfsc.github.io/adrift-analysis-methods/content/DataArchive/DataPrep.html#generate-full-bandwidth-ltsa). Use 5 s 200 Hz resolution.
 
-### Manually log sperm whale acoustic events
+### Start Triton Logger Remora
 
-### Identify potential masking for sperm whale echolocation 
+1.  Launch Triton within Matlab. Open the LTSA for the data you want to analyze.
+2.  In the Triton "Control" window, select the Remoras menu, choose Logger and then start a new log. You will need to re-start Triton if this is the first instance of using the Logger remora. See more info on Triton Remoras on the Marine Bioacoustic Research Collective [wiki](https://github.com/MarineBioAcousticsRC/Triton/wiki).
 
-##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)
+### Annotate the presence dolphin acoustic events
+
+Risso\'s dolphins (*Grampus griseus*) and Pacific white-sided dolphins (*Lagenorhynchus obliquidens*) produce echolocation clicks which can be identified to species by distinct spectral features observable in the LTSA and spectrogram [@Soldevilla2008]. There is some varation in the spectral features of echolocation clicks for Risso's dolphins [@soldevilla2017] and Pacific white-sided dolphins [@Soldevilla2008]. The analysts noted the presence of different click types within each encounter, when possible. Some dolphin species produce echolocation clicks which cannot currently be classified from the LTSA; those species are not included in this analysis, but their presence may be captured by the dolphin whistle events.
+
+\[INSERT SCREENSHOT SHOWING START AND END TIME OF RISSO'S DOLPHIN ECHOLOCATION EVENT\]
+
+\[INSERT SCREENSHOT SHOWING START AND END TIME OF PACIFIC WHITE-SIDED DOLPHIN ECHOLOCATION EVENT\]
+
+\<!\--# Potential unidentified dolphin species within the California Current include common dolphins (*Delphinus spp.*), bottlenose dolphins (*Tursiops truncatus),* Northern right whale dolphin (*Lissodelphus borealis*), and striped dolphins (*Stenella coeruleoalba*).
+
+\--\>
+
+Dolphin whistles appear in the LTSA as scattered, yet distinct pockets of energy between 2-20 kHz. There are no established methods to identify dolphin species by their whistles in the LTSA alone; therefore dolphin whistle events are all attributed to "Unidentified Odontocetes".
+
+\[INSERT SCREENSHOT SHOWING START AND END TIME OF DOLPHIN WHISTLE EVENT\]
+
+Dolphin acoustic events are defined with an encounter granularity (including start and end time) for continuous acoustic data, and with a 2-minute binned granularity (presence-only within a 2-minute bin) for duty-cycled acoustic data.
+
+### 

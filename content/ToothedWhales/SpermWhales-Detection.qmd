@@ -20,7 +20,7 @@ title: Sperm Whales
 
 Most ADRIFT acoustic data is recorded at sampling rates of 384 kHz, however sperm whale echolocation clicks contain energy between 400 Hz to 30 kHz. To reduce processing time and data storage requirements, full bandwidth data is decimated to a sample rate of 48 kHz using a decimation factor of 8 (384,000/48,000=8).
 
-1.  Using the Tools menu in the Triton "Control" window, choose to decimate an entire folder of WAV files
+1.  In the Triton "Control" window, select the Tools menu and choose to "Decimate All WAV Files in Directory"
 
     ![](/content/Soundscapes/images/Triton_Menu_Decimate.png){width="400"}
 
@@ -30,10 +30,12 @@ Most ADRIFT acoustic data is recorded at sampling rates of 384 kHz, however sper
 
 4.  The decimation process will start automatically and show a progress bar. When the decimation is complete, the progress bar will disappear. Depending on the total number of files and the required decimation factor, this process may take a few hours.
 
-### Generate Long Term Spectral Average (LTSA) 
+### Generate Long Term Spectral Average (LTSA)
+
+See methods in ["Data Prep" section](https://sael-swfsc.github.io/adrift-analysis-methods/content/DataArchive/DataPrep.html#generate-full-bandwidth-ltsa). Use 5 s 200 Hz resolution.
 
 ### Manually log sperm whale acoustic events
 
-### Identify potential masking for sperm whale echolocation 
+### Identify potential masking for sperm whale echolocation
 
 ##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)
