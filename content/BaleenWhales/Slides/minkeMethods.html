@@ -587,9 +587,27 @@ Kourtney Burger
 </section>
 <section id="detection-validation-1" class="slide level2">
 <h2>Detection Validation</h2>
-<p>Manually validate all detections to look for Minke boings</p>
-<p>ADD METHODS FOR BOXING BOINGS</p>
-</section></section>
+<p>The data is then manually scanned for minke boings and other sounds of interest using the GPL detections and Pamguard Spectrogram Annotation tool.</p>
+</section>
+<section id="spectrogram-annotation" class="slide level2">
+<h2>Spectrogram Annotation</h2>
+<p>Using the ‘Generalized Power Law Detector’ Section in the Data Map tab, scroll to detections and center your data there</p>
+
+<img data-src="../../../content/BaleenWhales/images/DataMap.png" class="r-stretch"></section>
+<section id="spectrogram-annotation-1" class="slide level2">
+<h2>Spectrogram Annotation</h2>
+<p>Return to the spectrogram view then click and drag to create an annotation box around each boing</p>
+
+<img data-src="../../../content/BaleenWhales/images/annotationBox.png" class="r-stretch"></section>
+<section id="spectrogram-annotation-2" class="slide level2 smaller">
+<h2>Spectrogram Annotation</h2>
+<p>A ‘Spectrogram Annotation’ pop up window will appear. In the ‘User form annotation’ section, select the eventType as a ‘Boing’ or other respective option, and press ok<img data-src="images/paste-0B89BB20.png" width="573"></p>
+</section>
+<section id="spectrogram-annotation-3" class="slide level2">
+<h2>Spectrogram Annotation</h2>
+<p>Continue to scan GPL detections and annotate all boings including those missed by the GPL detector, while ignoring false detections</p>
+
+<img data-src="../../../content/BaleenWhales/images/boinga.png" class="r-stretch"></section></section>
 <section>
 <section id="additional-20-data-validation" class="title-slide slide level1 center">
 <h1>Additional 20% Data Validation</h1>
@@ -597,7 +615,8 @@ Kourtney Burger
 </section>
 <section id="validation-code" class="slide level2 smaller">
 <h2>20% Validation Code</h2>
-<p>Due to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for additional validation.</p>
+<p>After running the GPL detector and manually scanning all detections, a stratified sub-sampling method was applied to randomly sample 20% of all data for additional validation to look for false negatives.</p>
+<p>The code below can be used to subsample 20% of the data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># PAMpal simple example </span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co"># Its on CRAN. Yay!</span></span>
@@ -695,7 +714,7 @@ Kourtney Burger
 </ul>
 <p><img data-src="../../../content/BaleenWhales/images/paste-F6687E7F.png"></p>
 <ul>
-<li>Validate each subsampled wav file by scrolling in the spectrogram to the file and boxing/validating all detections using the drop down options specified above</li>
+<li>Validate each subsampled wav file by scrolling in the spectrogram to the file and scanning for boings</li>
 </ul>
 </section></section>
 <section id="additional-notes" class="title-slide slide level1 smaller center">
@@ -708,7 +727,7 @@ Kourtney Burger
 <li>The box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)</li>
 </ul></li>
 </ul></li>
-<li><p>Method for false dectections</p>
+<li><p>Method for false detections</p>
 <ul>
 <li>Ignore them</li>
 </ul></li>
