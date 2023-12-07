@@ -38,7 +38,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 ## Minke
 
-PAMGuard version 2.02.02 was used to run a GPL detector to identify Minke whale boings (see image below). All detections were manually scanned and all boings were annotated in PAMGuard. Following manual scanning, an additional 20% of the total data was subsampled to verify boings were not being missed.
+PAMGuard version 2.02.02 was used to run a Generalized Power Law (GPL) detector to identify Minke whale boings (see image below). All detections were manually scanned and all boings were annotated using PAMGuard Viewer Mode's Spectrogram Annotation Tool. Following manual scanning, an additional 20% of the total data was subsampled to look for false negative boings. The annotations were then summarized into hourly presence/absence tables.
 
 ![Figure X. Spectrogram of Minke whale boings being detected by GPL detector](images/MinkeGPLDetections.png)
 
