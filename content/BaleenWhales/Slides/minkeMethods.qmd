@@ -175,15 +175,37 @@ Click 'Ok' to close all of the tabs and return to Pamguard Viewer window
 
 ## Detection Validation
 
-Manually validate all detections to look for Minke boings
+The data is then manually scanned for minke boings and other sounds of interest using the GPL detections and Pamguard Spectrogram Annotation tool.
 
-ADD METHODS FOR BOXING BOINGS
+## Spectrogram Annotation
+
+Using the 'Generalized Power Law Detector' Section in the Data Map tab, scroll to detections and center your data there
+
+![](/content/BaleenWhales/images/DataMap.png)
+
+## Spectrogram Annotation
+
+Return to the spectrogram view then click and drag to create an annotation box around each boing
+
+![](/content/BaleenWhales/images/annotationBox.png)
+
+## Spectrogram Annotation {.smaller}
+
+A 'Spectrogram Annotation' pop up window will appear. In the 'User form annotation' section, select the eventType as a 'Boing' or other respective option, and press ok![](images/paste-0B89BB20.png){width="573"}
+
+## Spectrogram Annotation
+
+Continue to scan GPL detections and annotate all boings including those missed by the GPL detector, while ignoring false detections
+
+![](/content/BaleenWhales/images/boinga.png)
 
 # Additional 20% Data Validation
 
 ## 20% Validation Code {.smaller}
 
-Due to the nature of this large data set we decided to use a stratified sub-sampling method to randomly sample 20% of all events for additional validation.
+After running the GPL detector and manually scanning all detections, a stratified sub-sampling method was applied to randomly sample 20% of all data for additional validation to look for false negatives.
+
+The code below can be used to subsample 20% of the data.
 
 ```{r}
 #| eval: FALSE
@@ -285,7 +307,7 @@ for(e in 1:nrow(wavDf)) {
 
 ![](/content/BaleenWhales/images/paste-F6687E7F.png)
 
--   Validate each subsampled wav file by scrolling in the spectrogram to the file and boxing/validating all detections using the drop down options specified above
+-   Validate each subsampled wav file by scrolling in the spectrogram to the file and scanning for boings
 
 # Additional Notes {.smaller}
 
@@ -295,6 +317,6 @@ for(e in 1:nrow(wavDf)) {
 
         -   The box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)
 
--   Method for false dectections
+-   Method for false detections
 
     -   Ignore them
