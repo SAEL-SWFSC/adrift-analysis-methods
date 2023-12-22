@@ -32,8 +32,12 @@ title: NBHF
 
 ### Reclassify clicks with click classifiers and matched template classifier
 
-1.  Import Matched Template Classification module and Click Detector from [NBHF_ClickClassifiers_and_MTC.psfx](../content/ToothedWhales/Pamguard settings/NBHF_ClickClassifiers_and_MTC.psfx)
-    -   Click classifiers are saved within the default NBHF Pamguard configuration file. They are also saved within the "Click Classifiers" folder within the ToothedWhale section, and .pgccs files can be imported into other Pamguard configuration files through the Click Classification settings.
+1.  Import Matched Template Classification module and Click Detector from NBHF_ClickClassifiers_and_MTC.psfx found in content/ToothedWhales/Pamguard settings directory
+    -   Click classifiers are saved within the Click Detector module in the default NBHF_ClickClassifiers_and_MTC configuration file. They are also saved as individual .pgccs files within content/ToothedWhales/Click Classifiers/NBHF directory.
+
+    -   In the Pamguard File Menu, select "Import PAMGuard Modules"![](images/Screenshot_Import_Modules.png){width="450"}
+
+    -   For Click Detector, select "Replace existing Click Detector" and for Match Template Classifier, select "Import as new module"![](images/Screenshot_Import_MTC_ClickDetector.png){width="450"}
 2.  Reclassify clicks with NBHF click classifiers
     -   In the Pamguard Click Classifier menu, select "Reanalyse Clicks"
 
