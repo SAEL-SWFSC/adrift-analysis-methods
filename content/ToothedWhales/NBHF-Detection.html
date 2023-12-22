@@ -319,8 +319,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-by-step-instructions" id="toc-step-by-step-instructions" class="nav-link" data-scroll-target="#step-by-step-instructions">Step-by-Step Instructions</a>
   <ul class="collapse">
   <li><a href="#run-echolocation-click-detector" id="toc-run-echolocation-click-detector" class="nav-link" data-scroll-target="#run-echolocation-click-detector">Run echolocation click detector</a></li>
+  <li><a href="#reclassify-clicks-with-click-classifiers-and-matched-template-classifier" id="toc-reclassify-clicks-with-click-classifiers-and-matched-template-classifier" class="nav-link" data-scroll-target="#reclassify-clicks-with-click-classifiers-and-matched-template-classifier">Reclassify clicks with click classifiers and matched template classifier</a></li>
   <li><a href="#automatically-define-potential-acoustic-events-in-r" id="toc-automatically-define-potential-acoustic-events-in-r" class="nav-link" data-scroll-target="#automatically-define-potential-acoustic-events-in-r">Automatically define potential acoustic events in R</a></li>
-  <li><a href="#calculate-click-parameters-for-all-events-in-r" id="toc-calculate-click-parameters-for-all-events-in-r" class="nav-link" data-scroll-target="#calculate-click-parameters-for-all-events-in-r">Calculate click parameters for all events in R</a></li>
   <li><a href="#predict-species-classification-using-banter-model" id="toc-predict-species-classification-using-banter-model" class="nav-link" data-scroll-target="#predict-species-classification-using-banter-model">Predict species classification using BANTER model</a></li>
   <li><a href="#review-labels-of-low-scoring-events" id="toc-review-labels-of-low-scoring-events" class="nav-link" data-scroll-target="#review-labels-of-low-scoring-events">Review labels of low-scoring events</a></li>
   </ul></li>
@@ -352,8 +352,11 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>Pamguard v.2.02.09 (<a href="https://www.pamguard.org/" class="uri">https://www.pamguard.org/</a>) is used to run click detector&nbsp;on full bandwidth data (384 kHz sample rate)</p></li>
 <li><p>Data is high-pass filtered at 100 kHz with a click detector (12 dB threshold)&nbsp;</p></li>
+<li><p>Pamguard v2.02.09f (public release expected to be available in early 2024) is used to reclassify clicks</p>
+<ul>
 <li><p>Click detections are classified within Pamguard based on peak frequency</p></li>
 <li><p>The Matched Template Classifier module evaluates the similarity of each click detection to known templates</p></li>
+</ul></li>
 <li><p>Potential acoustic events are automatically defined in R</p></li>
 <li><p>PAMpal is used to calculate features of click detections in each event</p></li>
 </ul>
@@ -363,19 +366,44 @@ ul.task-list li input[type="checkbox"] {
 <section id="run-echolocation-click-detector" class="level3">
 <h3 class="anchored" data-anchor-id="run-echolocation-click-detector">Run echolocation click detector</h3>
 <ol type="1">
-<li>Define location to save database and binary files</li>
-<li>Define array configuration (hydrophone sensitivity and separation)</li>
-<li>Add click classifiers to Click Classification module <!--#   Click classifiers are saved within the default NBHF Pamguard configuration file. They are also saved within the "Click Classifiers" folder within the ToothedWhale section, and .pgccs files can be imported into other Pamguard configuration files through the Click Classification settings. --></li>
-<li>Add click templates to Matched Template Classification module</li>
-<li>Save configuration file with a descriptive filename</li>
-<li>Press Run</li>
+<li><p>Define location to save database and binary files</p></li>
+<li><p>Define array configuration (hydrophone sensitivity and separation)</p></li>
+<li><p>Save configuration file with a descriptive filename</p></li>
+<li><p>Press Run</p></li>
 </ol>
+</section>
+<section id="reclassify-clicks-with-click-classifiers-and-matched-template-classifier" class="level3">
+<h3 class="anchored" data-anchor-id="reclassify-clicks-with-click-classifiers-and-matched-template-classifier">Reclassify clicks with click classifiers and matched template classifier</h3>
+<ol type="1">
+<li>Import Matched Template Classification module and Click Detector from <a href="../content/ToothedWhales/Pamguard settings/NBHF_ClickClassifiers_and_MTC.psfx">NBHF_ClickClassifiers_and_MTC.psfx</a>
+<ul>
+<li>Click classifiers are saved within the default NBHF Pamguard configuration file. They are also saved within the “Click Classifiers” folder within the ToothedWhale section, and .pgccs files can be imported into other Pamguard configuration files through the Click Classification settings.</li>
+</ul></li>
+<li>Reclassify clicks with NBHF click classifiers
+<ul>
+<li><p>In the Pamguard Click Classifier menu, select “Reanalyse Clicks”</p>
+<p><img src="images/Screenshot_Reanalyse_ClickDetector.png" class="img-fluid" width="450"></p></li>
+<li><p>Select “All Data”, tick the “Delete old database entries” box, and tick the “Reclassify Clicks” box. Add a note “Reclassify based on NBHF peak frequencies”. Then click “Start”<img src="images/Screenshot_Reclassify_Clicks.png" class="img-fluid" width="450"></p></li>
+</ul></li>
+<li>Reclassify clicks for Matched Template Classifier
+<ul>
+<li><p>In the Pamguard Settings menu, select “Matched Template Classifier” and “Reclassify clicks”</p>
+<p><img src="images/Screenshot_Reanalyse_MTC.png" class="img-fluid" width="450"></p></li>
+<li><p>Select “All Data”, tick the “Delete old database entries” box, and tick the “Matched Template Classifier” box. Add a note “Reanalyze based on NBHF MTC”. Then click “Start”<img src="images/Screenshot_MTC.png" class="img-fluid" width="450"></p></li>
+</ul></li>
+<li>When finished, save data and close Pamguard</li>
+</ol>
+<p><img src="images/Screenshot_SaveData.png" class="img-fluid" width="450"></p>
 </section>
 <section id="automatically-define-potential-acoustic-events-in-r" class="level3">
 <h3 class="anchored" data-anchor-id="automatically-define-potential-acoustic-events-in-r">Automatically define potential acoustic events in R</h3>
-</section>
-<section id="calculate-click-parameters-for-all-events-in-r" class="level3">
-<h3 class="anchored" data-anchor-id="calculate-click-parameters-for-all-events-in-r">Calculate click parameters for all events in R</h3>
+<p>Four thresholds are used to identify potential NBHF events, including “Pd_1” and “Pd_2” for Dall’s porpoise, “Pp” for Harbor porpoise, and “Ksp” for Kogia. Template thresholds: Pd_1=0.45, Pd_2=0.45, Pp=0.6, Ksp=0.45. These click templates were generated from acoustic encounters with known species. Thresholds were established in an iterative process to ensure no high quality acoustic events were missed.</p>
+<p>The <a href="..content/ToothedWhales/R/matchTemplateScript.R">matchTemplateScript_NBHF.R</a> script is used to identify potential NBHF events, add them to a database, and then generate an acoustic study using the PAMpal R package.</p>
+<p>Events are automatically defined when the following conditions are met</p>
+<ul>
+<li>3 or more clicks exceed the MTC thresholds within 120 seconds</li>
+<li>Events have a maximum duration of 120 seconds</li>
+</ul>
 </section>
 <section id="predict-species-classification-using-banter-model" class="level3">
 <h3 class="anchored" data-anchor-id="predict-species-classification-using-banter-model">Predict species classification using BANTER model</h3>
