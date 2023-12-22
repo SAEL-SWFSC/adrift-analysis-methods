@@ -8,9 +8,11 @@ title: NBHF
 
 -   Data is high-pass filtered at 100 kHz with a click detector (12 dB threshold) 
 
--   Click detections are classified within Pamguard based on peak frequency
+-   Pamguard v2.02.09f (public release expected to be available in early 2024) is used to reclassify clicks
 
--   The Matched Template Classifier module evaluates the similarity of each click detection to known templates
+    -   Click detections are classified within Pamguard based on peak frequency
+
+    -   The Matched Template Classifier module evaluates the similarity of each click detection to known templates
 
 -   Potential acoustic events are automatically defined in R
 
@@ -21,15 +23,43 @@ title: NBHF
 ### Run echolocation click detector
 
 1.  Define location to save database and binary files
+
 2.  Define array configuration (hydrophone sensitivity and separation)
-3.  Add click classifiers to Click Classification module <!--#   Click classifiers are saved within the default NBHF Pamguard configuration file. They are also saved within the "Click Classifiers" folder within the ToothedWhale section, and .pgccs files can be imported into other Pamguard configuration files through the Click Classification settings. -->
-4.  Add click templates to Matched Template Classification module
-5.  Save configuration file with a descriptive filename
-6.  Press Run
+
+3.  Save configuration file with a descriptive filename
+
+4.  Press Run
+
+### Reclassify clicks with click classifiers and matched template classifier
+
+1.  Import Matched Template Classification module and Click Detector from [NBHF_ClickClassifiers_and_MTC.psfx](../content/ToothedWhales/Pamguard settings/NBHF_ClickClassifiers_and_MTC.psfx)
+    -   Click classifiers are saved within the default NBHF Pamguard configuration file. They are also saved within the "Click Classifiers" folder within the ToothedWhale section, and .pgccs files can be imported into other Pamguard configuration files through the Click Classification settings.
+2.  Reclassify clicks with NBHF click classifiers
+    -   In the Pamguard Click Classifier menu, select "Reanalyse Clicks"
+
+        ![](images/Screenshot_Reanalyse_ClickDetector.png){width="450"}
+
+    -   Select "All Data", tick the "Delete old database entries" box, and tick the "Reclassify Clicks" box. Add a note "Reclassify based on NBHF peak frequencies". Then click "Start"![](images/Screenshot_Reclassify_Clicks.png){width="450"}
+3.  Reclassify clicks for Matched Template Classifier
+    -   In the Pamguard Settings menu, select "Matched Template Classifier" and "Reclassify clicks"
+
+        ![](images/Screenshot_Reanalyse_MTC.png){width="450"}
+
+    -   Select "All Data", tick the "Delete old database entries" box, and tick the "Matched Template Classifier" box. Add a note "Reanalyze based on NBHF MTC". Then click "Start"![](images/Screenshot_MTC.png){width="450"}
+4.  When finished, save data and close Pamguard
+
+![](images/Screenshot_SaveData.png){width="450"}
 
 ### Automatically define potential acoustic events in R
 
-### Calculate click parameters for all events in R
+Four thresholds are used to identify potential NBHF events, including "Pd_1" and "Pd_2" for Dall's porpoise, "Pp" for Harbor porpoise, and "Ksp" for Kogia. Template thresholds: Pd_1=0.45, Pd_2=0.45, Pp=0.6, Ksp=0.45. These click templates were generated from acoustic encounters with known species. Thresholds were established in an iterative process to ensure no high quality acoustic events were missed.
+
+The [matchTemplateScript_NBHF.R](..content/ToothedWhales/R/matchTemplateScript.R) script is used to identify potential NBHF events, add them to a database, and then generate an acoustic study using the PAMpal R package.
+
+Events are automatically defined when the following conditions are met
+
+-   3 or more clicks exceed the MTC thresholds within 120 seconds
+-   Events have a maximum duration of 120 seconds
 
 ### Predict species classification using BANTER model
 
