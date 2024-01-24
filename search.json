@@ -781,14 +781,14 @@
     "href": "content/BaleenWhales/BlueWhales-ManualDetection.html",
     "title": "Blue Whales - Manual Detection",
     "section": "",
-    "text": "Due to the low frequency noise that persisted under 50Hz throughout most of the drifts, manual logging of calls was the easest option to bin blue whale vocalizations.\nTriton software was used to create and manually bin blue whale A,B and D calls into 60 minute bins.\n\nLogging methods can be found here.\n\nLogs were saved in excel and then compiled using R into one final worksheet."
+    "text": "Due to the low frequency noise that persisted under 50Hz throughout most of the drifts, manual logging of calls was the easest option to bin blue whale vocalizations.\nTriton software was used to create and manually bin blue whale A,B and D calls into 60 minute bins.\n\nLogging methods can be found here.\n\nLogs were saved in excel and then compiled using R into one final worksheet.\nR was then used to bin blue whale presence into hourly presence plots"
   },
   {
     "objectID": "content/BaleenWhales/BlueWhales-ManualDetection.html#logging-a-b-and-d-calls-in-the-ltsa",
     "href": "content/BaleenWhales/BlueWhales-ManualDetection.html#logging-a-b-and-d-calls-in-the-ltsa",
     "title": "Blue Whales - Manual Detection",
     "section": "",
-    "text": "Due to the low frequency noise that persisted under 50Hz throughout most of the drifts, manual logging of calls was the easest option to bin blue whale vocalizations.\nTriton software was used to create and manually bin blue whale A,B and D calls into 60 minute bins.\n\nLogging methods can be found here.\n\nLogs were saved in excel and then compiled using R into one final worksheet."
+    "text": "Due to the low frequency noise that persisted under 50Hz throughout most of the drifts, manual logging of calls was the easest option to bin blue whale vocalizations.\nTriton software was used to create and manually bin blue whale A,B and D calls into 60 minute bins.\n\nLogging methods can be found here.\n\nLogs were saved in excel and then compiled using R into one final worksheet.\nR was then used to bin blue whale presence into hourly presence plots"
   },
   {
     "objectID": "content/DataArchive/OBIS.html",
