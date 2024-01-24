@@ -4,7 +4,7 @@ author: "Cory Hom-Weaver"
 format: 
   revealjs:
     slide-number: true
-    footer: "[Source Code](https://github.com/SAEL-SWFSC/adrift-analysis-methods/content/BaleenWhales/BlueWhales/BlueWhales-ManualDetection/BlueWhaleLoggingSlides.qmd)" #This should link to your methods page
+    footer: "[Source Code](https://https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Slides/BlueWhaleLoggingSlides.qmd)" #This should link to your methods page
     theme: black
 editor: visual
 ---
