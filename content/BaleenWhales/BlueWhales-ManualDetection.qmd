@@ -4,11 +4,11 @@ title: Blue Whales - Manual Detection
 
 ## Logging A, B and D calls in the LTSA
 
--   Due to the low frequency noise that persisted under 50Hz throughout most of the drifts, manual logging of calls was the easest option to bin blue whale vocalizations.
+-   Due to the low frequency noise that persisted under 50Hz throughout most of the drifts, manual logging of calls was the easiest option to bin blue whale vocalizations.
 
 -   Triton software was used to create and manually bin blue whale A,B and D calls into 60 minute bins.
 
-    -   Logging methods can be found [here](https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.qmd).
+    -   Logging methods can be found [here](http://localhost:3163/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide).
 
 -   Logs were saved in excel and then compiled using R into one final worksheet.
 

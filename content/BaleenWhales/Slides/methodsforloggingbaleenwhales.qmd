@@ -4,7 +4,7 @@ author: "Cory Hom-Weaver"
 format: 
   revealjs:
     slide-number: true
-    footer: "[Source Code](https://https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Slides/BlueWhaleLoggingSlides.qmd)" #This should link to your methods page
+    footer: "[Back to Methods](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/BlueWhales-ManualDetection.html)" #This should link to your methods page
     theme: black
 editor: visual
 ---
@@ -232,7 +232,7 @@ editor: visual
 
 ## Now you Triton windows should look something like this
 
-![](/content/Slides/images/TritonSetupComplete.png){fig-align="center"}
+![](/content/Slides/images/TritonSetupComplete.jpg){fig-align="center"}
 
 ## Step 12: Logging your first sound {.scrollable}
 
@@ -292,6 +292,3 @@ editor: visual
 
 
 
-::: footer
-[More line highlighting options here](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
-:::
