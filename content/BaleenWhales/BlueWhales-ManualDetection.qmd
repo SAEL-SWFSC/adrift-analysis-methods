@@ -8,7 +8,7 @@ title: Blue Whales - Manual Detection
 
 -   Triton software was used to create and manually bin blue whale A,B and D calls into 60 minute bins.
 
-    -   Logging methods can be found [here](http://localhost:3163/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide).
+    -   Logging methods can be found [here](Slides/methodsforloggingbaleenwhales.qmd).
 
 -   Logs were saved in excel and then compiled using R into one final worksheet.
 

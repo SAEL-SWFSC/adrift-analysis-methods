@@ -22,7 +22,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 ### *Annotation in Triton*
 
--   Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA's to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. Click [here](https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Baleen%20Whales/Powerpoint/Methods%20for%20Logging%20Baleen%20Whales%20SWFSC%20V1.pptx) for more detail of these methods.
+-   Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA's to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created. Click [here](Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
 
 ## Brydes
 
