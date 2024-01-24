@@ -21,9 +21,9 @@ Within PAMGuard, a Generalized Power Law detector was used to detect Minke boing
 
 ## Database & Binary Storage {.smaller}
 
--   Set database path to a new blank database titled *ADRIFT\_###\_PG_2\_02_02_Minke.sqlite3*
+-   Set database path to a new blank database titled *ADRIFT\_###\_PG_2_02_02_Minke.sqlite3*
 
--   Create a new binary folder for your detections titled *ADRIFT\_###\_PG_2\_02_02_Minke*
+-   Create a new binary folder for your detections titled *ADRIFT\_###\_PG_2_02_02_Minke*
 
 ## Hydrophone Array {.smaller}
 
@@ -313,7 +313,7 @@ for(e in 1:nrow(wavDf)) {
 
 -   Method for boings cutoff at the start or end of file (only applies to subsampled data to be validated)
 
-    -   If the detector consistently picks up cutoff boings AND you think they can be picked up easily using manual effort (there is enough signal to know it is a boing) \-- then box these partial detections and label them as 'Cutoff Boing' (can be helpful as they note the occurrence of these calls during this time selection)
+    -   If the detector consistently picks up cutoff boings AND you think they can be picked up easily using manual effort (there is enough signal to know it is a boing) -- then box these partial detections and label them as 'Cutoff Boing' (can be helpful as they note the occurrence of these calls during this time selection)
 
         -   The box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)
 

@@ -1,0 +1,297 @@
+---
+title: "Methods for Logging Baleen Whales SWFSC"
+author: "Cory Hom-Weaver"
+format: 
+  revealjs:
+    slide-number: true
+    footer: "[Source Code](https://github.com/SAEL-SWFSC/adrift-analysis-methods/content/BaleenWhales/BlueWhales/BlueWhales-ManualDetection/BlueWhaleLoggingSlides.qmd)" #This should link to your methods page
+    theme: black
+editor: visual
+---
+
+## Step 1: Open Matlab and Set the Path {.smaller}
+
+::: columns
+::: {.column width="30%"}
+-   Currently we are using Matlab 2023a
+
+-   Click on the home tab -\>Environment-\>Set Path
+
+-   Click "Add folder with Subfolders..."
+
+-   Browse to the folder containing Triton-R2020
+
+-   Click "Save" and then "Close
+:::
+
+::: {.column width="70%"}
+![](/content/Slides/images/setpathmatlab.png){fig-align="right"}
+:::
+:::
+
+## Step 2: Open Triton {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   Start Matlab and at the command prompt type ‘triton’ and press enter to run the application
+
+-   Three windows will be displayed: Plot, Control, & Message…
+:::
+
+::: {.column width="60%"}
+![](/content/Slides/images/TritonWindows.png){fig-align="right"}
+:::
+:::
+
+## Step 3: Add Logger Remora {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   In the control window (upper left hand window) click on ‘Remoras’ then ‘Add Remora.”
+
+-   Browse to the folder containing Triton-\>Remoras-\>Logger. Highlight this folder and click ‘Select Folder’
+
+-   A new window pop up asking to restart Triton, click ‘Yes’
+
+-   You will only need to add the Remora once. Triton should remember this once you have added it. It will prompt you to restart Triton at this time.
+:::
+
+::: {.column width="60%"}
+![](/content/Slides/images/Addloggerremora.png){fig-align="right"}
+:::
+:::
+
+## Step 4: Open an LTSA {.smaller}
+
+::: columns
+::: {.column width="30%"}
+-   Click File-\>Open LTSA
+
+-   Browse to the LTSA you wish to use for your log (they may vary depending on the species you are logging). Blue and Fin whales were logged using 500Hz LTSAs
+
+-   When it opens the plot and control windows may look something like this
+:::
+
+::: {.column width="70%"}
+![](/content/Slides/images/OpeningLTSA.png){fig-align="right"}
+:::
+:::
+
+## Step 5: Set Parameters {.smaller}
+
+::: columns
+::: {.column width="50%"}
+
+-   If you are logging duty cycled data you will want to be looking at around 1 hour at a time. Set the plot length accordingly.
+
+-   If you are logging continuous data then plot length should be 1
+
+-   Make sure you start logging as close to the start of the hour as possible
+
+-   Brightness should be from 0-10dB
+
+-   Contrast should be around 100dB
+
+-   Depending on the species you will want to adjust your upper frequency bounds.
+
+           
+    -   For blue and fin whales you can look at 0-150Hz
+    
+:::
+
+::: {.column width="50%"}
+![](/content/Slides/images/SetParametersLTSA.png){fig-align="right"}
+:::
+:::
+
+## Step 6: Create a New Log {.smaller}
+
+::: columns
+::: {.column width="50%"}
+
+-   Click on Remoras->Log->New Log
+
+-   Enter in the name of the log and direct Triton to save it in the folder with the LTSA
+
+-   Name your log with the Cruise_Year_Drift_#_Species_Log
+
+    -   Ex: CCES_2018_Drift_07_BlueWhale_Log
+
+
+:::
+
+::: {.column width="50%"}
+![](/content/Slides/images/CreatingNewLog.png){fig-align="right"}
+:::
+:::
+
+## Step 7: Set the deployment metadata {.smaller}
+
+::: columns
+::: {.column width="50%"}
+
+-   Type your initials in the ‘User ID’ tab
+
+-   Type the project name in the ‘Project’ tab
+
+-   Type in the Drift number in “Deployment’ and ‘Site’ tabs
+
+-   Then select your start time on the LTSA.
+      -   Remember to make sure to start as close to the hour as possible
+      -   Click ‘Set deployment metadata'
+
+:::
+
+::: {.column width="50%"}
+![](/content/Slides/images/SetMetaData.png){fig-align="right"}
+:::
+:::
+
+## Step 8: Setting up logging options {.smaller}
+
+::: columns
+::: {.column width="50%"}
+
+-   Check ‘All’ under the logging options
+      -   You can double click the “All’ button to expand it and check off specific species if you want.
+
+-   Under Granularity select ‘binned’
+
+-   Under time in minutes type ‘60
+
+-   Click ‘Set Effort’ 
+
+    -   NOTE: Although your log is open in the background do not make changes to it. If you need to make a change to your spreadsheet you must end your logging session and then open the spreadsheet to make changes. 
+
+
+:::
+
+::: {.column width="50%"}
+![](/content/Slides/images/LoggingOptions.png){fig-align="right"}
+:::
+:::
+
+## Step 9: Scrolling and looking for calls {.smaller}
+
+::: columns
+::: {.column width="40%"}
+
+-   Use the arrows on the LTSA to scroll back and forward in time
+
+-   Look for spikes of energy in the LTSA
+      -   These are Blue whale D calls with low frequency noise 
+
+:::
+
+::: {.column width="60%"}
+![](/content/Slides/images/LookingForCalls.png){fig-align="right"}
+:::
+:::
+
+
+## Step 10: Zooming in on a sound {.smaller}
+
+::: columns
+::: {.column width="40%"}
+
+-   When you see a spike of energy that you want to investigate click on the ‘Expand’ button to open the associated wav file
+
+-   Then click on the part of the LTSA that you want to look at in more detail
+
+
+:::
+
+::: {.column width="60%"}
+![](/content/Slides/images/ExpandingASound.png){fig-align="right"}
+:::
+:::
+
+## Step 11: Adjust Spectrogram Parameters{.smaller}
+
+::: columns
+::: {.column width="50%"}
+
+-   Set the plot length to 120 s. If it wont let you set it that high then use the back arrow to scroll to the beginning of the wav file
+
+-   Set the Plot Freq End to 200 Hz.  We are looking for calls generally below 100 Hz.
+
+-   FFT will vary depending on the frequency range you are looking at. For blue and fin whales we will use 512
+
+-   Set %Overlap to 90
+
+-   Brightness should be between 0-10dB
+
+-   Contrast should be around 100%dB
+
+:::
+
+::: {.column width="50%"}
+![](/content/Slides/images/ParametersForSpectrogram.png){fig-align="right"}
+:::
+:::
+
+## Now you Triton windows should look something like this
+
+![](/content/Slides/images/TritonSetupComplete.png){fig-align="center"}
+
+## Step 12: Logging your first sound {.scrollable}
+
+-   Go through each hour of recordings and look for calls made by the species of interest (i.e. blue whale A, B and D calls)
+
+-   We will be binning call types by the hour
+
+-   When you find your first call we you click on the corresponding drop down for group and species
+
+-   Then check off the first call of that type you have seen in that hour 
+
+-   Click on the call and then click on “pick start”
+
+-   *In the comments please note the quality of the call (1-3) followed by the quality of the recordings (G or B). PLEASE SEPARATE USING A “,” (comma)
+
+    -   1=low SNR (signal to noise ratio)
+    -   2=medium SNR
+    -   3=high SNR
+    -   G=good and can use auto-detector
+    -   B=bad and cannot use auto-detector
+
+-   Click log to save the information to the spreadsheet
+
+    -   *See more on this on following slides
+    
+## Unsure about the species or call type?
+
+-   Listen to the sound. Does is sound like the call type you are logging?
+
+-   Check in with Cory or Shannon. If they are busy or aren’t sure of the call type either then…
+
+-   Save the image and audio
+
+-   In the comments box type “poss call type” (ie poss B call) after the SNR of the call and the G/B recording. Separate these using a comma. We will review these later
+
+    -   Ie : 3, G, poss B call
+
+
+## Examples of SNR 1 Calls
+
+![](/content/Slides/images/SNR1Calls.jpg) 
+
+
+## Examples of SNR 2 Calls
+
+![](/content/Slides/images/SNR2Calls.jpg) 
+
+
+## Examples of SNR 3 Calls
+![](/content/Slides/images/SNR3Calls.jpg)
+
+## Examples of B(bad) Recordings
+![](/content/Slides/images/BadRecordings.jpg)
+
+## Examples of G(good) Recordings
+![](/content/Slides/images/GoodRecordings.jpg)
+
+
+
+::: footer
+[More line highlighting options here](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
+:::

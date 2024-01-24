@@ -2,18 +2,12 @@
 title: Blue Whales - Manual Detection
 ---
 
-## Setting up LTSA parameters
+## Logging A, B and D calls in the LTSA
 
--   Open 500Hz LTSA for the drift that is being analyzed.
+-   Due to the low frequency noise that persisted under 50Hz throughout most of the drifts, manual logging of calls was the easest option to bin blue whale vocalizations.
 
-    -   Change the time being displayed to reflect an hour of data.
+-   Triton software was used to create and manually bin blue whale A,B and D calls into 60 minute bins.
 
-        -   For continuous recordings, it should say 1HR.
+    -   Logging methods can be found here.
 
-        -   For Duty cycled data it could vary between .2 and .6HRS
-
-    -   Increase the brightness to 5. Leave default contrast settings
-
-    -   
-
-Triton software was used to create and manually bin blue whale A,B and D call types into 60 minute bins.
+-   Logs were saved in excel and then compiled using R into one final worksheet.
