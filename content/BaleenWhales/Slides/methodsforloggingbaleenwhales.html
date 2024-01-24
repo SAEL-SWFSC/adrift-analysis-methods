@@ -11,8 +11,8 @@
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Kourtney Burger">
-  <title>ADRIFT Analysis Methods - Minke Methods</title>
+  <meta name="author" content="Cory Hom-Weaver">
+  <title>ADRIFT Analysis Methods - Methods for Logging Baleen Whales SWFSC</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,71 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #f8f8f2;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -391,350 +326,305 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Minke Methods</h1>
+  <h1 class="title">Methods for Logging Baleen Whales SWFSC</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Kourtney Burger 
+Cory Hom-Weaver 
 </div>
 </div>
 </div>
 
 </section>
-<section id="overview" class="slide level2 smaller">
-<h2>Overview</h2>
-<p>Within PAMGuard, a Generalized Power Law detector was used to detect Minke boings. We started with basic GPL settings from Tyler Helble’s PARM files and modified them to fit our data.</p>
-<ul>
-<li>Example Pamguard settings file (INSERT LINK)</li>
-</ul>
-
-<img data-src="../../../content/BaleenWhales/images/MinkeGPLDetections.png" class="r-stretch quarto-figure-center"><p class="caption">Spectrogram of Minke whale boings being detected by GPL detector</p></section>
-<section>
-<section id="pamguard-set-up" class="title-slide slide level1 center">
-<h1>PAMGuard Set Up</h1>
-
-</section>
-<section id="database-binary-storage" class="slide level2 smaller">
-<h2>Database &amp; Binary Storage</h2>
-<ul>
-<li><p>Set database path to a new blank database titled <em>ADRIFT_###_PG_2_02_02_Minke.sqlite3</em></p></li>
-<li><p>Create a new binary folder for your detections titled <em>ADRIFT_###_PG_2_02_02_Minke</em></p></li>
-</ul>
-</section>
-<section id="hydrophone-array" class="slide level2 smaller">
-<h2>Hydrophone Array</h2>
-<p>Depending on the drift that was processed, the array settings in Pamguard were updated to reflect the spacing between hydrophones and the hydrophone sensitivity. For our purposes we only used CH0 in Pamguard to run the detector (CH 1 in physical hydrophone array).</p>
-</section>
-<section id="sound-acquisition-decimation" class="slide level2 smaller">
-<h2>Sound Acquisition &amp; Decimation</h2>
-<ul>
-<li>Set the sound acquisition path to the folder your sound files are in</li>
-<li>The Decimator in PAMGuard was set to decimate to 10kHz and used a Butterworth Low Pass Filter of 5kHz.</li>
-</ul>
-</section>
-<section id="gpl-settings" class="slide level2 smaller">
-<h2>GPL Settings</h2>
+<section id="step-1-open-matlab-and-set-the-path" class="slide level2 smaller">
+<h2>Step 1: Open Matlab and Set the Path</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
+<div class="column" style="width:30%;">
+<ul>
+<li><p>Currently we are using Matlab 2023a</p></li>
+<li><p>Click on the home tab -&gt;Environment-&gt;Set Path</p></li>
+<li><p>Click “Add folder with Subfolders…”</p></li>
+<li><p>Browse to the folder containing Triton-R2020</p></li>
+<li><p>Click “Save” and then “Close</p></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-right">
 <figure>
-<p><img data-src="../../../content/BaleenWhales/images/Screenshot 2023-08-15 203934.png"></p>
-<figcaption>FFT Settings</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:.5%;">
-
-</div><div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../../content/BaleenWhales/images/Screenshot 2023-08-15 204002.png"></p>
-<figcaption>Detection Settings</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:.5%;">
-
-</div><div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../../content/BaleenWhales/images/Screenshot 2023-08-15 204019.png"></p>
-<figcaption>Contours settings</figcaption>
+<p><img data-src="../../../content/Slides/images/setpathmatlab.png"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="spectrogram-annotation-setup" class="slide level2 smaller">
-<h2>Spectrogram Annotation Setup</h2>
-<p>In order for PAMpal to interact with the GPL detections we added in the Detection Grouper Module. This allows PAMpal to create events and push them back in the SQLite database in PAMGuard.</p>
-</section>
-<section id="detection-grouper-settings" class="slide level2 smaller">
-<h2>Detection Grouper Settings</h2>
+<section id="step-2-open-triton" class="slide level2 smaller">
+<h2>Step 2: Open Triton</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>Start Matlab and at the command prompt type ‘triton’ and press enter to run the application</p></li>
+<li><p>Three windows will be displayed: Plot, Control, &amp; Message…</p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-right">
 <figure>
-<p><img data-src="../../../content/BaleenWhales/Screenshots/Detection_Grouper_Display_Settings_PG.JPG"></p>
-<figcaption>Markers settings</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:.5%;">
-
-</div><div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../../content/BaleenWhales/Screenshots/Detection_Grouper_Data_Selection_Settings_PG.JPG"></p>
-<figcaption>Data selection settings</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:.5%;">
-
-</div><div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../../content/BaleenWhales/Screenshots/Detection_Grouper_Annotation_Settings_PG.JPG"></p>
-<figcaption>Annotations settings</figcaption>
+<p><img data-src="../../../content/Slides/images/TritonWindows.png"></p>
 </figure>
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="spectrogram-annotation-settings" class="title-slide slide level1 center">
-<h1>Spectrogram Annotation Settings</h1>
-
 </section>
-<section id="create-new-user-form" class="slide level2 smaller">
-<h2>Create New User Form</h2>
-<ul>
-<li><p>It is important to note that both the “Text” and “User Form” annotation boxes must be selected</p>
-<ul>
-<li><p>To setup the user form annotation (click on the gear icon)</p></li>
-<li><p>Create new user form</p></li>
-<li><p>Label the form “evType” then click ok</p></li>
-</ul></li>
-</ul>
-
-<img data-src="../../../content/BaleenWhales/Screenshots/Adding_user_form_to_DGL.JPG" class="r-stretch"></section>
-<section id="edit-user-form-add-lookup-table" class="slide level2 smaller">
-<h2>Edit User Form &amp; Add Lookup Table</h2>
+<section id="step-3-add-logger-remora" class="slide level2 smaller">
+<h2>Step 3: Add Logger Remora</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
+<div class="column" style="width:40%;">
 <ul>
-<li><p>Next click “edit form”</p></li>
-<li><p>Add a lookup table and fill it out exactly as follows (see figure x.)</p>
-<ul>
-<li><p>Title: eventType</p></li>
-<li><p>PostTitle: eventType</p></li>
-<li><p>DbTitle: eventType</p></li>
-<li><p>Topic: DGEventType</p></li>
-</ul></li>
+<li><p>In the control window (upper left hand window) click on ‘Remoras’ then ’Add Remora.”</p></li>
+<li><p>Browse to the folder containing Triton-&gt;Remoras-&gt;Logger. Highlight this folder and click ‘Select Folder’</p></li>
+<li><p>A new window pop up asking to restart Triton, click ‘Yes’</p></li>
+<li><p>You will only need to add the Remora once. Triton should remember this once you have added it. It will prompt you to restart Triton at this time.</p></li>
 </ul>
-</div><div class="column" style="width:66%;">
-<p><img data-src="../../../content/BaleenWhales/Screenshots/User_form_lookup_for_DGL.png"></p>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/Addloggerremora.png"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
-<section id="edit-lookup-list" class="slide level2 smaller">
-<h2>Edit Lookup List</h2>
+<section id="step-4-open-an-ltsa" class="slide level2 smaller">
+<h2>Step 4: Open an LTSA</h2>
 <div class="columns">
-<div class="column" style="width:70%;">
-<p>Add selection drop down by right clicking on ‘= no selection =’ and selecting ‘Edit list’</p>
-<p><img data-src="../../../content/BaleenWhales/images/paste-84EC9657.png"></p>
-</div><div class="column" style="width:30%;">
-<p>Click ‘Add item’ and fill in species specific options</p>
+<div class="column" style="width:30%;">
 <ul>
-<li><p>B - Boing</p></li>
-<li><p>CB - Cutoff Boing</p></li>
-<li><p>UB - Unknown Biological Sound</p></li>
-<li><p>UA - Unknown Anthropogenic Sound</p></li>
+<li><p>Click File-&gt;Open LTSA</p></li>
+<li><p>Browse to the LTSA you wish to use for your log (they may vary depending on the species you are logging). Blue and Fin whales were logged using 500Hz LTSAs</p></li>
+<li><p>When it opens the plot and control windows may look something like this</p></li>
 </ul>
-<p>Click ‘Ok’ to close all of the tabs and return to Pamguard Viewer window</p>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/OpeningLTSA.png"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
-<section id="add-spectrogram-annotation-module" class="slide level2 smaller">
-<h2>Add Spectrogram Annotation Module</h2>
-<ul>
-<li><p>Go to File &gt; Add Modules &gt; Utilities &gt; Spectrogram Annotation</p></li>
-<li><p>Under ‘Settings’, go to Spectrogram Annotation settings and click on the gear icon next to ‘User form annotation’</p></li>
-<li><p>Click on the ‘User form’ drop down, select ‘UDF_evType’, and click Ok to return to the Pamguard Viewer window</p></li>
-</ul>
-
-<img data-src="../../../content/BaleenWhales/images/paste-C1DA1020.png" class="r-stretch"></section>
-<section id="fix-spectrogram-parameters" class="slide level2 smaller">
-<h2>Fix Spectrogram Parameters</h2>
+<section id="step-5-set-parameters" class="slide level2 smaller">
+<h2>Step 5: Set Parameters</h2>
 <div class="columns">
-<div class="column" style="width:48%;">
+<div class="column" style="width:50%;">
 <ul>
-<li><p>Right click on the spectrogram and go to Settings</p>
+<li><p>If you are logging duty cycled data you will want to be looking at around 1 hour at a time. Set the plot length accordingly.</p></li>
+<li><p>If you are logging continuous data then plot length should be 1</p></li>
+<li><p>Make sure you start logging as close to the start of the hour as possible</p></li>
+<li><p>Brightness should be from 0-10dB</p></li>
+<li><p>Contrast should be around 100dB</p></li>
+<li><p>Depending on the species you will want to adjust your upper frequency bounds.</p>
 <ul>
-<li>Ensure both the ‘Detection Grouper’ and ‘Spectrogram Annotation’ boxes are checked and click Ok</li>
+<li>For blue and fin whales you can look at 0-150Hz</li>
 </ul></li>
-<li><p>Go to File &gt; Save Data and close Pamguard</p></li>
 </ul>
-</div><div class="column" style="width:4%;">
-
-</div><div class="column" style="width:48%;">
-<p><img data-src="../../../content/BaleenWhales/images/paste-C82ACEBF.png"></p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/SetParametersLTSA.png"></p>
+</figure>
 </div>
 </div>
-</section></section>
-<section>
-<section id="detection-validation" class="title-slide slide level1 center">
-<h1>Detection Validation</h1>
-
-</section>
-<section id="detection-validation-1" class="slide level2">
-<h2>Detection Validation</h2>
-<p>The data is then manually scanned for minke boings and other sounds of interest using the GPL detections and Pamguard Spectrogram Annotation tool.</p>
-</section>
-<section id="spectrogram-annotation" class="slide level2">
-<h2>Spectrogram Annotation</h2>
-<p>Using the ‘Generalized Power Law Detector’ Section in the Data Map tab, scroll to detections and center your data there</p>
-
-<img data-src="../../../content/BaleenWhales/images/DataMap.png" class="r-stretch"></section>
-<section id="spectrogram-annotation-1" class="slide level2">
-<h2>Spectrogram Annotation</h2>
-<p>Return to the spectrogram view then click and drag to create an annotation box around each boing</p>
-
-<img data-src="../../../content/BaleenWhales/images/annotationBox.png" class="r-stretch"></section>
-<section id="spectrogram-annotation-2" class="slide level2 smaller">
-<h2>Spectrogram Annotation</h2>
-<p>A ‘Spectrogram Annotation’ pop up window will appear. In the ‘User form annotation’ section, select the eventType as a ‘Boing’ or other respective option, and press ok<img data-src="images/paste-0B89BB20.png" width="573"></p>
-</section>
-<section id="spectrogram-annotation-3" class="slide level2">
-<h2>Spectrogram Annotation</h2>
-<p>Continue to scan GPL detections and annotate all boings including those missed by the GPL detector, while ignoring false detections</p>
-
-<img data-src="../../../content/BaleenWhales/images/boinga.png" class="r-stretch"></section></section>
-<section>
-<section id="additional-20-data-validation" class="title-slide slide level1 center">
-<h1>Additional 20% Data Validation</h1>
-
-</section>
-<section id="validation-code" class="slide level2 smaller">
-<h2>20% Validation Code</h2>
-<p>After running the GPL detector and manually scanning all detections, a stratified sub-sampling method was applied to randomly sample 20% of all data for additional validation to look for false negatives.</p>
-<p>The code below can be used to subsample 20% of the data.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># PAMpal simple example </span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># Its on CRAN. Yay!</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># install.packages('PAMpal')</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Sometimes I fix things and theyre only available on the GitHub version</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co"># Right now there are some things that run a lot faster on teh GitHub version so I recommend installing that.</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co"># updated 22-12-6 to include loop for PG event adding w/PAMmisc</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
-<span id="cb1-8"><a href="#cb1-8"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'TaikiSan21/PAMpal'</span>)</span>
-<span id="cb1-9"><a href="#cb1-9"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'TaikiSan21/PAMmisc'</span>)</span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="fu">library</span>(PAMpal)</span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">library</span>(PAMmisc)</span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># Start by creating a "PAMpalSettings" object. This keeps track of what data you want to process and what processing you want to apply to it.</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="co"># Change paths below to your DB and binary folder. Can just be the highest level binary folder for that drift - it will add all files within that folder recursively through subfolders.</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="co"># This will also ask you to type in some parameters for calculations in your console. You can just hit ENTER to accept defaults for all of these, they aren't relevant to the GPL calculations only for clicks.</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a>pps <span class="ot">&lt;-</span> <span class="fu">PAMpalSettings</span>(<span class="at">db =</span> <span class="st">'Path to database'</span>,</span>
-<span id="cb1-20"><a href="#cb1-20"></a>                      <span class="at">binaries =</span> <span class="st">'Path to binaries'</span>,</span>
-<span id="cb1-21"><a href="#cb1-21"></a>                      <span class="co"># these parameters are only for the click detector - can ignroe</span></span>
-<span id="cb1-22"><a href="#cb1-22"></a>                      <span class="at">sr_hz=</span><span class="st">'auto'</span>,</span>
-<span id="cb1-23"><a href="#cb1-23"></a>                      <span class="at">filterfrom_khz=</span><span class="dv">0</span>,</span>
-<span id="cb1-24"><a href="#cb1-24"></a>                      <span class="at">filterto_khz=</span><span class="cn">NULL</span>,</span>
-<span id="cb1-25"><a href="#cb1-25"></a>                      <span class="at">winLen_sec=</span>.<span class="dv">0025</span>)</span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a><span class="co"># Now tell it to process your data. Id is optional and serves no function, but can be useful to tell data apart at a later point in time. Here mode = 'recording' tells it how to organize your data. Most of the time we are working with data that have been marked manually into events, so PAMpal wants to organize things into events. mode='db' uses the events in the database, and only processes the detectoins you've marked out. In this case we just want to process everything, which is what mode='recording' does. It will group them into events by recording file. </span></span>
-<span id="cb1-28"><a href="#cb1-28"></a></span>
-<span id="cb1-29"><a href="#cb1-29"></a><span class="co"># This might take some time to read in events after processing in order to get the time </span></span>
-<span id="cb1-30"><a href="#cb1-30"></a><span class="co">#data &lt;- processPgDetections(pps, mode='db', id='Minke_CCES_019') </span></span>
-<span id="cb1-31"><a href="#cb1-31"></a></span>
-<span id="cb1-32"><a href="#cb1-32"></a>data <span class="ot">&lt;-</span> <span class="fu">processPgDetections</span>(pps, <span class="at">mode=</span><span class="st">'recording'</span>, <span class="at">id=</span><span class="st">'Species_Project_Drift#'</span>)</span>
-<span id="cb1-33"><a href="#cb1-33"></a></span>
-<span id="cb1-34"><a href="#cb1-34"></a><span class="co"># And here's how you can get the detections information out of "data" as a dataframe. Time column is "UTC", other columns are stuff it measured. </span></span>
-<span id="cb1-35"><a href="#cb1-35"></a>gplDf <span class="ot">&lt;-</span> <span class="fu">getGPLData</span>(data)</span>
-<span id="cb1-36"><a href="#cb1-36"></a></span>
-<span id="cb1-37"><a href="#cb1-37"></a><span class="co"># Now we can add the wav files to this data. You might get a warning about "startSample", its safe to ignore that.</span></span>
-<span id="cb1-38"><a href="#cb1-38"></a>data <span class="ot">&lt;-</span> <span class="fu">addRecordings</span>(data, </span>
-<span id="cb1-39"><a href="#cb1-39"></a>                      <span class="at">folder=</span><span class="st">'Path to wav files'</span>)</span>
-<span id="cb1-40"><a href="#cb1-40"></a></span>
-<span id="cb1-41"><a href="#cb1-41"></a><span class="co"># that data is stored here as a dataframe. Has "start" &amp; "end" as POSIXct and the fulle path to the file as "file"</span></span>
-<span id="cb1-42"><a href="#cb1-42"></a>wavDf <span class="ot">&lt;-</span> <span class="fu">files</span>(data)<span class="sc">$</span>recordings</span>
-<span id="cb1-43"><a href="#cb1-43"></a></span>
-<span id="cb1-44"><a href="#cb1-44"></a><span class="co"># add number of detections to this</span></span>
-<span id="cb1-45"><a href="#cb1-45"></a>nDets <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">events</span>(data), nDetections)</span>
-<span id="cb1-46"><a href="#cb1-46"></a>nDets <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">join=</span><span class="fu">names</span>(nDets), <span class="at">nDets=</span>nDets)</span>
-<span id="cb1-47"><a href="#cb1-47"></a>wavDf<span class="sc">$</span>join <span class="ot">&lt;-</span> <span class="fu">basename</span>(wavDf<span class="sc">$</span>file)</span>
-<span id="cb1-48"><a href="#cb1-48"></a>wavDf <span class="ot">&lt;-</span> <span class="fu">left_join</span>(wavDf, nDets)</span>
-<span id="cb1-49"><a href="#cb1-49"></a>wavDf<span class="sc">$</span>join <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb1-50"><a href="#cb1-50"></a>wavDf<span class="sc">$</span>nDets[<span class="fu">is.na</span>(wavDf<span class="sc">$</span>nDets)] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb1-51"><a href="#cb1-51"></a></span>
-<span id="cb1-52"><a href="#cb1-52"></a>nfiles <span class="ot">=</span><span class="fu">round</span>(<span class="fu">nrow</span>(wavDf)<span class="sc">*</span>.<span class="dv">2</span>)</span>
-<span id="cb1-53"><a href="#cb1-53"></a>randStart <span class="ot">=</span><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="dv">1</span>)</span>
-<span id="cb1-54"><a href="#cb1-54"></a></span>
-<span id="cb1-55"><a href="#cb1-55"></a>wavDf<span class="ot">=</span>wavDf[<span class="fu">round</span>(<span class="fu">seq</span>(randStart, <span class="fu">nrow</span>(wavDf), <span class="at">length.out =</span> nfiles)),]</span>
-<span id="cb1-56"><a href="#cb1-56"></a></span>
-<span id="cb1-57"><a href="#cb1-57"></a><span class="co"># If we care about assigning some kind of initial label to these detections. Otherwise ignore. </span></span>
-<span id="cb1-58"><a href="#cb1-58"></a>data <span class="ot">&lt;-</span> <span class="fu">setSpecies</span>(data, <span class="at">method=</span><span class="st">'manual'</span>, <span class="at">value=</span><span class="st">'InitialGPL'</span>)</span>
-<span id="cb1-59"><a href="#cb1-59"></a></span>
-<span id="cb1-60"><a href="#cb1-60"></a><span class="co"># Add events from wavDf loop</span></span>
-<span id="cb1-61"><a href="#cb1-61"></a><span class="cf">for</span>(e <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wavDf)) {</span>
-<span id="cb1-62"><a href="#cb1-62"></a>  thisEv <span class="ot">&lt;-</span> data[[<span class="fu">basename</span>(wavDf<span class="sc">$</span>file[e])]]</span>
-<span id="cb1-63"><a href="#cb1-63"></a>  <span class="co"># this will get all detector types, if just one type is wanted can be simplified to ex. uids &lt;- unique(getGPLData(thisEv)$UID)</span></span>
-<span id="cb1-64"><a href="#cb1-64"></a>  uids <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">unlist</span>(<span class="fu">lapply</span>(<span class="fu">getDetectorData</span>(thisEv), <span class="cf">function</span>(x) {</span>
-<span id="cb1-65"><a href="#cb1-65"></a>    <span class="cf">if</span>(<span class="fu">is.null</span>(x)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-66"><a href="#cb1-66"></a>    x<span class="sc">$</span>UID</span>
-<span id="cb1-67"><a href="#cb1-67"></a>  })))</span>
-<span id="cb1-68"><a href="#cb1-68"></a>  </span>
-<span id="cb1-69"><a href="#cb1-69"></a>  <span class="fu">addPgEvent</span>(<span class="at">db =</span> <span class="fu">files</span>(thisEv)<span class="sc">$</span>db,</span>
-<span id="cb1-70"><a href="#cb1-70"></a>             <span class="at">binary =</span> <span class="fu">files</span>(thisEv)<span class="sc">$</span>binaries,</span>
-<span id="cb1-71"><a href="#cb1-71"></a>             <span class="at">eventType =</span> <span class="fu">species</span>(thisEv)<span class="sc">$</span>id,</span>
-<span id="cb1-72"><a href="#cb1-72"></a>             <span class="at">UIDs =</span> uids,</span>
-<span id="cb1-73"><a href="#cb1-73"></a>             <span class="at">type =</span> <span class="st">'dg'</span>,</span>
-<span id="cb1-74"><a href="#cb1-74"></a>             <span class="at">start =</span> wavDf<span class="sc">$</span>start[e],</span>
-<span id="cb1-75"><a href="#cb1-75"></a>             <span class="at">end =</span> wavDf<span class="sc">$</span>end[e],</span>
-<span id="cb1-76"><a href="#cb1-76"></a>             <span class="at">comment =</span> <span class="fu">paste0</span>(<span class="st">'Added by PAMpal, event ID: '</span>, <span class="fu">id</span>(thisEv)))</span>
-<span id="cb1-77"><a href="#cb1-77"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="validation-steps" class="slide level2 scrollable">
-<h2>20% Validation Steps</h2>
+<section id="step-6-create-a-new-log" class="slide level2 smaller">
+<h2>Step 6: Create a New Log</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li><p>Once you have followed the code above to subsample your data, make a copy of the database in a ‘Data Validated’ folder and reopen the database in Pamguard Viewer</p></li>
-<li><p>Go to File &gt; Add Modules &gt; Displays &gt; User Display</p></li>
-</ul>
-<p><img data-src="../../../content/BaleenWhales/images/paste-2578EBE1.png"></p>
+<li><p>Click on Remoras-&gt;Log-&gt;New Log</p></li>
+<li><p>Enter in the name of the log and direct Triton to save it in the folder with the LTSA</p></li>
+<li><p>Name your log with the Cruise_Year_Drift_#_Species_Log</p>
 <ul>
-<li><p>Name the new user display ‘Subsample’</p></li>
-<li><p>Click on the new subsample tab and go to User Display &gt; New Detection Grouper data display</p></li>
-</ul>
-<p><img data-src="../../../content/BaleenWhales/images/paste-12CF9694.png"></p>
-<ul>
-<li>Your subsampled data should then be listed with associate marker colors</li>
-</ul>
-<p><img data-src="../../../content/BaleenWhales/images/paste-F6687E7F.png"></p>
-<ul>
-<li>Validate each subsampled wav file by scrolling in the spectrogram to the file and scanning for boings</li>
-</ul>
-</section></section>
-<section id="additional-notes" class="title-slide slide level1 smaller center">
-<h1>Additional Notes</h1>
-<ul>
-<li><p>Method for boings cutoff at the start or end of file (only applies to subsampled data to be validated)</p>
-<ul>
-<li><p>If the detector consistently picks up cutoff boings AND you think they can be picked up easily using manual effort (there is enough signal to know it is a boing) – then box these partial detections and label them as ‘Cutoff Boing’ (can be helpful as they note the occurrence of these calls during this time selection)</p>
-<ul>
-<li>The box should go to absolute zero (hug that left edge), as we can later use this demarcation to identify potential calls that are incomplete (if that is important for downstream processing)</li>
-</ul></li>
-</ul></li>
-<li><p>Method for false detections</p>
-<ul>
-<li>Ignore them</li>
+<li>Ex: CCES_2018_Drift_07_BlueWhale_Log</li>
 </ul></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/CreatingNewLog.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-7-set-the-deployment-metadata" class="slide level2 smaller">
+<h2>Step 7: Set the deployment metadata</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Type your initials in the ‘User ID’ tab</p></li>
+<li><p>Type the project name in the ‘Project’ tab</p></li>
+<li><p>Type in the Drift number in “Deployment’ and ‘Site’ tabs</p></li>
+<li><p>Then select your start time on the LTSA.</p>
+<ul>
+<li>Remember to make sure to start as close to the hour as possible</li>
+<li>Click ‘Set deployment metadata’</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/SetMetaData.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-8-setting-up-logging-options" class="slide level2 smaller">
+<h2>Step 8: Setting up logging options</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Check ‘All’ under the logging options</p>
+<ul>
+<li>You can double click the “All’ button to expand it and check off specific species if you want.</li>
+</ul></li>
+<li><p>Under Granularity select ‘binned’</p></li>
+<li><p>Under time in minutes type ’60</p></li>
+<li><p>Click ‘Set Effort’</p>
+<ul>
+<li>NOTE: Although your log is open in the background do not make changes to it. If you need to make a change to your spreadsheet you must end your logging session and then open the spreadsheet to make changes.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/LoggingOptions.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-9-scrolling-and-looking-for-calls" class="slide level2 smaller">
+<h2>Step 9: Scrolling and looking for calls</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>Use the arrows on the LTSA to scroll back and forward in time</p></li>
+<li><p>Look for spikes of energy in the LTSA</p>
+<ul>
+<li>These are Blue whale D calls with low frequency noise</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/LookingForCalls.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-10-zooming-in-on-a-sound" class="slide level2 smaller">
+<h2>Step 10: Zooming in on a sound</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>When you see a spike of energy that you want to investigate click on the ‘Expand’ button to open the associated wav file</p></li>
+<li><p>Then click on the part of the LTSA that you want to look at in more detail</p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/ExpandingASound.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-11-adjust-spectrogram-parameters" class="slide level2 smaller">
+<h2>Step 11: Adjust Spectrogram Parameters</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Set the plot length to 120 s. If it wont let you set it that high then use the back arrow to scroll to the beginning of the wav file</p></li>
+<li><p>Set the Plot Freq End to 200 Hz. We are looking for calls generally below 100 Hz.</p></li>
+<li><p>FFT will vary depending on the frequency range you are looking at. For blue and fin whales we will use 512</p></li>
+<li><p>Set %Overlap to 90</p></li>
+<li><p>Brightness should be between 0-10dB</p></li>
+<li><p>Contrast should be around 100%dB</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/ParametersForSpectrogram.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="now-you-triton-windows-should-look-something-like-this" class="slide level2">
+<h2>Now you Triton windows should look something like this</h2>
+
+<img data-src="../../../content/Slides/images/TritonSetupComplete.png" class="r-stretch quarto-figure-center"></section>
+<section id="step-12-logging-your-first-sound" class="slide level2 scrollable">
+<h2>Step 12: Logging your first sound</h2>
+<ul>
+<li><p>Go through each hour of recordings and look for calls made by the species of interest (i.e.&nbsp;blue whale A, B and D calls)</p></li>
+<li><p>We will be binning call types by the hour</p></li>
+<li><p>When you find your first call we you click on the corresponding drop down for group and species</p></li>
+<li><p>Then check off the first call of that type you have seen in that hour</p></li>
+<li><p>Click on the call and then click on “pick start”</p></li>
+<li><p>*In the comments please note the quality of the call (1-3) followed by the quality of the recordings (G or B). PLEASE SEPARATE USING A “,” (comma)</p>
+<ul>
+<li>1=low SNR (signal to noise ratio)</li>
+<li>2=medium SNR</li>
+<li>3=high SNR</li>
+<li>G=good and can use auto-detector</li>
+<li>B=bad and cannot use auto-detector</li>
+</ul></li>
+<li><p>Click log to save the information to the spreadsheet</p>
+<ul>
+<li>*See more on this on following slides</li>
+</ul></li>
+</ul>
+</section>
+<section id="unsure-about-the-species-or-call-type" class="slide level2">
+<h2>Unsure about the species or call type?</h2>
+<ul>
+<li><p>Listen to the sound. Does is sound like the call type you are logging?</p></li>
+<li><p>Check in with Cory or Shannon. If they are busy or aren’t sure of the call type either then…</p></li>
+<li><p>Save the image and audio</p></li>
+<li><p>In the comments box type “poss call type” (ie poss B call) after the SNR of the call and the G/B recording. Separate these using a comma. We will review these later</p>
+<ul>
+<li>Ie : 3, G, poss B call</li>
+</ul></li>
+</ul>
+</section>
+<section id="examples-of-snr-1-calls" class="slide level2">
+<h2>Examples of SNR 1 Calls</h2>
+
+<img data-src="../../../content/Slides/images/SNR1Calls.jpg" class="r-stretch"></section>
+<section id="examples-of-snr-2-calls" class="slide level2">
+<h2>Examples of SNR 2 Calls</h2>
+
+<img data-src="../../../content/Slides/images/SNR2Calls.jpg" class="r-stretch"></section>
+<section id="examples-of-snr-3-calls" class="slide level2">
+<h2>Examples of SNR 3 Calls</h2>
+
+<img data-src="../../../content/Slides/images/SNR3Calls.jpg" class="r-stretch"></section>
+<section id="examples-of-bbad-recordings" class="slide level2">
+<h2>Examples of B(bad) Recordings</h2>
+
+<img data-src="../../../content/Slides/images/BadRecordings.jpg" class="r-stretch"></section>
+<section id="examples-of-ggood-recordings" class="slide level2">
+<h2>Examples of G(good) Recordings</h2>
+
+<img data-src="../../../content/Slides/images/GoodRecordings.jpg" class="r-stretch"><div class="footer">
+<p><a href="https://quarto.org/docs/presentations/revealjs/#line-highlighting">More line highlighting options here</a></p>
+</div>
 
 <div class="footer footer-default">
-<p><a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Overview.html">Back to baleen whale methods overview</a></p>
+<p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/content/BaleenWhales/BlueWhales/BlueWhales-ManualDetection/BlueWhaleLoggingSlides.qmd">Source Code</a></p>
 </div>
 </section>
     </div>
@@ -948,44 +838,6 @@ Kourtney Burger
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

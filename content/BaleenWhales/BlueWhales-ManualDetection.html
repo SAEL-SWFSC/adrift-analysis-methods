@@ -315,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setting-up-ltsa-parameters" id="toc-setting-up-ltsa-parameters" class="nav-link active" data-scroll-target="#setting-up-ltsa-parameters">Setting up LTSA parameters</a></li>
+  <li><a href="#logging-a-b-and-d-calls-in-the-ltsa" id="toc-logging-a-b-and-d-calls-in-the-ltsa" class="nav-link active" data-scroll-target="#logging-a-b-and-d-calls-in-the-ltsa">Logging A, B and D calls in the LTSA</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/BaleenWhales/BlueWhales-ManualDetection.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/BaleenWhales/BlueWhales-ManualDetection.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -339,21 +339,16 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="setting-up-ltsa-parameters" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-ltsa-parameters">Setting up LTSA parameters</h2>
+<section id="logging-a-b-and-d-calls-in-the-ltsa" class="level2">
+<h2 class="anchored" data-anchor-id="logging-a-b-and-d-calls-in-the-ltsa">Logging A, B and D calls in the LTSA</h2>
 <ul>
-<li><p>Open 500Hz LTSA for the drift that is being analyzed.</p>
+<li><p>Due to the low frequency noise that persisted under 50Hz throughout most of the drifts, manual logging of calls was the easest option to bin blue whale vocalizations.</p></li>
+<li><p>Triton software was used to create and manually bin blue whale A,B and D calls into 60 minute bins.</p>
 <ul>
-<li><p>Change the time being displayed to reflect an hour of data.</p>
-<ul>
-<li><p>For continuous recordings, it should say 1HR.</p></li>
-<li><p>For Duty cycled data it could vary between .2 and .6HRS</p></li>
+<li>Logging methods can be found here.</li>
 </ul></li>
-<li><p>Increase the brightness to 5. Leave default contrast settings</p></li>
-<li></li>
-</ul></li>
+<li><p>Logs were saved in excel and then compiled using R into one final worksheet.</p></li>
 </ul>
-<p>Triton software was used to create and manually bin blue whale A,B and D call types into 60 minute bins.</p>
 
 
 </section>
