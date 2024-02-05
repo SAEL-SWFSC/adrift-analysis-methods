@@ -20,6 +20,8 @@ title: Triton Metrics
 
     -   Identify periods of noisy or bad data to eliminate from downstream analyses
 
+-   Soundscape metrics are only calculated for drifts that used a Soundtrap model 4300 or 640 with a HTI-92WB hydrophone. In the 2016 PASCAL project, there were 13 drifts that either used a SM2, SM3 recorder, or included an array that only had HTI-96min hydrophones. These drifts do not have soundscape metrics.
+
 ## Step-by-Step Instructions
 
 ### Decimation of acoustic data
@@ -90,9 +92,7 @@ See 'SysSens' function to automatically find calibration value for each deployme
 
 ![](images/Triton_SoundscapeMetric_Settings.png){width="400"}
 
-ADRIFT recordings were collected on a continuous or 50% duty cycle (6 min on out of
-every 12 minutes). Carious duty cycles were used to collect acoustic data from the 2016
-PASCAL and 2018 CCES survey, with a minimum 2-minute recording time. Therefore, a 2 minute window is used to calculate soundscape metrics which can be compared across surveys.
+ADRIFT recordings were collected on a continuous or 50% duty cycle (6 min on out of every 12 minutes). Carious duty cycles were used to collect acoustic data from the 2016 PASCAL and 2018 CCES survey, with a minimum 2-minute recording time. Therefore, a 2 minute window is used to calculate soundscape metrics which can be compared across surveys.
 
 Consistent cable strumming was observed below 100 Hz on many drifting buoy deployments, therefore the lower frequency limit for all calculated soundscape metrics was set to 100 Hz.
 
@@ -100,6 +100,6 @@ Consistent cable strumming was observed below 100 Hz on many drifting buoy deplo
 
 Manual identification in LTSA
 
-### Identify bad data 
+### Identify bad data
 
 Scan LTSA (1s, Hz resolution) with 2-hour windows, viewing frequencies between 0-500 Hz to identify time periods with noisy or compromised data quality. This review was performed as part of the initial data quality check (see more details on [these methods here](https://sael-swfsc.github.io/adrift-analysis-methods/content/DataArchive/DataQualityCheck.html#assess-data-quality)), and is an important step to identify time periods where noisy data prevents accurate calculations of sound levels in the environment.
