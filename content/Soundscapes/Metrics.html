@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -330,7 +350,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#calculate-full-system-calibration" id="toc-calculate-full-system-calibration" class="nav-link" data-scroll-target="#calculate-full-system-calibration">Calculate full system calibration</a></li>
   <li><a href="#calculate-soundscape-metrics" id="toc-calculate-soundscape-metrics" class="nav-link" data-scroll-target="#calculate-soundscape-metrics">Calculate soundscape metrics</a></li>
   <li><a href="#detect-vessels" id="toc-detect-vessels" class="nav-link" data-scroll-target="#detect-vessels">Detect vessels</a></li>
-  <li><a href="#identify-bad-data" id="toc-identify-bad-data" class="nav-link" data-scroll-target="#identify-bad-data">Identify bad data</a></li>
+  <li><a href="#identify-time-periods-of-bad-data" id="toc-identify-time-periods-of-bad-data" class="nav-link" data-scroll-target="#identify-time-periods-of-bad-data">Identify time periods of bad data</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/Soundscapes/Metrics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/Soundscapes/Metrics.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -431,17 +451,44 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="detect-vessels" class="level3">
 <h3 class="anchored" data-anchor-id="detect-vessels">Detect vessels</h3>
-<p>Manual identification in LTSA</p>
+<section id="start-triton-logger-remora" class="level4">
+<h4 class="anchored" data-anchor-id="start-triton-logger-remora">Start Triton Logger Remora</h4>
+<p>1. Launch Triton within Matlab. Open the LTSA for the data you want to analyze.</p>
+<p>2. In the Triton “Control” window, select the Remoras menu, choose Logger and then start a new log. You will need to re-start Triton if this is the first instance of using the Logger remora. See more info on Triton Remoras on the Marine Bioacoustic Research Collective <a href="https://github.com/MarineBioAcousticsRC/Triton/wiki">wiki</a>.</p>
 </section>
-<section id="identify-bad-data" class="level3">
-<h3 class="anchored" data-anchor-id="identify-bad-data">Identify bad data</h3>
-<p>Scan LTSA (1s, Hz resolution) with 2-hour windows, viewing frequencies between 0-500 Hz to identify time periods with noisy or compromised data quality. This review was performed as part of the initial data quality check (see more details on <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/DataArchive/DataQualityCheck.html#assess-data-quality">these methods here</a>), and is an important step to identify time periods where noisy data prevents accurate calculations of sound levels in the environment.</p>
+<section id="log-start-and-end-time-of-ship-acoustic-events" class="level4">
+<h4 class="anchored" data-anchor-id="log-start-and-end-time-of-ship-acoustic-events"><strong>Log start and end time of ship acoustic events</strong></h4>
+<p>Ships produce different noises such as impulsive signals from ship propeller cavitation or echosounder signals that can be easily identified in the LTSA and confirmed with the spectrogram.&nbsp;</p>
+<p>A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; <span class="citation" data-cites="wiggins2007">Wiggins and Hildebrand (<a href="#ref-wiggins2007" role="doc-biblioref">2007</a>)</span>; 5 s time average, 100 Hz frequency bins). Once a ship was identified, 10 s spectrograms were used to confirm identification (Fast Fourier transform length 2000 points, 75% overlap). Both LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. Ships were either logged as being broadband (<span class="citation" data-cites="Ship_Broadband">(<a href="#ref-Ship_Broadband" role="doc-biblioref"><strong>Ship_Broadband?</strong></a>)</span>) or narrowband/low frequency (<span class="citation" data-cites="Ship_Narrowband">(<a href="#ref-Ship_Narrowband" role="doc-biblioref"><strong>Ship_Narrowband?</strong></a>)</span>). Narrowband/low frequency ship signals were fainter while broadband signals were high amplitude and had frequency content above 5kHz during the vessel's passage.</p>
+<p>We assumed no signals were mistaken for ships because all LTSA detections were visually verified. We also assumed negligible missed detections of high amplitude ships given the characteristics of ships that make them easy to distinguish.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Ship_Broadband.png" class="img-fluid figure-img" width="1408"></p>
+<figcaption>Example of a broadband ship in the 1 hr LTSA (top) and 10 s spectrogram (bottom).</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Ship_narrowband.PNG" class="img-fluid figure-img"></p>
+<figcaption>Example of a narrowband/low frequency ship in the 1 hr LTSA (top; red box) and 10 s spectrogram (bottom).</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="identify-time-periods-of-bad-data" class="level3">
+<h3 class="anchored" data-anchor-id="identify-time-periods-of-bad-data">Identify time periods of bad data</h3>
+<p>Scan LTSA (1s, 1 Hz resolution) with 2-hour windows, viewing frequencies between 0-500 Hz to identify time periods with noisy or compromised data quality. This review was performed as part of the initial data quality check (see more details on <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/DataArchive/DataQualityCheck.html#assess-data-quality">these methods here</a>), and is an important step to identify time periods where noisy data prevents accurate calculations of sound levels in the environment.</p>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-wiggins2007" class="csl-entry" role="listitem">
+Wiggins, Sean M., and John A Hildebrand. 2007. <span>“High-Frequency Acoustic Recording Package (HARP) for Broad-Band, Long-Term Marine Mammal Monitoring.”</span> In, 17–20.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
