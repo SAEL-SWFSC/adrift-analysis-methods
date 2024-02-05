@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +69,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -58,6 +84,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -73,12 +100,12 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/ToothedWhales/BeakedWhales-Detection.html">Toothed Whales</a></li><li class="breadcrumb-item"><a href="../../content/ToothedWhales/SpermWhales-Detection.html">Sperm Whales</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/ToothedWhales/BeakedWhales-Detection.html">Toothed Whales</a></li><li class="breadcrumb-item"><a href="../../content/ToothedWhales/SpermWhales-Detection.html">Sperm Whales</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -88,14 +115,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/NOAA_logo.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.fisheries.noaa.gov/west-coast/science-data/southwest-acoustic-ecology-lab" rel="" title="Southwest Acoustic Ecology Lab, SWFSC" class="quarto-navigation-tool px-1" aria-label="Southwest Acoustic Ecology Lab, SWFSC"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/SAEL-SWFSC" rel="" title="SAEL Github" class="quarto-navigation-tool px-1" aria-label="SAEL Github"><i class="bi bi-github"></i></a>
+    <a href="https://www.fisheries.noaa.gov/west-coast/science-data/southwest-acoustic-ecology-lab" title="Southwest Acoustic Ecology Lab, SWFSC" class="quarto-navigation-tool px-1" aria-label="Southwest Acoustic Ecology Lab, SWFSC"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/SAEL-SWFSC" title="SAEL Github" class="quarto-navigation-tool px-1" aria-label="SAEL Github"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
@@ -308,7 +335,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -324,12 +351,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#identify-potential-masking-for-sperm-whale-echolocation" id="toc-identify-potential-masking-for-sperm-whale-echolocation" class="nav-link" data-scroll-target="#identify-potential-masking-for-sperm-whale-echolocation">Identify potential masking for sperm whale echolocation</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/ToothedWhales/SpermWhales-Detection.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/ToothedWhales/SpermWhales-Detection.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/ToothedWhales/SpermWhales-Detection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/ToothedWhales/SpermWhales-Detection.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/ToothedWhales/BeakedWhales-Detection.html">Toothed Whales</a></li><li class="breadcrumb-item"><a href="../../content/ToothedWhales/SpermWhales-Detection.html">Sperm Whales</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Sperm Whales</h1>
 </div>
@@ -344,7 +371,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <section id="methods-summary" class="level2">
 <h2 class="anchored" data-anchor-id="methods-summary">Methods Summary</h2>
@@ -377,16 +406,71 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="manually-log-sperm-whale-acoustic-events" class="level3">
 <h3 class="anchored" data-anchor-id="manually-log-sperm-whale-acoustic-events">Manually log sperm whale acoustic events</h3>
+<p><strong>Start Triton Logger remora</strong></p>
+<ol type="1">
+<li><p>Launch Triton within Matlab. Open the LTSA for the data you want to analyze.</p></li>
+<li><p>In the Triton "Control" window, select the Remoras menu, choose Logger and then start a new log. You will to re-start Triton if this is the first instance of using the Logger remora. See more info on Triton Remoras on the Marine Bioacoustic Research <a href="https://github.com/MarineBioAcousticsRC/Triton/wiki">wiki</a>.</p></li>
+</ol>
+<p><strong>Log start and end times of sperm whale acoustic events</strong></p>
+<p>Sperm whales (<em>Physeter macrocephalus)</em> produce echolocation clicks which can be easily identified by their distinct frequency content and high amplitude signal observable in the LTSA and spectrogram <span class="citation" data-cites="worthington1957">Worthington and Schevill (<a href="#ref-worthington1957" role="doc-biblioref">1957</a>)</span>, <span class="citation" data-cites="watkins1977">Watkins and Schevill (<a href="#ref-watkins1977" role="doc-biblioref">1977</a>)</span>, <span class="citation" data-cites="goold1999">Goold (<a href="#ref-goold1999" role="doc-biblioref">1999</a>)</span>, <span class="citation" data-cites="møhl2000">B. Møhl et al. (<a href="#ref-møhl2000" role="doc-biblioref">2000</a>)</span>, <span class="citation" data-cites="møhl2003">Bertel Møhl et al. (<a href="#ref-møhl2003" role="doc-biblioref">2003</a>)</span>, <span class="citation" data-cites="madsen2002">Madsen, Wahlberg, and Møhl (<a href="#ref-madsen2002" role="doc-biblioref">2002</a>)</span>.</p>
+<p>A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; <span class="citation" data-cites="wiggins2007">Wiggins and Hildebrand (<a href="#ref-wiggins2007" role="doc-biblioref">2007</a>)</span>; 5 s time average, 100 Hz frequency bins). Once sperm whale clicks were identified in the LTSA, 10 s spectrograms were used to confirm species identification <span class="citation" data-cites="PmClicks">(<a href="#ref-PmClicks" role="doc-biblioref"><strong>PmClicks?</strong></a>)</span>. LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. An encounter was defined as a series of clicks separated by no more than 30 min from other clicks. This time frame was chosen to match the typical echolocation production time during an average sperm whale dive cycle (Watwood et al., 2006). The start and end times of all encounters were noted, and these start and end times were used for further analysis.</p>
+<p>Opportunistic detections of slow clicks were also logged. These clicks have longer interclick intervals, a lower frequency emphasis around 2-4 kHz, and a longer duration <span class="citation" data-cites="PmSlowClicks">(<a href="#ref-PmSlowClicks" role="doc-biblioref"><strong>PmSlowClicks?</strong></a>)</span> (Mullins et al., 1988; Weilgart and Whitehead, 1988; Jaquet et al., 2001; Madsen et al., 2002b). <span class="citation" data-cites="jaquet2001">Jaquet, Dawson, and Douglas (<a href="#ref-jaquet2001" role="doc-biblioref">2001</a>)</span>, <span class="citation" data-cites="madsen2002">Madsen, Wahlberg, and Møhl (<a href="#ref-madsen2002" role="doc-biblioref">2002</a>)</span></p>
+<p>We assumed no signals were mistaken for sperm whales because all LTSA detections were visually verified. We also assumed negligible missed detections given the characteristics of sperm whale echolocation clicks that make them easy to distinguish from other odontocete species, particularly their frequency content.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Pm_RegularClicks_LTSA_Spectrogram.png" class="img-fluid figure-img"></p>
+<figcaption>Example of sperm whale echolocation clicks in the 1 hr LTSA (top) and 10 s spectrogram (bottom).</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Pm_SlowClicks_LTSA_Spectrogram.png" class="img-fluid figure-img"></p>
+<figcaption>Example of sperm whale slow clicks in the 1 hr LTSA (top) and 20 s spectrogram (bottom).</figcaption>
+</figure>
+</div>
 </section>
 <section id="identify-potential-masking-for-sperm-whale-echolocation" class="level3">
 <h3 class="anchored" data-anchor-id="identify-potential-masking-for-sperm-whale-echolocation">Identify potential masking for sperm whale echolocation</h3>
+<p>Sperm whale clicks can be masked by the impulsive signals from ship propeller cavitation or high amplitude ambient noise (rain, wind, etc.). Times with ship or ambient noise that masked any potential sperm whale clicks were considered times with no effort since analysts were unable to determine sperm whale presence <span class="citation" data-cites="Pm_Masking">(<a href="#ref-Pm_Masking" role="doc-biblioref"><strong>Pm_Masking?</strong></a>)</span>. Ships were logged as either being broadband or narrowband/low frequency (see methods on ship logging for more details). Narrowband/low frequency ships were fainter and did not mask sperm whale detections and were considered times with logging effort.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Pm_Masking.png" class="img-fluid figure-img"></p>
+<figcaption>Example of potential masking of sperm whale echolocation by ambient noise.</figcaption>
+</figure>
+</div>
 <p>##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)</p>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-goold1999" class="csl-entry" role="listitem">
+Goold, John C. 1999. <span>“Behavioural and Acoustic Observations of Sperm Whales in Scapa Flow, Orkney Islands.”</span> <em>Journal of the Marine Biological Association of the United Kingdom</em> 79 (3): 541–50. <a href="https://doi.org/10.1017/S0025315498000666">https://doi.org/10.1017/S0025315498000666</a>.
+</div>
+<div id="ref-jaquet2001" class="csl-entry" role="listitem">
+Jaquet, Nathalie, Stephen Dawson, and Lesley Douglas. 2001. <span>“Vocal Behavior of Male Sperm Whales: Why Do They Click?”</span> <em>The Journal of the Acoustical Society of America</em> 109 (June): 2254–59. <a href="https://doi.org/10.1121/1.1360718">https://doi.org/10.1121/1.1360718</a>.
+</div>
+<div id="ref-madsen2002" class="csl-entry" role="listitem">
+Madsen, P. T., M. Wahlberg, and B. Møhl. 2002. <span>“Male Sperm Whale (Physeter Macrocephalus) Acoustics in a High-Latitude Habitat: Implications for Echolocation and Communication.”</span> <em>Behavioral Ecology and Sociobiology</em> 53 (1): 31–41. <a href="https://doi.org/10.1007/s00265-002-0548-1">https://doi.org/10.1007/s00265-002-0548-1</a>.
+</div>
+<div id="ref-møhl2003" class="csl-entry" role="listitem">
+Møhl, Bertel, Magnus Wahlberg, Peter T. Madsen, Anders Heerfordt, and Anders Lund. 2003. <span>“The Monopulsed Nature of Sperm Whale Clicks.”</span> <em>The Journal of the Acoustical Society of America</em> 114 (2): 1143–54. <a href="https://doi.org/10.1121/1.1586258">https://doi.org/10.1121/1.1586258</a>.
+</div>
+<div id="ref-møhl2000" class="csl-entry" role="listitem">
+Møhl, B., M. Wahlberg, P. T. Madsen, L. A. Miller, and A. Surlykke. 2000. <span>“Sperm Whale Clicks: Directionality and Source Level Revisited.”</span> <em>The Journal of the Acoustical Society of America</em> 107 (1): 638–48. <a href="https://doi.org/10.1121/1.428329">https://doi.org/10.1121/1.428329</a>.
+</div>
+<div id="ref-watkins1977" class="csl-entry" role="listitem">
+Watkins, WA, and WE Schevill. 1977. <span>“Sperm Whale Codas.”</span> <em>The Journal of the Acoustical Society of America</em> 62 (6): 1485–90.
+</div>
+<div id="ref-wiggins2007" class="csl-entry" role="listitem">
+Wiggins, Sean M., and John A Hildebrand. 2007. <span>“High-Frequency Acoustic Recording Package (HARP) for Broad-Band, Long-Term Marine Mammal Monitoring.”</span> In, 17–20.
+</div>
+<div id="ref-worthington1957" class="csl-entry" role="listitem">
+Worthington, LV, and WE Schevill. 1957. <span>“Underwater Sounds Heard from Sperm Whales.”</span> <em>Nature</em> 180 (4580): 291–91.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -428,6 +512,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -496,13 +607,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -581,10 +694,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -594,8 +706,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -608,6 +729,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -651,6 +891,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -676,6 +917,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -737,12 +1004,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../content/ToothedWhales/BeakedWhales-IDGuide.html" class="pagination-link">
+      <a href="../../content/ToothedWhales/BeakedWhales-IDGuide.html" class="pagination-link  aria-label=" beaked="" whale="" id="" guide"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Beaked Whale ID Guide</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../content/ToothedWhales/Dolphins-Detection.html" class="pagination-link">
+      <a href="../../content/ToothedWhales/Dolphins-Detection.html" class="pagination-link" aria-label="Dolphins">
         <span class="nav-page-text">Dolphins</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -750,13 +1017,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© CC-1.0</div>   
+    <div class="nav-footer-left">
+<p>© CC-1.0</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">This page is built with <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/edit/main/content/ToothedWhales/SpermWhales-Detection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/ToothedWhales/SpermWhales-Detection.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
+
 
 
 
