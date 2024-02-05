@@ -459,18 +459,26 @@ div.csl-indent {
 <section id="log-start-and-end-time-of-ship-acoustic-events" class="level4">
 <h4 class="anchored" data-anchor-id="log-start-and-end-time-of-ship-acoustic-events"><strong>Log start and end time of ship acoustic events</strong></h4>
 <p>Ships produce different noises such as impulsive signals from ship propeller cavitation or echosounder signals that can be easily identified in the LTSA and confirmed with the spectrogram.&nbsp;</p>
-<p>A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; <span class="citation" data-cites="wiggins2007">Wiggins and Hildebrand (<a href="#ref-wiggins2007" role="doc-biblioref">2007</a>)</span>; 5 s time average, 100 Hz frequency bins). Once a ship was identified, 10 s spectrograms were used to confirm identification (Fast Fourier transform length 2000 points, 75% overlap). Both LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. Ships were either logged as being broadband (<span class="citation" data-cites="Ship_Broadband">(<a href="#ref-Ship_Broadband" role="doc-biblioref"><strong>Ship_Broadband?</strong></a>)</span>) or narrowband/low frequency (<span class="citation" data-cites="Ship_Narrowband">(<a href="#ref-Ship_Narrowband" role="doc-biblioref"><strong>Ship_Narrowband?</strong></a>)</span>). Narrowband/low frequency ship signals were fainter while broadband signals were high amplitude and had frequency content above 5kHz during the vessel's passage.</p>
+<p>A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; <span class="citation" data-cites="wiggins2007">Wiggins and Hildebrand (<a href="#ref-wiggins2007" role="doc-biblioref">2007</a>)</span>; 5 s time average, 100 Hz frequency bins). Once a ship was identified, 10 s spectrograms were used to confirm identification (Fast Fourier transform length 2000 points, 75% overlap). Both LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. Ships were either logged as being broadband (<a href="#fig-Ship_Broadband" class="quarto-xref">Figure&nbsp;1</a>) or narrowband/low frequency (<a href="#fig-Ship_Narrowband" class="quarto-xref">Figure&nbsp;2</a>). Narrowband/low frequency ship signals were fainter while broadband signals were high amplitude and had frequency content above 5kHz during the vessel's passage.</p>
 <p>We assumed no signals were mistaken for ships because all LTSA detections were visually verified. We also assumed negligible missed detections of high amplitude ships given the characteristics of ships that make them easy to distinguish.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Ship_Broadband.png" class="img-fluid figure-img" width="1408"></p>
-<figcaption>Example of a broadband ship in the 1 hr LTSA (top) and 10 s spectrogram (bottom).</figcaption>
+<div id="fig-Ship_Broadband" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Ship_Broadband-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Ship_Broadband.png" class="img-fluid figure-img" width="1408">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Ship_Broadband-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Example of a broadband ship in the 1 hr LTSA (top) and 10 s spectrogram (bottom).
+</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Ship_narrowband.PNG" class="img-fluid figure-img"></p>
-<figcaption>Example of a narrowband/low frequency ship in the 1 hr LTSA (top; red box) and 10 s spectrogram (bottom).</figcaption>
+<div id="fig-Ship_Narrowband" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Ship_Narrowband-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Ship_narrowband.PNG" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Ship_Narrowband-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Example of a narrowband/low frequency ship in the 1 hr LTSA (top; red box) and 10 s spectrogram (bottom).
+</figcaption>
 </figure>
 </div>
 </section>
