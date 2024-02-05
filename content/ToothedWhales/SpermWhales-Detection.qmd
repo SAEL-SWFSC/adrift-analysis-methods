@@ -43,28 +43,26 @@ See methods in ["Data Prep" section](https://sael-swfsc.github.io/adrift-analysi
 
 1.  Launch Triton within Matlab. Open the LTSA for the data you want to analyze.
 
-2.  In the Triton \"Control\" window, select the Remoras menu, choose Logger and then start a new log. You will to re-start Triton if this is the first instance of using the Logger remora. See more info on Triton Remoras on the Marine Bioacoustic Research [wiki](https://github.com/MarineBioAcousticsRC/Triton/wiki).
+2.  In the Triton "Control" window, select the Remoras menu, choose Logger and then start a new log. You will to re-start Triton if this is the first instance of using the Logger remora. See more info on Triton Remoras on the Marine Bioacoustic Research [wiki](https://github.com/MarineBioAcousticsRC/Triton/wiki).
 
 **Log start and end times of sperm whale acoustic events**
 
-Sperm whales (*Physeter macrocephalus)* produce echolocation clicks which can be easily identified by their distinct frequency content and high amplitude signal observable in the LTSA and spectrogram @worthington1957, @watkins1977, @goold1999, @møhl2000, @møhl2003, @madsen2002.
+Sperm whales (*Physeter macrocephalus)* produce echolocation clicks which can be easily identified by their distinct frequency content and high amplitude signal observable in the LTSA and spectrogram [@worthington1957; @watkins1977; @goold1999;, @møhl2000; @møhl2003; @madsen2002].
 
-A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; @wiggins2007; 5 s time average, 100 Hz frequency bins). Once sperm whale clicks were identified in the LTSA, 10 s
-spectrograms were used to confirm species identification [@PmClicks]. LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. An encounter was defined as a series of clicks separated by no more than 30 min from other clicks. This time frame was chosen to match the typical echolocation production time during an average sperm whale dive cycle (Watwood et al., 2006). The start and end times of all encounters were noted, and these start and end times were used for further analysis.
+A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; @wiggins2007; 5 s time average, 100 Hz frequency bins). Once sperm whale clicks were identified in the LTSA, 10 s spectrograms were used to confirm species identification (@fig-PmClicks). LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. An encounter was defined as a series of clicks separated by no more than 30 min from other clicks. This time frame was chosen to match the typical echolocation production time during an average sperm whale dive cycle [@watwood2006]. The start and end times of all encounters were noted, and these start and end times were used for further analysis.
 
-Opportunistic detections of slow clicks were also logged. These clicks have longer interclick intervals, a lower frequency emphasis around 2-4 kHz, and a longer duration [@PmSlowClicks] (Mullins et al., 1988; Weilgart and Whitehead, 1988; Jaquet et al., 2001; Madsen et al., 2002b). @jaquet2001, @madsen2002
+Opportunistic detections of slow clicks were also logged. These clicks have longer interclick intervals, a lower frequency emphasis around 2-4 kHz, and a longer duration (@fig-PmSlowClicks) [@jaquet2001a; @madsen2002] (Mullins et al., 1988; Weilgart and Whitehead, 1988; Jaquet et al., 2001).
 
-We assumed no signals were mistaken for sperm whales because all LTSA detections were visually verified. We also assumed negligible missed detections given the characteristics of sperm whale echolocation clicks that make them easy to distinguish from other odontocete species, particularly
-their frequency content.
+We assumed no signals were mistaken for sperm whales because all LTSA detections were visually verified. We also assumed negligible missed detections given the characteristics of sperm whale echolocation clicks that make them easy to distinguish from other odontocete species, particularly their frequency content.
 
-![Example of sperm whale echolocation clicks in the 1 hr LTSA (top) and 10 s spectrogram (bottom).](images/Pm_RegularClicks_LTSA_Spectrogram.png){#PmClicks}
+![Example of sperm whale echolocation clicks in the 1 hr LTSA (top) and 10 s spectrogram (bottom).](images/Pm_RegularClicks_LTSA_Spectrogram.png){#fig-PmClicks width="1409"}
 
-![Example of sperm whale slow clicks in the 1 hr LTSA (top) and 20 s spectrogram (bottom).](images/Pm_SlowClicks_LTSA_Spectrogram.png){#PmSlowClicks}
+![Example of sperm whale slow clicks in the 1 hr LTSA (top) and 20 s spectrogram (bottom).](images/Pm_SlowClicks_LTSA_Spectrogram.png){#fig-PmSlowClicks}
 
 ### Identify potential masking for sperm whale echolocation
 
-Sperm whale clicks can be masked by the impulsive signals from ship propeller cavitation or high amplitude ambient noise (rain, wind, etc.). Times with ship or ambient noise that masked any potential sperm whale clicks were considered times with no effort since analysts were unable to determine sperm whale presence [@Pm_Masking]. Ships were logged as either being broadband or narrowband/low frequency (see methods on ship logging for more details). Narrowband/low frequency ships were fainter and did not mask sperm whale detections and were considered times with logging effort.
+Sperm whale clicks can be masked by the impulsive signals from ship propeller cavitation or high amplitude ambient noise (rain, wind, etc.). Times with ship or ambient noise that masked any potential sperm whale clicks were considered times with no effort since analysts were unable to determine sperm whale presence (@fig-Pm_Masking). Ships were logged as either being broadband or narrowband/low frequency (see methods on ship logging for more details). Narrowband/low frequency ships were fainter and did not mask sperm whale detections and were considered times with logging effort.
 
-![Example of potential masking of sperm whale echolocation by ambient noise.](images/Pm_Masking.png){#Pm_Masking}
+![Example of potential masking of sperm whale echolocation by ambient noise.](images/Pm_Masking.png){#fig-Pm_Masking}
 
 ##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)

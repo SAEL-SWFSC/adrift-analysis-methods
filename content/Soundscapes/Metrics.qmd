@@ -111,13 +111,13 @@ Consistent cable strumming was observed below 100 Hz on many drifting buoy deplo
 
 Ships produce different noises such as impulsive signals from ship propeller cavitation or echosounder signals that can be easily identified in the LTSA and confirmed with the spectrogram. 
 
-A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; @wiggins2007; 5 s time average, 100 Hz frequency bins). Once a ship was identified, 10 s spectrograms were used to confirm identification (Fast Fourier transform length 2000 points, 75% overlap). Both LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. Ships were either logged as being broadband (@Ship_Broadband) or narrowband/low frequency (@Ship_Narrowband). Narrowband/low frequency ship signals were fainter while broadband signals were high amplitude and had frequency content above 5kHz during the vessel\'s passage.
+A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; @wiggins2007; 5 s time average, 100 Hz frequency bins). Once a ship was identified, 10 s spectrograms were used to confirm identification (Fast Fourier transform length 2000 points, 75% overlap). Both LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. Ships were either logged as being broadband (@fig-Ship_Broadband) or narrowband/low frequency (@fig-Ship_Narrowband). Narrowband/low frequency ship signals were fainter while broadband signals were high amplitude and had frequency content above 5kHz during the vessel\'s passage.
 
 We assumed no signals were mistaken for ships because all LTSA detections were visually verified. We also assumed negligible missed detections of high amplitude ships given the characteristics of ships that make them easy to distinguish.
 
-![Example of a broadband ship in the 1 hr LTSA (top) and 10 s spectrogram (bottom).](images/Ship_Broadband.png){#Ship_Broadband width="1408"}
+![Example of a broadband ship in the 1 hr LTSA (top) and 10 s spectrogram (bottom).](images/Ship_Broadband.png){#fig-Ship_Broadband width="1408"}
 
-![Example of a narrowband/low frequency ship in the 1 hr LTSA (top; red box) and 10 s spectrogram (bottom).](images/Ship_narrowband.PNG){#Ship_Narrowband}
+![Example of a narrowband/low frequency ship in the 1 hr LTSA (top; red box) and 10 s spectrogram (bottom).](images/Ship_narrowband.PNG){#fig-Ship_Narrowband}
 
 ### Identify time periods of bad data
 
