@@ -1,5 +1,8 @@
 ---
 title: Triton Metrics
+crossref:
+  fig-labels: arabic 
+bibliography: references.bib
 ---
 
 ## Methods Summary
@@ -98,8 +101,24 @@ Consistent cable strumming was observed below 100 Hz on many drifting buoy deplo
 
 ### Detect vessels
 
-Manual identification in LTSA
+#### Start Triton Logger Remora
 
-### Identify bad data
+1\. Launch Triton within Matlab. Open the LTSA for the data you want to analyze.
 
-Scan LTSA (1s, Hz resolution) with 2-hour windows, viewing frequencies between 0-500 Hz to identify time periods with noisy or compromised data quality. This review was performed as part of the initial data quality check (see more details on [these methods here](https://sael-swfsc.github.io/adrift-analysis-methods/content/DataArchive/DataQualityCheck.html#assess-data-quality)), and is an important step to identify time periods where noisy data prevents accurate calculations of sound levels in the environment.
+2\. In the Triton "Control" window, select the Remoras menu, choose Logger and then start a new log. You will need to re-start Triton if this is the first instance of using the Logger remora. See more info on Triton Remoras on the Marine Bioacoustic Research Collective [wiki](https://github.com/MarineBioAcousticsRC/Triton/wiki).
+
+#### **Log start and end time of ship acoustic events**
+
+Ships produce different noises such as impulsive signals from ship propeller cavitation or echosounder signals that can be easily identified in the LTSA and confirmed with the spectrogram. 
+
+A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; @wiggins2007; 5 s time average, 100 Hz frequency bins). Once a ship was identified, 10 s spectrograms were used to confirm identification (Fast Fourier transform length 2000 points, 75% overlap). Both LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. Ships were either logged as being broadband (@Ship_Broadband) or narrowband/low frequency (@Ship_Narrowband). Narrowband/low frequency ship signals were fainter while broadband signals were high amplitude and had frequency content above 5kHz during the vessel\'s passage.
+
+We assumed no signals were mistaken for ships because all LTSA detections were visually verified. We also assumed negligible missed detections of high amplitude ships given the characteristics of ships that make them easy to distinguish.
+
+![Example of a broadband ship in the 1 hr LTSA (top) and 10 s spectrogram (bottom).](images/Ship_Broadband.png){#Ship_Broadband width="1408"}
+
+![Example of a narrowband/low frequency ship in the 1 hr LTSA (top; red box) and 10 s spectrogram (bottom).](images/Ship_narrowband.PNG){#Ship_Narrowband}
+
+### Identify time periods of bad data
+
+Scan LTSA (1s, 1 Hz resolution) with 2-hour windows, viewing frequencies between 0-500 Hz to identify time periods with noisy or compromised data quality. This review was performed as part of the initial data quality check (see more details on [these methods here](https://sael-swfsc.github.io/adrift-analysis-methods/content/DataArchive/DataQualityCheck.html#assess-data-quality)), and is an important step to identify time periods where noisy data prevents accurate calculations of sound levels in the environment.
