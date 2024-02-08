@@ -61,7 +61,7 @@ We assumed no signals were mistaken for sperm whales because all LTSA detections
 
 ### Identify potential masking for sperm whale echolocation
 
-Sperm whale clicks can be masked by the impulsive signals from ship propeller cavitation or high amplitude ambient noise (rain, wind, etc.). Times with ship or ambient noise that masked any potential sperm whale clicks were considered times with no effort since analysts were unable to determine sperm whale presence (@fig-Pm_Masking). Ships were logged as either being broadband or narrowband/low frequency (see methods on ship logging for more details). Narrowband/low frequency ships were fainter and did not mask sperm whale detections and were considered times with logging effort.
+Sperm whale clicks can be masked by the impulsive signals from ship propeller cavitation or high amplitude ambient noise (rain, wind, etc.). Times with ship or ambient noise that masked any potential sperm whale clicks were considered times with no effort since analysts were unable to determine sperm whale presence (@fig-Pm_Masking). Ships were logged as either being broadband or narrowband/low frequency (see details of ship logging in [soundscape methods](https://sael-swfsc.github.io/adrift-analysis-methods/content/Soundscapes/Metrics.html) for more details). Narrowband/low frequency ships were fainter and did not mask sperm whale detections and were considered times with logging effort.
 
 ![Example of potential masking of sperm whale echolocation by ambient noise.](images/Pm_Masking.png){#fig-Pm_Masking}
 
