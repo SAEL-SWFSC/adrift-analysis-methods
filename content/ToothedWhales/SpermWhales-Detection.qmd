@@ -47,11 +47,11 @@ See methods in ["Data Prep" section](https://sael-swfsc.github.io/adrift-analysi
 
 **Log start and end times of sperm whale acoustic events**
 
-Sperm whales (*Physeter macrocephalus)* produce echolocation clicks which can be easily identified by their distinct frequency content and high amplitude signal observable in the LTSA and spectrogram [@worthington1957; @watkins1977; @goold1999;, @møhl2000; @møhl2003; @madsen2002].
+Sperm whales (*Physeter macrocephalus)* produce echolocation clicks which can be easily identified by their distinct frequency content and high amplitude signal observable in the LTSA and spectrogram [@worthington1957; @watkins1977; @goold1999; , @møhl2000; @møhl2003; @madsen2002].
 
 A trained analyst viewed 1 h windows of long-term spectral averages (LTSA; @wiggins2007; 5 s time average, 100 Hz frequency bins). Once sperm whale clicks were identified in the LTSA, 10 s spectrograms were used to confirm species identification (@fig-PmClicks). LTSAs and spectrograms were scanned with a brightness of 60 and a contrast of 180 for consistency across deployments. An encounter was defined as a series of clicks separated by no more than 30 min from other clicks. This time frame was chosen to match the typical echolocation production time during an average sperm whale dive cycle [@watwood2006]. The start and end times of all encounters were noted, and these start and end times were used for further analysis.
 
-Opportunistic detections of slow clicks were also logged. These clicks have longer interclick intervals, a lower frequency emphasis around 2-4 kHz, and a longer duration (@fig-PmSlowClicks) [@jaquet2001a; @madsen2002] (Mullins et al., 1988; Weilgart and Whitehead, 1988; Jaquet et al., 2001).
+Opportunistic detections of slow clicks were also logged. These clicks have longer interclick intervals, a lower frequency emphasis around 2-4 kHz, and a longer duration (@fig-PmSlowClicks) [@mullins1988; @weilgart1988; @jaquet2001a; @madsen2002].
 
 We assumed no signals were mistaken for sperm whales because all LTSA detections were visually verified. We also assumed negligible missed detections given the characteristics of sperm whale echolocation clicks that make them easy to distinguish from other odontocete species, particularly their frequency content.
 
