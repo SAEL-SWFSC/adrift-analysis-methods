@@ -55,9 +55,9 @@ Opportunistic detections of slow clicks were also logged. These clicks have long
 
 We assumed no signals were mistaken for sperm whales because all LTSA detections were visually verified. We also assumed negligible missed detections given the characteristics of sperm whale echolocation clicks that make them easy to distinguish from other odontocete species, particularly their frequency content.
 
-![Example of sperm whale echolocation clicks in the 1 hr LTSA (top) and 10 s spectrogram (bottom).](images/Pm_RegularClicks_LTSA_Spectrogram.png){#fig-PmClicks width="1409"}
+![Example of sperm whale echolocation clicks in the 1 hr LTSA (top) and 10 s spectrogram (bottom).](images/Pm_RegularClicks_LTSA_Spectrogram.png){#fig-PmClicks width="622"}
 
-![Example of sperm whale slow clicks in the 1 hr LTSA (top) and 20 s spectrogram (bottom).](images/Pm_SlowClicks_LTSA_Spectrogram.png){#fig-PmSlowClicks}
+![Example of sperm whale slow clicks in the 1 hr LTSA (top) and 20 s spectrogram (bottom).](images/Pm_SlowClicks_LTSA_Spectrogram.png){#fig-PmSlowClicks width="622"}
 
 ### Identify potential masking for sperm whale echolocation
 
@@ -65,4 +65,4 @@ Sperm whale clicks can be masked by the impulsive signals from ship propeller ca
 
 ![Example of potential masking of sperm whale echolocation by ambient noise.](images/Pm_Masking.png){#fig-Pm_Masking}
 
-##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)
+**##Add sub-section about IPI/ICI analysis (not useful for duty-cycled data; Could be useful to apply on continuous data)**
