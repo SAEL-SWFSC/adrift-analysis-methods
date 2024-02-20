@@ -16,15 +16,11 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 ## Blue Whales
 
-### *GPL in PAMGuard (we can omit this or leave it in)*
-
--   PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.
-
 ### *Manual Annotation in Triton*
 
--   Identified blue whale acoustic events include A, B and D call types.
--   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) is used for the following:
-    -   Long-term spectral averages (LTSAs) are calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings
+-   Presence of blue whales within the recordings were based off of A, B, and D call types.
+-   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) was used for the following:
+    -   Long-term spectral averages (LTSAs) were calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings
 
     -   A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call.
 
@@ -36,7 +32,38 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 ### *Click detector in PAMGuard*
 
--   A click detector in PAMGuard version 2.02.02 was used to detect 20Hz fin whale pluses throughout the recordings. Twenty percent of those data were validated as a training set for a BANTER model.
+-   [PAMGuard](https://www.pamguard.org/) software was used to automatically detect fin whale 20Hz pulses in the ADRIFT dataset.
+    -   A click classifier was created to classify 20Hz fin whale pulses as "fin clicks"
+
+        -   PamGuard settings can be found here
+
+    -   Recordings from each Drift was run through the click detector
+
+    -   Click information were saved to binary files
+
+### *Validation of events*
+
+-   PAMpal was used to create events in each database
+
+    -   Events were defined as every wav file
+
+    -   Wav file lengths and duty cycles varied depending on deployment but all information related to deployment details can be found [here](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=1736197089).
+
+### *Random Forest Model* 
+
+-   A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023
+
+-   The model was then tested on novel data
+
+-   The model was then used to predict on the rest of the fin whale events for all drifts
+
+### *Review of Model Results*
+
+-   The model had one of three results: Accept, Review, Dropped
+
+-   If the model had \>3 predictions and a high average score, the event was accepted as a fin whale
+
+-   If the model had \>3 predictions and a low average score, the event was thrown into a review column
 
 ## Gray
 
