@@ -8,9 +8,9 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 ## Data Prep
 
--   Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively using channel one of the raw recordings.
+-   Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated in [Triton software](https://github.com/MarineBioAcousticsRC/Triton) to 12kHz and 500Hz respectively using channel one of the raw recordings.
 
--   From those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.
+-   From those decimated recordings, Triton software was used to create long-term spectral averages (LTSAs) for each Drift at both 12kHz and 500Hz respectively.
 
     -   LTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details.
 
@@ -20,9 +20,15 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 -   PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.
 
-### *Annotation in Triton*
+### *Manual Annotation in Triton*
 
--   Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA's to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created. Click [here](Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
+-   Identified blue whale acoustic events include A, B and D call types.
+-   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) is used for the following:
+    -   Long-term spectral averages (LTSAs) are calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings
+
+    -   A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call.
+
+    -   These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created. Click [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
 
 ## Brydes
 
