@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/NOAA_logo.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
@@ -328,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#blue-whales" id="toc-blue-whales" class="nav-link" data-scroll-target="#blue-whales">Blue Whales</a>
   <ul class="collapse">
   <li><a href="#gpl-in-pamguard-we-can-omit-this-or-leave-it-in" id="toc-gpl-in-pamguard-we-can-omit-this-or-leave-it-in" class="nav-link" data-scroll-target="#gpl-in-pamguard-we-can-omit-this-or-leave-it-in"><em>GPL in PAMGuard (we can omit this or leave it in)</em></a></li>
-  <li><a href="#annotation-in-triton" id="toc-annotation-in-triton" class="nav-link" data-scroll-target="#annotation-in-triton"><em>Annotation in Triton</em></a></li>
+  <li><a href="#manual-annotation-in-triton" id="toc-manual-annotation-in-triton" class="nav-link" data-scroll-target="#manual-annotation-in-triton"><em>Manual Annotation in Triton</em></a></li>
   </ul></li>
   <li><a href="#brydes" id="toc-brydes" class="nav-link" data-scroll-target="#brydes">Brydes</a></li>
   <li><a href="#fin" id="toc-fin" class="nav-link" data-scroll-target="#fin">Fin</a>
@@ -370,8 +370,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="data-prep" class="level2">
 <h2 class="anchored" data-anchor-id="data-prep">Data Prep</h2>
 <ul>
-<li><p>Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated to 12kHz and 500Hz respectively using channel one of the raw recordings.</p></li>
-<li><p>From those decimated recordings, an LTSA was created for each Drift at both 12kHz and 500Hz respectively.</p>
+<li><p>Recordings from ADRIFT, CCES, and PASCAL were originally sampled between 192kHz and 576kHz. In order to examine these recordings for baleen whales they were decimated in <a href="https://github.com/MarineBioAcousticsRC/Triton">Triton software</a> to 12kHz and 500Hz respectively using channel one of the raw recordings.</p></li>
+<li><p>From those decimated recordings, Triton software was used to create long-term spectral averages (LTSAs) for each Drift at both 12kHz and 500Hz respectively.</p>
 <ul>
 <li>LTSAs were reviewed by an experienced analyst as an initial QAQC of our recordings in that frequency range. If it was determined that the recordings were unusable in a specific frequency then that was noted in the Deployment Details.</li>
 </ul></li>
@@ -385,10 +385,16 @@ ul.task-list li input[type="checkbox"] {
 <li>PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.</li>
 </ul>
 </section>
-<section id="annotation-in-triton" class="level3">
-<h3 class="anchored" data-anchor-id="annotation-in-triton"><em>Annotation in Triton</em></h3>
+<section id="manual-annotation-in-triton" class="level3">
+<h3 class="anchored" data-anchor-id="manual-annotation-in-triton"><em>Manual Annotation in Triton</em></h3>
 <ul>
-<li>Triton version 1.93.20160524 was used in Matlab 2023a to scan 500Hz LTSA’s to look for blue whale calls. A trained analyst scanned the LTSA one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call. These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created. Click <a href="Slides/methodsforloggingbaleenwhales.html#/title-slide">here</a> for more detail of these methods.</li>
+<li>Identified blue whale acoustic events include A, B and D call types.</li>
+<li><a href="https://github.com/MarineBioAcousticsRC/Triton">Triton software</a> is used for the following:
+<ul>
+<li><p>Long-term spectral averages (LTSAs) are calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings</p></li>
+<li><p>A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call.</p></li>
+<li><p>These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created. Click <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide">here</a> for more detail of these methods.</p></li>
+</ul></li>
 </ul>
 </section>
 </section>
@@ -959,7 +965,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../content/DataArchive/OBIS.html" class="pagination-link  aria-label=" obis"="">
+      <a href="../../content/DataArchive/OBIS.html" class="pagination-link" aria-label="OBIS">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">OBIS</span>
       </a>          
   </div>
