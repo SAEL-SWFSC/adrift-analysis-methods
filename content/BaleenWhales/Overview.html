@@ -327,13 +327,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-prep" id="toc-data-prep" class="nav-link" data-scroll-target="#data-prep">Data Prep</a></li>
   <li><a href="#blue-whales" id="toc-blue-whales" class="nav-link" data-scroll-target="#blue-whales">Blue Whales</a>
   <ul class="collapse">
-  <li><a href="#gpl-in-pamguard-we-can-omit-this-or-leave-it-in" id="toc-gpl-in-pamguard-we-can-omit-this-or-leave-it-in" class="nav-link" data-scroll-target="#gpl-in-pamguard-we-can-omit-this-or-leave-it-in"><em>GPL in PAMGuard (we can omit this or leave it in)</em></a></li>
   <li><a href="#manual-annotation-in-triton" id="toc-manual-annotation-in-triton" class="nav-link" data-scroll-target="#manual-annotation-in-triton"><em>Manual Annotation in Triton</em></a></li>
   </ul></li>
   <li><a href="#brydes" id="toc-brydes" class="nav-link" data-scroll-target="#brydes">Brydes</a></li>
   <li><a href="#fin" id="toc-fin" class="nav-link" data-scroll-target="#fin">Fin</a>
   <ul class="collapse">
   <li><a href="#click-detector-in-pamguard" id="toc-click-detector-in-pamguard" class="nav-link" data-scroll-target="#click-detector-in-pamguard"><em>Click detector in PAMGuard</em></a></li>
+  <li><a href="#validation-of-events" id="toc-validation-of-events" class="nav-link" data-scroll-target="#validation-of-events"><em>Validation of events</em></a></li>
+  <li><a href="#random-forest-model" id="toc-random-forest-model" class="nav-link" data-scroll-target="#random-forest-model"><em>Random Forest Model</em></a></li>
+  <li><a href="#review-of-model-results" id="toc-review-of-model-results" class="nav-link" data-scroll-target="#review-of-model-results"><em>Review of Model Results</em></a></li>
   </ul></li>
   <li><a href="#gray" id="toc-gray" class="nav-link" data-scroll-target="#gray">Gray</a></li>
   <li><a href="#humpack" id="toc-humpack" class="nav-link" data-scroll-target="#humpack">Humpack</a></li>
@@ -379,19 +381,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="blue-whales" class="level2">
 <h2 class="anchored" data-anchor-id="blue-whales">Blue Whales</h2>
-<section id="gpl-in-pamguard-we-can-omit-this-or-leave-it-in" class="level3">
-<h3 class="anchored" data-anchor-id="gpl-in-pamguard-we-can-omit-this-or-leave-it-in"><em>GPL in PAMGuard (we can omit this or leave it in)</em></h3>
-<ul>
-<li>PAMGuard version 2.02.02 was used to run a GPL detector to look for blue whale A and B calls over 38 deployments in the ADRFIT data set. While the detector did well at picking up on the A and B calls, there was so much noise in the low frequency recordings, that the detector also picked up a lot of false positives. Because of this we decided to use Triton for annotating A, B and D calls.</li>
-</ul>
-</section>
 <section id="manual-annotation-in-triton" class="level3">
 <h3 class="anchored" data-anchor-id="manual-annotation-in-triton"><em>Manual Annotation in Triton</em></h3>
 <ul>
-<li>Identified blue whale acoustic events include A, B and D call types.</li>
-<li><a href="https://github.com/MarineBioAcousticsRC/Triton">Triton software</a> is used for the following:
+<li>Presence of blue whales within the recordings were based off of A, B, and D call types.</li>
+<li><a href="https://github.com/MarineBioAcousticsRC/Triton">Triton software</a> was used for the following:
 <ul>
-<li><p>Long-term spectral averages (LTSAs) are calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings</p></li>
+<li><p>Long-term spectral averages (LTSAs) were calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings</p></li>
 <li><p>A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call.</p></li>
 <li><p>These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created. Click <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide">here</a> for more detail of these methods.</p></li>
 </ul></li>
@@ -406,7 +402,41 @@ ul.task-list li input[type="checkbox"] {
 <section id="click-detector-in-pamguard" class="level3">
 <h3 class="anchored" data-anchor-id="click-detector-in-pamguard"><em>Click detector in PAMGuard</em></h3>
 <ul>
-<li>A click detector in PAMGuard version 2.02.02 was used to detect 20Hz fin whale pluses throughout the recordings. Twenty percent of those data were validated as a training set for a BANTER model.</li>
+<li><a href="https://www.pamguard.org/">PAMGuard</a> software was used to automatically detect fin whale 20Hz pulses in the ADRIFT dataset.
+<ul>
+<li><p>A click classifier was created to classify 20Hz fin whale pulses as “fin clicks”</p>
+<ul>
+<li>PamGuard settings can be found here</li>
+</ul></li>
+<li><p>Recordings from each Drift was run through the click detector</p></li>
+<li><p>Click information were saved to binary files</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="validation-of-events" class="level3">
+<h3 class="anchored" data-anchor-id="validation-of-events"><em>Validation of events</em></h3>
+<ul>
+<li><p>PAMpal was used to create events in each database</p>
+<ul>
+<li><p>Events were defined as every wav file</p></li>
+<li><p>Wav file lengths and duty cycles varied depending on deployment but all information related to deployment details can be found <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=1736197089">here</a>.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="random-forest-model" class="level3">
+<h3 class="anchored" data-anchor-id="random-forest-model"><em>Random Forest Model</em></h3>
+<ul>
+<li><p>A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023</p></li>
+<li><p>The model was then tested on novel data</p></li>
+<li><p>The model was then used to predict on the rest of the fin whale events for all drifts</p></li>
+</ul>
+</section>
+<section id="review-of-model-results" class="level3">
+<h3 class="anchored" data-anchor-id="review-of-model-results"><em>Review of Model Results</em></h3>
+<ul>
+<li><p>The model had one of three results: Accept, Review, Dropped</p></li>
+<li><p>If the model had &gt;3 predictions and a high average score, the event was accepted as a fin whale</p></li>
+<li><p>If the model had &gt;3 predictions and a low average score, the event was thrown into a review column</p></li>
 </ul>
 </section>
 </section>
