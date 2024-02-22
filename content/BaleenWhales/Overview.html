@@ -330,12 +330,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#manual-annotation-in-triton" id="toc-manual-annotation-in-triton" class="nav-link" data-scroll-target="#manual-annotation-in-triton"><em>Manual Annotation in Triton</em></a></li>
   </ul></li>
   <li><a href="#brydes" id="toc-brydes" class="nav-link" data-scroll-target="#brydes">Brydes</a></li>
-  <li><a href="#fin" id="toc-fin" class="nav-link" data-scroll-target="#fin">Fin</a>
+  <li><a href="#fin-20-hz-adrift" id="toc-fin-20-hz-adrift" class="nav-link" data-scroll-target="#fin-20-hz-adrift">Fin 20 Hz ADRIFT</a>
   <ul class="collapse">
   <li><a href="#click-detector-in-pamguard" id="toc-click-detector-in-pamguard" class="nav-link" data-scroll-target="#click-detector-in-pamguard"><em>Click detector in PAMGuard</em></a></li>
   <li><a href="#validation-of-events" id="toc-validation-of-events" class="nav-link" data-scroll-target="#validation-of-events"><em>Validation of events</em></a></li>
   <li><a href="#random-forest-model" id="toc-random-forest-model" class="nav-link" data-scroll-target="#random-forest-model"><em>Random Forest Model</em></a></li>
   <li><a href="#review-of-model-results" id="toc-review-of-model-results" class="nav-link" data-scroll-target="#review-of-model-results"><em>Review of Model Results</em></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></li>
   <li><a href="#gray" id="toc-gray" class="nav-link" data-scroll-target="#gray">Gray</a></li>
   <li><a href="#humpack" id="toc-humpack" class="nav-link" data-scroll-target="#humpack">Humpack</a></li>
@@ -397,8 +398,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="brydes" class="level2">
 <h2 class="anchored" data-anchor-id="brydes">Brydes</h2>
 </section>
-<section id="fin" class="level2">
-<h2 class="anchored" data-anchor-id="fin">Fin</h2>
+<section id="fin-20-hz-adrift" class="level2">
+<h2 class="anchored" data-anchor-id="fin-20-hz-adrift">Fin 20 Hz ADRIFT</h2>
 <section id="click-detector-in-pamguard" class="level3">
 <h3 class="anchored" data-anchor-id="click-detector-in-pamguard"><em>Click detector in PAMGuard</em></h3>
 <ul>
@@ -406,7 +407,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>A click classifier was created to classify 20Hz fin whale pulses as “fin clicks”</p>
 <ul>
-<li>PamGuard settings can be found here</li>
+<li>PamGuard settings can be found <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings">here</a></li>
 </ul></li>
 <li><p>Recordings from each Drift was run through the click detector</p></li>
 <li><p>Click information were saved to binary files</p></li>
@@ -416,7 +417,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="validation-of-events" class="level3">
 <h3 class="anchored" data-anchor-id="validation-of-events"><em>Validation of events</em></h3>
 <ul>
-<li><p>PAMpal was used to create events in each database</p>
+<li><p><a href="https://taikisan21.github.io/PAMpal/">PAMpal</a> was used to create events in each database</p>
 <ul>
 <li><p>Events were defined as every wav file</p></li>
 <li><p>Wav file lengths and duty cycles varied depending on deployment but all information related to deployment details can be found <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=1736197089">here</a>.</p></li>
@@ -426,18 +427,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="random-forest-model" class="level3">
 <h3 class="anchored" data-anchor-id="random-forest-model"><em>Random Forest Model</em></h3>
 <ul>
-<li><p>A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023</p></li>
-<li><p>The model was then tested on novel data</p></li>
-<li><p>The model was then used to predict on the rest of the fin whale events for all drifts</p></li>
+<li>A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023</li>
 </ul>
 </section>
 <section id="review-of-model-results" class="level3">
 <h3 class="anchored" data-anchor-id="review-of-model-results"><em>Review of Model Results</em></h3>
 <ul>
+<li><p>We used the model to predict if fin whales were present on an hourly basis</p></li>
 <li><p>The model had one of three results: Accept, Review, Dropped</p></li>
-<li><p>If the model had &gt;3 predictions and a high average score, the event was accepted as a fin whale</p></li>
-<li><p>If the model had &gt;3 predictions and a low average score, the event was thrown into a review column</p></li>
+<li><p>Both Accepted and Review detections were reviewed for accuracy</p></li>
+<li><p>More detail of these methods can be found here</p></li>
 </ul>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
 </section>
 </section>
 <section id="gray" class="level2">
