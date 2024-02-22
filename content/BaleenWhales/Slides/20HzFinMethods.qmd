@@ -26,23 +26,21 @@ editor: visual
 
 ## Step 2: Change output settings for your Drift {.smaller}
 
-::: columns 
-::: {.column width="40%"} 
-- Load a new database with the following naming structure
+::: columns
+::: {.column width="40%"}
+-   Load a new database with the following naming structure
 
-    -   ADRIFT_###_PG_2_02_09_FinClick.sqlite3
+    -   ADRIFT\_###\_PG_2\_02_09_FinClick.sqlite3
 
 -   Setup a new Binary files folder
 
     -   We want each Drift to have it's own Binary files
 
-    ![](images/NagivateToDB.JPG)
-    ![](images/Binary_Folder.JPG)
-
+    ![](images/NagivateToDB.JPG) ![](images/Binary_Folder.JPG)
 :::
 :::
 
-## Step 3: Update the  {.smaller}
+## Step 3: Update the {.smaller}
 
 ::: columns
 ::: {.column width="40%"}

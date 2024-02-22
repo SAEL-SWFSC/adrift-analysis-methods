@@ -61,7 +61,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 -   Both Accepted and Review detections were reviewed for accuracy
 
--   More detail of these methods can be found here
+-   More detail of these methods can be found [here](https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/BaleenWhales/Slides/20HzFinMethods.html)
 
 ### 
 
