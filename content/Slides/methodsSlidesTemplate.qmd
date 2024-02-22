@@ -23,9 +23,9 @@ For advanced formatting options see Quarto's [Advanced Reveal documentation](htt
 
 New slides can be created using the header options
 
--   *'\## Slide Title'* creates a new slide
+-   *'## Slide Title'* creates a new slide
 
--   *'\# Slide Title'* creates a new section with a title slide
+-   *'# Slide Title'* creates a new section with a title slide
 
 -   See following slides for example
 
