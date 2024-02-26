@@ -79,6 +79,132 @@ editor: visual
 
 ::: {.column width="40%"}
 ![](/content/Slides/images/Sound_Aquistion_Fin.JPG){fig-align="center"}
+:::
+:::
 
+## Step 6: Process each Drift {.smaller}
+
+::: columns
+::: {.column width="30%"}
+-   Click the play button and let your wav files run through PAMGuard
+
+    -   20Hz Fin Pulses should have Wigner Plots that are down swept
+    -   Peak frequency will be close to 20-25Hz with some variability
+:::
+
+::: {.column width="70%"}
+![](/content/Slides/images/Fin_Clicks_ClickDetector.JPG){fig-align="center"}
 :::
 :::
+
+## Step 6: Create Events in PAMPal {.smaller}
+
+-The code below can be used to subsample 20% of the data. We used a stratified sub-sampling method that looks at 1 out of every 5 wav files
+
+```{r}
+#| eval: FALSE
+#| echo: true
+# PAMpal simple example 
+# install.packages('PAMpal')
+# updated 22-12-6 to include loop for PG event adding w/PAMmisc
+# UPDATE 2023-09-06:
+#   Changed first processing from mode='recording' because there were
+#   DST-related bugs on some drifts. Lines 45-48 updated.
+
+rm(list=ls())
+devtools::install_github('TaikiSan21/PAMpal')
+devtools::install_github('TaikiSan21/PAMmisc')
+library(PAMpal)
+library(PAMmisc)
+
+# Start by creating a "PAMpalSettings" object. This keeps track of what data
+# you want to process and what processing you want to apply to it.
+
+# Change paths below to your DB and binary folder. Can just be the 
+# highest level binary folder for that drift - it will add all files
+# within that folder recursively through subfolders.
+
+# This will also ask you to type in some parameters for calculations
+# in your console. You can just hit ENTER to accept defaults for all
+# of these, they aren't relevant to the GPL calculations only for clicks.
+
+pps <- PAMpalSettings(db = 'H:/DATA/PAMGUARD_FIN_CLICK/AddFinEvent/ADRIFT_053_PG_2_02_02_FinClick.sqlite3',
+                      binaries = 'H:/DATA/PAMGUARD_FIN_CLICK/FinClickDetector_Run/Binaries/ADRIFT_053',
+                      # these parameters are only for the click detector - can ignore
+                      sr_hz=200,
+                      filterfrom_khz=0,
+                      filterto_khz=NULL,
+                      winLen_sec=1)
+
+# Now tell it to process your data. Id is optional and serves no function,
+# but can be useful to tell data apart at a later point in time. Here
+# mode = 'recording' tells it how to organize your data. Most of the time
+# we are working with data that have been marked manually into events, 
+# so PAMpal wants to organize things into events. mode='db' uses the events
+# in the database, and only processes the detectoins you've marked out.
+# In this case we just want to process everything, which is what 
+# mode='recording' does. It will group them into events by recording file. 
+
+# This might take some time
+
+# to read in events after processing in order to get the tim
+#data <- processPgDetections(pps, mode='db', id='Humpback007') 
+wavFolder <- 'H:/RECORDINGS/12kHz/ADRIFT_053_CENSOR_12kHz'
+wavGroups <- PAMpal:::mapWavFolder(wavFolder)
+wavGroups$id <- basename(wavGroups$file)
+data <- processPgDetections(pps, mode='time', grouping=wavGroups, id='Fin_ADRIFT_53')
+# data <- processPgDetections(pps, mode='recording', id='Fin_ADRIFT_53')
+
+# And here's how you can get the detections information out of "data"
+# as a dataframe. Time column is "UTC", other columns are stuff it
+# measured. 
+clickDf <- getClickData(data)
+
+# Now we can add the wav files to this data. You might get a warning about
+# "startSample", its safe to ignore that.
+data <- addRecordings(data, folder=wavFolder)
+
+# that data is stored here as a dataframe. Has "start" & "end" as POSIXct and
+# the fulle path to the file as "file"
+wavDf <- files(data)$recordings
+# add number of detections to this
+nDets <- sapply(events(data), nDetections)
+nDets <- data.frame(join=names(nDets), nDets=nDets)
+wavDf$join <- basename(wavDf$file)
+wavDf <- left_join(wavDf, nDets)
+wavDf$join <- NULL
+wavDf$nDets[is.na(wavDf$nDets)] <- 0
+
+nfiles =round(nrow(wavDf)*.2)
+randStart =sample(1:5,1)
+
+wavDf=wavDf[round(seq(randStart, nrow(wavDf), length.out = nfiles)),]
+
+
+
+
+# If we care about assigning some kind of initial label to these
+# detections. Otherwise ignore. 
+data <- setSpecies(data, method='manual', value='fin_click')
+
+# Add events from wavDf loop
+for(e in 1:nrow(wavDf)) {
+  thisEv <- data[[basename(wavDf$file[e])]]
+  # this will get all detector types, if just one type is wanted can
+  # be simplified to ex. uids <- unique(getGPLData(thisEv)$UID)
+  uids <- unique(unlist(lapply(getDetectorData(thisEv), function(x) {
+    if(is.null(x)) return(NULL)
+    x$UID
+  })))
+  
+  addPgEvent(db = files(thisEv)$db,
+             binary = files(thisEv)$binaries,
+             eventType = species(thisEv)$id,
+             UIDs = uids,
+             type = 'click',
+             start = wavDf$start[e],
+             end = wavDf$end[e],
+             comment = paste0('Added by PAMpal, event ID: ', id(thisEv)))
+}
+
+```
