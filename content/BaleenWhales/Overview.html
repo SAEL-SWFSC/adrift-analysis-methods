@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../content/BaleenWhales/Dectections.html" rel="next">
+<link href="../../content/ToothedWhales/BeakedWhales-Detection.html" rel="next">
 <link href="../../content/DataArchive/OBIS.html" rel="prev">
 <link href="../../images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -204,48 +204,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../content/BaleenWhales/Dectections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Detection</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../content/BaleenWhales/FinWhales20Hz-BANTER.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fin Whales (20 Hz) - BANTER</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../content/BaleenWhales/BlueWhales-ManualDetection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Blue Whales - Manual Detection</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../content/BaleenWhales/BlueWhales-GPL.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Blue Whales - GPL Detection</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../content/BaleenWhales/BlueWhales-BANTER.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Blue Whales - BANTER</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../content/BaleenWhales/MinkeWhales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Minke Whales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../content/BaleenWhales/Gray_and_HumpbackWhales-BANTER.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gray &amp; Humpback Whales - BANTER</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -336,7 +294,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#validation-of-events" id="toc-validation-of-events" class="nav-link" data-scroll-target="#validation-of-events"><em>Validation of events</em></a></li>
   <li><a href="#random-forest-model" id="toc-random-forest-model" class="nav-link" data-scroll-target="#random-forest-model"><em>Random Forest Model</em></a></li>
   <li><a href="#review-of-model-results" id="toc-review-of-model-results" class="nav-link" data-scroll-target="#review-of-model-results"><em>Review of Model Results</em></a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></li>
   <li><a href="#gray" id="toc-gray" class="nav-link" data-scroll-target="#gray">Gray</a></li>
   <li><a href="#humpack" id="toc-humpack" class="nav-link" data-scroll-target="#humpack">Humpack</a></li>
@@ -385,13 +342,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="manual-annotation-in-triton" class="level3">
 <h3 class="anchored" data-anchor-id="manual-annotation-in-triton"><em>Manual Annotation in Triton</em></h3>
 <ul>
-<li>Presence of blue whales within the recordings were based off of A, B, and D call types.</li>
-<li><a href="https://github.com/MarineBioAcousticsRC/Triton">Triton software</a> was used for the following:
+<li><p>Presence of blue whales within the recordings were based off of A, B, and D call types.</p></li>
+<li><p><a href="https://github.com/MarineBioAcousticsRC/Triton">Triton software</a> was used for the following:</p>
 <ul>
 <li><p>Long-term spectral averages (LTSAs) were calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings</p></li>
 <li><p>A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call.</p></li>
-<li><p>These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created. Click <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide">here</a> for more detail of these methods.</p></li>
-</ul></li>
+<li><p>These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created.</p></li>
+</ul>
+<p>Click <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide">here</a> for more detail of these methods.</p></li>
 </ul>
 </section>
 </section>
@@ -420,7 +378,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://taikisan21.github.io/PAMpal/">PAMpal</a> was used to create events in each database</p>
 <ul>
 <li><p>Events were defined as every wav file</p></li>
-<li><p>Wav file lengths and duty cycles varied depending on deployment but all information related to deployment details can be found <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=1736197089">here</a>.</p></li>
+<li><p>Wav file lengths and duty cycles varied depending on deployment but all information related to deployment details can be found <a href="https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=395545420">here</a>.</p></li>
 </ul></li>
 </ul>
 </section>
@@ -436,11 +394,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>We used the model to predict if fin whales were present on an hourly basis</p></li>
 <li><p>The model had one of three results: Accept, Review, Dropped</p></li>
 <li><p>Both Accepted and Review detections were reviewed for accuracy</p></li>
-<li><p>More detail of these methods can be found <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/BaleenWhales/Slides/20HzFinMethods.html">here</a></p></li>
 </ul>
-</section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<p>More detail of these methods can be found <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/BaleenWhales/Slides/20HzFinMethods.html">here</a></p>
 </section>
 </section>
 <section id="gray" class="level2">
@@ -451,14 +406,19 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="minke" class="level2">
 <h2 class="anchored" data-anchor-id="minke">Minke</h2>
-<p>PAMGuard version 2.02.02 was used to run a Generalized Power Law (GPL) detector to identify Minke whale boings (see image below). All detections were manually scanned and all boings were annotated using PAMGuard Viewer Mode’s Spectrogram Annotation Tool. Following manual scanning, an additional 20% of the total data was subsampled to look for false negative boings. The annotations were then summarized into hourly presence/absence tables.</p>
+<ul>
+<li><a href="https://www.pamguard.org/">PAMGuard</a> software was used to run a Generalized Power Law (GPL) detector to identify Minke whale boings (see image below)</li>
+<li>All detections were manually scanned and all boings were annotated using PAMGuard Viewer Mode’s Spectrogram Annotation Tool</li>
+<li>Following manual scanning, an additional 20% of the total data was subsampled to look for false negative boings</li>
+<li>The annotations were then summarized into hourly presence/absence tables.</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/MinkeGPLDetections.png" class="img-fluid figure-img"></p>
 <figcaption>Figure X. Spectrogram of Minke whale boings being detected by GPL detector</figcaption>
 </figure>
 </div>
-<p><a href="../../content/BaleenWhales/Slides/minkeMethods.html">Detailed methods</a></p>
+<p>Click <a href="../../content/BaleenWhales/Slides/minkeMethods.html">here</a> for more detailed methods</p>
 
 
 </section>
@@ -1003,8 +963,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../content/BaleenWhales/Dectections.html" class="pagination-link" aria-label="Detection">
-        <span class="nav-page-text">Detection</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../content/ToothedWhales/BeakedWhales-Detection.html" class="pagination-link" aria-label="Beaked Whales">
+        <span class="nav-page-text">Beaked Whales</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
