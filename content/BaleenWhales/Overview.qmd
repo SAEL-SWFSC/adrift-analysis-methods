@@ -19,16 +19,20 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 ### *Manual Annotation in Triton*
 
 -   Presence of blue whales within the recordings were based off of A, B, and D call types.
+
 -   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) was used for the following:
+
     -   Long-term spectral averages (LTSAs) were calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings
 
     -   A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call.
 
-    -   These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created. Click [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
+    -   These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created.
+
+    Click [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
 
 ## Brydes
 
-## Fin 20 Hz ADRIFT 
+## Fin 20 Hz ADRIFT
 
 ### *Click detector in PAMGuard*
 
@@ -47,9 +51,9 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
     -   Events were defined as every wav file
 
-    -   Wav file lengths and duty cycles varied depending on deployment but all information related to deployment details can be found [here](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=1736197089).
+    -   Wav file lengths and duty cycles varied depending on deployment but all information related to deployment details can be found [here](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=395545420).
 
-### *Random Forest Model* 
+### *Random Forest Model*
 
 -   A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023
 
@@ -61,9 +65,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 -   Both Accepted and Review detections were reviewed for accuracy
 
--   More detail of these methods can be found [here](https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/BaleenWhales/Slides/20HzFinMethods.html)
-
-### 
+More detail of these methods can be found [here](https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/main/content/BaleenWhales/Slides/20HzFinMethods.html)
 
 ## Gray
 
@@ -71,8 +73,11 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 ## Minke
 
-PAMGuard version 2.02.02 was used to run a Generalized Power Law (GPL) detector to identify Minke whale boings (see image below). All detections were manually scanned and all boings were annotated using PAMGuard Viewer Mode's Spectrogram Annotation Tool. Following manual scanning, an additional 20% of the total data was subsampled to look for false negative boings. The annotations were then summarized into hourly presence/absence tables.
+-   [PAMGuard](https://www.pamguard.org/) software was used to run a Generalized Power Law (GPL) detector to identify Minke whale boings (see image below)
+-   All detections were manually scanned and all boings were annotated using PAMGuard Viewer Mode's Spectrogram Annotation Tool
+-   Following manual scanning, an additional 20% of the total data was subsampled to look for false negative boings
+-   The annotations were then summarized into hourly presence/absence tables.
 
 ![Figure X. Spectrogram of Minke whale boings being detected by GPL detector](images/MinkeGPLDetections.png)
 
-[Detailed methods](Slides/minkeMethods.qmd)
+Click [here](Slides/minkeMethods.qmd) for more detailed methods

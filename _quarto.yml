@@ -48,13 +48,13 @@ website:
       - section: "Baleen Whales"
         contents:
           - content/BaleenWhales/Overview.qmd
-          - content/BaleenWhales/Dectections.qmd
-          - content/BaleenWhales/FinWhales20Hz-BANTER.qmd
-          - content/BaleenWhales/BlueWhales-ManualDetection.qmd
-          - content/BaleenWhales/BlueWhales-GPL.qmd
-          - content/BaleenWhales/BlueWhales-BANTER.qmd
-          - content/BaleenWhales/MinkeWhales.qmd
-          - content/BaleenWhales/Gray_and_HumpbackWhales-BANTER.qmd
+          # - content/BaleenWhales/Dectections.qmd
+          # - content/BaleenWhales/FinWhales20Hz-BANTER.qmd
+          # - content/BaleenWhales/BlueWhales-ManualDetection.qmd
+          # - content/BaleenWhales/BlueWhales-GPL.qmd
+          # - content/BaleenWhales/BlueWhales-BANTER.qmd
+          # - content/BaleenWhales/MinkeWhales.qmd
+          # - content/BaleenWhales/Gray_and_HumpbackWhales-BANTER.qmd
       - section: "Toothed Whales"
         contents:
           - content/ToothedWhales/BeakedWhales-Detection.qmd
