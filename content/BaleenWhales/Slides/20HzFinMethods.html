@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -430,6 +495,134 @@ Cory Hom-Weaver
 </div>
 </div>
 </div>
+</section>
+<section id="step-6-process-each-drift" class="slide level2 smaller">
+<h2>Step 6: Process each Drift</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li><p>Click the play button and let your wav files run through PAMGuard</p>
+<ul>
+<li>20Hz Fin Pulses should have Wigner Plots that are down swept</li>
+<li>Peak frequency will be close to 20-25Hz with some variability</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Fin_Clicks_ClickDetector.JPG" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6-create-events-in-pampal" class="slide level2 smaller">
+<h2>Step 6: Create Events in PAMPal</h2>
+<p>-The code below can be used to subsample 20% of the data. We used a stratified sub-sampling method that looks at 1 out of every 5 wav files</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># PAMpal simple example </span></span>
+<span id="cb1-2"><a></a><span class="co"># install.packages('PAMpal')</span></span>
+<span id="cb1-3"><a></a><span class="co"># updated 22-12-6 to include loop for PG event adding w/PAMmisc</span></span>
+<span id="cb1-4"><a></a><span class="co"># UPDATE 2023-09-06:</span></span>
+<span id="cb1-5"><a></a><span class="co">#   Changed first processing from mode='recording' because there were</span></span>
+<span id="cb1-6"><a></a><span class="co">#   DST-related bugs on some drifts. Lines 45-48 updated.</span></span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<span id="cb1-9"><a></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'TaikiSan21/PAMpal'</span>)</span>
+<span id="cb1-10"><a></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'TaikiSan21/PAMmisc'</span>)</span>
+<span id="cb1-11"><a></a><span class="fu">library</span>(PAMpal)</span>
+<span id="cb1-12"><a></a><span class="fu">library</span>(PAMmisc)</span>
+<span id="cb1-13"><a></a></span>
+<span id="cb1-14"><a></a><span class="co"># Start by creating a "PAMpalSettings" object. This keeps track of what data</span></span>
+<span id="cb1-15"><a></a><span class="co"># you want to process and what processing you want to apply to it.</span></span>
+<span id="cb1-16"><a></a></span>
+<span id="cb1-17"><a></a><span class="co"># Change paths below to your DB and binary folder. Can just be the </span></span>
+<span id="cb1-18"><a></a><span class="co"># highest level binary folder for that drift - it will add all files</span></span>
+<span id="cb1-19"><a></a><span class="co"># within that folder recursively through subfolders.</span></span>
+<span id="cb1-20"><a></a></span>
+<span id="cb1-21"><a></a><span class="co"># This will also ask you to type in some parameters for calculations</span></span>
+<span id="cb1-22"><a></a><span class="co"># in your console. You can just hit ENTER to accept defaults for all</span></span>
+<span id="cb1-23"><a></a><span class="co"># of these, they aren't relevant to the GPL calculations only for clicks.</span></span>
+<span id="cb1-24"><a></a></span>
+<span id="cb1-25"><a></a>pps <span class="ot">&lt;-</span> <span class="fu">PAMpalSettings</span>(<span class="at">db =</span> <span class="st">'H:/DATA/PAMGUARD_FIN_CLICK/AddFinEvent/ADRIFT_053_PG_2_02_02_FinClick.sqlite3'</span>,</span>
+<span id="cb1-26"><a></a>                      <span class="at">binaries =</span> <span class="st">'H:/DATA/PAMGUARD_FIN_CLICK/FinClickDetector_Run/Binaries/ADRIFT_053'</span>,</span>
+<span id="cb1-27"><a></a>                      <span class="co"># these parameters are only for the click detector - can ignore</span></span>
+<span id="cb1-28"><a></a>                      <span class="at">sr_hz=</span><span class="dv">200</span>,</span>
+<span id="cb1-29"><a></a>                      <span class="at">filterfrom_khz=</span><span class="dv">0</span>,</span>
+<span id="cb1-30"><a></a>                      <span class="at">filterto_khz=</span><span class="cn">NULL</span>,</span>
+<span id="cb1-31"><a></a>                      <span class="at">winLen_sec=</span><span class="dv">1</span>)</span>
+<span id="cb1-32"><a></a></span>
+<span id="cb1-33"><a></a><span class="co"># Now tell it to process your data. Id is optional and serves no function,</span></span>
+<span id="cb1-34"><a></a><span class="co"># but can be useful to tell data apart at a later point in time. Here</span></span>
+<span id="cb1-35"><a></a><span class="co"># mode = 'recording' tells it how to organize your data. Most of the time</span></span>
+<span id="cb1-36"><a></a><span class="co"># we are working with data that have been marked manually into events, </span></span>
+<span id="cb1-37"><a></a><span class="co"># so PAMpal wants to organize things into events. mode='db' uses the events</span></span>
+<span id="cb1-38"><a></a><span class="co"># in the database, and only processes the detectoins you've marked out.</span></span>
+<span id="cb1-39"><a></a><span class="co"># In this case we just want to process everything, which is what </span></span>
+<span id="cb1-40"><a></a><span class="co"># mode='recording' does. It will group them into events by recording file. </span></span>
+<span id="cb1-41"><a></a></span>
+<span id="cb1-42"><a></a><span class="co"># This might take some time</span></span>
+<span id="cb1-43"><a></a></span>
+<span id="cb1-44"><a></a><span class="co"># to read in events after processing in order to get the tim</span></span>
+<span id="cb1-45"><a></a><span class="co">#data &lt;- processPgDetections(pps, mode='db', id='Humpback007') </span></span>
+<span id="cb1-46"><a></a>wavFolder <span class="ot">&lt;-</span> <span class="st">'H:/RECORDINGS/12kHz/ADRIFT_053_CENSOR_12kHz'</span></span>
+<span id="cb1-47"><a></a>wavGroups <span class="ot">&lt;-</span> PAMpal<span class="sc">:::</span><span class="fu">mapWavFolder</span>(wavFolder)</span>
+<span id="cb1-48"><a></a>wavGroups<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="fu">basename</span>(wavGroups<span class="sc">$</span>file)</span>
+<span id="cb1-49"><a></a>data <span class="ot">&lt;-</span> <span class="fu">processPgDetections</span>(pps, <span class="at">mode=</span><span class="st">'time'</span>, <span class="at">grouping=</span>wavGroups, <span class="at">id=</span><span class="st">'Fin_ADRIFT_53'</span>)</span>
+<span id="cb1-50"><a></a><span class="co"># data &lt;- processPgDetections(pps, mode='recording', id='Fin_ADRIFT_53')</span></span>
+<span id="cb1-51"><a></a></span>
+<span id="cb1-52"><a></a><span class="co"># And here's how you can get the detections information out of "data"</span></span>
+<span id="cb1-53"><a></a><span class="co"># as a dataframe. Time column is "UTC", other columns are stuff it</span></span>
+<span id="cb1-54"><a></a><span class="co"># measured. </span></span>
+<span id="cb1-55"><a></a>clickDf <span class="ot">&lt;-</span> <span class="fu">getClickData</span>(data)</span>
+<span id="cb1-56"><a></a></span>
+<span id="cb1-57"><a></a><span class="co"># Now we can add the wav files to this data. You might get a warning about</span></span>
+<span id="cb1-58"><a></a><span class="co"># "startSample", its safe to ignore that.</span></span>
+<span id="cb1-59"><a></a>data <span class="ot">&lt;-</span> <span class="fu">addRecordings</span>(data, <span class="at">folder=</span>wavFolder)</span>
+<span id="cb1-60"><a></a></span>
+<span id="cb1-61"><a></a><span class="co"># that data is stored here as a dataframe. Has "start" &amp; "end" as POSIXct and</span></span>
+<span id="cb1-62"><a></a><span class="co"># the fulle path to the file as "file"</span></span>
+<span id="cb1-63"><a></a>wavDf <span class="ot">&lt;-</span> <span class="fu">files</span>(data)<span class="sc">$</span>recordings</span>
+<span id="cb1-64"><a></a><span class="co"># add number of detections to this</span></span>
+<span id="cb1-65"><a></a>nDets <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">events</span>(data), nDetections)</span>
+<span id="cb1-66"><a></a>nDets <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">join=</span><span class="fu">names</span>(nDets), <span class="at">nDets=</span>nDets)</span>
+<span id="cb1-67"><a></a>wavDf<span class="sc">$</span>join <span class="ot">&lt;-</span> <span class="fu">basename</span>(wavDf<span class="sc">$</span>file)</span>
+<span id="cb1-68"><a></a>wavDf <span class="ot">&lt;-</span> <span class="fu">left_join</span>(wavDf, nDets)</span>
+<span id="cb1-69"><a></a>wavDf<span class="sc">$</span>join <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb1-70"><a></a>wavDf<span class="sc">$</span>nDets[<span class="fu">is.na</span>(wavDf<span class="sc">$</span>nDets)] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb1-71"><a></a></span>
+<span id="cb1-72"><a></a>nfiles <span class="ot">=</span><span class="fu">round</span>(<span class="fu">nrow</span>(wavDf)<span class="sc">*</span>.<span class="dv">2</span>)</span>
+<span id="cb1-73"><a></a>randStart <span class="ot">=</span><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="dv">1</span>)</span>
+<span id="cb1-74"><a></a></span>
+<span id="cb1-75"><a></a>wavDf<span class="ot">=</span>wavDf[<span class="fu">round</span>(<span class="fu">seq</span>(randStart, <span class="fu">nrow</span>(wavDf), <span class="at">length.out =</span> nfiles)),]</span>
+<span id="cb1-76"><a></a></span>
+<span id="cb1-77"><a></a></span>
+<span id="cb1-78"><a></a></span>
+<span id="cb1-79"><a></a></span>
+<span id="cb1-80"><a></a><span class="co"># If we care about assigning some kind of initial label to these</span></span>
+<span id="cb1-81"><a></a><span class="co"># detections. Otherwise ignore. </span></span>
+<span id="cb1-82"><a></a>data <span class="ot">&lt;-</span> <span class="fu">setSpecies</span>(data, <span class="at">method=</span><span class="st">'manual'</span>, <span class="at">value=</span><span class="st">'fin_click'</span>)</span>
+<span id="cb1-83"><a></a></span>
+<span id="cb1-84"><a></a><span class="co"># Add events from wavDf loop</span></span>
+<span id="cb1-85"><a></a><span class="cf">for</span>(e <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wavDf)) {</span>
+<span id="cb1-86"><a></a>  thisEv <span class="ot">&lt;-</span> data[[<span class="fu">basename</span>(wavDf<span class="sc">$</span>file[e])]]</span>
+<span id="cb1-87"><a></a>  <span class="co"># this will get all detector types, if just one type is wanted can</span></span>
+<span id="cb1-88"><a></a>  <span class="co"># be simplified to ex. uids &lt;- unique(getGPLData(thisEv)$UID)</span></span>
+<span id="cb1-89"><a></a>  uids <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">unlist</span>(<span class="fu">lapply</span>(<span class="fu">getDetectorData</span>(thisEv), <span class="cf">function</span>(x) {</span>
+<span id="cb1-90"><a></a>    <span class="cf">if</span>(<span class="fu">is.null</span>(x)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="cb1-91"><a></a>    x<span class="sc">$</span>UID</span>
+<span id="cb1-92"><a></a>  })))</span>
+<span id="cb1-93"><a></a>  </span>
+<span id="cb1-94"><a></a>  <span class="fu">addPgEvent</span>(<span class="at">db =</span> <span class="fu">files</span>(thisEv)<span class="sc">$</span>db,</span>
+<span id="cb1-95"><a></a>             <span class="at">binary =</span> <span class="fu">files</span>(thisEv)<span class="sc">$</span>binaries,</span>
+<span id="cb1-96"><a></a>             <span class="at">eventType =</span> <span class="fu">species</span>(thisEv)<span class="sc">$</span>id,</span>
+<span id="cb1-97"><a></a>             <span class="at">UIDs =</span> uids,</span>
+<span id="cb1-98"><a></a>             <span class="at">type =</span> <span class="st">'click'</span>,</span>
+<span id="cb1-99"><a></a>             <span class="at">start =</span> wavDf<span class="sc">$</span>start[e],</span>
+<span id="cb1-100"><a></a>             <span class="at">end =</span> wavDf<span class="sc">$</span>end[e],</span>
+<span id="cb1-101"><a></a>             <span class="at">comment =</span> <span class="fu">paste0</span>(<span class="st">'Added by PAMpal, event ID: '</span>, <span class="fu">id</span>(thisEv)))</span>
+<span id="cb1-102"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -647,6 +840,44 @@ Cory Hom-Weaver
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
