@@ -21,9 +21,9 @@ Within PAMGuard, a Generalized Power Law detector was used to detect Minke boing
 
 ## Database & Binary Storage {.smaller}
 
--   Set database path to a new blank database titled *ADRIFT\_###\_PG_2\_02_02_Minke.sqlite3*
+-   Set database path to a new blank database titled *ADRIFT\_###\_PG_2_02_02_Minke.sqlite3*
 
--   Create a new binary folder for your detections titled *ADRIFT\_###\_PG_2\_02_02_Minke*
+-   Create a new binary folder for your detections titled *ADRIFT\_###\_PG_2_02_02_Minke*
 
 ## Hydrophone Array {.smaller}
 

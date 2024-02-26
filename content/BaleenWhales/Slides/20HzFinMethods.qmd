@@ -17,35 +17,68 @@ editor: visual
 ## Step 1: Open PAMGuard {.smaller}
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="30%"}
 -   Open PAMgaurd and navigate to the [settings file](https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings) that has "FinClick" in the name
+:::
 
-    ![](images/Pamguard_Open.JPG)
+::: {.column width="70%"}
+![](images/Pamguard_Open.JPG)
 :::
 :::
 
 ## Step 2: Change output settings for your Drift {.smaller}
 
-::: columns
-::: {.column width="40%"}
 -   Load a new database with the following naming structure
 
-    -   ADRIFT\_###\_PG_2\_02_09_FinClick.sqlite3
+    -   *ADRIFT\_###\_PG_2_02_09_FinClick.sqlite3*
 
 -   Setup a new Binary files folder
 
     -   We want each Drift to have it's own Binary files
 
-    ![](images/NagivateToDB.JPG) ![](images/Binary_Folder.JPG)
+## Step 3: Update the Array File {.smaller}
+
+::: columns
+::: {.column width="30%"}
+-   Open Hydrophone array settings
+
+    -   Modify settings to match deployment details for the specific array used for your drift
+:::
+
+::: {.column width="70%"}
+![](/content/Slides/images/Array_File_PG.JPG){fig-align="right"}
 :::
 :::
 
-## Step 3: Update the {.smaller}
+## Step 4: Decimator Settings {.smaller}
+
+-   Check to see that your decimator settings match the settings below
 
 ::: columns
 ::: {.column width="40%"}
--   Open PAMgaurd and navigate to the [settings file](https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings) that has "FinClick" in the name
+![](/content/Slides/images/200Hz_Decimator.JPG){fig-align="left"}
+:::
 
-    ![](images/Pamguard_Open.JPG)
+::: {.column width="60%"}
+![](/content/Slides/images/Decimator_filter_settings.JPG){fig-align="right"}
+:::
+:::
+
+## Step 5: Sound Acquisition {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   Navigate to your sound files
+
+    -   We used 12kHz files, which were previously decimated in Triton Software
+
+-   Due to an offset at the beginning of the SoundTrap wav files, we need to make sure to skip the initial 3 seconds of the recording
+
+-   Your settings should look like the following below
+:::
+
+::: {.column width="40%"}
+![](/content/Slides/images/Sound_Aquistion_Fin.JPG){fig-align="center"}
+
 :::
 :::
