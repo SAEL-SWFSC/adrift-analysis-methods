@@ -1,0 +1,10 @@
+---
+title: "Humpback Whale Methods"
+author: "Kaitlin Palmer"
+format: 
+  revealjs:
+    slide-number: true
+    footer: "[Back to baleen whale methods overview](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Overview.html)" #This should link to your methods page
+    theme: black
+editor: visual
+---
