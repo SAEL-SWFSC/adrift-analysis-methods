@@ -348,40 +348,86 @@ Cory Hom-Weaver
 <section id="step-1-open-pamguard" class="slide level2 smaller">
 <h2>Step 1: Open PAMGuard</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:30%;">
 <ul>
-<li><p>Open PAMgaurd and navigate to the <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings">settings file</a> that has “FinClick” in the name</p>
-<p><img data-src="images/Pamguard_Open.JPG"></p></li>
+<li>Open PAMgaurd and navigate to the <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings">settings file</a> that has “FinClick” in the name</li>
 </ul>
+</div><div class="column" style="width:70%;">
+<p><img data-src="images/Pamguard_Open.JPG"></p>
 </div>
 </div>
 </section>
 <section id="step-2-change-output-settings-for-your-drift" class="slide level2 smaller">
 <h2>Step 2: Change output settings for your Drift</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
 <ul>
 <li><p>Load a new database with the following naming structure</p>
 <ul>
-<li>ADRIFT_###_PG_2_02_09_FinClick.sqlite3</li>
+<li><em>ADRIFT_###_PG_2_02_09_FinClick.sqlite3</em></li>
 </ul></li>
 <li><p>Setup a new Binary files folder</p>
 <ul>
 <li>We want each Drift to have it’s own Binary files</li>
+</ul></li>
 </ul>
-<p><img data-src="images/NagivateToDB.JPG"> <img data-src="images/Binary_Folder.JPG"></p></li>
+</section>
+<section id="step-3-update-the-array-file" class="slide level2 smaller">
+<h2>Step 3: Update the Array File</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li><p>Open Hydrophone array settings</p>
+<ul>
+<li>Modify settings to match deployment details for the specific array used for your drift</li>
+</ul></li>
 </ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/Array_File_PG.JPG" class="quarto-figure quarto-figure-right"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
-<section id="step-3-update-the" class="slide level2 smaller">
-<h2>Step 3: Update the</h2>
+<section id="step-4-decimator-settings" class="slide level2 smaller">
+<h2>Step 4: Decimator Settings</h2>
+<ul>
+<li>Check to see that your decimator settings match the settings below</li>
+</ul>
 <div class="columns">
 <div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="../../../content/Slides/images/200Hz_Decimator.JPG" class="quarto-figure quarto-figure-left"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../../content/Slides/images/Decimator_filter_settings.JPG" class="quarto-figure quarto-figure-right"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-sound-acquisition" class="slide level2 smaller">
+<h2>Step 5: Sound Acquisition</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
-<li><p>Open PAMgaurd and navigate to the <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings">settings file</a> that has “FinClick” in the name</p>
-<p><img data-src="images/Pamguard_Open.JPG"></p></li>
+<li><p>Navigate to your sound files</p>
+<ul>
+<li>We used 12kHz files, which were previously decimated in Triton Software</li>
+</ul></li>
+<li><p>Due to an offset at the beginning of the SoundTrap wav files, we need to make sure to skip the initial 3 seconds of the recording</p></li>
+<li><p>Your settings should look like the following below</p></li>
 </ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Sound_Aquistion_Fin.JPG" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 </div>
 </div>
 
