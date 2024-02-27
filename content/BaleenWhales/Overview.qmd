@@ -69,9 +69,33 @@ More detail of these methods can be found [here](http://localhost:7770/content/B
 
 ## Gray and Humpack
 
-Downsampled audio data were visualized as spectrograms and manually browsed for the presence of humpback and gray whale calls using [Raven Pro v. 1.6.4](https://store.birds.cornell.edu/collections/raven-sound-software). Spectrogram settings included a 4096pt fft length with a Han window 90% overlap resulting in a 341 ms time and 4.21hz frequency resolution. All drifts were manually scanned for humpback and gray whale calls and hourly presence was indicated, regardless of duty-cycling regime. Humpback annotations were labeled as either humpback song, (HmpSng), humpback social (HmpSoc), or undetermined humpback calls (Hmp). The humpback song category contained sections of calls where at least two notes of a theme were clearly visible and produced twice. This qualification was relaxed when song segments were clearly visible in the preceding our and were reduced in SNR or masked by impulsive sounds (i.e. increasing distance between the animal and drifter). The humpback social category included whops, grunt sequences, that are stereotyped and could be clearly discriminated [Dundop et al. 2008](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1748-7692.2008.00208.x). The undetermined humpback category was a catch all for calls that did not clearly fit into either song or social category. This was often used when calls were low SNR or diverse in visual and aural appearance. During the annotation process at least one call of each class was noted for each hour where present. However, multiple annotations were per hour were occasionally made where subjectively higher SNR signals were found after the initial annotation. In other words, some effort was made to select the highest SNR calls. The presence of gray whales was also indicated but classes were not specified. However, it should be noted that there is considerable overlap in the repertoires of humpback whales and gray whales and as such, care should be taken when inferring gray whale presence from audio with concurrent humpback whale presence.
+Downsampled audio data (12 kHz) were visualized as spectrograms and manually browsed for the presence of humpback and gray whale calls using [Raven Pro v. 1.6.4](https://store.birds.cornell.edu/collections/raven-sound-software). Spectrogram settings included a 4096pt fft length with a Han window 90% overlap resulting in a 341 ms time and 4.21hz frequency resolution. All drifts were manually scanned for humpback and gray whale calls and hourly presence was indicated, regardless of duty-cycling regime.
 
-Cross validation of a portion of the calls was completed with Dr. Alison Stimpert. In this process, a selection of uncertain annotations were collaboratively reviewed to ensure consistency between expert analysts. All annotation files were stored as Raven Selection tables containing columns for the start and end time, relative to the beginning of the drift audio files, date and time at the start of the annotation in yyyy/mm/dd HH:MM:SS, low and high frequency, Species, Hour of the day-for hourly presence analysis, and additional Notes column.
+All annotation files were stored as Raven Selection tables containing columns for the start and end time, relative to the beginning of the drift audio files, date and time at the start of the annotation in yyyy/mm/dd HH:MM:SS, low and high frequency, Species, Hour of the day-for hourly presence analysis, and additional Notes column.
+
+#### Humpback Whale Annotations
+
+Humpback annotations were labeled as either humpback song, (HmpSng), humpback social (HmpSoc), or undetermined humpback calls (Hmp).
+
+-   The humpback song category contained sections of calls where at least two notes of a theme were clearly visible and produced twice
+
+    -   This qualification was relaxed when song segments were clearly visible in the preceding hour and were reduced in SNR or masked by impulsive sounds (i.e. increasing distance between the animal and drifter)
+
+-   The humpback social category included whops and grunt sequences, that are stereotyped and could be clearly discriminated ([Dundop et al. 2008](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1748-7692.2008.00208.x))
+
+-   The undetermined humpback category was a catch all for calls that did not clearly fit into either song or social category
+
+    -   This was often used when calls were low SNR or diverse in visual and aural appearance
+
+During the annotation process at least one call of each class was noted for each hour where present. However, multiple annotations were per hour were occasionally made where subjectively higher SNR signals were found after the initial annotation. In other words, some effort was made to select the highest SNR calls
+
+#### Gray Whale Annotation
+
+The presence of gray whales was also indicated but classes were not specified. However, it should be noted that there is considerable overlap in the repertoires of humpback whales and gray whales and as such, care should be taken when inferring gray whale presence from audio with concurrent humpback whale presence.
+
+#### Cross Validation
+
+Cross validation of a portion of the calls was completed with Dr. Alison Stimpert. In this process, a selection of uncertain annotations were collaboratively reviewed to ensure consistency between expert analysts.
 
 ## Minke
 
