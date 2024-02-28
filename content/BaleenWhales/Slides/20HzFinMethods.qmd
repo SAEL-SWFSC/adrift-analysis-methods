@@ -82,7 +82,37 @@ editor: visual
 :::
 :::
 
-## Step 6: Process each Drift {.smaller}
+## Step 6: Check the Digital Pre and Trigger filter Settings {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![Digital Pre Filter Settings](/content/Slides/images/Click_Detector_PreFilter_Fin.JPG){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![Digital Trigger Filter Settings](/content/Slides/images/Click_Detector_TrigerFilter_Fin.JPG){fig-align="center"}
+:::
+:::
+
+## Step 7: Check the Click Detector Settings {.smaller}
+
+-The settings for the first three tabs should be as follows. The rest of the tabs can be left to their default
+
+::: columns
+::: {.column width="33%"}
+![Click Detector Source](/content/Slides/images/Click_Detector_DetectionParms_Source.JPG){fig-align="center"}
+:::
+
+::: {.column width="33%"}
+![Click Detector Trigger](/content/Slides/images/Click_Detector_DetectionParms_Trigger.JPG){fig-align="center"}
+:::
+
+::: {.column width="33%"}
+![Click Detector Click Length](/content/Slides/images/Click_Detector_DetectionParms_ClickLength.JPG){fig-align="center"}
+:::
+:::
+
+## Step 8: Process each Drift {.smaller}
 
 ::: columns
 ::: {.column width="30%"}
@@ -97,9 +127,9 @@ editor: visual
 :::
 :::
 
-## Step 6: Create Events in PAMPal {.smaller}
+## Step 9: Create Events in PAMpal {.smaller}
 
--The code below can be used to subsample 20% of the data. We used a stratified sub-sampling method that looks at 1 out of every 5 wav files
+-The code below can be used to subsample 20% of the data. We used a stratified sub-sampling method that looks at 1 out of every 5 wav files. Before running this code, create a copy of the original database and place it in a new folder so that we don't write over the originals.
 
 ```{r}
 #| eval: FALSE
@@ -208,3 +238,110 @@ for(e in 1:nrow(wavDf)) {
 }
 
 ```
+
+## Step 10: Open the Database in Viewer Mode {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   Open the database that you have added events to with PAMGuard Viewer Mode
+
+    -   Use the original binary files
+
+-   Check to see that your events were added correctly under Click Detection--\>Show events
+:::
+
+::: {.column width="60%"}
+![Events added through PAMpal](/content/Slides/images/Events_PG.JPG){fig-align="center"}
+:::
+:::
+
+## Step 11: Add Spectrogram Annotation Moduel {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   Open the database that you have added events to with PAMGuard Viewer Mode
+
+    -   Use the original binary files
+
+-   Add the "Spectrogram Annotation Moduel"
+
+-   Once added you should see "Spectrogram Annotation Settings" under the settings menu
+:::
+
+::: {.column width="60%"}
+![](/content/Slides/images/Spectrogram_Annotation_Settings.JPG){fig-align="center"}
+:::
+:::
+
+## Step 12: Add LOOKUP Table {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   Click on the gear icon for the "User Form Annotation" check box
+
+-   Click on "Create New"
+
+    -   A new dialog will pop up and under the left side you will Add a LOOKUP table
+
+    -   Fill in the metadata for the table as follows
+:::
+
+::: {.column width="60%"}
+![](/content/Slides/images/Create_Logger_Form_Fin-Annotations.JPG){fig-align="center"}
+:::
+:::
+
+## Step 13: Add drop down list for LOOKUP table {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   Right click on the drop down menu to the right of the Topic section
+
+-   Click on edit list
+
+    -   Add the following 4 options as seen in the image to the right
+    -   Click ok on all of the promts
+    -   In order for your settings to work you will need to save and restart PAMGaurd
+:::
+
+::: {.column width="60%"}
+![](/content/Slides/images/LookUp_Table_Fin_Annotations.JPG){fig-align="center"}
+:::
+:::
+
+## Step 14: Make a Copy of the Events Database {.smaller}
+
+-   We will be comparing the Original Events Database with the Validated Database to pull out metrics such as false positives, false negatives, true positives, true negative and precision and recall
+
+    -   This is why we need to validate a copy of the events database and keep one untouched
+
+## Step 15: Start Validating Events {.smaller}
+
+-   Use the Click Detector Event List to Navigate to each event
+    -   Use the click detector to add or remove clicks to an event
+        -   Use the Wigner and the click spectrum to determine if the click is a 20Hz fin pulse
+        -   Look at the spectrogram and see if the click looks like a 20Hz fin pulse
+
+::: columns
+::: {.column width="50%"}
+![Fin pulses in the click detector. Click spectrum shows a peak around 20Hz. The wigner shows a slight down sweep.](/content/Slides/images/Fin_Clicks_Good_Wigner.JPG){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![20Hz Fin Pulses (purple triangles represent where the click detector has picked up a pulse)](/content/Slides/images/20Hz_Fin_Spectrogram.JPG){fig-align="center"}
+:::
+:::
+
+## Step 16: Annotate Missed Fin Pulses on the Spectrogram Display {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   Scroll through each event using the spectrogram display
+    -   Annotate any 20Hz pulse that was missed by the click detector
+    -   Draw a box around the click and use the drop down menu to select the sound you're boxing
+:::
+
+::: {.column width="60%"}
+![Spectrogram Annotation](/content/Slides/images/Fin_click_annotation_spectrogram.JPG){fig-align="center"}
+:::
+:::
