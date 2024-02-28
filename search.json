@@ -609,18 +609,81 @@
     "text": "Step 5: Sound Acquisition\n\n\n\nNavigate to your sound files\n\nWe used 12kHz files, which were previously decimated in Triton Software\n\nDue to an offset at the beginning of the SoundTrap wav files, we need to make sure to skip the initial 3 seconds of the recording\nYour settings should look like the following below"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-6-process-each-drift",
-    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-6-process-each-drift",
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-6-check-the-digital-pre-and-trigger-filter-settings",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-6-check-the-digital-pre-and-trigger-filter-settings",
     "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
-    "section": "Step 6: Process each Drift",
-    "text": "Step 6: Process each Drift\n\n\n\nClick the play button and let your wav files run through PAMGuard\n\n20Hz Fin Pulses should have Wigner Plots that are down swept\nPeak frequency will be close to 20-25Hz with some variability"
+    "section": "Step 6: Check the Digital Pre and Trigger filter Settings",
+    "text": "Step 6: Check the Digital Pre and Trigger filter Settings\n\n\n\n\n\nDigital Pre Filter Settings\n\n\n\n\n\n\nDigital Trigger Filter Settings"
   },
   {
-    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-6-create-events-in-pampal",
-    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-6-create-events-in-pampal",
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-7-check-the-click-detector-settings",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-7-check-the-click-detector-settings",
     "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
-    "section": "Step 6: Create Events in PAMPal",
-    "text": "Step 6: Create Events in PAMPal\n-The code below can be used to subsample 20% of the data. We used a stratified sub-sampling method that looks at 1 out of every 5 wav files\n\n# PAMpal simple example \n# install.packages('PAMpal')\n# updated 22-12-6 to include loop for PG event adding w/PAMmisc\n# UPDATE 2023-09-06:\n#   Changed first processing from mode='recording' because there were\n#   DST-related bugs on some drifts. Lines 45-48 updated.\n\nrm(list=ls())\ndevtools::install_github('TaikiSan21/PAMpal')\ndevtools::install_github('TaikiSan21/PAMmisc')\nlibrary(PAMpal)\nlibrary(PAMmisc)\n\n# Start by creating a \"PAMpalSettings\" object. This keeps track of what data\n# you want to process and what processing you want to apply to it.\n\n# Change paths below to your DB and binary folder. Can just be the \n# highest level binary folder for that drift - it will add all files\n# within that folder recursively through subfolders.\n\n# This will also ask you to type in some parameters for calculations\n# in your console. You can just hit ENTER to accept defaults for all\n# of these, they aren't relevant to the GPL calculations only for clicks.\n\npps &lt;- PAMpalSettings(db = 'H:/DATA/PAMGUARD_FIN_CLICK/AddFinEvent/ADRIFT_053_PG_2_02_02_FinClick.sqlite3',\n                      binaries = 'H:/DATA/PAMGUARD_FIN_CLICK/FinClickDetector_Run/Binaries/ADRIFT_053',\n                      # these parameters are only for the click detector - can ignore\n                      sr_hz=200,\n                      filterfrom_khz=0,\n                      filterto_khz=NULL,\n                      winLen_sec=1)\n\n# Now tell it to process your data. Id is optional and serves no function,\n# but can be useful to tell data apart at a later point in time. Here\n# mode = 'recording' tells it how to organize your data. Most of the time\n# we are working with data that have been marked manually into events, \n# so PAMpal wants to organize things into events. mode='db' uses the events\n# in the database, and only processes the detectoins you've marked out.\n# In this case we just want to process everything, which is what \n# mode='recording' does. It will group them into events by recording file. \n\n# This might take some time\n\n# to read in events after processing in order to get the tim\n#data &lt;- processPgDetections(pps, mode='db', id='Humpback007') \nwavFolder &lt;- 'H:/RECORDINGS/12kHz/ADRIFT_053_CENSOR_12kHz'\nwavGroups &lt;- PAMpal:::mapWavFolder(wavFolder)\nwavGroups$id &lt;- basename(wavGroups$file)\ndata &lt;- processPgDetections(pps, mode='time', grouping=wavGroups, id='Fin_ADRIFT_53')\n# data &lt;- processPgDetections(pps, mode='recording', id='Fin_ADRIFT_53')\n\n# And here's how you can get the detections information out of \"data\"\n# as a dataframe. Time column is \"UTC\", other columns are stuff it\n# measured. \nclickDf &lt;- getClickData(data)\n\n# Now we can add the wav files to this data. You might get a warning about\n# \"startSample\", its safe to ignore that.\ndata &lt;- addRecordings(data, folder=wavFolder)\n\n# that data is stored here as a dataframe. Has \"start\" & \"end\" as POSIXct and\n# the fulle path to the file as \"file\"\nwavDf &lt;- files(data)$recordings\n# add number of detections to this\nnDets &lt;- sapply(events(data), nDetections)\nnDets &lt;- data.frame(join=names(nDets), nDets=nDets)\nwavDf$join &lt;- basename(wavDf$file)\nwavDf &lt;- left_join(wavDf, nDets)\nwavDf$join &lt;- NULL\nwavDf$nDets[is.na(wavDf$nDets)] &lt;- 0\n\nnfiles =round(nrow(wavDf)*.2)\nrandStart =sample(1:5,1)\n\nwavDf=wavDf[round(seq(randStart, nrow(wavDf), length.out = nfiles)),]\n\n\n\n\n# If we care about assigning some kind of initial label to these\n# detections. Otherwise ignore. \ndata &lt;- setSpecies(data, method='manual', value='fin_click')\n\n# Add events from wavDf loop\nfor(e in 1:nrow(wavDf)) {\n  thisEv &lt;- data[[basename(wavDf$file[e])]]\n  # this will get all detector types, if just one type is wanted can\n  # be simplified to ex. uids &lt;- unique(getGPLData(thisEv)$UID)\n  uids &lt;- unique(unlist(lapply(getDetectorData(thisEv), function(x) {\n    if(is.null(x)) return(NULL)\n    x$UID\n  })))\n  \n  addPgEvent(db = files(thisEv)$db,\n             binary = files(thisEv)$binaries,\n             eventType = species(thisEv)$id,\n             UIDs = uids,\n             type = 'click',\n             start = wavDf$start[e],\n             end = wavDf$end[e],\n             comment = paste0('Added by PAMpal, event ID: ', id(thisEv)))\n}\n\n\n\n\nBack to Methods"
+    "section": "Step 7: Check the Click Detector Settings",
+    "text": "Step 7: Check the Click Detector Settings\n-The settings for the first three tabs should be as follows. The rest of the tabs can be left to their default\n\n\n\n\n\nClick Detector Source\n\n\n\n\n\n\nClick Detector Trigger\n\n\n\n\n\n\nClick Detector Click Length"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-8-process-each-drift",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-8-process-each-drift",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 8: Process each Drift",
+    "text": "Step 8: Process each Drift\n\n\n\nClick the play button and let your wav files run through PAMGuard\n\n20Hz Fin Pulses should have Wigner Plots that are down swept\nPeak frequency will be close to 20-25Hz with some variability"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-9-create-events-in-pampal",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-9-create-events-in-pampal",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 9: Create Events in PAMpal",
+    "text": "Step 9: Create Events in PAMpal\n-The code below can be used to subsample 20% of the data. We used a stratified sub-sampling method that looks at 1 out of every 5 wav files. Before running this code, create a copy of the original database and place it in a new folder so that we don’t write over the originals.\n\n# PAMpal simple example \n# install.packages('PAMpal')\n# updated 22-12-6 to include loop for PG event adding w/PAMmisc\n# UPDATE 2023-09-06:\n#   Changed first processing from mode='recording' because there were\n#   DST-related bugs on some drifts. Lines 45-48 updated.\n\nrm(list=ls())\ndevtools::install_github('TaikiSan21/PAMpal')\ndevtools::install_github('TaikiSan21/PAMmisc')\nlibrary(PAMpal)\nlibrary(PAMmisc)\n\n# Start by creating a \"PAMpalSettings\" object. This keeps track of what data\n# you want to process and what processing you want to apply to it.\n\n# Change paths below to your DB and binary folder. Can just be the \n# highest level binary folder for that drift - it will add all files\n# within that folder recursively through subfolders.\n\n# This will also ask you to type in some parameters for calculations\n# in your console. You can just hit ENTER to accept defaults for all\n# of these, they aren't relevant to the GPL calculations only for clicks.\n\npps &lt;- PAMpalSettings(db = 'H:/DATA/PAMGUARD_FIN_CLICK/AddFinEvent/ADRIFT_053_PG_2_02_02_FinClick.sqlite3',\n                      binaries = 'H:/DATA/PAMGUARD_FIN_CLICK/FinClickDetector_Run/Binaries/ADRIFT_053',\n                      # these parameters are only for the click detector - can ignore\n                      sr_hz=200,\n                      filterfrom_khz=0,\n                      filterto_khz=NULL,\n                      winLen_sec=1)\n\n# Now tell it to process your data. Id is optional and serves no function,\n# but can be useful to tell data apart at a later point in time. Here\n# mode = 'recording' tells it how to organize your data. Most of the time\n# we are working with data that have been marked manually into events, \n# so PAMpal wants to organize things into events. mode='db' uses the events\n# in the database, and only processes the detectoins you've marked out.\n# In this case we just want to process everything, which is what \n# mode='recording' does. It will group them into events by recording file. \n\n# This might take some time\n\n# to read in events after processing in order to get the tim\n#data &lt;- processPgDetections(pps, mode='db', id='Humpback007') \nwavFolder &lt;- 'H:/RECORDINGS/12kHz/ADRIFT_053_CENSOR_12kHz'\nwavGroups &lt;- PAMpal:::mapWavFolder(wavFolder)\nwavGroups$id &lt;- basename(wavGroups$file)\ndata &lt;- processPgDetections(pps, mode='time', grouping=wavGroups, id='Fin_ADRIFT_53')\n# data &lt;- processPgDetections(pps, mode='recording', id='Fin_ADRIFT_53')\n\n# And here's how you can get the detections information out of \"data\"\n# as a dataframe. Time column is \"UTC\", other columns are stuff it\n# measured. \nclickDf &lt;- getClickData(data)\n\n# Now we can add the wav files to this data. You might get a warning about\n# \"startSample\", its safe to ignore that.\ndata &lt;- addRecordings(data, folder=wavFolder)\n\n# that data is stored here as a dataframe. Has \"start\" & \"end\" as POSIXct and\n# the fulle path to the file as \"file\"\nwavDf &lt;- files(data)$recordings\n# add number of detections to this\nnDets &lt;- sapply(events(data), nDetections)\nnDets &lt;- data.frame(join=names(nDets), nDets=nDets)\nwavDf$join &lt;- basename(wavDf$file)\nwavDf &lt;- left_join(wavDf, nDets)\nwavDf$join &lt;- NULL\nwavDf$nDets[is.na(wavDf$nDets)] &lt;- 0\n\nnfiles =round(nrow(wavDf)*.2)\nrandStart =sample(1:5,1)\n\nwavDf=wavDf[round(seq(randStart, nrow(wavDf), length.out = nfiles)),]\n\n\n\n\n# If we care about assigning some kind of initial label to these\n# detections. Otherwise ignore. \ndata &lt;- setSpecies(data, method='manual', value='fin_click')\n\n# Add events from wavDf loop\nfor(e in 1:nrow(wavDf)) {\n  thisEv &lt;- data[[basename(wavDf$file[e])]]\n  # this will get all detector types, if just one type is wanted can\n  # be simplified to ex. uids &lt;- unique(getGPLData(thisEv)$UID)\n  uids &lt;- unique(unlist(lapply(getDetectorData(thisEv), function(x) {\n    if(is.null(x)) return(NULL)\n    x$UID\n  })))\n  \n  addPgEvent(db = files(thisEv)$db,\n             binary = files(thisEv)$binaries,\n             eventType = species(thisEv)$id,\n             UIDs = uids,\n             type = 'click',\n             start = wavDf$start[e],\n             end = wavDf$end[e],\n             comment = paste0('Added by PAMpal, event ID: ', id(thisEv)))\n}"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-10-open-the-database-in-viewer-mode",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-10-open-the-database-in-viewer-mode",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 10: Open the Database in Viewer Mode",
+    "text": "Step 10: Open the Database in Viewer Mode\n\n\n\nOpen the database that you have added events to with PAMGuard Viewer Mode\n\nUse the original binary files\n\nCheck to see that your events were added correctly under Click Detection–&gt;Show events\n\n\n\n\n\nEvents added through PAMpal"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-11-add-spectrogram-annotation-moduel",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-11-add-spectrogram-annotation-moduel",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 11: Add Spectrogram Annotation Moduel",
+    "text": "Step 11: Add Spectrogram Annotation Moduel\n\n\n\nOpen the database that you have added events to with PAMGuard Viewer Mode\n\nUse the original binary files\n\nAdd the “Spectrogram Annotation Moduel”\nOnce added you should see “Spectrogram Annotation Settings” under the settings menu"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-12-add-lookup-table",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-12-add-lookup-table",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 12: Add LOOKUP Table",
+    "text": "Step 12: Add LOOKUP Table\n\n\n\nClick on the gear icon for the “User Form Annotation” check box\nClick on “Create New”\n\nA new dialog will pop up and under the left side you will Add a LOOKUP table\nFill in the metadata for the table as follows"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-13-add-drop-down-list-for-lookup-table",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-13-add-drop-down-list-for-lookup-table",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 13: Add drop down list for LOOKUP table",
+    "text": "Step 13: Add drop down list for LOOKUP table\n\n\n\nRight click on the drop down menu to the right of the Topic section\nClick on edit list\n\nAdd the following 4 options as seen in the image to the right\nClick ok on all of the promts\nIn order for your settings to work you will need to save and restart PAMGaurd"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-14-make-a-copy-of-the-events-database",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-14-make-a-copy-of-the-events-database",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 14: Make a Copy of the Events Database",
+    "text": "Step 14: Make a Copy of the Events Database\n\nWe will be comparing the Original Events Database with the Validated Database to pull out metrics such as false positives, false negatives, true positives, true negative and precision and recall\n\nThis is why we need to validate a copy of the events database and keep one untouched"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-15-start-validating-events",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-15-start-validating-events",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 15: Start Validating Events",
+    "text": "Step 15: Start Validating Events\n\nUse the Click Detector Event List to Navigate to each event\n\nUse the click detector to add or remove clicks to an event\n\nUse the Wigner and the click spectrum to determine if the click is a 20Hz fin pulse\nLook at the spectrogram and see if the click looks like a 20Hz fin pulse\n\n\n\n\n\n\n\n\nFin pulses in the click detector. Click spectrum shows a peak around 20Hz. The wigner shows a slight down sweep.\n\n\n\n\n\n\n20Hz Fin Pulses (purple triangles represent where the click detector has picked up a pulse)"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-16-annotate-missed-fin-pulses-on-the-spectrogram-display",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-16-annotate-missed-fin-pulses-on-the-spectrogram-display",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 16: Annotate Missed Fin Pulses on the Spectrogram Display",
+    "text": "Step 16: Annotate Missed Fin Pulses on the Spectrogram Display\n\n\n\nScroll through each event using the spectrogram display\n\nAnnotate any 20Hz pulse that was missed by the click detector\nDraw a box around the click and use the drop down menu to select the sound you’re boxing\n\n\n\n\n\n\nSpectrogram Annotation\n\n\n\n\n\n\n\nBack to Methods"
   },
   {
     "objectID": "content/BaleenWhales/Gray_and_HumpbackWhales-Detection.html",

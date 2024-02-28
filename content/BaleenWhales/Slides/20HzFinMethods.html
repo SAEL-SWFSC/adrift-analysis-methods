@@ -496,8 +496,56 @@ Cory Hom-Weaver
 </div>
 </div>
 </section>
-<section id="step-6-process-each-drift" class="slide level2 smaller">
-<h2>Step 6: Process each Drift</h2>
+<section id="step-6-check-the-digital-pre-and-trigger-filter-settings" class="slide level2 smaller">
+<h2>Step 6: Check the Digital Pre and Trigger filter Settings</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Click_Detector_PreFilter_Fin.JPG" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Digital Pre Filter Settings</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Click_Detector_TrigerFilter_Fin.JPG" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Digital Trigger Filter Settings</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-7-check-the-click-detector-settings" class="slide level2 smaller">
+<h2>Step 7: Check the Click Detector Settings</h2>
+<p>-The settings for the first three tabs should be as follows. The rest of the tabs can be left to their default</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Click_Detector_DetectionParms_Source.JPG" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Click Detector Source</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Click_Detector_DetectionParms_Trigger.JPG" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Click Detector Trigger</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Click_Detector_DetectionParms_ClickLength.JPG" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Click Detector Click Length</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-8-process-each-drift" class="slide level2 smaller">
+<h2>Step 8: Process each Drift</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <ul>
@@ -516,9 +564,9 @@ Cory Hom-Weaver
 </div>
 </div>
 </section>
-<section id="step-6-create-events-in-pampal" class="slide level2 smaller">
-<h2>Step 6: Create Events in PAMPal</h2>
-<p>-The code below can be used to subsample 20% of the data. We used a stratified sub-sampling method that looks at 1 out of every 5 wav files</p>
+<section id="step-9-create-events-in-pampal" class="slide level2 smaller">
+<h2>Step 9: Create Events in PAMpal</h2>
+<p>-The code below can be used to subsample 20% of the data. We used a stratified sub-sampling method that looks at 1 out of every 5 wav files. Before running this code, create a copy of the original database and place it in a new folder so that we don’t write over the originals.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># PAMpal simple example </span></span>
 <span id="cb1-2"><a></a><span class="co"># install.packages('PAMpal')</span></span>
@@ -622,6 +670,151 @@ Cory Hom-Weaver
 <span id="cb1-100"><a></a>             <span class="at">end =</span> wavDf<span class="sc">$</span>end[e],</span>
 <span id="cb1-101"><a></a>             <span class="at">comment =</span> <span class="fu">paste0</span>(<span class="st">'Added by PAMpal, event ID: '</span>, <span class="fu">id</span>(thisEv)))</span>
 <span id="cb1-102"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-10-open-the-database-in-viewer-mode" class="slide level2 smaller">
+<h2>Step 10: Open the Database in Viewer Mode</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>Open the database that you have added events to with PAMGuard Viewer Mode</p>
+<ul>
+<li>Use the original binary files</li>
+</ul></li>
+<li><p>Check to see that your events were added correctly under Click Detection–&gt;Show events</p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Events_PG.JPG" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Events added through PAMpal</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-11-add-spectrogram-annotation-moduel" class="slide level2 smaller">
+<h2>Step 11: Add Spectrogram Annotation Moduel</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>Open the database that you have added events to with PAMGuard Viewer Mode</p>
+<ul>
+<li>Use the original binary files</li>
+</ul></li>
+<li><p>Add the “Spectrogram Annotation Moduel”</p></li>
+<li><p>Once added you should see “Spectrogram Annotation Settings” under the settings menu</p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Spectrogram_Annotation_Settings.JPG" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-12-add-lookup-table" class="slide level2 smaller">
+<h2>Step 12: Add LOOKUP Table</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>Click on the gear icon for the “User Form Annotation” check box</p></li>
+<li><p>Click on “Create New”</p>
+<ul>
+<li><p>A new dialog will pop up and under the left side you will Add a LOOKUP table</p></li>
+<li><p>Fill in the metadata for the table as follows</p></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Create_Logger_Form_Fin-Annotations.JPG" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-13-add-drop-down-list-for-lookup-table" class="slide level2 smaller">
+<h2>Step 13: Add drop down list for LOOKUP table</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>Right click on the drop down menu to the right of the Topic section</p></li>
+<li><p>Click on edit list</p>
+<ul>
+<li>Add the following 4 options as seen in the image to the right</li>
+<li>Click ok on all of the promts</li>
+<li>In order for your settings to work you will need to save and restart PAMGaurd</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/LookUp_Table_Fin_Annotations.JPG" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-14-make-a-copy-of-the-events-database" class="slide level2 smaller">
+<h2>Step 14: Make a Copy of the Events Database</h2>
+<ul>
+<li><p>We will be comparing the Original Events Database with the Validated Database to pull out metrics such as false positives, false negatives, true positives, true negative and precision and recall</p>
+<ul>
+<li>This is why we need to validate a copy of the events database and keep one untouched</li>
+</ul></li>
+</ul>
+</section>
+<section id="step-15-start-validating-events" class="slide level2 smaller">
+<h2>Step 15: Start Validating Events</h2>
+<ul>
+<li>Use the Click Detector Event List to Navigate to each event
+<ul>
+<li>Use the click detector to add or remove clicks to an event
+<ul>
+<li>Use the Wigner and the click spectrum to determine if the click is a 20Hz fin pulse</li>
+<li>Look at the spectrogram and see if the click looks like a 20Hz fin pulse</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Fin_Clicks_Good_Wigner.JPG" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Fin pulses in the click detector. Click spectrum shows a peak around 20Hz. The wigner shows a slight down sweep.</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/20Hz_Fin_Spectrogram.JPG" class="quarto-figure quarto-figure-center"></p>
+<figcaption>20Hz Fin Pulses (purple triangles represent where the click detector has picked up a pulse)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-16-annotate-missed-fin-pulses-on-the-spectrogram-display" class="slide level2 smaller">
+<h2>Step 16: Annotate Missed Fin Pulses on the Spectrogram Display</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Scroll through each event using the spectrogram display
+<ul>
+<li>Annotate any 20Hz pulse that was missed by the click detector</li>
+<li>Draw a box around the click and use the drop down menu to select the sound you’re boxing</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../../content/Slides/images/Fin_click_annotation_spectrogram.JPG" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Spectrogram Annotation</figcaption>
+</figure>
+</div>
+</div>
 </div>
 
 <div class="quarto-auto-generated-content">
