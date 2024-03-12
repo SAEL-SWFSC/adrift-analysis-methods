@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -295,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#random-forest-model" id="toc-random-forest-model" class="nav-link" data-scroll-target="#random-forest-model"><em>Random Forest Model</em></a></li>
   <li><a href="#review-of-model-results" id="toc-review-of-model-results" class="nav-link" data-scroll-target="#review-of-model-results"><em>Review of Model Results</em></a></li>
   </ul></li>
-  <li><a href="#gray-and-humpack" id="toc-gray-and-humpack" class="nav-link" data-scroll-target="#gray-and-humpack">Gray and Humpack</a></li>
+  <li><a href="#gray-and-humpback" id="toc-gray-and-humpback" class="nav-link" data-scroll-target="#gray-and-humpback">Gray and Humpback</a></li>
   <li><a href="#minke" id="toc-minke" class="nav-link" data-scroll-target="#minke">Minke</a></li>
   </ul></li>
   </ul>
@@ -397,8 +397,8 @@ ul.task-list li input[type="checkbox"] {
 <p>More detail of these methods can be found <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/20HzFinMethods.html#/title-slide">here</a></p>
 </section>
 </section>
-<section id="gray-and-humpack" class="level2">
-<h2 class="anchored" data-anchor-id="gray-and-humpack">Gray and Humpack</h2>
+<section id="gray-and-humpback" class="level2">
+<h2 class="anchored" data-anchor-id="gray-and-humpback">Gray and Humpback</h2>
 <p>Downsampled audio data (12 kHz) were visualized as spectrograms and manually browsed for the presence of humpback and gray whale calls using <a href="https://store.birds.cornell.edu/collections/raven-sound-software">Raven Pro v. 1.6.4</a>. Spectrogram settings included a 4096pt fft length with a Han window 90% overlap resulting in a 341 ms time and 4.21hz frequency resolution. All drifts were manually scanned for humpback and gray whale calls and hourly presence was indicated, regardless of duty-cycling regime.</p>
 <p>All annotation files were stored as Raven Selection tables containing columns for the start and end time, relative to the beginning of the drift audio files, date and time at the start of the annotation in yyyy/mm/dd HH:MM:SS, low and high frequency, Species, Hour of the day-for hourly presence analysis, and additional Notes column.</p>
 <section id="humpback-whale-annotations" class="level4">
@@ -670,6 +670,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/sael-swfsc\.github\.io\/adrift-analysis-methods\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -704,7 +722,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
