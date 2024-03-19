@@ -12,6 +12,8 @@ All ADRIFT, CCES, and PASCAL raw data and sound level metrics are publicly acces
 
 [Additional Archive Guidelines](https://drive.google.com/drive/folders/1ReEKFXMQ-SajJUyzTQFDVI9EnfKn9m8p?usp=sharing)
 
+[ADRIFT Passive Packer Field Mapping](https://docs.google.com/spreadsheets/d/1G_QF8C8QnqvQg8lf0nBXWtaGW7ApnxId0c-qkmUYwcg/edit#gid=0)
+
 ## Hard Drive Requirements
 
 ### Guidelines
@@ -58,7 +60,7 @@ Physically label the drive with the following information easily visible
 ## Note: The majority of the information required by Passive Packer can be found in the [Deployment Details spreadsheet](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=42687545%5D)
 :::
 
-## Automation Code (*WORK IN PROGRESS)* 
+## Automation Code (*WORK IN PROGRESS)*
 
 The following code transfers our deployment details metadata into a Passive Packer ready database, containing JSON strings for all Passive Packer fields. This automation script is for ADRIFT deployments, however similar scripts can be found in our [Passive Packer Repository](https://github.com/Kourtney-Burger/ADRIFT-Deployment-PassivePacker) for CCES and PASCAL.
 
