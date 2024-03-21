@@ -66,7 +66,7 @@ The following code transfers our deployment details metadata into a Passive Pack
 
 A folder manipulation automation code was also created to transfer all raw and ancillary data to Passive Packer specific directories to expedite the packaging process.
 
-[Here is our mapping spreadsheet](https://docs.google.com/spreadsheets/d/1G_QF8C8QnqvQg8lf0nBXWtaGW7ApnxId0c-qkmUYwcg/edit#gid=0) where we linked [our deployment metadata fields](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=42687545) to their [respective Passive Packer fields](https://www.ngdc.noaa.gov/mgg/pad/packager_manual.pdf). 
+[Here is our mapping spreadsheet](https://docs.google.com/spreadsheets/d/1G_QF8C8QnqvQg8lf0nBXWtaGW7ApnxId0c-qkmUYwcg/edit#gid=0) where we linked [our deployment metadata fields](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=42687545) to their [respective Passive Packer fields](https://www.ngdc.noaa.gov/mgg/pad/packager_manual.pdf).
 
 ### Deployment Script
 
