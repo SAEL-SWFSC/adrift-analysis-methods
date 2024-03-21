@@ -544,7 +544,7 @@
     "href": "content/DataArchive/NCEI.html#automation-code-work-in-progress",
     "title": "NCEI Passive Acoustics Archive",
     "section": "Automation Code (WORK IN PROGRESS)",
-    "text": "Automation Code (WORK IN PROGRESS)\nThe following code transfers our deployment details metadata into a Passive Packer ready database, containing JSON strings for all Passive Packer fields. This automation script is for ADRIFT deployments, however similar scripts can be found in our Passive Packer Repository for CCES and PASCAL.\nA folder manipulation automation code was also created to transfer all raw and ancillary data to Passive Packer specific directories to expedite the packaging process.\n\nDeployment Script\nThe deployment automation code can be found here\n\n\nFolder Manipulation\nThe data folder manipulation code can be found here",
+    "text": "Automation Code (WORK IN PROGRESS)\nThe following code transfers our deployment details metadata into a Passive Packer ready database, containing JSON strings for all Passive Packer fields. This automation script is for ADRIFT deployments, however similar scripts can be found in our Passive Packer Repository for CCES and PASCAL.\nA folder manipulation automation code was also created to transfer all raw and ancillary data to Passive Packer specific directories to expedite the packaging process.\nHere is our mapping spreadsheet where we linked our deployment metadata fields to their respective Passive Packer fields.\n\nDeployment Script\nThe deployment automation code can be found here\n\n\nFolder Manipulation\nThe data folder manipulation code can be found here",
     "crumbs": [
       "Data Archive",
       "Archive",
