@@ -65,7 +65,33 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 -   Both Accepted and Review detections were reviewed for accuracy
 
-More detail of these methods can be found [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/20HzFinMethods.html#/title-slide)
+More details of these methods can be found [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/20HzFinMethods.html#/title-slide)
+
+## Fin 40 Hz ADRIFT
+
+### *Stage 1: PAMGuard Automated Processing Mode*
+
+-   Raw audio (.wav) files were organized and processed by drifter dataset and included tested parameters for PAMGuard's inbuilt "Whistle and Moan Detector" that would serve to detect calls from a variety of species
+
+    -   Example PAMGuard settings file [here titled 'Fin40Hz_Drifter_Analysis_200Hz_v2.psfx'](https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings)
+
+-   Automated detections were clipped and stored in a clip folder in order to allow for review in the clip generator
+
+-   These were housed outside of the binary to maintain lower binary file size for later processing/copying of data
+
+-   An LTSA module was added to all configuration files to assist with rapid identification of noise and marine mammal vocal activity periods, but largely only leveraged with continuous data
+
+### *Stage 2: PAMGuard Viewer Mode Review and Annotation*
+
+-   The binary and database files were used in the manual annotation process through PAMGuard Viewer Mode
+
+-   An experienced data analyst used the 'Detection Group Localiser' to mark the start and end of each acoustic event (defined by a minimum elapsed time between the end of a series of continuous calls and beginning of another, e.g. 120 minutes)
+
+-   A custom logger form is used to collect the analyst initials, species, call type and comments regarding the acoustic event
+
+-   If an analyst was not confident in a species identification, an association of "Possible" and the whale name was indicated
+
+-   If the calls were not possible to identify to species, a label of "Unknown whale" (if thought to be a whale) or "Unknown sound" (if unsure if it was a whale or fish) was used
 
 ## Gray and Humpback
 
