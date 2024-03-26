@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -295,6 +295,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#random-forest-model" id="toc-random-forest-model" class="nav-link" data-scroll-target="#random-forest-model"><em>Random Forest Model</em></a></li>
   <li><a href="#review-of-model-results" id="toc-review-of-model-results" class="nav-link" data-scroll-target="#review-of-model-results"><em>Review of Model Results</em></a></li>
   </ul></li>
+  <li><a href="#fin-40-hz-adrift" id="toc-fin-40-hz-adrift" class="nav-link" data-scroll-target="#fin-40-hz-adrift">Fin 40 Hz ADRIFT</a>
+  <ul class="collapse">
+  <li><a href="#stage-1-pamguard-automated-processing-mode" id="toc-stage-1-pamguard-automated-processing-mode" class="nav-link" data-scroll-target="#stage-1-pamguard-automated-processing-mode"><em>Stage 1: PAMGuard Automated Processing Mode</em></a></li>
+  <li><a href="#stage-2-pamguard-viewer-mode-review-and-annotation" id="toc-stage-2-pamguard-viewer-mode-review-and-annotation" class="nav-link" data-scroll-target="#stage-2-pamguard-viewer-mode-review-and-annotation"><em>Stage 2: PAMGuard Viewer Mode Review and Annotation</em></a></li>
+  </ul></li>
   <li><a href="#gray-and-humpback" id="toc-gray-and-humpback" class="nav-link" data-scroll-target="#gray-and-humpback">Gray and Humpback</a></li>
   <li><a href="#minke" id="toc-minke" class="nav-link" data-scroll-target="#minke">Minke</a></li>
   </ul></li>
@@ -394,7 +399,32 @@ ul.task-list li input[type="checkbox"] {
 <li><p>The model had one of three results: Accept, Review, Dropped</p></li>
 <li><p>Both Accepted and Review detections were reviewed for accuracy</p></li>
 </ul>
-<p>More detail of these methods can be found <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/20HzFinMethods.html#/title-slide">here</a></p>
+<p>More details of these methods can be found <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/20HzFinMethods.html#/title-slide">here</a></p>
+</section>
+</section>
+<section id="fin-40-hz-adrift" class="level2">
+<h2 class="anchored" data-anchor-id="fin-40-hz-adrift">Fin 40 Hz ADRIFT</h2>
+<section id="stage-1-pamguard-automated-processing-mode" class="level3">
+<h3 class="anchored" data-anchor-id="stage-1-pamguard-automated-processing-mode"><em>Stage 1: PAMGuard Automated Processing Mode</em></h3>
+<ul>
+<li><p>Raw audio (.wav) files were organized and processed by drifter dataset and included tested parameters for PAMGuard’s inbuilt “Whistle and Moan Detector” that would serve to detect calls from a variety of species</p>
+<ul>
+<li>Example PAMGuard settings file <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings">here titled ‘Fin40Hz_Drifter_Analysis_200Hz_v2.psfx’</a></li>
+</ul></li>
+<li><p>Automated detections were clipped and stored in a clip folder in order to allow for review in the clip generator</p></li>
+<li><p>These were housed outside of the binary to maintain lower binary file size for later processing/copying of data</p></li>
+<li><p>An LTSA module was added to all configuration files to assist with rapid identification of noise and marine mammal vocal activity periods, but largely only leveraged with continuous data</p></li>
+</ul>
+</section>
+<section id="stage-2-pamguard-viewer-mode-review-and-annotation" class="level3">
+<h3 class="anchored" data-anchor-id="stage-2-pamguard-viewer-mode-review-and-annotation"><em>Stage 2: PAMGuard Viewer Mode Review and Annotation</em></h3>
+<ul>
+<li><p>The binary and database files were used in the manual annotation process through PAMGuard Viewer Mode</p></li>
+<li><p>An experienced data analyst used the ‘Detection Group Localiser’ to mark the start and end of each acoustic event (defined by a minimum elapsed time between the end of a series of continuous calls and beginning of another, e.g.&nbsp;120 minutes)</p></li>
+<li><p>A custom logger form is used to collect the analyst initials, species, call type and comments regarding the acoustic event</p></li>
+<li><p>If an analyst was not confident in a species identification, an association of “Possible” and the whale name was indicated</p></li>
+<li><p>If the calls were not possible to identify to species, a label of “Unknown whale” (if thought to be a whale) or “Unknown sound” (if unsure if it was a whale or fish) was used</p></li>
+</ul>
 </section>
 </section>
 <section id="gray-and-humpback" class="level2">
