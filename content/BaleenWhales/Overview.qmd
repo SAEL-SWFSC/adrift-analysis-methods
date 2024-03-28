@@ -93,6 +93,8 @@ More details of these methods can be found [here](https://sael-swfsc.github.io/a
 
 -   If the calls were not possible to identify to species, a label of "Unknown whale" (if thought to be a whale) or "Unknown sound" (if unsure if it was a whale or fish) was used
 
+More detailed methods can be found [here](https://github.com/SAEL-SWFSC/adrift-analysis-methods/blob/eb42960cac44a238ec705e0f1d720c6d2b5b152f/reports/Liz%20Fin%20Whale%20Analysis/OSA_NMSF_2023.578_Project_Report.pdf)
+
 ## Gray and Humpback
 
 Downsampled audio data (12 kHz) were visualized as spectrograms and manually browsed for the presence of humpback and gray whale calls using [Raven Pro v. 1.6.4](https://store.birds.cornell.edu/collections/raven-sound-software). Spectrogram settings included a 4096pt fft length with a Han window 90% overlap resulting in a 341 ms time and 4.21hz frequency resolution. All drifts were manually scanned for humpback and gray whale calls and hourly presence was indicated, regardless of duty-cycling regime.
