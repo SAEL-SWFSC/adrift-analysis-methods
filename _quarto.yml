@@ -44,7 +44,7 @@ website:
                 - content/DataArchive/TethysDeployments.qmd
                 - content/DataArchive/TethysDetections.qmd
                 - content/DataArchive/NCEI.qmd
-                - content/DataArchive/OBIS.qmd
+                - content/DataArchive/PACM.qmd
       - section: "Baleen Whales"
         contents:
           - content/BaleenWhales/Overview.qmd
