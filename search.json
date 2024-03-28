@@ -432,234 +432,51 @@
     ]
   },
   {
-    "objectID": "content/DataArchive/OBIS.html",
-    "href": "content/DataArchive/OBIS.html",
-    "title": "OBIS",
+    "objectID": "content/DataArchive/TethysDeployments.html",
+    "href": "content/DataArchive/TethysDeployments.html",
+    "title": "Tethys - Deployments",
     "section": "",
-    "text": "*Need to check w/ Taiki about this",
+    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)",
     "crumbs": [
       "Data Archive",
       "Archive",
-      "OBIS"
+      "Tethys - Deployments"
     ]
   },
   {
-    "objectID": "content/DataArchive/OBIS.html#obis-archive-metadata",
-    "href": "content/DataArchive/OBIS.html#obis-archive-metadata",
-    "title": "OBIS",
+    "objectID": "content/DataArchive/TethysDeployments.html#create-deployment-worksheet",
+    "href": "content/DataArchive/TethysDeployments.html#create-deployment-worksheet",
+    "title": "Tethys - Deployments",
     "section": "",
-    "text": "*Need to check w/ Taiki about this",
+    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)",
     "crumbs": [
       "Data Archive",
       "Archive",
-      "OBIS"
+      "Tethys - Deployments"
     ]
   },
   {
-    "objectID": "content/DataArchive/TethysDetections.html",
-    "href": "content/DataArchive/TethysDetections.html",
-    "title": "Tethys - Detections",
-    "section": "",
-    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)",
+    "objectID": "content/DataArchive/TethysDeployments.html#deployment-details-to-tethys",
+    "href": "content/DataArchive/TethysDeployments.html#deployment-details-to-tethys",
+    "title": "Tethys - Deployments",
+    "section": "Deployment details to Tethys",
+    "text": "Deployment details to Tethys\n\nUpload finalized deployment details to Tethys using appropriate sourcemap\n\nMobile and moored deployment sourcemaps in TethysSAEL repository on Anne’s github\n\nWork with Anne for this",
     "crumbs": [
       "Data Archive",
       "Archive",
-      "Tethys - Detections"
+      "Tethys - Deployments"
     ]
   },
   {
-    "objectID": "content/DataArchive/TethysDetections.html#tethys-detection-worksheet",
-    "href": "content/DataArchive/TethysDetections.html#tethys-detection-worksheet",
-    "title": "Tethys - Detections",
-    "section": "",
-    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)",
+    "objectID": "content/DataArchive/TethysDeployments.html#pampaltethys-metadata",
+    "href": "content/DataArchive/TethysDeployments.html#pampaltethys-metadata",
+    "title": "Tethys - Deployments",
+    "section": "PAMpal/Tethys Metadata",
+    "text": "PAMpal/Tethys Metadata\n\nTalk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. \nAdditional comments on workflow spreadsheet",
     "crumbs": [
       "Data Archive",
       "Archive",
-      "Tethys - Detections"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/TethysDetections.html#upload-detections-to-tethys",
-    "href": "content/DataArchive/TethysDetections.html#upload-detections-to-tethys",
-    "title": "Tethys - Detections",
-    "section": "Upload Detections to Tethys",
-    "text": "Upload Detections to Tethys\n\nSWFSC.Detections.Analyst.v1 sourcemap\nNOAA.NMFS.v4 species abbreviation",
-    "crumbs": [
-      "Data Archive",
-      "Archive",
-      "Tethys - Detections"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/NCEI.html",
-    "href": "content/DataArchive/NCEI.html",
-    "title": "NCEI Passive Acoustics Archive",
-    "section": "",
-    "text": "All ADRIFT, CCES, and PASCAL raw data and sound level metrics are publicly accessible through NCEI Passive Acoustics Data Archive. All data were packaged using a combination of automated scripts and the NCEI Passive Packer tool.",
-    "crumbs": [
-      "Data Archive",
-      "Archive",
-      "NCEI Passive Acoustics Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/NCEI.html#passive-packer-resources",
-    "href": "content/DataArchive/NCEI.html#passive-packer-resources",
-    "title": "NCEI Passive Acoustics Archive",
-    "section": "Passive Packer Resources",
-    "text": "Passive Packer Resources\nNCEI Passive Acoustic Data Viewer\nPassive Packer Manual\nAdditional Archive Guidelines\nADRIFT Passive Packer Field Mapping",
-    "crumbs": [
-      "Data Archive",
-      "Archive",
-      "NCEI Passive Acoustics Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/NCEI.html#hard-drive-requirements",
-    "href": "content/DataArchive/NCEI.html#hard-drive-requirements",
-    "title": "NCEI Passive Acoustics Archive",
-    "section": "Hard Drive Requirements",
-    "text": "Hard Drive Requirements\n\nGuidelines\n\nOnly use Western Digital or Seagate Drives\n\nWe bought 4 20TB WD Elements Desktop Hard Drives for PASCAL, CCES, and ADRIFT\n\nData can be packaged directly from its home directory to the destination external hard drive\nAll data and the metadata files created by Passive Packer must fit on the destination drive, ensure there is ample space on drive to reduce the risk of the program crashing\n\n\n\nExternal Hard Drive Name\nInclude the organization and project name without spaces in the hard drive name\n\nExample: SWFSC_ADRIFT_DRIVE\n\n\n\nPhysical Hard Drive Label\nPhysically label the drive with the following information easily visible\n\nPackagers full name\nYour organization\nProject Name\nExample: Kourtney Burger, SWFSC, ADRIFT",
-    "crumbs": [
-      "Data Archive",
-      "Archive",
-      "NCEI Passive Acoustics Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/NCEI.html#getting-started",
-    "href": "content/DataArchive/NCEI.html#getting-started",
-    "title": "NCEI Passive Acoustics Archive",
-    "section": "Getting Started",
-    "text": "Getting Started\n\nDownload software from Passive Packer Website and follow the ‘Getting Started’ directions\nSee Passive Packer Manual for introduction to software and guidelines on packaging other passive acoustics data, including sound level metrics and moored deployments\nYou can manually fill in all Passive Packer fields following the guidelines and field descriptions in the Passive Packer manual\n\nOR\n\nYou can use the following automation scripts to fill in the Passive Packer database, which will pre-populate the majority of the fields based on the Package ID (Drift ID)\n\n\n\n\n\n\n\nNote: The majority of the information required by Passive Packer can be found in the Deployment Details spreadsheet",
-    "crumbs": [
-      "Data Archive",
-      "Archive",
-      "NCEI Passive Acoustics Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/NCEI.html#automation-code-work-in-progress",
-    "href": "content/DataArchive/NCEI.html#automation-code-work-in-progress",
-    "title": "NCEI Passive Acoustics Archive",
-    "section": "Automation Code (WORK IN PROGRESS)",
-    "text": "Automation Code (WORK IN PROGRESS)\nThe following code transfers our deployment details metadata into a Passive Packer ready database, containing JSON strings for all Passive Packer fields. This automation script is for ADRIFT deployments, however similar scripts can be found in our Passive Packer Repository for CCES and PASCAL.\nA folder manipulation automation code was also created to transfer all raw and ancillary data to Passive Packer specific directories to expedite the packaging process.\nHere is our mapping spreadsheet where we linked our deployment metadata fields to their respective Passive Packer fields.\n\nDeployment Script\nThe deployment automation code can be found here\n\n\nFolder Manipulation\nThe data folder manipulation code can be found here",
-    "crumbs": [
-      "Data Archive",
-      "Archive",
-      "NCEI Passive Acoustics Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/NCEI.html#complete-package-process",
-    "href": "content/DataArchive/NCEI.html#complete-package-process",
-    "title": "NCEI Passive Acoustics Archive",
-    "section": "Complete Package Process",
-    "text": "Complete Package Process\nOnce both scripts have been run and the Passive Packer database is updated, you can open Passive Packer and select a drift from the dataset drop down. All required fields should auto-populate. Once the data has been quality checked, select ‘Package Data’ and Passive Packer will automatically prepare the data package for NCEI.\nThe packaged data is now ready to be shipped to NCEI following the hard drive guidelines above.\n\n\n\n\n\n\nNote: Passive Packer will crash if one of the JSON strings are not formatted properly",
-    "crumbs": [
-      "Data Archive",
-      "Archive",
-      "NCEI Passive Acoustics Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/DataPrep.html",
-    "href": "content/DataArchive/DataPrep.html",
-    "title": "Data Prep",
-    "section": "",
-    "text": "Check that all columns in the Deployment Details spreadsheet are completed\nReach out to deployment/retrieval team for additional deployment details if needed",
-    "crumbs": [
-      "Data Archive",
-      "Data Prep"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/DataPrep.html#complete-data-entries",
-    "href": "content/DataArchive/DataPrep.html#complete-data-entries",
-    "title": "Data Prep",
-    "section": "",
-    "text": "Check that all columns in the Deployment Details spreadsheet are completed\nReach out to deployment/retrieval team for additional deployment details if needed",
-    "crumbs": [
-      "Data Archive",
-      "Data Prep"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/DataPrep.html#sud-file-extraction",
-    "href": "content/DataArchive/DataPrep.html#sud-file-extraction",
-    "title": "Data Prep",
-    "section": "SUD File Extraction",
-    "text": "SUD File Extraction\nExtract SUD files using the Soundtrap Host Software\n\nOpen the Soundtrap Host Software and navigate to Tools &gt; Set Default File Save Location\nBrowse to the folder where the SUD files are saved and select it\nNavigate again to Tools &gt; File Extraction\nClick Select File, navigate to the SUD file folder, select all, and click open\nSUD file extraction will begin, take note of the number of files and ensure this is equal to the number of extracted files once the process is completed",
-    "crumbs": [
-      "Data Archive",
-      "Data Prep"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/DataPrep.html#generate-full-bandwidth-ltsa",
-    "href": "content/DataArchive/DataPrep.html#generate-full-bandwidth-ltsa",
-    "title": "Data Prep",
-    "section": "Generate Full Bandwidth LTSA",
-    "text": "Generate Full Bandwidth LTSA\nUsing Triton on Matlab, generate a full bandwidth LTSA with the wav files from the SUD files previously extracted\n\nOpen Matlab and type Triton into the command window\nThree Triton windows will open, using the Control window, navigate to Tools &gt; Make LTSA from Directory of Files\nSelect File Type pop up will open, select 1 for wav files (enter 2 or 3 if working with other sound file type)\nUsing the file explorer pop up, navigate to folder where wav files are stored and click Select Folder\nThe Set Long-Term Spectrogram Parameters window will open, set the Time Average Length to 5 seconds and the Frequency Bin Size to 200 Hz, press enter\nThe Choose Channel to LTSA window will open, select 1 and press OK\nThe Save LTSA File window will open, navigate to desired folder, name the output file using this format: ADRIFT_###_5s_200Hz.ltsa, and press save\nThe LTSA will begin to process and will automatically open in the plot window once completed",
-    "crumbs": [
-      "Data Archive",
-      "Data Prep"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/DataPrep.html#identify-recording-data-start-and-data-end",
-    "href": "content/DataArchive/DataPrep.html#identify-recording-data-start-and-data-end",
-    "title": "Data Prep",
-    "section": "Identify Recording Data Start and Data End",
-    "text": "Identify Recording Data Start and Data End\n\nUsing the LTSA, identify when the data starts in the recordings (usually determined by when there is no ship noise from the deployment present in LTSA)\nIdentify when the data ends in the LTSA (right before retrieval ship noise is present)\nTruncate the data by deleting the recordings outside of that time range",
-    "crumbs": [
-      "Data Archive",
-      "Data Prep"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/DataPrep.html#update-deployment-details",
-    "href": "content/DataArchive/DataPrep.html#update-deployment-details",
-    "title": "Data Prep",
-    "section": "Update deployment details ",
-    "text": "Update deployment details \n\nInput Data Start and Data End times into the Deployment Details spreadsheet using the Data Start/End times determined above",
-    "crumbs": [
-      "Data Archive",
-      "Data Prep"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/DataUpload.html",
-    "href": "content/DataArchive/DataUpload.html",
-    "title": "Data Upload",
-    "section": "",
-    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results",
-    "crumbs": [
-      "Data Archive",
-      "Data Upload"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/DataUpload.html#don-metadata-upload",
-    "href": "content/DataArchive/DataUpload.html#don-metadata-upload",
-    "title": "Data Upload",
-    "section": "",
-    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results",
-    "crumbs": [
-      "Data Archive",
-      "Data Upload"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/DataUpload.html#high-quality-photos-and-videos",
-    "href": "content/DataArchive/DataUpload.html#high-quality-photos-and-videos",
-    "title": "Data Upload",
-    "section": "High Quality Photos and Videos",
-    "text": "High Quality Photos and Videos\n\nSubmit any high quality photos/videos to Photo & Video Library",
-    "crumbs": [
-      "Data Archive",
-      "Data Upload"
+      "Tethys - Deployments"
     ]
   },
   {
@@ -740,52 +557,225 @@
     ]
   },
   {
-    "objectID": "content/DataArchive/TethysDeployments.html",
-    "href": "content/DataArchive/TethysDeployments.html",
-    "title": "Tethys - Deployments",
+    "objectID": "content/DataArchive/DataUpload.html",
+    "href": "content/DataArchive/DataUpload.html",
+    "title": "Data Upload",
     "section": "",
-    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)",
+    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results",
     "crumbs": [
       "Data Archive",
-      "Archive",
-      "Tethys - Deployments"
+      "Data Upload"
     ]
   },
   {
-    "objectID": "content/DataArchive/TethysDeployments.html#create-deployment-worksheet",
-    "href": "content/DataArchive/TethysDeployments.html#create-deployment-worksheet",
-    "title": "Tethys - Deployments",
+    "objectID": "content/DataArchive/DataUpload.html#don-metadata-upload",
+    "href": "content/DataArchive/DataUpload.html#don-metadata-upload",
+    "title": "Data Upload",
     "section": "",
-    "text": "Combine deployment details with GPS data in Tethys format\nFollow guidelines on the TethysSAEL repository on Anne’s github (requires inputs from deployment details worksheet and GPS csv files)",
+    "text": "All of the following files will be uploaded to the shared network drive, The Don\n\nUpload extracted SUD files (sud, log, wav, and accelerometer)\nUpload Depth Data to the metadata folder\nUpload GPS Data from the Driftwatch gps_csv folder to the metadata folder\nUpload Photos to metadata media folder\nUpload Videos to metadata media folder\nUpload Sightings Forms to metadata media folder\nUpload any additional metadata to metadata folder\n\nIncluding QAQC results",
     "crumbs": [
       "Data Archive",
-      "Archive",
-      "Tethys - Deployments"
+      "Data Upload"
     ]
   },
   {
-    "objectID": "content/DataArchive/TethysDeployments.html#deployment-details-to-tethys",
-    "href": "content/DataArchive/TethysDeployments.html#deployment-details-to-tethys",
-    "title": "Tethys - Deployments",
-    "section": "Deployment details to Tethys",
-    "text": "Deployment details to Tethys\n\nUpload finalized deployment details to Tethys using appropriate sourcemap\n\nMobile and moored deployment sourcemaps in TethysSAEL repository on Anne’s github\n\nWork with Anne for this",
+    "objectID": "content/DataArchive/DataUpload.html#high-quality-photos-and-videos",
+    "href": "content/DataArchive/DataUpload.html#high-quality-photos-and-videos",
+    "title": "Data Upload",
+    "section": "High Quality Photos and Videos",
+    "text": "High Quality Photos and Videos\n\nSubmit any high quality photos/videos to Photo & Video Library",
     "crumbs": [
       "Data Archive",
-      "Archive",
-      "Tethys - Deployments"
+      "Data Upload"
     ]
   },
   {
-    "objectID": "content/DataArchive/TethysDeployments.html#pampaltethys-metadata",
-    "href": "content/DataArchive/TethysDeployments.html#pampaltethys-metadata",
-    "title": "Tethys - Deployments",
-    "section": "PAMpal/Tethys Metadata",
-    "text": "PAMpal/Tethys Metadata\n\nTalk w/ Taiki about how to enter/store this metadata (we discussed having a function that saves it to a csv so it can be uploaded to Pampal and Tethys). This will include info needed for Passive Packer. \nAdditional comments on workflow spreadsheet",
+    "objectID": "content/DataArchive/DataPrep.html",
+    "href": "content/DataArchive/DataPrep.html",
+    "title": "Data Prep",
+    "section": "",
+    "text": "Check that all columns in the Deployment Details spreadsheet are completed\nReach out to deployment/retrieval team for additional deployment details if needed",
+    "crumbs": [
+      "Data Archive",
+      "Data Prep"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/DataPrep.html#complete-data-entries",
+    "href": "content/DataArchive/DataPrep.html#complete-data-entries",
+    "title": "Data Prep",
+    "section": "",
+    "text": "Check that all columns in the Deployment Details spreadsheet are completed\nReach out to deployment/retrieval team for additional deployment details if needed",
+    "crumbs": [
+      "Data Archive",
+      "Data Prep"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/DataPrep.html#sud-file-extraction",
+    "href": "content/DataArchive/DataPrep.html#sud-file-extraction",
+    "title": "Data Prep",
+    "section": "SUD File Extraction",
+    "text": "SUD File Extraction\nExtract SUD files using the Soundtrap Host Software\n\nOpen the Soundtrap Host Software and navigate to Tools &gt; Set Default File Save Location\nBrowse to the folder where the SUD files are saved and select it\nNavigate again to Tools &gt; File Extraction\nClick Select File, navigate to the SUD file folder, select all, and click open\nSUD file extraction will begin, take note of the number of files and ensure this is equal to the number of extracted files once the process is completed",
+    "crumbs": [
+      "Data Archive",
+      "Data Prep"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/DataPrep.html#generate-full-bandwidth-ltsa",
+    "href": "content/DataArchive/DataPrep.html#generate-full-bandwidth-ltsa",
+    "title": "Data Prep",
+    "section": "Generate Full Bandwidth LTSA",
+    "text": "Generate Full Bandwidth LTSA\nUsing Triton on Matlab, generate a full bandwidth LTSA with the wav files from the SUD files previously extracted\n\nOpen Matlab and type Triton into the command window\nThree Triton windows will open, using the Control window, navigate to Tools &gt; Make LTSA from Directory of Files\nSelect File Type pop up will open, select 1 for wav files (enter 2 or 3 if working with other sound file type)\nUsing the file explorer pop up, navigate to folder where wav files are stored and click Select Folder\nThe Set Long-Term Spectrogram Parameters window will open, set the Time Average Length to 5 seconds and the Frequency Bin Size to 200 Hz, press enter\nThe Choose Channel to LTSA window will open, select 1 and press OK\nThe Save LTSA File window will open, navigate to desired folder, name the output file using this format: ADRIFT_###_5s_200Hz.ltsa, and press save\nThe LTSA will begin to process and will automatically open in the plot window once completed",
+    "crumbs": [
+      "Data Archive",
+      "Data Prep"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/DataPrep.html#identify-recording-data-start-and-data-end",
+    "href": "content/DataArchive/DataPrep.html#identify-recording-data-start-and-data-end",
+    "title": "Data Prep",
+    "section": "Identify Recording Data Start and Data End",
+    "text": "Identify Recording Data Start and Data End\n\nUsing the LTSA, identify when the data starts in the recordings (usually determined by when there is no ship noise from the deployment present in LTSA)\nIdentify when the data ends in the LTSA (right before retrieval ship noise is present)\nTruncate the data by deleting the recordings outside of that time range",
+    "crumbs": [
+      "Data Archive",
+      "Data Prep"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/DataPrep.html#update-deployment-details",
+    "href": "content/DataArchive/DataPrep.html#update-deployment-details",
+    "title": "Data Prep",
+    "section": "Update deployment details ",
+    "text": "Update deployment details \n\nInput Data Start and Data End times into the Deployment Details spreadsheet using the Data Start/End times determined above",
+    "crumbs": [
+      "Data Archive",
+      "Data Prep"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/NCEI.html",
+    "href": "content/DataArchive/NCEI.html",
+    "title": "NCEI Passive Acoustics Archive",
+    "section": "",
+    "text": "All ADRIFT, CCES, and PASCAL raw data and sound level metrics are publicly accessible through NCEI Passive Acoustics Data Archive. All data were packaged using a combination of automated scripts and the NCEI Passive Packer tool.",
     "crumbs": [
       "Data Archive",
       "Archive",
-      "Tethys - Deployments"
+      "NCEI Passive Acoustics Archive"
     ]
+  },
+  {
+    "objectID": "content/DataArchive/NCEI.html#passive-packer-resources",
+    "href": "content/DataArchive/NCEI.html#passive-packer-resources",
+    "title": "NCEI Passive Acoustics Archive",
+    "section": "Passive Packer Resources",
+    "text": "Passive Packer Resources\nNCEI Passive Acoustic Data Viewer\nPassive Packer Manual\nAdditional Archive Guidelines\nADRIFT Passive Packer Field Mapping",
+    "crumbs": [
+      "Data Archive",
+      "Archive",
+      "NCEI Passive Acoustics Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/NCEI.html#hard-drive-requirements",
+    "href": "content/DataArchive/NCEI.html#hard-drive-requirements",
+    "title": "NCEI Passive Acoustics Archive",
+    "section": "Hard Drive Requirements",
+    "text": "Hard Drive Requirements\n\nGuidelines\n\nOnly use Western Digital or Seagate Drives\n\nWe bought 4 20TB WD Elements Desktop Hard Drives for PASCAL, CCES, and ADRIFT\n\nData can be packaged directly from its home directory to the destination external hard drive\nAll data and the metadata files created by Passive Packer must fit on the destination drive, ensure there is ample space on drive to reduce the risk of the program crashing\n\n\n\nExternal Hard Drive Name\nInclude the organization and project name without spaces in the hard drive name\n\nExample: SWFSC_ADRIFT_DRIVE\n\n\n\nPhysical Hard Drive Label\nPhysically label the drive with the following information easily visible\n\nPackagers full name\nYour organization\nProject Name\nExample: Kourtney Burger, SWFSC, ADRIFT",
+    "crumbs": [
+      "Data Archive",
+      "Archive",
+      "NCEI Passive Acoustics Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/NCEI.html#getting-started",
+    "href": "content/DataArchive/NCEI.html#getting-started",
+    "title": "NCEI Passive Acoustics Archive",
+    "section": "Getting Started",
+    "text": "Getting Started\n\nDownload software from Passive Packer Website and follow the ‘Getting Started’ directions\nSee Passive Packer Manual for introduction to software and guidelines on packaging other passive acoustics data, including sound level metrics and moored deployments\nYou can manually fill in all Passive Packer fields following the guidelines and field descriptions in the Passive Packer manual\n\nOR\n\nYou can use the following automation scripts to fill in the Passive Packer database, which will pre-populate the majority of the fields based on the Package ID (Drift ID)\n\n\n\n\n\n\n\nNote: The majority of the information required by Passive Packer can be found in the Deployment Details spreadsheet",
+    "crumbs": [
+      "Data Archive",
+      "Archive",
+      "NCEI Passive Acoustics Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/NCEI.html#automation-code-work-in-progress",
+    "href": "content/DataArchive/NCEI.html#automation-code-work-in-progress",
+    "title": "NCEI Passive Acoustics Archive",
+    "section": "Automation Code (WORK IN PROGRESS)",
+    "text": "Automation Code (WORK IN PROGRESS)\nThe following code transfers our deployment details metadata into a Passive Packer ready database, containing JSON strings for all Passive Packer fields. This automation script is for ADRIFT deployments, however similar scripts can be found in our Passive Packer Repository for CCES and PASCAL.\nA folder manipulation automation code was also created to transfer all raw and ancillary data to Passive Packer specific directories to expedite the packaging process.\nHere is our mapping spreadsheet where we linked our deployment metadata fields to their respective Passive Packer fields.\n\nDeployment Script\nThe deployment automation code can be found here\n\n\nFolder Manipulation\nThe data folder manipulation code can be found here",
+    "crumbs": [
+      "Data Archive",
+      "Archive",
+      "NCEI Passive Acoustics Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/NCEI.html#complete-package-process",
+    "href": "content/DataArchive/NCEI.html#complete-package-process",
+    "title": "NCEI Passive Acoustics Archive",
+    "section": "Complete Package Process",
+    "text": "Complete Package Process\nOnce both scripts have been run and the Passive Packer database is updated, you can open Passive Packer and select a drift from the dataset drop down. All required fields should auto-populate. Once the data has been quality checked, select ‘Package Data’ and Passive Packer will automatically prepare the data package for NCEI.\nThe packaged data is now ready to be shipped to NCEI following the hard drive guidelines above.\n\n\n\n\n\n\nNote: Passive Packer will crash if one of the JSON strings are not formatted properly",
+    "crumbs": [
+      "Data Archive",
+      "Archive",
+      "NCEI Passive Acoustics Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/TethysDetections.html",
+    "href": "content/DataArchive/TethysDetections.html",
+    "title": "Tethys - Detections",
+    "section": "",
+    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)",
+    "crumbs": [
+      "Data Archive",
+      "Archive",
+      "Tethys - Detections"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/TethysDetections.html#tethys-detection-worksheet",
+    "href": "content/DataArchive/TethysDetections.html#tethys-detection-worksheet",
+    "title": "Tethys - Detections",
+    "section": "",
+    "text": "Follow guidelines on the TethysSAEL repository on Anne’s github (requires user define inputs)",
+    "crumbs": [
+      "Data Archive",
+      "Archive",
+      "Tethys - Detections"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/TethysDetections.html#upload-detections-to-tethys",
+    "href": "content/DataArchive/TethysDetections.html#upload-detections-to-tethys",
+    "title": "Tethys - Detections",
+    "section": "Upload Detections to Tethys",
+    "text": "Upload Detections to Tethys\n\nSWFSC.Detections.Analyst.v1 sourcemap\nNOAA.NMFS.v4 species abbreviation",
+    "crumbs": [
+      "Data Archive",
+      "Archive",
+      "Tethys - Detections"
+    ]
+  },
+  {
+    "objectID": "content/DataArchive/OBIS.html",
+    "href": "content/DataArchive/OBIS.html",
+    "title": "OBIS",
+    "section": "",
+    "text": "*Need to check w/ Taiki about this"
+  },
+  {
+    "objectID": "content/DataArchive/OBIS.html#obis-archive-metadata",
+    "href": "content/DataArchive/OBIS.html#obis-archive-metadata",
+    "title": "OBIS",
+    "section": "",
+    "text": "*Need to check w/ Taiki about this"
   },
   {
     "objectID": "content/Slides/methodsSlidesTemplate.html#title-page",
