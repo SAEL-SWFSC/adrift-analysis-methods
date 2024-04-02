@@ -30,8 +30,6 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
     Click [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
 
-## Brydes
-
 ## Fin 20 Hz ADRIFT
 
 ### *Click detector in PAMGuard*
@@ -75,7 +73,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 More details of these methods can be found [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/20HzFinMethods.html#/title-slide)
 
-## Fin 40 Hz ADRIFT
+## Fin 40 Hz ADRIFT/ Brydes
 
 ### *Stage 1: PAMGuard Automated Processing* 
 
@@ -91,13 +89,11 @@ More details of these methods can be found [here](https://sael-swfsc.github.io/a
 
 ### *Stage 2: PAMGuard Viewer Mode Review and Annotation*
 
--   The binary and database files were used in the manual annotation process through PAMGuard Viewer Mode
+-   In PAMGuard Viewer Mode, an experienced data analyst used the 'Detection Group Localiser' to mark the start and end of each acoustic event (defined by a minimum elapsed time between the end of a series of continuous calls and beginning of another, e.g. 120 minutes)
 
--   An experienced data analyst used the 'Detection Group Localiser' to mark the start and end of each acoustic event (defined by a minimum elapsed time between the end of a series of continuous calls and beginning of another, e.g. 120 minutes)
+-   A custom logger form was used to collect the analyst initials, species, call type and comments regarding the acoustic event
 
--   A custom logger form is used to collect the analyst initials, species, call type and comments regarding the acoustic event
-
--   If an analyst was not confident in a species identification, an association of "Possible" and the whale name was indicated
+-   If an analyst was not confident in a species identification, an association of "Possible" and the whale name was indicated.
 
 -   If the calls were not possible to identify to species, a label of "Unknown whale" (if thought to be a whale) or "Unknown sound" (if unsure if it was a whale or fish) was used
 
