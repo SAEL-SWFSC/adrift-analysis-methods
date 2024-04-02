@@ -1088,8 +1088,8 @@
     ]
   },
   {
-    "objectID": "content/BaleenWhales/Overview.html#fin-40-hz-adrift-brydes",
-    "href": "content/BaleenWhales/Overview.html#fin-40-hz-adrift-brydes",
+    "objectID": "content/BaleenWhales/Overview.html#fin-40-hz-adrift-brydessei",
+    "href": "content/BaleenWhales/Overview.html#fin-40-hz-adrift-brydessei",
     "title": "Overview",
     "section": "",
     "text": "Raw audio (.wav) files were organized and processed by drifter in PAMGuard’s “Whistle and Moan” detector.\n\nExample PAMGuard settings file: ‘Fin40Hz_Drifter_Analysis_200Hz_v2.psfx’\n\nAutomated detections were clipped and stored in a clip folder in order to allow for review using the clip generator\nThese were housed outside of the binary to maintain lower binary file size for later processing/copying of data\nAn LTSA module was added to all configuration files to assist with rapid identification of noise and marine mammal vocal activity periods, but largely only leveraged with continuous data\n\n\n\n\n\nIn PAMGuard Viewer Mode, an experienced data analyst used the ‘Detection Group Localiser’ to mark the start and end of each acoustic event (defined by a minimum elapsed time between the end of a series of continuous calls and beginning of another, e.g. 120 minutes)\nA custom logger form was used to collect the analyst initials, species, call type and comments regarding the acoustic event\nIf an analyst was not confident in a species identification, an association of “Possible” and the whale name was indicated.\nIf the calls were not possible to identify to species, a label of “Unknown whale” (if thought to be a whale) or “Unknown sound” (if unsure if it was a whale or fish) was used\n\nMore detailed methods can be found here",
