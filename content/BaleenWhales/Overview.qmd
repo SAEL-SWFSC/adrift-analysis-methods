@@ -24,7 +24,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
     -   Long-term spectral averages (LTSAs) were calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings
 
-    -   A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call.
+    -   A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call before moving onto the next hour.
 
     -   These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created.
 
@@ -41,7 +41,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
         -   PamGuard settings can be found [here](https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings)
 
-    -   Recordings from each Drift was run through the click detector
+    -   Recordings from each Drift were run through the click detector
 
     -   Click information were saved to binary files
 
@@ -51,17 +51,25 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
     -   Events were defined as every wav file
 
-    -   Wav file lengths and duty cycles varied depending on deployment but all information related to deployment details can be found [here](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=395545420).
+        -   Wav file lengths and duty cycles varied depending on deployment but all information related to deployment details can be found [here](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit#gid=395545420).
+
+-   A stratified sub-sampling method was used to validate 20% of the wav files in a drift.
 
 ### *Random Forest Model*
 
--   A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023
+-   A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023.
 
 ### *Review of Model Results*
 
 -   We used the model to predict if fin whales were present on an hourly basis
 
--   The model had one of three results: Accept, Review, Dropped
+-   The model had one of three results: Accepted, Review, Dropped
+
+    -   Accepted: 3 or more predictions and a score of 0.85 or higher
+
+    -   Review: 3 or more predictions and a score of 0.5 to 0.84
+
+    -   Dropped: less than 3 predictions and a score of greater than 0.5
 
 -   Both Accepted and Review detections were reviewed for accuracy
 
@@ -69,13 +77,13 @@ More details of these methods can be found [here](https://sael-swfsc.github.io/a
 
 ## Fin 40 Hz ADRIFT
 
-### *Stage 1: PAMGuard Automated Processing Mode*
+### *Stage 1: PAMGuard Automated Processing* 
 
--   Raw audio (.wav) files were organized and processed by drifter dataset and included tested parameters for PAMGuard's inbuilt "Whistle and Moan Detector" that would serve to detect calls from a variety of species
+-   Raw audio (.wav) files were organized and processed by drifter in PAMGuard's "Whistle and Moan" detector.
 
-    -   Example PAMGuard settings file [here titled 'Fin40Hz_Drifter_Analysis_200Hz_v2.psfx'](https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings)
+    -   Example PAMGuard settings file: ['Fin40Hz_Drifter_Analysis_200Hz_v2.psfx'](https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings)
 
--   Automated detections were clipped and stored in a clip folder in order to allow for review in the clip generator
+-   Automated detections were clipped and stored in a clip folder in order to allow for review using the clip generator
 
 -   These were housed outside of the binary to maintain lower binary file size for later processing/copying of data
 
