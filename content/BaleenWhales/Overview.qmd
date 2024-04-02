@@ -73,7 +73,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 More details of these methods can be found [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/20HzFinMethods.html#/title-slide)
 
-## Fin 40 Hz ADRIFT/ Brydes
+## Fin 40 Hz ADRIFT/ Brydes/Sei
 
 ### *Stage 1: PAMGuard Automated Processing* 
 
