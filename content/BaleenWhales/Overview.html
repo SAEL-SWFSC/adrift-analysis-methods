@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -287,6 +287,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#manual-annotation-in-triton" id="toc-manual-annotation-in-triton" class="nav-link" data-scroll-target="#manual-annotation-in-triton"><em>Manual Annotation in Triton</em></a></li>
   </ul></li>
+  <li><a href="#fin-20hz-cces-pascal" id="toc-fin-20hz-cces-pascal" class="nav-link" data-scroll-target="#fin-20hz-cces-pascal">Fin 20Hz CCES &amp; PASCAL</a>
+  <ul class="collapse">
+  <li><a href="#manual-annotation-in-triton-1" id="toc-manual-annotation-in-triton-1" class="nav-link" data-scroll-target="#manual-annotation-in-triton-1"><em>Manual Annotation in Triton</em></a></li>
+  </ul></li>
   <li><a href="#fin-20-hz-adrift" id="toc-fin-20-hz-adrift" class="nav-link" data-scroll-target="#fin-20-hz-adrift">Fin 20 Hz ADRIFT</a>
   <ul class="collapse">
   <li><a href="#click-detector-in-pamguard" id="toc-click-detector-in-pamguard" class="nav-link" data-scroll-target="#click-detector-in-pamguard"><em>Click detector in PAMGuard</em></a></li>
@@ -346,6 +350,22 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="manual-annotation-in-triton"><em>Manual Annotation in Triton</em></h3>
 <ul>
 <li><p>Presence of blue whales within the recordings were based off of A, B, and D call types.</p></li>
+<li><p><a href="https://github.com/MarineBioAcousticsRC/Triton">Triton software</a> was used for the following:</p>
+<ul>
+<li><p>Long-term spectral averages (LTSAs) were calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings</p></li>
+<li><p>A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call before moving onto the next hour.</p></li>
+<li><p>These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created.</p></li>
+</ul>
+<p>Click <a href="https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide">here</a> for more detail of these methods.</p></li>
+</ul>
+</section>
+</section>
+<section id="fin-20hz-cces-pascal" class="level2">
+<h2 class="anchored" data-anchor-id="fin-20hz-cces-pascal">Fin 20Hz CCES &amp; PASCAL</h2>
+<section id="manual-annotation-in-triton-1" class="level3">
+<h3 class="anchored" data-anchor-id="manual-annotation-in-triton-1"><em>Manual Annotation in Triton</em></h3>
+<ul>
+<li><p>Presence of 20Hz fin whale calls within the recordings were manually annotated due to the variability in recording duty cycle and sampling.</p></li>
 <li><p><a href="https://github.com/MarineBioAcousticsRC/Triton">Triton software</a> was used for the following:</p>
 <ul>
 <li><p>Long-term spectral averages (LTSAs) were calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings</p></li>
