@@ -73,6 +73,8 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 -   A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023.
 
+    ![Confusion Matrix from Random Forest Model](images/RandomForest_ConfusionMatrix.JPG)
+
 ### *Review of Model Results*
 
 -   We used the model to predict if fin whales were present on an hourly basis
@@ -91,7 +93,7 @@ More details of these methods can be found [here](https://sael-swfsc.github.io/a
 
 ## Fin 40 Hz ADRIFT/ Brydes/Sei
 
-### *Stage 1: PAMGuard Automated Processing* 
+### *Stage 1: PAMGuard Automated Processing*
 
 -   Raw audio (.wav) files were organized and processed by drifter in PAMGuard's "Whistle and Moan" detector.
 
