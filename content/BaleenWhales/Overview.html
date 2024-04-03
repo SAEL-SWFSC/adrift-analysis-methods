@@ -408,19 +408,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="random-forest-model" class="level3">
 <h3 class="anchored" data-anchor-id="random-forest-model"><em>Random Forest Model</em></h3>
 <ul>
-<li><p>A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/RandomForest_ConfusionMatrix.JPG" class="img-fluid figure-img"></p>
-<figcaption>Confusion Matrix from Random Forest Model</figcaption>
-</figure>
-</div></li>
+<li>A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023.</li>
 </ul>
 </section>
 <section id="review-of-model-results" class="level3">
 <h3 class="anchored" data-anchor-id="review-of-model-results"><em>Review of Model Results</em></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/RandomForest_ConfusionMatrix.JPG" class="img-fluid figure-img"></p>
+<figcaption>Figure x. Confusion Matrix from Random Forest Model</figcaption>
+</figure>
+</div>
+<p>We used the model to predict if fin whales were present on an hourly basis. While we understand that there were limitations to this model, we felt confident using based off of the following criteria.</p>
 <ul>
-<li><p>We used the model to predict if fin whales were present on an hourly basis</p></li>
 <li><p>The model had one of three results: Accepted, Review, Dropped</p>
 <ul>
 <li><p>Accepted: 3 or more predictions and a score of 0.85 or higher</p></li>
