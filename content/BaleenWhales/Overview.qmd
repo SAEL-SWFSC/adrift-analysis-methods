@@ -73,11 +73,11 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
 -   A random forest model was created using validated data from 14 drifts, deployed in 3 different locations between June of 2021-July 2023.
 
-    ![Confusion Matrix from Random Forest Model](images/RandomForest_ConfusionMatrix.JPG)
+### *Review of Model Results* 
 
-### *Review of Model Results*
+![Figure x. Confusion Matrix from Random Forest Model](images/RandomForest_ConfusionMatrix.JPG){alt="Figure x. Confusion Matrix from Random Forest Model"}
 
--   We used the model to predict if fin whales were present on an hourly basis
+We used the model to predict if fin whales were present on an hourly basis. While we understand that there were limitations to this model, we felt confident using based off of the following criteria.
 
 -   The model had one of three results: Accepted, Review, Dropped
 
