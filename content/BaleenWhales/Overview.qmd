@@ -30,6 +30,22 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
     Click [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
 
+## Fin 20Hz CCES & PASCAL
+
+### *Manual Annotation in Triton*
+
+-   Presence of 20Hz fin whale calls within the recordings were manually annotated due to the variability in recording duty cycle and sampling.
+
+-   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) was used for the following:
+
+    -   Long-term spectral averages (LTSAs) were calculated with a 1 Hz, 5 second resolution using 500Hz decimated recordings
+
+    -   A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call before moving onto the next hour.
+
+    -   These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created.
+
+    Click [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
+
 ## Fin 20 Hz ADRIFT
 
 ### *Click detector in PAMGuard*
