@@ -238,7 +238,35 @@
     "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-16-annotate-missed-fin-pulses-on-the-spectrogram-display",
     "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
     "section": "Step 16: Annotate Missed Fin Pulses on the Spectrogram Display",
-    "text": "Step 16: Annotate Missed Fin Pulses on the Spectrogram Display\n\n\n\nScroll through each event using the spectrogram display\n\nAnnotate any 20Hz pulse that was missed by the click detector\nDraw a box around the click and use the drop down menu to select the sound you’re boxing\n\n\n\n\n\n\nSpectrogram Annotation\n\n\n\n\n\n\n\nBack to Methods"
+    "text": "Step 16: Annotate Missed Fin Pulses on the Spectrogram Display\n\n\n\nScroll through each event using the spectrogram display\n\nAnnotate any 20Hz pulse that was missed by the click detector\nDraw a box around the click and use the drop down menu to select the sound you’re boxing\n\n\n\n\n\n\nSpectrogram Annotation"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-17-compare-original-event-database-with-the-validated-events-database",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-17-compare-original-event-database-with-the-validated-events-database",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 17: Compare original event database with the validated events database",
+    "text": "Step 17: Compare original event database with the validated events database\n\nWe then compared the original and validated databases to understand our detector performance.\n\nThe detector was tuned to over detect clicks as we wanted to make sure to pick up all of the 20Hz fin pulses. That being said, most of recordings were pretty noisy under 50Hz and the click detector picked up on a lot of false positives"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-18-create-a-random-forest-model-from-the-validated-data",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-18-create-a-random-forest-model-from-the-validated-data",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 18: Create a Random Forest Model from the validated data",
+    "text": "Step 18: Create a Random Forest Model from the validated data\n\nTaiki Sakai created a model to use for the classification of 20Hz fin whale pulses based off of the previously validated data. The model and all of the data used can be found on his GitHub site here.\nWe used the model to predict if fin whales were present on an hourly basis on all of our data. While we understand that there were limitations to this model, we felt confident using based off of the following criteria.\n\nThe model had one of three results: Accepted, Review, Dropped\n\nAccepted: 3 or more predictions and a score of 0.85 or higher\nReview: 3 or more predictions and a score of 0.5 to 0.84\nDropped: less than 3 predictions and a score of greater than 0.5\n\nBoth Accepted and Review detections were reviewed for accuracy"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-19-validate-predictions",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-19-validate-predictions",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 19: Validate Predictions",
+    "text": "Step 19: Validate Predictions\n\nUsing Taiki’s finProcessReivewScript.R we can quickly review all “Accepted” and “Review” hours.\n\nWe would track our progress using a “.CSV”. Under the manualReivew column we entered Fin or NotFin for that hour based off of the spectrogram images.\n\n\n\n\n\n\n\nSpectrogram of 2 min clips. Red circles are predictions\n\n\n\n\n\n\nCSV to keep track of review. NAs were dropped by the model"
+  },
+  {
+    "objectID": "content/BaleenWhales/Slides/20HzFinMethods.html#step-20-combine-all-data-for-plotting",
+    "href": "content/BaleenWhales/Slides/20HzFinMethods.html#step-20-combine-all-data-for-plotting",
+    "title": "Semi-Automated Approach to Detecting 20Hz Fin Whale Pulses",
+    "section": "Step 20: Combine all data for plotting",
+    "text": "Step 20: Combine all data for plotting\n\nFrom here we gave all .CSVs to Taiki to integrate into the final report plots.\n\n\n\n\nBack to Methods"
   },
   {
     "objectID": "content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#step-1-open-matlab-and-set-the-path",

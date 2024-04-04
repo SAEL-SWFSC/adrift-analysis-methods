@@ -816,6 +816,63 @@ Cory Hom-Weaver
 </div>
 </div>
 </div>
+</section>
+<section id="step-17-compare-original-event-database-with-the-validated-events-database" class="slide level2 smaller">
+<h2>Step 17: Compare original event database with the validated events database</h2>
+<ul>
+<li><p>We then compared the original and validated databases to understand our detector performance.</p>
+<ul>
+<li>The detector was tuned to over detect clicks as we wanted to make sure to pick up all of the 20Hz fin pulses. That being said, most of recordings were pretty noisy under 50Hz and the click detector picked up on a lot of false positives</li>
+</ul></li>
+</ul>
+</section>
+<section id="step-18-create-a-random-forest-model-from-the-validated-data" class="slide level2 smaller">
+<h2>Step 18: Create a Random Forest Model from the validated data</h2>
+<ul>
+<li><p>Taiki Sakai created a model to use for the classification of 20Hz fin whale pulses based off of the previously validated data. The model and all of the data used can be found on his <a href="https://github.com/TaikiSan21/Fin_RF">GitHub site here.</a></p></li>
+<li><p>We used the model to predict if fin whales were present on an hourly basis on all of our data. While we understand that there were limitations to this model, we felt confident using based off of the following criteria.</p>
+<ul>
+<li><p>The model had one of three results: Accepted, Review, Dropped</p>
+<ul>
+<li><p>Accepted: 3 or more predictions and a score of 0.85 or higher</p></li>
+<li><p>Review: 3 or more predictions and a score of 0.5 to 0.84</p></li>
+<li><p>Dropped: less than 3 predictions and a score of greater than 0.5</p></li>
+</ul></li>
+<li><p>Both Accepted and Review detections were reviewed for accuracy</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="step-19-validate-predictions" class="slide level2 smaller">
+<h2>Step 19: Validate Predictions</h2>
+<ul>
+<li>Using Taiki’s <a href="https://github.com/TaikiSan21/Fin_RF/blob/main/finProcessReviewScript.R">finProcessReivewScript.R</a> we can quickly review all “Accepted” and “Review” hours.
+<ul>
+<li>We would track our progress using a “.CSV”. Under the manualReivew column we entered Fin or NotFin for that hour based off of the spectrogram images.</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="../../../content/Slides/images/ModelReview_Spectrogram.JPG" width="311"></p>
+<figcaption>Spectrogram of 2 min clips. Red circles are predictions</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="../../../content/Slides/images/RF_Review_CSV.JPG" width="258"></p>
+<figcaption>CSV to keep track of review. NAs were dropped by the model</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-20-combine-all-data-for-plotting" class="slide level2 smaller">
+<h2>Step 20: Combine all data for plotting</h2>
+<ul>
+<li>From here we gave all .CSVs to Taiki to integrate into the final report plots.</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
