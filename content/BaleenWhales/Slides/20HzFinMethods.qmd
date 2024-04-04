@@ -345,3 +345,44 @@ for(e in 1:nrow(wavDf)) {
 ![Spectrogram Annotation](/content/Slides/images/Fin_click_annotation_spectrogram.JPG){fig-align="center"}
 :::
 :::
+
+## Step 17: Compare original event database with the validated events database {.smaller}
+
+-   We then compared the original and validated databases to understand our detector performance.
+
+    -   The detector was tuned to over detect clicks as we wanted to make sure to pick up all of the 20Hz fin pulses. That being said, most of recordings were pretty noisy under 50Hz and the click detector picked up on a lot of false positives
+
+## Step 18: Create a Random Forest Model from the validated data {.smaller}
+
+-   Taiki Sakai created a model to use for the classification of 20Hz fin whale pulses based off of the previously validated data. The model and all of the data used can be found on his [GitHub site here.](https://github.com/TaikiSan21/Fin_RF)
+
+-   We used the model to predict if fin whales were present on an hourly basis on all of our data. While we understand that there were limitations to this model, we felt confident using based off of the following criteria.
+
+    -   The model had one of three results: Accepted, Review, Dropped
+
+        -   Accepted: 3 or more predictions and a score of 0.85 or higher
+
+        -   Review: 3 or more predictions and a score of 0.5 to 0.84
+
+        -   Dropped: less than 3 predictions and a score of greater than 0.5
+
+    -   Both Accepted and Review detections were reviewed for accuracy
+
+## Step 19: Validate Predictions {.smaller}
+
+-   Using Taiki's [finProcessReivewScript.R](https://github.com/TaikiSan21/Fin_RF/blob/main/finProcessReviewScript.R) we can quickly review all "Accepted" and "Review" hours.
+    -   We would track our progress using a ".CSV". Under the manualReivew column we entered Fin or NotFin for that hour based off of the spectrogram images.
+
+::: columns
+::: {.column width="50%"}
+![Spectrogram of 2 min clips. Red circles are predictions](/content/Slides/images/ModelReview_Spectrogram.JPG){fig-align="left" width="311"}
+:::
+
+::: {.column width="50%"}
+![CSV to keep track of review. NAs were dropped by the model](/content/Slides/images/RF_Review_CSV.JPG){fig-align="left" width="258"}
+:::
+:::
+
+## Step 20: Combine all data for plotting {.smaller}
+
+-   From here we gave all .CSVs to Taiki to integrate into the final report plots.
