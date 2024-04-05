@@ -95,13 +95,13 @@ More details of these methods can be found [here](https://sael-swfsc.github.io/a
 
 ### *Stage 1: PAMGuard Automated Processing*
 
+-   [Configurations files](https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings) were developed and tested with well know example call data prior to processing
+
 -   Raw audio (.wav) files were organized and processed by drifter in PAMGuard's "Whistle and Moan" detector.
 
-    -   Example PAMGuard settings file: ['Fin40Hz_Drifter_Analysis_200Hz_v2.psfx'](https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings)
+    -   Automated detections were clipped and stored in a clip folder in order to allow for review using the clip generator
 
--   Automated detections were clipped and stored in a clip folder in order to allow for review using the clip generator
-
--   These were housed outside of the binary to maintain lower binary file size for later processing/copying of data
+        -   These were housed outside of the binary to maintain lower binary file size for later processing/copying of data
 
 -   An LTSA module was added to all configuration files to assist with rapid identification of noise and marine mammal vocal activity periods, but largely only leveraged with continuous data
 
