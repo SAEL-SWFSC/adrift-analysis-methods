@@ -437,12 +437,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="stage-1-pamguard-automated-processing" class="level3">
 <h3 class="anchored" data-anchor-id="stage-1-pamguard-automated-processing"><em>Stage 1: PAMGuard Automated Processing</em></h3>
 <ul>
+<li><p><a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings">Configurations files</a> were developed and tested with well know example call data prior to processing</p></li>
 <li><p>Raw audio (.wav) files were organized and processed by drifter in PAMGuard’s “Whistle and Moan” detector.</p>
 <ul>
-<li>Example PAMGuard settings file: <a href="https://github.com/SAEL-SWFSC/adrift-analysis-methods/tree/main/content/BaleenWhales/Pamguard%20Settings">‘Fin40Hz_Drifter_Analysis_200Hz_v2.psfx’</a></li>
+<li><p>Automated detections were clipped and stored in a clip folder in order to allow for review using the clip generator</p>
+<ul>
+<li>These were housed outside of the binary to maintain lower binary file size for later processing/copying of data</li>
 </ul></li>
-<li><p>Automated detections were clipped and stored in a clip folder in order to allow for review using the clip generator</p></li>
-<li><p>These were housed outside of the binary to maintain lower binary file size for later processing/copying of data</p></li>
+</ul></li>
 <li><p>An LTSA module was added to all configuration files to assist with rapid identification of noise and marine mammal vocal activity periods, but largely only leveraged with continuous data</p></li>
 </ul>
 </section>
