@@ -668,7 +668,7 @@
     "href": "content/ToothedWhales/SpermWhales-Detection.html",
     "title": "Sperm Whales",
     "section": "",
-    "text": "Triton software is used for the following:\n\nAcoustic data is decimated to 48 kHz sample rate\nLong-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution\nThe start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows\nIdentify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation",
+    "text": "Triton software is used for the following:\n\nAcoustic data from Channel 1 is decimated to 48 kHz sample rate\nLong-term spectral averages (LTSAs) are calculated with a 100 Hz, 5 second resolution\nThe start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows\nIdentify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation",
     "crumbs": [
       "Toothed Whales",
       "Sperm Whales"
@@ -679,7 +679,7 @@
     "href": "content/ToothedWhales/SpermWhales-Detection.html#methods-summary",
     "title": "Sperm Whales",
     "section": "",
-    "text": "Triton software is used for the following:\n\nAcoustic data is decimated to 48 kHz sample rate\nLong-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution\nThe start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows\nIdentify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation",
+    "text": "Triton software is used for the following:\n\nAcoustic data from Channel 1 is decimated to 48 kHz sample rate\nLong-term spectral averages (LTSAs) are calculated with a 100 Hz, 5 second resolution\nThe start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows\nIdentify periods of vessel noise or buoy self-noise which could mask sperm whale echolocation",
     "crumbs": [
       "Toothed Whales",
       "Sperm Whales"
