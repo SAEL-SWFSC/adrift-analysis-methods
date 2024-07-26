@@ -11,7 +11,7 @@ bibliography: references.bib
 
 -   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) is used for the following:
 
-    -   Acoustic data is decimated to 48 kHz sample rate
+    -   Acoustic data from Channel 1 is decimated to 48 kHz sample rate
 
     -   Soundscape long-term spectral averages (LTSAs) are calculated with a 1 Hz, 1 second resolution
 
