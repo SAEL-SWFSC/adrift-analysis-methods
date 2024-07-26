@@ -9,9 +9,9 @@ bibliography: references.bib
 
 -   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) is used for the following:
 
-    -   Acoustic data is decimated to 48 kHz sample rate
+    -   Acoustic data from Channel 1 is decimated to 48 kHz sample rate
 
-    -   Long-term spectral averages (LTSAs) are calculated with a X Hz, X second resolution
+    -   Long-term spectral averages (LTSAs) are calculated with a 100 Hz, 5 second resolution
 
     -   The start and end times of sperm whale echolocation clicks are identified by manually scanning LTSAs in 1 hour windows
 
