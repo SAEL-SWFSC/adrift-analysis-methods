@@ -9,7 +9,7 @@ bibliography: references.bib
 
 -   [Triton software](https://github.com/MarineBioAcousticsRC/Triton) is used for the following:
 
-    -   Long-term spectral averages (LTSAs) are calculated with a 200 Hz, 5 second resolution
+    -   Long-term spectral averages (LTSAs) are calculated from Channel 1 recordings with a 200 Hz, 5 second resolution
 
     -   For continuous recordings (ADRIFT dataset), the start and end times of dolphin acoustic events are identified by manually scanning LTSAs in 1 hour windows
 
