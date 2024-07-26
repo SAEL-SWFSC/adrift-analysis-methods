@@ -635,7 +635,7 @@
     "href": "content/ToothedWhales/Dolphins-Detection.html",
     "title": "Dolphins",
     "section": "",
-    "text": "Identified dolphin acoustic events include echolocation clicks from Risso’s and Pacific white-sided dolphins, and whistles from unidentified dolphin species\nTriton software is used for the following:\n\nLong-term spectral averages (LTSAs) are calculated with a 200 Hz, 5 second resolution\nFor continuous recordings (ADRIFT dataset), the start and end times of dolphin acoustic events are identified by manually scanning LTSAs in 1 hour windows\nFor duty-cycled recordings (CCES and PASCAL datasets), the presence of dolphin acoustic events is identified within 2-minute bins",
+    "text": "Identified dolphin acoustic events include echolocation clicks from Risso’s and Pacific white-sided dolphins, and whistles from unidentified dolphin species\nTriton software is used for the following:\n\nLong-term spectral averages (LTSAs) are calculated from Channel 1 recordings with a 200 Hz, 5 second resolution\nFor continuous recordings (ADRIFT dataset), the start and end times of dolphin acoustic events are identified by manually scanning LTSAs in 1 hour windows\nFor duty-cycled recordings (CCES and PASCAL datasets), the presence of dolphin acoustic events is identified within 2-minute bins",
     "crumbs": [
       "Toothed Whales",
       "Dolphins"
@@ -646,7 +646,7 @@
     "href": "content/ToothedWhales/Dolphins-Detection.html#methods-summary",
     "title": "Dolphins",
     "section": "",
-    "text": "Identified dolphin acoustic events include echolocation clicks from Risso’s and Pacific white-sided dolphins, and whistles from unidentified dolphin species\nTriton software is used for the following:\n\nLong-term spectral averages (LTSAs) are calculated with a 200 Hz, 5 second resolution\nFor continuous recordings (ADRIFT dataset), the start and end times of dolphin acoustic events are identified by manually scanning LTSAs in 1 hour windows\nFor duty-cycled recordings (CCES and PASCAL datasets), the presence of dolphin acoustic events is identified within 2-minute bins",
+    "text": "Identified dolphin acoustic events include echolocation clicks from Risso’s and Pacific white-sided dolphins, and whistles from unidentified dolphin species\nTriton software is used for the following:\n\nLong-term spectral averages (LTSAs) are calculated from Channel 1 recordings with a 200 Hz, 5 second resolution\nFor continuous recordings (ADRIFT dataset), the start and end times of dolphin acoustic events are identified by manually scanning LTSAs in 1 hour windows\nFor duty-cycled recordings (CCES and PASCAL datasets), the presence of dolphin acoustic events is identified within 2-minute bins",
     "crumbs": [
       "Toothed Whales",
       "Dolphins"
