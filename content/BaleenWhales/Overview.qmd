@@ -28,6 +28,14 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
     -   These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created.
 
+        #### Call Examples 
+
+        ![Spectrogram of blue whale A call](Screenshots/BlueWhale_A_Call.JPG)
+
+        ![Spectrogram of blue whale B call](Screenshots/BlueWhale_B_Call.JPG)
+
+        ![Spectrogram of blue whale D call](Screenshots/BlueWhale_D_Call.JPG)
+
     Click [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
 
 ## Fin 20Hz CCES & PASCAL
@@ -43,6 +51,12 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
     -   A trained analyst scanned the LTSAs one hour at a time to look for A, B and D calls. If a call was discovered within that hour chunk, the analyst would note the start time of each call type and a comment regarding the SNR and quality of the call before moving onto the next hour.
 
     -   These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created.
+
+        #### Call Examples
+
+        ![Spectrogram of a fin whale 20Hz call](Screenshots/FinWhale_20HzDoublet_Call.JPG)
+
+        ![Spectrogram of a fin whale 40Hz call](Screenshots/FinWhale_40Hz_Call.JPG)
 
     Click [here](https://sael-swfsc.github.io/adrift-analysis-methods/content/BaleenWhales/Slides/methodsforloggingbaleenwhales.html#/title-slide) for more detail of these methods.
 
