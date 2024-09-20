@@ -1,0 +1,43 @@
+---
+title: Access Data
+---
+
+Our Tethys database is an internal storage tool stored on our lab servers. Access may be granted under special circumstances.
+
+## Accessing The Database
+
+### For SAEL Lab Members
+
+1.  Work with IT to set up an user profile on SWC-SRANKIN1-D
+
+2.  Navigate to 'C:\\Tethys\\Tethys3\\databases\\metadata'
+
+3.  Open the 'tethys.bat' batch file
+
+    -   Note, if this is your first time opening accessing the database, it may take a while to execute and you may get a permissions request. You will need IT permissions complete this request
+
+4.  Once the database is running, the second to last line in the batch window should prompt you to access the web interface at '<http://SWC-SRANKIN1-D.nmfs.local:9779/Client>'
+
+    ![](images/TethysBatchWindow.png)
+
+5.  Once opened in your browser you should see the following window
+
+    ![](images/TethysWebBrowser.png)
+
+### For Non SAEL Lab Uses
+
+1.  Contact Shannon Rankin (shannon.rankin\@noaa.gov) or Kourtney Burger (kourtney.burger\@noaa.gov) for a copy of the database
+
+2.  Once you receive the zipped folder, save and extract it to your computer
+
+3.  Follow 2-5 above to access the web browser
+
+## Web Browser
+
+## Data Viewer
+
+## More Information
+
+::: callout-note
+## Reference the [user manual](https://tethys.sdsu.edu/distribution/current-docs/Tethys.pdf) for more information on Tethys functionality
+:::

@@ -1,5 +1,5 @@
 ---
-title: Tethys - Deployments
+title: Deployments
 ---
 
 ## Create deployment worksheet

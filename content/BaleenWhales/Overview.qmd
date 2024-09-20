@@ -28,7 +28,7 @@ Baleen whale vocalizations are noted by their long duration, low frequency calls
 
     -   These annotations were saved in a .CSV for each deployment. CSVs were then combined and plots for hourly presence were created.
 
-        #### Call Examples 
+        #### Call Examples
 
         ![Spectrogram of blue whale A call](Screenshots/BlueWhale_A_Call.JPG)
 
