@@ -1039,7 +1039,7 @@
     "href": "content/DataArchive/TethysAccessData.html",
     "title": "Access Data",
     "section": "",
-    "text": "Our Tethys database is an internal storage tool stored on our lab servers. Access may be granted under special circumstances.",
+    "text": "Our Tethys database is an internal storage tool stored on our lab servers. Outside access may be granted under special circumstances. Tethys is well documented here with video tutorials here. The information below is a starting point to open Tethys and basic use cases. Please reference Tethys documentation for more information.",
     "crumbs": [
       "Data Archive",
       "Archive",
@@ -1052,7 +1052,7 @@
     "href": "content/DataArchive/TethysAccessData.html#accessing-the-database",
     "title": "Access Data",
     "section": "Accessing The Database",
-    "text": "Accessing The Database\n\nFor SAEL Lab Members\n\nWork with IT to set up an user profile on SWC-SRANKIN1-D\nNavigate to ‘C:\\Tethys\\Tethys3\\databases\\metadata’\nOpen the ‘tethys.bat’ batch file\n\nNote, if this is your first time opening accessing the database, it may take a while to execute and you may get a permissions request. You will need IT permissions complete this request\n\nOnce the database is running, the second to last line in the batch window should prompt you to access the web interface at ‘http://SWC-SRANKIN1-D.nmfs.local:9779/Client’\n\nOnce opened in your browser you should see the following window\n\n\n\n\nFor Non SAEL Lab Uses\n\nContact Shannon Rankin (shannon.rankin@noaa.gov) or Kourtney Burger (kourtney.burger@noaa.gov) for a copy of the database\nOnce you receive the zipped folder, save and extract it to your computer\nFollow 2-5 above to access the web browser",
+    "text": "Accessing The Database\n\nFor SAEL Lab Members\n\nWork with IT to set up an user profile on SWC-SRANKIN1-D\nNavigate to ‘C:\\Tethys\\Tethys3\\databases\\metadata’\nOpen the ‘tethys.bat’ batch file\n\nNote, if this is your first time opening accessing the database, it may take up to an hour to execute and you may get a permissions request. You will need IT permissions complete this request\n\nOnce the database is running, the second to last line in the batch window should prompt you to access the web interface at ‘http://SWC-SRANKIN1-D.nmfs.local:9779/Client’\n\nOnce opened in your browser you should see the following window\n\n\n\n\nFor Non SAEL Lab Uses\nFrom full Tethys folder\n\nContact Shannon Rankin (shannon.rankin@noaa.gov) or Kourtney Burger (kourtney.burger@noaa.gov) for a copy of the database\nOnce you receive the zipped folder, save and extract it to your computer\nNavigate to ‘C:\\Tethys\\databases\\metadata’\nOpen the ‘tethys.bat’ batch file\n\nNote, if this is your first time opening accessing the database, it may take up to an hour to execute and you may get a permissions request. You will need IT permissions complete this request\n\nOnce the database is running, the second to last line in the batch window should prompt you to access the web interface at ‘http://local:9779/Client’",
     "crumbs": [
       "Data Archive",
       "Archive",
@@ -1061,24 +1061,11 @@
     ]
   },
   {
-    "objectID": "content/DataArchive/TethysAccessData.html#web-browser",
-    "href": "content/DataArchive/TethysAccessData.html#web-browser",
+    "objectID": "content/DataArchive/TethysAccessData.html#clients",
+    "href": "content/DataArchive/TethysAccessData.html#clients",
     "title": "Access Data",
-    "section": "Web Browser",
-    "text": "Web Browser",
-    "crumbs": [
-      "Data Archive",
-      "Archive",
-      "Tethys",
-      "Access Data"
-    ]
-  },
-  {
-    "objectID": "content/DataArchive/TethysAccessData.html#data-viewer",
-    "href": "content/DataArchive/TethysAccessData.html#data-viewer",
-    "title": "Access Data",
-    "section": "Data Viewer",
-    "text": "Data Viewer",
+    "section": "Clients",
+    "text": "Clients\nYou can easily access the Tethys Database through 2 web based clients\n\nWeb Client\nThe Web Client is a user-friendly interface to accessing Tethys data. You can construct, visualize, and export data queries. Below are some basic features and uses of the web client, full documentation can be found in the ‘Tethys-WebClientManual’\n\nSimple Queries\nUsing the ‘Simple Queries’ tab, you can use a variety of fields to refine the data query spatially, temporally, or by other deployment and species metadata. You can query for detection effort, detections, deployments, or localizations.\nHere’s an example where I queried for all blue whale detections in 2023 from the ADRIFT project, using a bounding box to filter detections in central California. These results can be saved using the ‘Save’ drop down at the bottom left.\nNote, Tethys uses species codes and our data using NOAA.NMFS.v4. This can be changed in the drop down next to the Advanced Queries tab. Species abbreviations can be found here ‘\\Tethys\\databases\\metadata\\source-docs\\SpeciesAbbreviations’\n\n\n\n\n\n\n\nQuerying may take a while if you have a large spatial or temporal window.\n\n\n\n\n\n\n\n\nAdvanced Queries\nAdvanced queries allow the user to build a more refined query from additional fields, using drag-and-drop functionality. Similar to Simple Queries, you can query for detection effort, detections, deployments, or localizations. There are also separate tabs to build your query, view the query in JSON and XQuery format, and to view results on a map and in XML format.\nHere’s an example where I built a query for deployment IDs and regions for deployments from CCES that used a ST4300HF.\n\nHere are the results for that query, which I can copy to clipboard or save in a variety of formats\n\n\n\n\nData Explorer\nThe Data Explorer is another web based tool for exploring the database in an interactive point-and-click interface. Full documentation can be in the ‘Tethys-DataExplorerManual’\n\n\n\n\n\n\nNote: Python is required to run the Data Explorer\n\n\n\nThis is included when you download Tethys\n\n\nAdd directions for accessing and navigating the data explorer",
     "crumbs": [
       "Data Archive",
       "Archive",
