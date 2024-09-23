@@ -2,7 +2,7 @@
 title: Access Data
 ---
 
-Our Tethys database is an internal storage tool stored on our lab servers. Access may be granted under special circumstances.
+Our Tethys database is an internal storage tool stored on our lab servers. Outside access may be granted under special circumstances. Tethys is well documented [here](https://tethys.sdsu.edu/documentation/) with [video tutorials here](https://tethys.sdsu.edu/tutorials/). The information below is a starting point to open Tethys and basic use cases. Please reference [Tethys documentation](https://tethys.sdsu.edu/) for more information.
 
 ## Accessing The Database
 
@@ -14,7 +14,7 @@ Our Tethys database is an internal storage tool stored on our lab servers. Acces
 
 3.  Open the 'tethys.bat' batch file
 
-    -   Note, if this is your first time opening accessing the database, it may take a while to execute and you may get a permissions request. You will need IT permissions complete this request
+    -   Note, if this is your first time opening accessing the database, it may take up to an hour to execute and you may get a permissions request. You will need IT permissions complete this request
 
 4.  Once the database is running, the second to last line in the batch window should prompt you to access the web interface at '<http://SWC-SRANKIN1-D.nmfs.local:9779/Client>'
 
@@ -26,15 +26,60 @@ Our Tethys database is an internal storage tool stored on our lab servers. Acces
 
 ### For Non SAEL Lab Uses
 
+From full Tethys folder
+
 1.  Contact Shannon Rankin (shannon.rankin\@noaa.gov) or Kourtney Burger (kourtney.burger\@noaa.gov) for a copy of the database
-
 2.  Once you receive the zipped folder, save and extract it to your computer
+3.  Navigate to 'C:\\Tethys\\databases\\metadata'
+4.  Open the 'tethys.bat' batch file
+    -   Note, if this is your first time opening accessing the database, it may take up to an hour to execute and you may get a permissions request. You will need IT permissions complete this request
+5.  Once the database is running, the second to last line in the batch window should prompt you to access the web interface at ['http://local:9779/Client'](http://localhost:9779/Client/)
 
-3.  Follow 2-5 above to access the web browser
+## Clients
 
-## Web Browser
+You can easily access the Tethys Database through 2 web based clients
 
-## Data Viewer
+### Web Client
+
+The Web Client is a user-friendly interface to accessing Tethys data. You can construct, visualize, and export data queries. Below are some basic features and uses of the web client, full documentation can be found in the ['Tethys-WebClientManual'](https://tethys.sdsu.edu/distribution/current-docs/WebClient.pdf)
+
+#### Simple Queries 
+
+Using the 'Simple Queries' tab, you can use a variety of fields to refine the data query spatially, temporally, or by other deployment and species metadata. You can query for detection effort, detections, deployments, or localizations.
+
+Here's an example where I queried for all blue whale detections in 2023 from the ADRIFT project, using a bounding box to filter detections in central California. These results can be saved using the 'Save' drop down at the bottom left.
+
+Note, Tethys uses species codes and our data using NOAA.NMFS.v4. This can be changed in the drop down next to the Advanced Queries tab. Species abbreviations can be found here '\\Tethys\\databases\\metadata\\source-docs\\SpeciesAbbreviations'
+
+![](images/tethysQueryExample.png)
+
+::: callout-caution
+## Querying may take a while if you have a large spatial or temporal window.
+:::
+
+#### Advanced Queries
+
+Advanced queries allow the user to build a more refined query from additional fields, using drag-and-drop functionality. Similar to Simple Queries, you can query for detection effort, detections, deployments, or localizations. There are also separate tabs to build your query, view the query in JSON and XQuery format, and to view results on a map and in XML format.
+
+Here's an example where I built a query for deployment IDs and regions for deployments from CCES that used a ST4300HF.
+
+![](images/tethysAdvancedQuery.png)
+
+Here are the results for that query, which I can copy to clipboard or save in a variety of formats
+
+![](images/tethysAdvancedQueryResults.png)
+
+### Data Explorer
+
+The Data Explorer is another web based tool for exploring the database in an interactive point-and-click interface. Full documentation can be in the ['Tethys-DataExplorerManual'](https://tethys.sdsu.edu/distribution/current-docs/DataExplorerManual.pdf)
+
+::: callout-caution
+## Note: Python is required to run the Data Explorer
+
+This is included when you download Tethys
+:::
+
+*Add directions for accessing and navigating the data explorer*
 
 ## More Information
 
